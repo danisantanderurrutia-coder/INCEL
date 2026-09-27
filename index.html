@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Los Manejadores (Proyecto INCEL) — Agencia de Comunicación Digital e Influencers IA</title>
+  <meta name="description" content="Conectamos talentos con el mundo. Agencia líder en Influencers IA, Canales de YouTube Educativos y Asesorías Comunicacionales.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon.png?v=4">
+  <link rel="icon" type="image/png" sizes="128x128" href="favicon-128.png?v=4">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=4">
+  <link rel="shortcut icon" href="favicon.png?v=4">
+  <link rel="apple-touch-icon" href="favicon.png?v=4">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Background -->
+  <div class="ambient-bg">
+    <div class="glow-1"></div>
+    <div class="glow-2"></div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <nav class="navbar">
+    <a href="#home" class="nav-brand" id="main-nav-brand" onclick="switchView('public')">
+      <div id="navbar-logo-container" style="display: flex; align-items: center; justify-content: center;">
+        <img src="logo_emblem.png" alt="Los Manejadores Emblem" class="navbar-logo-img" />
+      </div>
+      <span id="brand-title-text">LOS MANEJADORES</span>
+    </a>
+
+    <div class="nav-controls">
+      <ul class="nav-links" id="public-nav-links">
+        <li><a href="#roster">Influencers</a></li>
+        <li><a href="#youtube">Youtube</a></li>
+        <li><a href="#desarrollo">I+D</a></li>
+      </ul>
+
+      <div class="nav-actions-group">
+        <a href="#pitch" class="nav-pitch-btn" title="Ver Pitch Comercial de 10 Slides">
+          <i class="fa-solid fa-file-invoice-dollar"></i> Pitch Comercial
+        </a>
+        <button class="btn-dossier-pdf" onclick="window.print()" title="Imprimir o Exportar PDF">
+          <i class="fa-solid fa-file-pdf"></i> PDF
+        </button>
+        <button id="btn-lock-auth" class="nav-lock-btn" onclick="switchView('team')" title="Acceso al Panel de Equipo">
+          <i id="nav-lock-icon" class="fa-solid fa-lock"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Dynamic Router Container for Dedicated Subpages -->
+  <main id="view-dynamic" class="mode-view">
+    <!-- Rendered dynamically by app.js router -->
+  </main>
+
+  <!-- =================================================================== -->
+  <!-- VISTA PÚBLICA PRINCIPAL (HOME SHOWROOM / PRESENTACIÓN DE PROYECTO)   -->
+  <!-- =================================================================== -->
+  <main id="view-public" class="mode-view active-view">
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        
+        <!-- Large Glowing Brand Showcase (El Play Modular 3D Neón) -->
+        <div class="hero-brand-showcase">
+          <div class="hero-logo-wrapper">
+            <div class="hero-logo-glow"></div>
+            <img src="logo_full.png" alt="Los Manejadores Logo 3D Neón Oficial" class="hero-logo-img" />
+          </div>
+          <div class="hero-brand-meta">
+            <span class="hero-brand-tag"><i class="fa-solid fa-circle-check"></i> IDENTIDAD OFICIAL 3D NEÓN</span>
+            <span class="hero-brand-name">LOS MANEJADORES</span>
+          </div>
+        </div>
+
+        <div class="hero-badge">
+          <i class="fa-solid fa-bolt"></i> Comercialización Digital + Inteligencia Artificial
+        </div>
+        <h1 class="hero-title">
+          Conectamos talentos con el mundo. <br>
+          <span class="gradient-text">Escalamos activos digitales.</span>
+        </h1>
+        <p class="hero-lead">
+          Desarrollamos y comercializamos influencers virtuales hiperrealistas con consistencia consagrada, canales faceless de YouTube y programas de coaching ejecutivo.
+        </p>
+        <div class="hero-actions">
+          <a href="#roster" class="btn btn-primary">
+            <i class="fa-solid fa-bag-shopping"></i> Venta de Influencers
+          </a>
+          <a href="#desarrollo" class="btn btn-secondary">
+            <i class="fa-solid fa-microchip"></i> Cómo Desarrollamos (I+D)
+          </a>
+          <button onclick="showTeamView('influencer-ops')" class="btn btn-secondary" style="border-color: rgba(139, 92, 246, 0.45);">
+            <i class="fa-solid fa-sliders" style="color: var(--purple);"></i> Panel Operativo
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roster de Influencers IA (Venta & Comercialización) -->
+    <section id="roster" class="section" style="padding-top: 2rem;">
+      <div class="section-header">
+        <span class="section-subtitle">Catálogo Comercial & Licenciamiento</span>
+        <h2 class="section-title">Influencers IA: Modelos Listos para Venta y Escalamiento</h2>
+        <p class="section-description">
+          Activos digitales hiperrealistas con consistencia consagrada. Listos para acuerdos de marca, patrocinios B2B y embudos directos a suscripción VIP (Fanvue / PPV).
+        </p>
+      </div>
+
+      <div class="roster-grid">
+        
+        <!-- 1. Elena Daddario -->
+        <div class="glass-card influencer-card" style="border-color: rgba(96, 165, 250, 0.4);">
+          <div class="influencer-img-wrapper">
+            <img src="elena_avatar.png" alt="Elena Daddario" class="influencer-img">
+            <span class="influencer-badge" style="color: #60a5fa; border-color: #60a5fa; background: rgba(96, 165, 250, 0.15);">
+              <i class="fa-solid fa-check-circle"></i> Personaje Listo • Daniel
+            </span>
+          </div>
+          <div class="influencer-info">
+            <h3 class="influencer-name">Elena Daddario</h3>
+            <span class="influencer-niche"><i class="fa-solid fa-brain"></i> Psicología & Lifestyle Europeo</span>
+            <p class="influencer-desc">27 años. Rusa en Miraflores. Elegancia atemporal, pilates y bienestar emocional. Monetización vía Fanvue VIP ($14/m) y marcas de bienestar.</p>
+            <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem;">
+              <a href="#influencer/elena" class="btn btn-primary influencer-btn" style="flex: 1; justify-content: center;">
+                <i class="fa-solid fa-arrow-right"></i> Ficha & Venta
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Julia -->
+        <div class="glass-card influencer-card" style="border-color: rgba(236, 72, 153, 0.4);">
+          <div class="influencer-img-wrapper">
+            <img src="julia_avatar.jpg" alt="Julia" class="influencer-img">
+            <span class="influencer-badge" style="color: #ec4899; border-color: #ec4899; background: rgba(236, 72, 153, 0.15);">
+              <i class="fa-solid fa-check-circle"></i> Personaje Listo • Pancho Ipinza
+            </span>
+          </div>
+          <div class="influencer-info">
+            <h3 class="influencer-name">Julia</h3>
+            <span class="influencer-niche"><i class="fa-solid fa-spa"></i> Dermocosmética & Clean Beauty</span>
+            <p class="influencer-desc">24 años. Miraflores. Reseñas científicas sin filtro, dupes accesibles y skincare real. Monetización con marcas dermocosméticas y VIP ($12/m).</p>
+            <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem;">
+              <a href="#influencer/julia" class="btn btn-primary influencer-btn" style="flex: 1; justify-content: center;">
+                <i class="fa-solid fa-arrow-right"></i> Ficha & Venta
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Laura "Lau" Taeda (Nutrición con Evidencia) -->
+        <div class="glass-card influencer-card" style="border-color: rgba(16, 185, 129, 0.45);">
+          <div class="influencer-img-wrapper">
+            <img src="laura_avatar.png" alt="Laura Taeda" class="influencer-img">
+            <span class="influencer-badge" style="color: #10b981; border-color: #10b981; background: rgba(16, 185, 129, 0.15);">
+              <i class="fa-solid fa-check-circle"></i> Personaje Listo • Wladimir
+            </span>
+          </div>
+          <div class="influencer-info">
+            <h3 class="influencer-name">Laura "Lau" Taeda</h3>
+            <span class="influencer-niche"><i class="fa-solid fa-apple-whole"></i> Nutrition Lifestyle + Science-Based Reviews</span>
+            <p class="influencer-desc">32 años. CDMX. Nutrióloga bicultural, desmitificación de dietas con evidencia médica y recomposición corporal. Club VIP ($24/m).</p>
+            <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem;">
+              <a href="#influencer/laura" class="btn btn-primary influencer-btn" style="flex: 1; justify-content: center;">
+                <i class="fa-solid fa-arrow-right"></i> Ficha & Venta
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Maite Valenzuela ("La Rancherita" - Mercado Chile) -->
+        <!-- 4. Maite Valenzuela ("La Rancherita" - Mercado Chile) -->
+        <div class="glass-card influencer-card" style="border-color: rgba(245, 158, 11, 0.45);">
+          <div class="influencer-img-wrapper">
+            <img src="maite_avatar.jpg" alt="Maite Valenzuela" class="influencer-img">
+            <span class="influencer-badge" style="color: #f59e0b; border-color: #f59e0b; background: rgba(245, 158, 11, 0.15);">
+              <i class="fa-solid fa-users"></i> Personaje Listo • Equipo
+            </span>
+          </div>
+          <div class="influencer-info">
+            <h3 class="influencer-name">Maite Valenzuela</h3>
+            <span class="influencer-niche"><i class="fa-solid fa-music"></i> Cumbia Ranchera & Country Chic</span>
+            <p class="influencer-desc">24 años. Valle de Colchagua. La voz hot de la cumbia ranchera chilena. Activo del equipo con videoclips, streaming musical y Fanvue VIP ($15/m).</p>
+            <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem;">
+              <a href="#influencer/maite" class="btn btn-primary influencer-btn" style="flex: 1; justify-content: center;">
+                <i class="fa-solid fa-arrow-right"></i> Ficha & Venta
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Kira Voss ("The Cyber Dev & Glamour" - Hot Game Dev & Prueba Social Validada) -->
+        <div class="glass-card influencer-card" style="border-color: rgba(6, 182, 212, 0.45);">
+          <div class="influencer-img-wrapper">
+            <img src="kira_avatar.jpg" alt="Kira Voss" class="influencer-img">
+            <span class="influencer-badge" style="color: var(--cyan); border-color: var(--cyan); background: rgba(6, 182, 212, 0.15);">
+              <i class="fa-solid fa-users"></i> Caso Validado • Equipo
+            </span>
+          </div>
+          <div class="influencer-info">
+            <h3 class="influencer-name">Kira Voss</h3>
+            <span class="influencer-niche"><i class="fa-solid fa-terminal"></i> Game Dev, Ciber-Activismo & Tech Glamour</span>
+            <p class="influencer-desc">26 años. Activo insignia del equipo: desarrollo de videojuegos indie (Godot/Unreal), activismo open-source y prueba social validada con más de 500 suscriptores en Fanvue ($18 USD/m) y Patreon.</p>
+            <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem;">
+              <a href="#influencer/kira" class="btn btn-primary influencer-btn" style="flex: 1; justify-content: center;">
+                <i class="fa-solid fa-arrow-right"></i> Ficha & Caso Validado
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Alejandra (Concepto Q2) -->
+        <div class="glass-card influencer-card">
+          <div class="influencer-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80" alt="Alejandra" class="influencer-img">
+            <span class="influencer-badge" style="color: #a78bfa; border-color: #a78bfa; background: rgba(167, 139, 250, 0.15);">
+              <i class="fa-solid fa-guitar"></i> Concepto Q2
+            </span>
+          </div>
+          <div class="influencer-info">
+            <h3 class="influencer-name">Alejandra</h3>
+            <span class="influencer-niche"><i class="fa-solid fa-compact-disc"></i> Cultura Indie & Vinilos</span>
+            <p class="influencer-desc">23 años. Berlín. Curaduría de vinilos raros, festivales independientes y estética vintage. Monetización con sellos y audio ($10/m).</p>
+            <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem;">
+              <a href="#influencer/alejandra" class="btn btn-secondary influencer-btn" style="flex: 1; justify-content: center;">
+                <i class="fa-solid fa-arrow-right"></i> Explorar Perfil
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CÓMO DESARROLLAMOS: PIPELINE I+D PROPIETARIO (Texto sintetizado y orientado a desarrollo) -->
+    <section id="desarrollo" class="section">
+      <div class="section-header">
+        <span class="section-subtitle">Metodología Propietaria I+D</span>
+        <h2 class="section-title">Cómo Desarrollamos Activos Virtuales Rentables</h2>
+        <p class="section-description">
+          De la concepción psicológica al despliegue comercial: nuestro pipeline estandarizado de 4 etapas para producir influencers y formatos escalables con 100% de propiedad intelectual.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
+        
+        <div class="glass-card" style="border-left: 3px solid var(--purple);">
+          <div style="font-size: 1.5rem; color: var(--purple); margin-bottom: 0.5rem;"><i class="fa-solid fa-fingerprint"></i></div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: #fff; margin-bottom: 0.35rem;">1. Psicometría & Identidad</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
+            Definición del arquetipo, contradicciones creíbles, tono de voz exacto, do's/don'ts y límites éticos infranqueables.
+          </p>
+        </div>
+
+        <div class="glass-card" style="border-left: 3px solid var(--cyan);">
+          <div style="font-size: 1.5rem; color: var(--cyan); margin-bottom: 0.5rem;"><i class="fa-solid fa-microchip"></i></div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: #fff; margin-bottom: 0.35rem;">2. Consagración LoRA 4K</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
+            Entrenamiento de modelos con +50 renders base en ComfyUI/Flux para consistencia visual absoluta en cualquier pose, lente y luz.
+          </p>
+        </div>
+
+        <div class="glass-card" style="border-left: 3px solid var(--pink);">
+          <div style="font-size: 1.5rem; color: var(--pink); margin-bottom: 0.5rem;"><i class="fa-solid fa-waveform-lines"></i></div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: #fff; margin-bottom: 0.35rem;">3. Voz & Lipsync Dinámico</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
+            Clonación de voz multilingüe hiperrealista (ElevenLabs) y animación de video generativa (Kling/Hailuo) para formatos verticales.
+          </p>
+        </div>
+
+        <div class="glass-card" style="border-left: 3px solid #10b981;">
+          <div style="font-size: 1.5rem; color: #10b981; margin-bottom: 0.5rem;"><i class="fa-solid fa-funnel-dollar"></i></div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: #fff; margin-bottom: 0.35rem;">4. Embudo de Venta & VIP</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
+            Estrategia de conversión Safe → Teaser → Pago: atracción orgánica en TikTok/Reels hacia membresías Fanvue y acuerdos de marca.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Commercial Licensing Callout -->
+      <div class="glass-card" style="margin-top: 1.5rem; padding: 1.25rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-color: rgba(139, 92, 246, 0.35);">
+        <div>
+          <h4 style="color: #fff; font-family: var(--font-heading); font-size: 1.05rem; margin-bottom: 0.2rem;">
+            <i class="fa-solid fa-handshake" style="color: var(--cyan); margin-right: 0.4rem;"></i> Modelos de Venta B2B & Licenciamiento
+          </h4>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">
+            Licenciamos nuestros personajes existentes para campañas de marcas o desarrollamos el embajador virtual oficial para tu empresa con propiedad intelectual exclusiva.
+          </p>
+        </div>
+        <a href="#pitch" class="btn btn-primary btn-sm"><i class="fa-solid fa-file-invoice-dollar"></i> Ver Propuesta Comercial</a>
+      </div>
+    </section>
+
+    <!-- Servicios Principales -->
+    <section id="servicios" class="section">
+      <div class="section-header">
+        <span class="section-subtitle">Portfolio Estructurado</span>
+        <h2 class="section-title">Nuestras 3 Líneas de Negocio</h2>
+      </div>
+
+      <div class="services-grid">
+        <!-- Servicio 1 -->
+        <div class="glass-card">
+          <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+          <h3 class="service-title">1. Influencers Digitales IA</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            Creación, gestión y monetización de avatares e influencers virtuales generados por IA con consistencia facial impecable y narrativas envolventes.
+          </p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Identidad y Backstory Único</li>
+            <li><i class="fa-solid fa-check"></i> Producción de Material Gráfico Base</li>
+            <li><i class="fa-solid fa-check"></i> Embudo de Monetización (Soft a Exclusive)</li>
+            <li><i class="fa-solid fa-check"></i> Inserción en Fanvue / OnlyFans / Patreon</li>
+          </ul>
+        </div>
+
+        <!-- Servicio 2 -->
+        <div class="glass-card">
+          <div class="service-icon" style="background: rgba(236, 72, 153, 0.15); color: var(--pink);"><i class="fa-brands fa-youtube"></i></div>
+          <h3 class="service-title">2. Canales YouTube Educativos</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            Canales de alto enganche con guiones educativos, animación generativa y narración envolvente sobre ciencia, historia y filosofía.
+          </p>
+          <ul class="service-list">
+            <li><i class="fa-solid fa-check"></i> Contenido Infantil & Viajes en el Tiempo</li>
+            <li><i class="fa-solid fa-check"></i> Divulgación Sci-Fi & Tecnológica</li>
+            <li><i class="fa-solid fa-check"></i> Narrativas sobre Historias y Religiones</li>
+            <li><i class="fa-solid fa-check"></i> Edición y Optimización de SEO</li>
+          </ul>
+        </div>
+
+        <!-- Servicio 3 -->
+        <div class="glass-card">
+          <div class="service-icon" style="background: rgba(6, 182, 212, 0.15); color: var(--cyan);"><i class="fa-solid fa-user-tie"></i></div>
+          <h3 class="service-title">3. Asesorías Comunicacionales</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            Coaching de comunicación, desarrollo de habilidades de expresión, networking profesional y dominio de idiomas para ejecutivos y creadores.
+          </p>
+          <ul class="service-list" style="margin-bottom: 1.5rem;">
+            <li><i class="fa-solid fa-check"></i> Entrenamiento en Oratoria y Presencia</li>
+            <li><i class="fa-solid fa-check"></i> Estrategia de Marca Personal</li>
+            <li><i class="fa-solid fa-check"></i> Coaching de Idiomas y Relaciones</li>
+            <li><i class="fa-solid fa-check"></i> Planes de Posicionamiento B2B</li>
+          </ul>
+          <a href="#asesorias" class="btn btn-primary" style="width: 100%; justify-content: center;">
+            <i class="fa-solid fa-arrow-right"></i> Ver Página de Asesorías
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Executive Snapshot & Unit Economics (Para Socios e Inversionistas) -->
+    <section id="executive-snapshot" class="section" style="padding-top: 2rem; padding-bottom: 2rem;">
+      <div class="section-header">
+        <span class="section-subtitle">Venture Architecture & Unit Economics</span>
+        <h2 class="section-title">Rentabilidad & Escalabilidad de la Agencia</h2>
+        <p class="section-description">
+          Métricas ejecutivas diseñadas para socios e inversionistas: ventajas asimétricas de los influencers generados por IA frente al talento tradicional.
+        </p>
+      </div>
+
+      <div class="exec-metrics-grid">
+        <div class="exec-metric-card accent-green">
+          <div class="exec-metric-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="exec-metric-val">82%</div>
+          <div class="exec-metric-label">Margen Bruto Proyectado</div>
+          <div class="exec-metric-subtext">Frente al 18% promedio de agencias tradicionales con talento humano físico.</div>
+        </div>
+
+        <div class="exec-metric-card accent-cyan">
+          <div class="exec-metric-icon"><i class="fa-solid fa-bolt"></i></div>
+          <div class="exec-metric-val">&lt; 48h</div>
+          <div class="exec-metric-label">Time-to-Market por Activo</div>
+          <div class="exec-metric-subtext">Generación de consistencia facial, arquetipo y 50 renders base en alta resolución.</div>
+        </div>
+
+        <div class="exec-metric-card accent-pink">
+          <div class="exec-metric-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="exec-metric-val">0%</div>
+          <div class="exec-metric-label">Riesgo Reputacional Humano</div>
+          <div class="exec-metric-subtext">Propiedad intelectual 100% interna, sin huelgas, cancelaciones ni demandas contractuales.</div>
+        </div>
+
+        <div class="exec-metric-card">
+          <div class="exec-metric-icon"><i class="fa-solid fa-infinity"></i></div>
+          <div class="exec-metric-val">24 / 7</div>
+          <div class="exec-metric-label">Producción Multicanal Continua</div>
+          <div class="exec-metric-subtext">Generación sincronizada en IG, TikTok, YouTube Shorts y Fanvue sin fatiga operativa.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Canales de YouTube: Formatos & Comercialización -->
+    <section id="youtube" class="section">
+      <div class="section-header">
+        <span class="section-subtitle">Producción Automatizada & Monetización</span>
+        <h2 class="section-title">Formatos YouTube: Canales Automatizados y Monetizables</h2>
+        <p class="section-description">
+          Canales faceless de alta retención generados con IA. Modelos de negocio listos para monetización diversificada vía AdSense, patrocinios B2B y licencias educativas.
+        </p>
+      </div>
+
+      <div class="channels-grid">
+        <!-- Canal 1: Sofía -->
+        <div class="channel-card">
+          <div class="channel-thumb-wrapper">
+            <img src="yt_sofia_thumb.jpg" alt="Los viajes en el tiempo de Sofía" class="channel-thumb-img" loading="lazy">
+            <div class="channel-thumb-overlay"></div>
+            <span class="channel-thumb-badge"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> Formato Infantil</span>
+            <div style="position: absolute; bottom: 0.65rem; right: 0.75rem; background: rgba(0,0,0,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px; z-index: 2;">
+              0:58 / Short
+            </div>
+          </div>
+          <div class="channel-card-body">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+              <div class="channel-icon-box" style="background: rgba(236, 72, 153, 0.15); color: var(--pink);"><i class="fa-solid fa-child-reaching"></i></div>
+              <div>
+                <h3 style="font-family: var(--font-heading); font-size: 1.15rem; margin: 0;">1. Los viajes de Sofía</h3>
+                <span style="color: var(--pink); font-size: 0.8rem; font-weight: 600;">Historia & Valores para Familias</span>
+              </div>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.85rem; line-height: 1.5; flex-grow: 1;">
+              Micro-aventuras animadas de 60 segundos por portales temporales (Egipto, Roma, Renacimiento). Alta retención y co-creación con audiencia infantil.
+            </p>
+            <div style="background: rgba(236, 72, 153, 0.1); border: 1px solid rgba(236, 72, 153, 0.25); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-bottom: 1rem; font-size: 0.75rem; color: #f9a8d4;">
+              <i class="fa-solid fa-sack-dollar"></i> <strong>Venta:</strong> AdSense Kids + Libros KDP + Merch Educativo (RPM: $3.5–$5 USD)
+            </div>
+            <a href="#channel/sofia" class="btn btn-primary" style="font-size: 0.82rem; justify-content: center;">
+              <i class="fa-solid fa-clapperboard"></i> Ver Guiones & Monetización
+            </a>
+          </div>
+        </div>
+
+        <!-- Canal 2: Arcanotech -->
+        <div class="channel-card">
+          <div class="channel-thumb-wrapper">
+            <img src="yt_arcanotech_thumb.jpg" alt="Los Gemelos Arcanotech" class="channel-thumb-img" loading="lazy">
+            <div class="channel-thumb-overlay"></div>
+            <span class="channel-thumb-badge"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> Sci-Fi & Futurismo</span>
+            <div style="position: absolute; bottom: 0.65rem; right: 0.75rem; background: rgba(0,0,0,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px; z-index: 2;">
+              12:40 / Debate Dual
+            </div>
+          </div>
+          <div class="channel-card-body">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+              <div class="channel-icon-box" style="background: rgba(6, 182, 212, 0.15); color: var(--cyan);"><i class="fa-solid fa-atom"></i></div>
+              <div>
+                <h3 style="font-family: var(--font-heading); font-size: 1.15rem; margin: 0;">2. Gemelos Arcanotech</h3>
+                <span style="color: var(--cyan); font-size: 0.8rem; font-weight: 600;">Solarpunk vs Cyberpunk</span>
+              </div>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.85rem; line-height: 1.5; flex-grow: 1;">
+              Debates narrativos entre dos magos gemelos: utopías solares ecológicas vs distopías cibernéticas nocturnas. Atractivo para comunidad tech y dev.
+            </p>
+            <div style="background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.25); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-bottom: 1rem; font-size: 0.75rem; color: #67e8f9;">
+              <i class="fa-solid fa-sack-dollar"></i> <strong>Venta:</strong> Patrocinios Tech/SaaS + AdSense Sci-Fi + Afiliados (RPM: $6–$9.5 USD)
+            </div>
+            <a href="#channel/arcanotech" class="btn btn-primary" style="font-size: 0.82rem; justify-content: center;">
+              <i class="fa-solid fa-clapperboard"></i> Ver Guiones & Monetización
+            </a>
+          </div>
+        </div>
+
+        <!-- Canal 3: Cuentos Sagrados -->
+        <div class="channel-card">
+          <div class="channel-thumb-wrapper">
+            <img src="yt_sagrados_thumb.jpg" alt="Cuentos Sagrados (sin autor)" class="channel-thumb-img" loading="lazy">
+            <div class="channel-thumb-overlay"></div>
+            <span class="channel-thumb-badge"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> Historia Universal</span>
+            <div style="position: absolute; bottom: 0.65rem; right: 0.75rem; background: rgba(0,0,0,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px; z-index: 2;">
+              18:20 / Documental
+            </div>
+          </div>
+          <div class="channel-card-body">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+              <div class="channel-icon-box" style="background: rgba(139, 92, 246, 0.15); color: var(--purple);"><i class="fa-solid fa-scroll"></i></div>
+              <div>
+                <h3 style="font-family: var(--font-heading); font-size: 1.15rem; margin: 0;">3. Cuentos Sagrados</h3>
+                <span style="color: var(--purple); font-size: 0.8rem; font-weight: 600;">Mitología & Textos Antiguos</span>
+              </div>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.85rem; line-height: 1.5; flex-grow: 1;">
+              Relatos universales y mitos fundacionales narrados con sobriedad y arte generativo estilo óleo al claroscuro. Gran consumo en audiencias maduras.
+            </p>
+            <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.25); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-bottom: 1rem; font-size: 0.75rem; color: #c4b5fd;">
+              <i class="fa-solid fa-sack-dollar"></i> <strong>Venta:</strong> Audiolibros Audible + AdSense Premium + Licencias (RPM: $7–$12 USD)
+            </div>
+            <a href="#channel/sagrados" class="btn btn-primary" style="font-size: 0.82rem; justify-content: center;">
+              <i class="fa-solid fa-clapperboard"></i> Ver Guiones & Monetización
+            </a>
+          </div>
+        </div>
+
+        <!-- Canal 4: Maite Ranchera -->
+        <div class="channel-card">
+          <div class="channel-thumb-wrapper">
+            <img src="yt_ranchera_thumb.jpg" alt="Maite & La Fiebre Ranchera" class="channel-thumb-img" loading="lazy">
+            <div class="channel-thumb-overlay"></div>
+            <span class="channel-thumb-badge"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> Música Chilena</span>
+            <div style="position: absolute; bottom: 0.65rem; right: 0.75rem; background: rgba(0,0,0,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px; z-index: 2;">
+              60:00 / Mix Festivo
+            </div>
+          </div>
+          <div class="channel-card-body">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+              <div class="channel-icon-box" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b;"><i class="fa-solid fa-music"></i></div>
+              <div>
+                <h3 style="font-family: var(--font-heading); font-size: 1.15rem; margin: 0;">4. Maite Ranchera</h3>
+                <span style="color: #f59e0b; font-size: 0.8rem; font-weight: 600;">Cumbia Campesina & Cono Sur</span>
+              </div>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.85rem; line-height: 1.5; flex-grow: 1;">
+              Videoclips 4K generativos y mixes festivos de 1h para asados y fiestas populares en Chile y el Cono Sur con la voz y carisma de Maite Valenzuela.
+            </p>
+            <div style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-bottom: 1rem; font-size: 0.75rem; color: #fde68a;">
+              <i class="fa-solid fa-sack-dollar"></i> <strong>Venta:</strong> AdSense Sesiones Largas + Streaming Spotify + Licores (RPM: $4.5–$7 USD)
+            </div>
+            <a href="#channel/ranchera" class="btn btn-primary" style="font-size: 0.82rem; justify-content: center;">
+              <i class="fa-solid fa-clapperboard"></i> Ver Guiones & Monetización
+            </a>
+          </div>
+        </div>
+
+        <!-- Canal 5: Kira Vane DevLogs -->
+        <div class="channel-card">
+          <div class="channel-thumb-wrapper">
+            <img src="yt_kira_thumb.jpg" alt="Kira Vane • DevLogs & Ciber-Activismo" class="channel-thumb-img" loading="lazy">
+            <div class="channel-thumb-overlay"></div>
+            <span class="channel-thumb-badge"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> Gaming & DevLogs</span>
+            <div style="position: absolute; bottom: 0.65rem; right: 0.75rem; background: rgba(0,0,0,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px; z-index: 2;">
+              14:15 / DevLog
+            </div>
+          </div>
+          <div class="channel-card-body">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+              <div class="channel-icon-box" style="background: rgba(6, 182, 212, 0.15); color: var(--cyan);"><i class="fa-solid fa-gamepad"></i></div>
+              <div>
+                <h3 style="font-family: var(--font-heading); font-size: 1.15rem; margin: 0;">5. Kira Vane DevLogs</h3>
+                <span style="color: var(--cyan); font-size: 0.8rem; font-weight: 600;">Desarrollo Indie & Ciber-Activismo</span>
+              </div>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.85rem; line-height: 1.5; flex-grow: 1;">
+              Devlogs de programación de videojuegos en Godot/Unreal y ensayos sobre soberanía de código y privacidad digital presentados por Kira Vane.
+            </p>
+            <div style="background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.25); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-bottom: 1rem; font-size: 0.75rem; color: #67e8f9;">
+              <i class="fa-solid fa-sack-dollar"></i> <strong>Venta:</strong> Patrocinios SaaS Tech + Wishlists Steam + AdSense Dev (RPM: $9–$15 USD)
+            </div>
+            <a href="#channel/kira_gamedev" class="btn btn-primary" style="font-size: 0.82rem; justify-content: center;">
+              <i class="fa-solid fa-clapperboard"></i> Ver Guiones & Monetización
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Commercial Channel Coproduction Callout -->
+      <div class="glass-card" style="margin-top: 1.5rem; padding: 1.25rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-color: rgba(6, 182, 212, 0.35);">
+        <div>
+          <h4 style="color: #fff; font-family: var(--font-heading); font-size: 1.05rem; margin-bottom: 0.2rem;">
+            <i class="fa-brands fa-youtube" style="color: var(--pink); margin-right: 0.4rem;"></i> Coproducción de Canales & Venta Llave en Mano
+          </h4>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">
+            ¿Quieres lanzar un canal temático automatizado para tu marca o fondo? Estructuramos el canal desde el branding hasta los guiones y renders semanales con esquemas de rev-share o venta completa.
+          </p>
+        </div>
+        <a href="#pitch" class="btn btn-secondary btn-sm"><i class="fa-solid fa-comments-dollar"></i> Consultar Alianza Comercial</a>
+      </div>
+    </section>
+
+    <!-- Propuestas de Logo Teaser Section -->
+    <section class="section" style="background: rgba(18, 22, 36, 0.4); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 3rem 2rem; margin: 3rem 0;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; align-items: center;">
+        <div>
+          <span class="section-subtitle" style="color: var(--pink);"><i class="fa-solid fa-pen-nib"></i> Identidad Visual Oficial</span>
+          <h2 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; margin: 0.5rem 0 1rem 0;">Identidad 3D Neón — Los Manejadores</h2>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+            El isotipo oficial <strong>3D Neón Play Modular</strong> representa la fusión entre contenido de producción (Play), diálogo comunicacional (Burbuja) y aceleración de audiencias (Flecha de crecimiento).
+          </p>
+          <a href="#copys" onclick="switchView('team'); switchTeamTab('copys');" class="btn btn-primary">
+            <i class="fa-solid fa-copy"></i> Ver Hub de Copys del Equipo
+          </a>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <div style="position: relative; max-width: 520px; width: 100%;">
+            <div style="position: absolute; inset: -15px; background: radial-gradient(circle, rgba(139, 92, 246, 0.45), rgba(6, 182, 212, 0.25), transparent 70%); filter: blur(28px); z-index: -1;"></div>
+            <img src="logo_full.png" alt="Los Manejadores Logo 3D Neón Render" style="width: 100%; border-radius: var(--radius-lg); border: 2px solid var(--border-highlight); box-shadow: 0 20px 50px rgba(0,0,0,0.75), 0 0 45px rgba(139,92,246,0.4); transition: transform 0.4s ease;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pitch Deck Viewer (10 Slides) -->
+    <section id="pitch" class="section">
+      <div class="section-header">
+        <span class="section-subtitle">Presentación Ejecutiva</span>
+        <h2 class="section-title">Pitch Deck de Inversores & Clientes</h2>
+        <p class="section-description">Síntesis estratégica de 10 diapositivas para presentación ante fondos, marcas y colaboradores clave.</p>
+        <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.25rem;">
+          <button class="btn btn-secondary btn-sm" onclick="window.print()" title="Generar PDF de las diapositivas">
+            <i class="fa-solid fa-file-pdf"></i> Descargar Pitch Deck (PDF)
+          </button>
+        </div>
+      </div>
+
+      <div class="pitch-container">
+        <!-- Slide 1 -->
+        <div class="pitch-slide active-slide" data-slide="1">
+          <span class="slide-num">DIAPOSITIVA 1 DE 10 • PORTADA</span>
+          <h3 class="slide-title">Los Manejadores — Creative AI Studio</h3>
+          <p class="slide-text">Conectamos talentos digitales con el mundo mediante IA generativa, narrativa de alto enganche y monetización estructurada.</p>
+          <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--cyan);"><i class="fa-solid fa-earth-americas"></i> Operaciones Estratégicas: Alemania (CET) & Canadá (EST)</div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="pitch-slide" data-slide="2">
+          <span class="slide-num">DIAPOSITIVA 2 DE 10 • EL PROBLEMA</span>
+          <h3 class="slide-title">El Cuello de Botella de los Creadores</h3>
+          <p class="slide-text">El 95% de los creadores y marcas sufren saturación operativa: costos de producción prohibitivos ($3,000+/mes por video tradicional), inconsistencia visual y agotamiento de agenda.</p>
+          <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-dim);">
+            <em>Lorem ipsum dolor sit amet: TAM de la economía de creadores excede $250B con 70% de ineficiencia en producción de contenido.</em>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="pitch-slide" data-slide="3">
+          <span class="slide-num">DIAPOSITIVA 3 DE 10 • LA SOLUCIÓN</span>
+          <h3 class="slide-title">Influencia Virtual Asistida por IA</h3>
+          <p class="slide-text">Creamos avatares hiperrealistas con consistencia facial absoluta y canales automatizados a 1/10 del costo tradicional y con una velocidad de iteración 10 veces mayor.</p>
+          <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--green);">
+            <i class="fa-solid fa-circle-check"></i> Producción 24/7 sin dependencia física de agenda ni fatiga de rodaje.
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="pitch-slide" data-slide="4">
+          <span class="slide-num">DIAPOSITIVA 4 DE 10 • MODELO DE NEGOCIO</span>
+          <h3 class="slide-title">Triple Embudo de Monetización</h3>
+          <p class="slide-text">
+            1. Suscripciones VIP recurrentes (Fanvue / OnlyFans: $12–$25 USD/mes).<br>
+            2. YouTube Automatizado (AdSense de alto RPM + Patrocinios integrados).<br>
+            3. Asesorías Comunicacionales B2B ($150 a $2,400 USD/cliente).
+          </p>
+          <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-dim);">
+            <em>Lorem ipsum dolor sit amet: LTV estimado de suscriptor VIP: $185 USD. Costo de Adquisición (CAC): $18 USD.</em>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="pitch-slide" data-slide="5">
+          <span class="slide-num">DIAPOSITIVA 5 DE 10 • PRUEBA SOCIAL & EQUIPO</span>
+          <h3 class="slide-title">Caso Validado: Kira Voss (Equipo)</h3>
+          <p class="slide-text">Prototipo e influencer virtual consagrada (Indie Game Dev & Cyber-activismo) del equipo que escaló de 0 a más de 500 suscriptores pagos en 90 días, validando el embudo de conversión de redes abiertas a contenido VIP ($18/mes).</p>
+          <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--pink);">
+            <i class="fa-solid fa-chart-line"></i> Retención mensual superior al 70% con interacción automatizada.
+          </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="pitch-slide" data-slide="6">
+          <span class="slide-num">DIAPOSITIVA 6 DE 10 • ARQUITECTURA TÉCNICA</span>
+          <h3 class="slide-title">Pipeline Tecnológico Propietario de 8 Pasos</h3>
+          <p class="slide-text">Desde la arquitectura de prompts con Gemini (formato ROLOCODEPRE), consistencia LoRA con Flux 2 y Motion Control en Kling 3.0, hasta orquestación autónoma con Antigravity agy CLI.</p>
+          <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--cyan);">
+            <i class="fa-solid fa-microchip"></i> Stack modular capaz de generar hasta 500 piezas audiovisuales al día.
+          </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="pitch-slide" data-slide="7">
+          <span class="slide-num">DIAPOSITIVA 7 DE 10 • SEGURIDAD & COMPLIANCE</span>
+          <h3 class="slide-title">Seguridad, KYC y Marco Legal Transfronterizo</h3>
+          <p class="slide-text">Verificación KYC rigurosa para modelos y plataformas, protección de propiedad intelectual, pasarelas de cobro seguras (Wise Business / Stripe) y cumplimiento fiscal entre Alemania y Canadá.</p>
+          <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-dim);">
+            <em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cumplimiento de normativas GDPR (UE) y PIPEDA (Canadá).</em>
+          </div>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="pitch-slide" data-slide="8">
+          <span class="slide-num">DIAPOSITIVA 8 DE 10 • PLAN FINANCIERO</span>
+          <h3 class="slide-title">Metas Financieras a 90 Días</h3>
+          <p class="slide-text">
+            • Fase 1: 3 influencers activos en producción y primeros 150 suscriptores pagos.<br>
+            • Fase 2: 3 canales de YouTube en monetización y 3 clientes corporativos B2B.<br>
+            • Proyección Mes 6: $18,000 USD/mes con margen de contribución superior al 60%.
+          </p>
+          <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-dim);">
+            <em>Lorem ipsum dolor sit amet: Inversión en cómputo GPU y APIs estimada en $650 USD/mes por avatar activo.</em>
+          </div>
+        </div>
+
+        <!-- Slide 9 -->
+        <div class="pitch-slide" data-slide="9">
+          <span class="slide-num">DIAPOSITIVA 9 DE 10 • EQUIPO</span>
+          <h3 class="slide-title">Sinergia Fundadora Multidisciplinaria</h3>
+          <p class="slide-text">
+            <strong>Daniel Santander (Alemania):</strong> Dirección de Arquitectura IA, LoRAs y Automatización con agy CLI.<br>
+            <strong>Pancho Ipinza (Canadá):</strong> Dirección Creativa, Storytelling, Relaciones Públicas y Captación B2B.<br>
+            <strong>Wladimir Gutierrez (Chile):</strong> Media Operations, Motion AI y Escalamiento de Contenido Audiovisual.
+          </p>
+          <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-dim);">
+            <em>Red de especialistas en edición audiovisual, biohacking y asesoría jurídica internacional en fase de incorporación.</em>
+          </div>
+        </div>
+
+        <!-- Slide 10 -->
+        <div class="pitch-slide" data-slide="10">
+          <span class="slide-num">DIAPOSITIVA 10 DE 10 • CALL TO ACTION</span>
+          <h3 class="slide-title">Siguiente Paso: Construyamos Juntos</h3>
+          <p class="slide-text">Únete como inversor estratégico, socio comercial o solicita una consultoría comunicacional personalizada. Transforma tu visión en una audiencia global.</p>
+          <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="#asesorias" class="btn btn-primary btn-sm"><i class="fa-solid fa-calendar-check"></i> Agendar Diagnóstico</a>
+            <button onclick="switchView('team')" class="btn btn-secondary btn-sm"><i class="fa-solid fa-lock"></i> Acceso a Panel Interno</button>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="pitch-controls">
+          <button class="btn btn-secondary" onclick="prevSlide()"><i class="fa-solid fa-chevron-left"></i> Anterior</button>
+          <div class="pitch-dots" id="pitch-dots"></div>
+          <button class="btn btn-primary" onclick="nextSlide()">Siguiente <i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =================================================================== -->
+  <!-- VISTA DE EQUIPO (PANEL DE CONTROL INTERNO / GANTT & PIPELINE)      -->
+  <!-- =================================================================== -->
+  <main id="view-team" class="mode-view">
+    
+    <div class="dashboard-header">
+      <div class="dashboard-title-area">
+        <div>
+          <h1 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800;">
+            <i class="fa-solid fa-list-check" style="color: var(--purple);"></i> Panel Interno de Trabajo
+          </h1>
+          <p style="color: var(--text-muted);">Coordinación operativa, Carta Gantt a 90 Días y Manual Tecnológico de Producción con IA</p>
+        </div>
+        <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
+          <button onclick="switchView('public')" class="btn btn-secondary" style="font-size: 0.85rem;" title="Volver a la vista pública">
+            <i class="fa-solid fa-arrow-left"></i> Volver a Vista Pública
+          </button>
+          <button onclick="lockTeamView()" class="btn btn-secondary" style="font-size: 0.85rem;" title="Bloquear panel de equipo con PIN">
+            <i class="fa-solid fa-lock"></i> Bloquear Sesión
+          </button>
+          <button onclick="resetGanttData()" class="btn btn-secondary" style="font-size: 0.85rem;">
+            <i class="fa-solid fa-rotate-left"></i> Reiniciar Progreso
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-navigation Tabs for Internal Team Panel -->
+    <div class="team-tab-nav">
+      <button id="btn-team-tab-gantt" class="team-tab-btn active" onclick="switchTeamTab('gantt')">
+        <i class="fa-solid fa-chart-gantt"></i> 1. Carta Gantt Operativa (90 Días)
+      </button>
+      <button id="btn-team-tab-pipeline" class="team-tab-btn" onclick="switchTeamTab('pipeline')">
+        <i class="fa-solid fa-diagram-project"></i> 2. Pipeline de Producción Detallado & Herramientas
+      </button>
+      <button id="btn-team-tab-copys" class="team-tab-btn" onclick="switchTeamTab('copys')">
+        <i class="fa-solid fa-copy"></i> 3. Hub de Copys & Scripts Listos
+      </button>
+      <button id="btn-team-tab-members" class="team-tab-btn" onclick="switchTeamTab('members')">
+        <i class="fa-solid fa-users-gear"></i> 4. Equipo & Husos Horarios
+      </button>
+      <button id="btn-team-tab-influencer-ops" class="team-tab-btn" onclick="switchTeamTab('influencer-ops')">
+        <i class="fa-solid fa-wand-magic-sparkles"></i> 5. Operaciones de Influencers (Guía & Calibración Global)
+      </button>
+    </div>
+
+    <!-- PÁGINA 1: CARTA GANTT OPERATIVA -->
+    <div id="team-pane-gantt" class="team-pane active-pane">
+      <!-- Live Metrics Dashboard -->
+      <div class="dash-stats-row">
+        <div class="glass-card stat-card">
+          <div class="stat-icon" style="background: rgba(139, 92, 246, 0.15); color: var(--purple);"><i class="fa-solid fa-clock"></i></div>
+          <div>
+            <div class="stat-val">90 Días</div>
+            <div class="stat-lbl">Duración del Pipeline</div>
+          </div>
+        </div>
+
+        <div class="glass-card stat-card">
+          <div class="stat-icon" style="background: rgba(16, 185, 129, 0.15); color: var(--green);"><i class="fa-solid fa-bars-progress"></i></div>
+          <div style="flex-grow: 1;">
+            <div class="stat-val" id="gantt-progress-text">0%</div>
+            <div class="stat-lbl">Completado de la Carta Gantt</div>
+            <div class="progress-bar-container">
+              <div id="gantt-progress-bar" class="progress-bar-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card stat-card">
+          <div class="stat-icon" style="background: rgba(6, 182, 212, 0.15); color: var(--cyan);"><i class="fa-solid fa-check-double"></i></div>
+          <div>
+            <div class="stat-val" id="gantt-tasks-count">0 / 0</div>
+            <div class="stat-lbl">Hitos Completados</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION: Carta Gantt Interactiva -->
+      <section class="section" style="padding-top: 0;">
+        <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+          <span class="section-subtitle">Roadmap del Proyecto</span>
+          <h2 class="section-title">Carta Gantt Operativa (Semanas 1 a 16)</h2>
+          <p class="section-description" style="margin: 0;">
+            Marca las casillas conforme el equipo complete los entregables entre Alemania y Canadá para actualizar la velocidad.
+          </p>
+        </div>
+
+        <div class="gantt-wrapper">
+          <div class="gantt-toolbar">
+            <div class="filter-group">
+              <button class="filter-btn active" onclick="filterGantt('all')">Todas las Fases</button>
+              <button class="filter-btn" onclick="filterGantt('phase-0')">Fase 0 (Días 1-15)</button>
+              <button class="filter-btn" onclick="filterGantt('phase-1')">Fase 1 (Días 16-45)</button>
+              <button class="filter-btn" onclick="filterGantt('phase-2')">Fase 2 (Días 46-75)</button>
+              <button class="filter-btn" onclick="filterGantt('phase-3')">Fase 3 (Días 76-90)</button>
+            </div>
+            <div class="gantt-sync-actions">
+              <button class="btn btn-secondary btn-sm" onclick="exportGanttJSON()" title="Descargar archivo JSON con el progreso actual">
+                <i class="fa-solid fa-download"></i> Exportar JSON
+              </button>
+              <button class="btn btn-secondary btn-sm" onclick="triggerImportGantt()" title="Cargar archivo JSON de otro miembro">
+                <i class="fa-solid fa-upload"></i> Importar JSON
+              </button>
+              <input type="file" id="gantt-import-input" accept=".json" style="display:none" onchange="importGanttJSON(event)">
+              <button class="btn btn-secondary btn-sm" onclick="shareGanttLink()" title="Copiar enlace con el progreso sincronizado">
+                <i class="fa-solid fa-share-nodes"></i> Compartir Enlace
+              </button>
+            </div>
+          </div>
+
+          <table class="gantt-table">
+            <thead>
+              <tr>
+                <th style="width: 50px;">Estado</th>
+                <th>Hito / Tarea Operativa</th>
+                <th>Fase</th>
+                <th>Semana</th>
+                <th>Responsable</th>
+              </tr>
+            </thead>
+            <tbody id="gantt-table-body">
+              <!-- Rendered by JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- PÁGINA 2: PIPELINE DE PRODUCCIÓN DETALLADO & MANUAL DE IA -->
+    <div id="team-pane-pipeline" class="team-pane">
+      
+      <!-- Visión General y Rutas por Servicio -->
+      <section class="section" style="padding-top: 0;">
+        <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+          <span class="section-subtitle" style="color: var(--pink);"><i class="fa-solid fa-map-location-dot"></i> Metodología y Arquitectura</span>
+          <h2 class="section-title">Rutas de Producción Según la Línea de Servicio</h2>
+          <p class="section-description" style="margin: 0;">
+            Dependiendo del servicio seleccionado por el cliente o la meta del canal, el flujo de herramientas de IA se adapta para optimizar costos, velocidad y retención.
+          </p>
+        </div>
+
+        <div class="route-cards-grid">
+          <!-- Ruta 1: Influencers IA -->
+          <div class="route-card" style="border-top: 4px solid var(--pink);">
+            <span class="route-badge" style="background: rgba(236, 72, 153, 0.15); color: var(--pink);">Ruta A — Influencers IA</span>
+            <h3 class="route-title">UGC, Redes Sociales & Monopolio de Rostros</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+              Creación de avatares con consistencia facial impecable, videos cortos de interacción (TikTok/Reels) y derivación a embudos de suscripción VIP (Fanvue/OnlyFans).
+            </p>
+            <ul class="route-tools-list">
+              <li><i class="fa-solid fa-check" style="color: var(--pink);"></i> <strong>Personaje & Rostro:</strong> Nano Banana Pro + Flux 2 LoRA</li>
+              <li><i class="fa-solid fa-check" style="color: var(--pink);"></i> <strong>Video & Motion:</strong> Kling 3.0 Motion Control + Arcads</li>
+              <li><i class="fa-solid fa-check" style="color: var(--pink);"></i> <strong>Voz:</strong> ElevenLabs / ChatterBox</li>
+              <li><i class="fa-solid fa-check" style="color: var(--pink);"></i> <strong>Orquestación:</strong> Antigravity + agy CLI</li>
+            </ul>
+          </div>
+
+          <!-- Ruta 2: Canales Educativos YouTube -->
+          <div class="route-card" style="border-top: 4px solid var(--cyan);">
+            <span class="route-badge" style="background: rgba(6, 182, 212, 0.15); color: var(--cyan);">Ruta B — Canales YouTube</span>
+            <h3 class="route-title">Storytelling Automatizado & Modo Narrativo</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+              Generación masiva de historias para YouTube Shorts (60s) o documentales de alto RPM en YouTube Long-Form.
+            </p>
+            <ul class="route-tools-list">
+              <li><i class="fa-solid fa-check" style="color: var(--cyan);"></i> <strong>Guion & Storyboard:</strong> Gemini + ChatGPT (ROLOCODEPRE)</li>
+              <li><i class="fa-solid fa-check" style="color: var(--cyan);"></i> <strong>Director Agente:</strong> SJINN + Veo 3 / Sora 2</li>
+              <li><i class="fa-solid fa-check" style="color: var(--cyan);"></i> <strong>Ensamblaje:</strong> InVideo / CapCut</li>
+              <li><i class="fa-solid fa-check" style="color: var(--cyan);"></i> <strong>Música:</strong> Suno AI</li>
+            </ul>
+          </div>
+
+          <!-- Ruta 3: Asesorías Comunicacionales -->
+          <div class="route-card" style="border-top: 4px solid var(--purple);">
+            <span class="route-badge" style="background: rgba(139, 92, 246, 0.15); color: var(--purple);">Ruta C — Asesorías Comunicacionales</span>
+            <h3 class="route-title">Clonación de Voz & Avatares Ejecutivos B2B</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+              Coaching de oratoria y presencia digital apoyado por avatares parlantes en HD y clonación de voz del propio ejecutivo.
+            </p>
+            <ul class="route-tools-list">
+              <li><i class="fa-solid fa-check" style="color: var(--purple);"></i> <strong>Guiones de Oratoria:</strong> Gemini Gems (Coach de Voz)</li>
+              <li><i class="fa-solid fa-check" style="color: var(--purple);"></i> <strong>Clonación de Voz:</strong> ElevenLabs / ChatterBox</li>
+              <li><i class="fa-solid fa-check" style="color: var(--purple);"></i> <strong>Talking Avatars:</strong> HeyGen / LivePortrait / Hedra</li>
+              <li><i class="fa-solid fa-check" style="color: var(--purple);"></i> <strong>Revisión:</strong> CapCut Agent IA</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tabla Matriz de Herramientas Tecnológicas -->
+      <section class="section" style="padding-top: 0;">
+        <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #fff; margin-bottom: 1rem;">
+          <i class="fa-solid fa-server" style="color: var(--cyan);"></i> Matriz de Herramientas y Ecosistema IA (Feb 2026)
+        </h3>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Catálogo comparativo de plataformas integradas en la agencia:</p>
+
+        <div style="overflow-x: auto;">
+          <table class="tech-matrix-table">
+            <thead>
+              <tr>
+                <th>Herramienta / Plataforma</th>
+                <th>Rol en el Pipeline</th>
+                <th>Modelo de Costo</th>
+                <th>Uso Clave en Los Manejadores</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong style="color: #fff;">Gemini / Google AI Studio</strong></td>
+                <td>Guiones, Prompts & Gems</td>
+                <td>Gratis / API</td>
+                <td>Creación de "Gems" fijos por influencer para mantener coherencia narrativa e inmunidad al drift. Formato ROLOCODEPRE.</td>
+              </tr>
+              <tr>
+                <td><strong style="color: #fff;">Antigravity & agy CLI</strong></td>
+                <td>Orquestación & Automatización</td>
+                <td>Incluido / Motor Local</td>
+                <td>Ejecución de flujos de trabajo autónomos, agentes de producción y scripting de automatización de contenidos.</td>
+              </tr>
+              <tr>
+                <td><strong style="color: #fff;">Nano Banana / Nano Banana Pro</strong></td>
+                <td>Generación de Personaje 4K</td>
+                <td>Rápido / HD</td>
+                <td>Creación de ficha técnica de personaje con set base de 4 ángulos canónicos en 1–2 segundos.</td>
+              </tr>
+              <tr>
+                <td><strong style="color: #fff;">Kling 3.0 Omni</strong></td>
+                <td>Motion Control & Multishot</td>
+                <td>$5 / min aprox.</td>
+                <td>Transferencia de movimiento de video de referencia sobre la foto del influencer conservando la consistencia facial.</td>
+              </tr>
+              <tr>
+                <td><strong style="color: #fff;">Veo 3 / Veo 3.1 & Sora 2</strong></td>
+                <td>Video Cinematográfico</td>
+                <td>Propietario / Enterprise</td>
+                <td>Generación de escenas hiperrealistas con lip-sync y audio ambiental nativo sincronizado.</td>
+              </tr>
+              <tr>
+                <td><strong style="color: #fff;">ElevenLabs & ChatterBox</strong></td>
+                <td>Clonación de Voz (TTS)</td>
+                <td>$5/mes o Gratis (OS)</td>
+                <td>Clonación de voz hiperrealista. ChatterBox permite clonación con 5s de audio y sliders de emoción.</td>
+              </tr>
+              <tr>
+                <td><strong style="color: #fff;">Arcads & Clawdbot + Manus</strong></td>
+                <td>Generación Masiva de Ads UGC</td>
+                <td>$5/min (hasta 550 vids/día)</td>
+                <td>Generador automático de anuncios UGC TikTok a partir de foto + script + video de referencia.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- DESGLOSE PROFUNDO PASO A PASO (0 a 7) -->
+      <section class="section" style="padding-top: 0;">
+        <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+          <span class="section-subtitle" style="color: var(--purple);"><i class="fa-solid fa-list-ol"></i> Protocolo de Producción</span>
+          <h2 class="section-title">Manual de Operación de 8 Pasos (Desglose Exhaustivo)</h2>
+        </div>
+
+        <!-- PASO 0 -->
+        <div class="pipeline-deepdive-card">
+          <div class="deepdive-header">
+            <span class="deepdive-step-num">PASO 00</span>
+            <div class="deepdive-title">Setup Inicial & Configuración de Cuentas Base</div>
+          </div>
+          <p style="color: var(--text-main); font-size: 1rem; line-height: 1.7; margin-bottom: 1rem;">
+            Configuración de la infraestructura tecnológica requerida antes de iniciar cualquier campaña o lanzamiento de influencer.
+          </p>
+          <div>
+            <span class="platform-pill highlight">Gemini API</span>
+            <span class="platform-pill highlight">Antigravity CLI</span>
+            <span class="platform-pill">Kling 3.0</span>
+            <span class="platform-pill">ElevenLabs</span>
+            <span class="platform-pill">CapCut Pro</span>
+          </div>
+        </div>
+
+        <!-- PASO 1 -->
+        <div class="pipeline-deepdive-card">
+          <div class="deepdive-header">
+            <span class="deepdive-step-num">PASO 01</span>
+            <div class="deepdive-title">Ideación, Guion & Arquitectura de Prompts</div>
+          </div>
+          <p style="color: var(--text-main); font-size: 1rem; line-height: 1.7; margin-bottom: 1rem;">
+            Estructuración de narrativa, ganchos virales y prompts usando el formato estandarizado <strong>ROLOCODEPRE</strong> (Rol – Logros – Contexto – Desafío – Preguntas) en Gemini y ChatGPT. Para prompts visuales se define la Óptica (ej. 35mm), Ángulo de Luz y Paleta Dominante.
+          </p>
+          <div>
+            <span class="platform-pill highlight">Gemini 1.5 Pro</span>
+            <span class="platform-pill">ChatGPT GPT-5.2</span>
+            <span class="platform-pill">Claude Sonnet</span>
+          </div>
+        </div>
+
+        <!-- PASO 2: DEEP DIVE GRÁFICOS BASE Y CONSISTENCIA FACIAL -->
+        <div class="pipeline-deepdive-card" style="border-color: var(--pink); background: rgba(236, 72, 153, 0.03);">
+          <div class="deepdive-header">
+            <span class="deepdive-step-num" style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">PASO 02</span>
+            <div>
+              <div class="deepdive-title">Producción de Gráficos Base & Consistencia Facial (Identidad de Rostro)</div>
+              <span style="color: var(--pink); font-size: 0.85rem; font-weight: 700;">★ SECCIÓN CRÍTICA DE APRENDIZAJE ★</span>
+            </div>
+          </div>
+
+          <p style="color: var(--text-main); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            <strong>El Gran Desafío:</strong> ¿Cómo lograr que el rostro de un influencer virtual se mantenga exactamente idéntico a través de 100s de fotos con ropa, fondos y emociones distintas sin perder coherencia?
+          </p>
+
+          <h4 style="color: var(--cyan); font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 0.75rem;">
+            Técnicas y Alternativas Recomendadas para Consistencia de Rostro:
+          </h4>
+
+          <div style="display: grid; gap: 1.25rem; margin-bottom: 2rem;">
+            
+            <div style="background: rgba(10, 12, 20, 0.6); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+              <h5 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.35rem;">
+                1. Nano Banana Pro + Kit de 4 Ángulos Canónicos (Opción Rápida & Eficiente)
+              </h5>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+                En <strong>Nano Banana Pro</strong> se genera la foto matriz en 4K. Luego se solicitan 4 renders canónicos del mismo sujeto: <em>Frontal, 3/4 Izquierdo, 3/4 Derecho y Perfil</em>. Este kit de 4 fotos sirve de insumo base indiscutible para las herramientas de animación.
+              </p>
+            </div>
+
+            <div style="background: rgba(10, 12, 20, 0.6); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+              <h5 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.35rem;">
+                2. Gemini + Gems de Personaje Fijo
+              </h5>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+                Creación de un <strong>Gem personalizado en Gemini</strong> que almacena la descripción exacta de los rasgos inmutables (distancia entre ojos, forma de mejillas, cicatrices) junto con las imágenes canónicas en la memoria del modelo para generar nuevas escenas sin desviaciones.
+              </p>
+            </div>
+
+            <div style="background: rgba(10, 12, 20, 0.6); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+              <h5 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.35rem;">
+                3. Entrenamiento de LoRA Facial (Flux 2 / Stable Diffusion XL en ComfyUI / Fal.ai)
+              </h5>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+                El estándar de máxima calidad profesional: se alimentan 15–20 fotos en alta resolución a un modelo Flux o SDXL para entrenar un archivo LoRA de peso ligero (50-100 MB). Este LoRA se activa mediante una palabra clave (ej. <code>&lt;s0:alejandra_face&gt;</code>) garantizando que el personaje aparezca en cualquier vestuario o locación.
+              </p>
+            </div>
+
+            <div style="background: rgba(10, 12, 20, 0.6); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+              <h5 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.35rem;">
+                4. Google Whisk / InstantID / InsightFace (Face Swapping Avanzado)
+              </h5>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+                Técnica de referencia de imagen donde se fusiona el cuerpo/pose de una imagen destino con la máscara y landmarks faciales de la foto original del influencer.
+              </p>
+            </div>
+
+            <div style="background: rgba(10, 12, 20, 0.6); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+              <h5 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.35rem;">
+                5. Escalado con LUPA / Magnific AI Upscaler
+              </h5>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+                Mejora de poros, textura de piel y nitidez en 8K antes de pasar a la fase de animación de video.
+              </p>
+            </div>
+
+          </div>
+
+          <div>
+            <span class="platform-pill highlight">Nano Banana Pro</span>
+            <span class="platform-pill highlight">Gemini Gems</span>
+            <span class="platform-pill highlight">Flux 2 LoRA</span>
+            <span class="platform-pill">Google Whisk</span>
+            <span class="platform-pill">InstantID</span>
+            <span class="platform-pill">Magnific AI</span>
+          </div>
+        </div>
+
+        <!-- PASO 3: DEEP DIVE GENERACIÓN DE VIDEO -->
+        <div class="pipeline-deepdive-card" style="border-color: var(--cyan); background: rgba(6, 182, 212, 0.03);">
+          <div class="deepdive-header">
+            <span class="deepdive-step-num" style="background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">PASO 03</span>
+            <div>
+              <div class="deepdive-title">Generación de Video & Animación Mantenimiento de Rostro</div>
+              <span style="color: var(--cyan); font-size: 0.85rem; font-weight: 700;">★ SECCIÓN CRÍTICA DE APRENDIZAJE ★</span>
+            </div>
+          </div>
+
+          <p style="color: var(--text-main); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            <strong>El Paso a Video:</strong> ¿Cómo transformar fotos estáticas en videos en movimiento (hablando, bailando, caminando) conservando el rostro idéntico y sincronización de labios impecable?
+          </p>
+
+          <h4 style="color: var(--purple); font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 0.75rem;">
+            Técnicas y Plataformas Disponibles para Generación de Video:
+          </h4>
+
+          <div style="display: grid; gap: 1.25rem; margin-bottom: 2rem;">
+            
+            <div style="background: rgba(10, 12, 20, 0.6); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+              <h5 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.35rem;">
+                A) Kling 3.0 Omni — Motion Control & Multishot (Recomendado para UGC Viral)
+              </h5>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+                En <strong>Kling 3.0 Omni</strong> se utiliza la función <em>"Elements" / Motion Control</em>: Subes la foto estática a animar + la pista de video de referencia (un video real tuyo o de internet bailando o hablando). Kling transfiere exactamente el movimiento, gesticulación y física sobre la foto del influencer a un costo de ~$5/minuto.
+              </p>
+            </div>
+
+            <div style="background: rgba(10, 12, 20, 0.6); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+              <h5 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.35rem;">
+                B) Arcads — Fabricación Masiva de Anuncios UGC con IA
+              </h5>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+                Plataforma especializada en anuncios: Subes la foto del influencer + el script en texto + video de referencia → Arcads entrega 2 videos de 30 segundos en 10 minutos con lipsync y lenguaje corporal natural.
+              </p>
+            </div>
+
+            <div style="background: rgba(10, 12, 20, 0.6); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+              <h5 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.35rem;">
+                C) Veo 3 / Veo 3.1 & Sora 2 — Storytelling Cinematográfico
+              </h5>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+                <strong>Veo 3.1</strong> permite la animación con audio nativo sincronizado (lip-sync ambiental), ideal para historias de YouTube Shorts. <strong>Sora 2</strong> genera clips hiperrealistas desde cero cuando no se necesita foto de referencia previa.
+              </p>
+            </div>
+
+            <div style="background: rgba(10, 12, 20, 0.6); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+              <h5 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.35rem;">
+                D) HeyGen / LivePortrait / Hedra — Avatares Parlantes (Talking Avatars)
+              </h5>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+                Tomas una foto de alta calidad del rostro del influencer + una pista de audio (clonada en ElevenLabs) → LivePortrait o Hedra sintetizan el movimiento de labios, parpadeo y pequeñas inclinaciones de cabeza sin distorsionar el rostro original.
+              </p>
+            </div>
+
+            <div style="background: rgba(10, 12, 20, 0.6); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+              <h5 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.35rem;">
+                E) Modelos Open Source Locales (HuMo / Qwen WAN / LTX-2)
+              </h5>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+                Generación de video ejecutable en servidores locales GPU sin costo por crédito. Ofrece privacidad total y control sobre parámetros de cam-motion.
+              </p>
+            </div>
+
+          </div>
+
+          <div>
+            <span class="platform-pill highlight">Kling 3.0 Omni</span>
+            <span class="platform-pill highlight">Arcads UGC</span>
+            <span class="platform-pill highlight">Veo 3.1 Native Audio</span>
+            <span class="platform-pill">Sora 2</span>
+            <span class="platform-pill">LivePortrait</span>
+            <span class="platform-pill">Hedra</span>
+            <span class="platform-pill">Qwen WAN (OS)</span>
+          </div>
+        </div>
+
+        <!-- PASO 4 -->
+        <div class="pipeline-deepdive-card">
+          <div class="deepdive-header">
+            <span class="deepdive-step-num">PASO 04</span>
+            <div class="deepdive-title">Voz, Audio & Clonación Vocal</div>
+          </div>
+          <p style="color: var(--text-main); font-size: 1rem; line-height: 1.7; margin-bottom: 1rem;">
+            <strong>ElevenLabs:</strong> Estándar de oro para clonación con inflexiones naturales. <br>
+            <strong>ChatterBox (Open Source):</strong> Clonación gratuita con solo 5 segundos de audio de muestra y sliders de control emocional.<br>
+            <strong>Suno AI:</strong> Composición de canciones y música de fondo para Reels y vídeos infantiles.
+          </p>
+          <div>
+            <span class="platform-pill highlight">ElevenLabs</span>
+            <span class="platform-pill highlight">ChatterBox</span>
+            <span class="platform-pill">Qwen3-TTS</span>
+            <span class="platform-pill">Suno AI</span>
+          </div>
+        </div>
+
+        <!-- PASO 5 -->
+        <div class="pipeline-deepdive-card">
+          <div class="deepdive-header">
+            <span class="deepdive-step-num">PASO 05</span>
+            <div class="deepdive-title">Ensamblaje, Edición & InVideo Automation</div>
+          </div>
+          <p style="color: var(--text-main); font-size: 1rem; line-height: 1.7; margin-bottom: 1rem;">
+            Integración en <strong>InVideo</strong> o <strong>CapCut Pro</strong>. InVideo permite conectar 20+ modelos (Sora 2, Veo 3.1, Nano Banana) mediante scripts automatizados con variaciones A/B para testear ganchos virales.
+          </p>
+          <div>
+            <span class="platform-pill highlight">InVideo Studio</span>
+            <span class="platform-pill highlight">CapCut Pro</span>
+            <span class="platform-pill">Freepik Canvas</span>
+          </div>
+        </div>
+
+        <!-- PASO 6 -->
+        <div class="pipeline-deepdive-card">
+          <div class="deepdive-header">
+            <span class="deepdive-step-num">PASO 06</span>
+            <div class="deepdive-title">Publicación & Distribución Escalonada</div>
+          </div>
+          <p style="color: var(--text-main); font-size: 1rem; line-height: 1.7; margin-bottom: 1rem;">
+            Distribución programada usando <strong>ReuseVideos.com</strong> para re-publicar en múltiples redes sin marcas de agua y <strong>Somoslank.com</strong> para gestión colaborativa de cuentas.
+          </p>
+          <div>
+            <span class="platform-pill highlight">ReuseVideos</span>
+            <span class="platform-pill">Somoslank</span>
+          </div>
+        </div>
+
+        <!-- PASO 7 -->
+        <div class="pipeline-deepdive-card" style="border-color: var(--green); background: rgba(16, 185, 129, 0.03);">
+          <div class="deepdive-header">
+            <span class="deepdive-step-num" style="background: var(--success-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">PASO 07</span>
+            <div class="deepdive-title">Escalado & Automatización con Agentes (Antigravity agy CLI)</div>
+          </div>
+          <p style="color: var(--text-main); font-size: 1rem; line-height: 1.7; margin-bottom: 1rem;">
+            Uso de <strong>Antigravity y agy CLI</strong> junto a motores como <strong>Clawdbot + Kling + Manus</strong> para ejecutar canales automáticos que generan hasta 550 videos diarios con pruebas de retención continuas.
+          </p>
+          <div>
+            <span class="platform-pill highlight">Antigravity agy CLI</span>
+            <span class="platform-pill highlight">Clawdbot + Manus</span>
+            <span class="platform-pill">Claude Code</span>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- PÁGINA 3: HUB DE COPYS & SCRIPTS -->
+    <div id="team-pane-copys" class="team-pane">
+      <section class="section" style="padding-top: 1rem;">
+        <div class="section-header">
+          <span class="section-subtitle"><i class="fa-solid fa-copy" style="color: var(--pink);"></i> Recursos del Equipo</span>
+          <h2 class="section-title">Hub de Copys & Scripts Listos para Usar</h2>
+          <p class="section-description">
+            Plantillas, guiones y textos estratégicos prediseñados para lanzamientos en redes sociales, llamadas a la acción y captación B2B.
+          </p>
+        </div>
+
+        <div class="copy-grid">
+          <div class="glass-card">
+            <h4 style="color: var(--purple); font-family: var(--font-heading); margin-bottom: 0.75rem;"><i class="fa-solid fa-bullhorn"></i> Post 1 — Manifiesto de Lanzamiento</h4>
+            <div class="copy-box" id="copy-1">"Nace Los Manejadores: IA + comunicación digital para el siglo 21. Construimos influencia auténtica que vende (sin humo). ¿Tienes una idea o proyecto? Transformamos tu visión en audiencia global."</div>
+            <button onclick="copyToClipboard('copy-1')" class="btn btn-secondary" style="width: 100%; justify-content: center; font-size: 0.85rem; margin-top: 1rem;">
+              <i class="fa-regular fa-copy"></i> Copiar Texto
+            </button>
+          </div>
+
+          <div class="glass-card">
+            <h4 style="color: var(--cyan); font-family: var(--font-heading); margin-bottom: 0.75rem;"><i class="fa-solid fa-layer-group"></i> Post 2 — Carrusel de Servicios</h4>
+            <div class="copy-box" id="copy-2">"3 formas en que hacemos crecer tu presencia digital:
+1. Influencers IA: Avatares escalables de alto enganche.
+2. Canales YouTube: Historias educativas automatizadas.
+3. Asesorías: Habilidades comunicacionales ejecutivas.
+Agenda consulta gratuita hoy."</div>
+            <button onclick="copyToClipboard('copy-2')" class="btn btn-secondary" style="width: 100%; justify-content: center; font-size: 0.85rem; margin-top: 1rem;">
+              <i class="fa-regular fa-copy"></i> Copiar Texto
+            </button>
+          </div>
+
+          <div class="glass-card">
+            <h4 style="color: var(--pink); font-family: var(--font-heading); margin-bottom: 0.75rem;"><i class="fa-solid fa-envelope-open-text"></i> Pitch Email — Creadores & Alianzas</h4>
+            <div class="copy-box" id="copy-3">"Hola [Nombre], te escribo desde Los Manejadores. Hemos estado siguiendo tu contenido y vemos una oportunidad increíble para escalar tu audiencia utilizando herramientas de IA y formatos narrativos. Nos gustaría agendar una llamada de 15 min."</div>
+            <button onclick="copyToClipboard('copy-3')" class="btn btn-secondary" style="width: 100%; justify-content: center; font-size: 0.85rem; margin-top: 1rem;">
+              <i class="fa-regular fa-copy"></i> Copiar Texto
+            </button>
+          </div>
+
+          <div class="glass-card">
+            <h4 style="color: var(--cyan); font-family: var(--font-heading); margin-bottom: 0.75rem;"><i class="fa-solid fa-handshake"></i> Pitch B2B — Propuesta a Marcas</h4>
+            <div class="copy-box" id="copy-4">"Estimado [Nombre de Empresa]: En Los Manejadores conectamos marcas de vanguardia con audiencias digitales altamente segmentadas mediante influencers virtuales y canales educativos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ¿Cuándo tendrías 10 minutos para explorar sinergias?"</div>
+            <button onclick="copyToClipboard('copy-4')" class="btn btn-secondary" style="width: 100%; justify-content: center; font-size: 0.85rem; margin-top: 1rem;">
+              <i class="fa-regular fa-copy"></i> Copiar Texto
+            </button>
+          </div>
+
+          <div class="glass-card">
+            <h4 style="color: var(--purple); font-family: var(--font-heading); margin-bottom: 0.75rem;"><i class="fa-solid fa-file-contract"></i> Resumen NDA & Revenue Share</h4>
+            <div class="copy-box" id="copy-5">"ACUERDO DE CONFIDENCIALIDAD & COLABORACIÓN: Ambas partes convienen mantener reserva estricta sobre prompts de IA, flujos de consistencia facial y datos analíticos. Lorem ipsum dolor sit amet, duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. Distribución pactada de ingresos netos: 50% reinversión operativa / 50% distribución periódica entre socios."</div>
+            <button onclick="copyToClipboard('copy-5')" class="btn btn-secondary" style="width: 100%; justify-content: center; font-size: 0.85rem; margin-top: 1rem;">
+              <i class="fa-regular fa-copy"></i> Copiar Texto
+            </button>
+          </div>
+
+          <div class="glass-card">
+            <h4 style="color: var(--green); font-family: var(--font-heading); margin-bottom: 0.75rem;"><i class="fa-solid fa-comments"></i> Mensaje Bienvenida VIP (Fanvue / OF)</h4>
+            <div class="copy-box" id="copy-6">"¡Hola y bienvenido a mi espacio exclusivo! ✨ Me alegra mucho tenerte aquí. Cada semana compartiré sets inéditos en 4K, sesiones de preguntas privadas y acceso anticipado a mis proyectos. Lorem ipsum dolor sit amet, dime en los comentarios qué contenido te gustaría ver primero 💬🔥"</div>
+            <button onclick="copyToClipboard('copy-6')" class="btn btn-secondary" style="width: 100%; justify-content: center; font-size: 0.85rem; margin-top: 1rem;">
+              <i class="fa-regular fa-copy"></i> Copiar Texto
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PÁGINA 4: EQUIPO, HUSOS HORARIOS & HUB OPERATIVO -->
+    <div id="team-pane-members" class="team-pane">
+      <section class="section" style="padding-top: 1rem;">
+        <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+          <span class="section-subtitle" style="color: var(--cyan);"><i class="fa-solid fa-users-gear"></i> Directorio y Sincronización Transatlántica</span>
+          <h2 class="section-title">Equipo Fundador, Roles & Operaciones en Vivo</h2>
+          <p class="section-description" style="margin: 0;">
+            Alineación estratégica internacional entre Alemania, Canadá y Chile. Consulta los husos horarios en vivo y la ventana óptima de trabajo colaborativo diario.
+          </p>
+        </div>
+
+        <!-- Relojes Mundiales en Vivo & Ventana de Sincronización -->
+        <div class="clocks-grid">
+          <div class="glass-card clock-card">
+            <div class="clock-flag">🇩🇪</div>
+            <div class="clock-info">
+              <span class="clock-zone">Alemania / Europa Central (CET • UTC+1)</span>
+              <div class="clock-time" id="clock-berlin">--:--:--</div>
+              <span class="clock-note">Base Técnica & Operaciones de IA (Daniel Santander)</span>
+            </div>
+          </div>
+
+          <div class="glass-card clock-card">
+            <div class="clock-flag">🇨🇦</div>
+            <div class="clock-info">
+              <span class="clock-zone">Canadá / Costa Este (EST • UTC-5)</span>
+              <div class="clock-time" id="clock-toronto">--:--:--</div>
+              <span class="clock-note">Base Creativa & Relaciones Públicas (Pancho Ipinza)</span>
+            </div>
+          </div>
+
+          <div class="glass-card clock-card">
+            <div class="clock-flag">🇨🇱</div>
+            <div class="clock-info">
+              <span class="clock-zone">Chile / Santiago (CLT • UTC-3)</span>
+              <div class="clock-time" id="clock-santiago">--:--:--</div>
+              <span class="clock-note">Media Operations & Motion AI (Wladimir Gutierrez)</span>
+            </div>
+          </div>
+
+          <div class="glass-card sync-window-card">
+            <div class="sync-icon"><i class="fa-solid fa-handshake"></i></div>
+            <div>
+              <span class="sync-title">Ventana Óptima de Sincronización Diaria</span>
+              <div class="sync-hours">15:00 – 18:00 CET / 09:00 – 12:00 EST / 11:00 – 14:00 CLT</div>
+              <p class="sync-desc">Franja horaria para standups diarios, revisión de entregables y lanzamientos conjuntos de campañas.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Directorio de Miembros del Equipo -->
+        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin: 3rem 0 1.5rem 0; color: #fff;">
+          <i class="fa-solid fa-id-card-clip" style="color: var(--purple);"></i> Miembros del Equipo & Asignación de Responsabilidades
+        </h3>
+
+        <div class="team-members-grid">
+          <!-- Miembro 1: Daniel Santander -->
+          <div class="glass-card member-card">
+            <div class="member-header">
+              <div class="member-avatar-box">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <div>
+                <h4 class="member-name">Daniel Santander</h4>
+                <span class="member-role"><i class="fa-solid fa-microchip"></i> Lead Tech & AI Pipeline Architect</span>
+              </div>
+            </div>
+            <p class="member-bio">
+              Responsable de la infraestructura técnica, modelos de consistencia facial (LoRAs en Flux/SDXL), automatizaciones con Antigravity / agy CLI y despliegue del portal web.
+            </p>
+            <div class="member-meta">
+              <span><i class="fa-solid fa-location-dot"></i> Alemania (CET)</span>
+              <span><i class="fa-solid fa-envelope"></i> daniel@losmanejadores.io</span>
+            </div>
+          </div>
+
+          <!-- Miembro 2: Pancho Ipinza -->
+          <div class="glass-card member-card">
+            <div class="member-header">
+              <div class="member-avatar-box" style="background: rgba(236,72,153,0.15); color: var(--pink);">
+                <i class="fa-solid fa-bullhorn"></i>
+              </div>
+              <div>
+                <h4 class="member-name">Pancho Ipinza</h4>
+                <span class="member-role" style="color: var(--pink);"><i class="fa-solid fa-pen-nib"></i> Creative Director & Strategic Outreach</span>
+              </div>
+            </div>
+            <p class="member-bio">
+              Dirección de narrativa, conceptualización de personajes, guiones para YouTube y vinculación con creadores de contenido, agencias y clientes B2B.
+            </p>
+            <div class="member-meta">
+              <span><i class="fa-solid fa-location-dot"></i> Canadá (EST)</span>
+              <span><i class="fa-solid fa-envelope"></i> pancho@losmanejadores.io</span>
+            </div>
+          </div>
+
+          <!-- Miembro 3: Wladimir Gutierrez -->
+          <div class="glass-card member-card">
+            <div class="member-header">
+              <div class="member-avatar-box" style="background: rgba(6,182,212,0.15); color: var(--cyan);">
+                <i class="fa-solid fa-clapperboard"></i>
+              </div>
+              <div>
+                <h4 class="member-name">Wladimir Gutierrez</h4>
+                <span class="member-role" style="color: var(--cyan);"><i class="fa-solid fa-film"></i> Media Operations & Motion AI Lead</span>
+              </div>
+            </div>
+            <p class="member-bio">
+              Dirección de operaciones audiovisuales, escalamiento de producción en video generativo (Kling 3.0, HeyGen, InVideo), consistencia dinámica y gestión del pipeline de personajes virtuales.
+            </p>
+            <div class="member-meta">
+              <span><i class="fa-solid fa-location-dot"></i> Santiago, Chile (CLT)</span>
+              <span><i class="fa-solid fa-envelope"></i> wladimir@losmanejadores.io</span>
+            </div>
+          </div>
+
+          <!-- Miembro 4: Asesoría Legal & Compliance (Placeholder Lorem Ipsum) -->
+          <div class="glass-card member-card" style="opacity: 0.85; border-style: dashed;">
+            <div class="member-header">
+              <div class="member-avatar-box" style="background: rgba(16,185,129,0.15); color: var(--green);">
+                <i class="fa-solid fa-scale-balanced"></i>
+              </div>
+              <div>
+                <h4 class="member-name">Legal & Compliance Internacional</h4>
+                <span class="member-role" style="color: var(--green);"><i class="fa-solid fa-shield-halved"></i> Consultoría Externa</span>
+              </div>
+            </div>
+            <p class="member-bio">
+              <em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. KYC y pasarelas transfronterizas.</em>
+            </p>
+            <div class="member-meta">
+              <span><i class="fa-solid fa-location-dot"></i> Alemania / Canadá</span>
+              <span><i class="fa-solid fa-shield"></i> Acuerdo de Confidencialidad Activo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enlaces Rápidos de Colaboración Operativa -->
+        <div class="glass-card" style="margin-top: 3rem; padding: 2rem;">
+          <h4 style="font-family: var(--font-heading); font-size: 1.25rem; color: #fff; margin-bottom: 1rem;">
+            <i class="fa-solid fa-link" style="color: var(--cyan);"></i> Enlaces Rápidos del Workspace del Proyecto
+          </h4>
+          <div class="workspace-links-grid">
+            <a href="https://t.me/" target="_blank" class="workspace-link-item">
+              <i class="fa-brands fa-telegram" style="color: #229ED9;"></i>
+              <div>
+                <strong>Grupo Telegram Oficial</strong>
+                <span>Canal diario de coordinación y alertas rápidas</span>
+              </div>
+            </a>
+            <a href="https://notion.so/" target="_blank" class="workspace-link-item">
+              <i class="fa-solid fa-book-bookmark" style="color: #fff;"></i>
+              <div>
+                <strong>Notion Central INCEL</strong>
+                <span>Base de conocimientos, prompts y actas de reuniones</span>
+              </div>
+            </a>
+            <a href="https://drive.google.com/" target="_blank" class="workspace-link-item">
+              <i class="fa-brands fa-google-drive" style="color: #34A853;"></i>
+              <div>
+                <strong>Google Drive de Producción</strong>
+                <span>Carpeta compartida de renders 4K, audios y LoRAs</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PÁGINA 5: OPERACIONES DE INFLUENCERS (GUÍA OPERATIVA & CALIBRACIÓN GLOBAL) -->
+    <div id="team-pane-influencer-ops" class="team-pane">
+      <section class="section" style="padding-top: 1rem;">
+        <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+          <span class="section-subtitle" style="color: var(--purple);"><i class="fa-solid fa-wand-magic-sparkles"></i> Matriz Operativa de Producción</span>
+          <h2 class="section-title">Manual Operativo & Control de Influencers IA</h2>
+          <p class="section-description" style="margin: 0;">
+            Centro de mando para llevar los personajes virtuales día a día: asignación por responsable, estado de calibración, embudo de conversión y parámetros técnicos de render.
+          </p>
+        </div>
+
+        <!-- Matriz Dinámica de Control de Influencers -->
+        <div class="glass-card" style="margin-bottom: 2rem; padding: 1.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+            <div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.2rem; color: #fff; margin: 0;">
+                <i class="fa-solid fa-table-list" style="color: var(--cyan);"></i> Estado Global de los 8 Activos Digitales
+              </h3>
+              <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0.2rem 0 0 0;">
+                Muestra el progreso del briefing de 6 preguntas, monetización y handler a cargo.
+              </p>
+            </div>
+            <button class="btn btn-secondary btn-sm" onclick="renderInfluencerOpsMatrix()">
+              <i class="fa-solid fa-rotate"></i> Actualizar Métricas
+            </button>
+          </div>
+
+          <div id="influencer-ops-table-container">
+            <!-- Rendered dynamically by renderInfluencerOpsMatrix() in app.js -->
+          </div>
+        </div>
+
+        <!-- Guía de Operaciones Diarias: Protocolo Safe -> Teaser -> Pago -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+          
+          <!-- Bloque 1: Protocolo de Contenido -->
+          <div class="glass-card" style="padding: 1.5rem;">
+            <h4 style="color: var(--cyan); font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 0.75rem;">
+              <i class="fa-solid fa-filter-circle-dollar"></i> 1. Protocolo Safe → Teaser → Pago
+            </h4>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              <li style="margin-bottom: 0.5rem;">
+                <strong style="color: #fff;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Capa Safe (TikTok / Reels):</strong>
+                100% familiar y lifestyle. Cero contenido explícito ni links directos a pasarelas adultas. Foco en ganchos de 3s y viralidad orgánica.
+              </li>
+              <li style="margin-bottom: 0.5rem;">
+                <strong style="color: #fff;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Capa Teaser (Instagram / Twitter):</strong>
+                Sensualidad sutil, fotos editoriales y preguntas provocadoras. Llamados a la acción hacia Linktree / DM automatizado.
+              </li>
+              <li>
+                <strong style="color: #fff;"><i class="fa-solid fa-check" style="color: #10b981;"></i> Capa de Pago (Fanvue / PPV):</strong>
+                Sets en 4K sin censura, mensajes de voz personalizados y micro-transacciones de propinas para maximizar LTV del suscriptor.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Bloque 2: Consistencia Técnica de Render -->
+          <div class="glass-card" style="padding: 1.5rem;">
+            <h4 style="color: var(--pink); font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 0.75rem;">
+              <i class="fa-solid fa-sliders"></i> 2. Parámetros Técnicos de Render
+            </h4>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              <li style="margin-bottom: 0.5rem;">
+                <strong style="color: #fff;"><i class="fa-solid fa-microchip" style="color: var(--pink);"></i> Peso LoRA ComfyUI / Flux:</strong>
+                Mantener entre <strong>0.75 y 0.85</strong>. Por encima de 0.88 el rostro se "quema" y pierde naturalidad en expresiones de perfil.
+              </li>
+              <li style="margin-bottom: 0.5rem;">
+                <strong style="color: #fff;"><i class="fa-solid fa-camera" style="color: var(--pink);"></i> Lentes recomendados:</strong>
+                35mm f/2.0 para selfies y fotos casuales cotidianas. 85mm f/1.4 para retratos de estudio y belleza.
+              </li>
+              <li>
+                <strong style="color: #fff;"><i class="fa-solid fa-microphone-lines" style="color: var(--pink);"></i> Voz (ElevenLabs):</strong>
+                Estabilidad: 0.65, Similitud: 0.82. Usar inflexión adecuada al origen del personaje (ej. eslava cálida para Elena).
+              </li>
+            </ul>
+          </div>
+
+          <!-- Bloque 3: Gestión de DMs & Retención -->
+          <div class="glass-card" style="padding: 1.5rem;">
+            <h4 style="color: var(--purple); font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 0.75rem;">
+              <i class="fa-solid fa-comments"></i> 3. Gestión de DMs & Conversión
+            </h4>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              <li style="margin-bottom: 0.5rem;">
+                <strong style="color: #fff;"><i class="fa-solid fa-quote-left" style="color: var(--purple);"></i> En primera persona:</strong>
+                Nunca romper la ilusión del personaje. Responder con empatía, cercanía y el tono de voz establecido en su ficha.
+              </li>
+              <li style="margin-bottom: 0.5rem;">
+                <strong style="color: #fff;"><i class="fa-solid fa-shield-halved" style="color: var(--purple);"></i> Filtro de Límites:</strong>
+                Prohibido prometer encuentros físicos o citas reales. Enfocar la relación en complicidad digital y exclusividad.
+              </li>
+              <li>
+                <strong style="color: #fff;"><i class="fa-solid fa-sack-dollar" style="color: var(--purple);"></i> Upselling en Fanvue:</strong>
+                Ofrecer sets customizados por mensaje privado con tickets de $25 a $75 USD a los suscriptores más fieles.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Bloque 4: Compliance & Respaldo -->
+          <div class="glass-card" style="padding: 1.5rem;">
+            <h4 style="color: #10b981; font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 0.75rem;">
+              <i class="fa-solid fa-scale-balanced"></i> 4. Compliance & Seguridad Fiscal
+            </h4>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              <li style="margin-bottom: 0.5rem;">
+                <strong style="color: #fff;"><i class="fa-solid fa-fingerprint" style="color: #10b981;"></i> 100% IA Sintética:</strong>
+                Garantía contractual de que los rostros son generados matemáticamente y no clonan ni vulneran la imagen de personas reales.
+              </li>
+              <li style="margin-bottom: 0.5rem;">
+                <strong style="color: #fff;"><i class="fa-solid fa-hard-drive" style="color: #10b981;"></i> Backups Semanales:</strong>
+                Copia cifrada en nube y disco local de todos los prompts maestros, LoRAs y renders originales para evitar pérdida de datos.
+              </li>
+              <li>
+                <strong style="color: #fff;"><i class="fa-solid fa-file-invoice" style="color: #10b981;"></i> Registro Fiscal Mensual:</strong>
+                Consolidación de payouts de Fanvue y bancos para trazabilidad contable en Alemania, Canadá y Chile.
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- Modal para Perfil de Influencers -->
+  <div id="influencer-modal" class="modal-overlay">
+    <div class="modal-container">
+      <button onclick="closeInfluencerModal()" class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <div id="modal-content">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Autenticación / PIN para Acceso Confidencial de Equipo -->
+  <div id="auth-modal" class="modal-overlay">
+    <div class="modal-container" style="max-width: 440px; text-align: center;">
+      <button onclick="closeAuthModal()" class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(139, 92, 246, 0.15); color: var(--purple); display: flex; align-items: center; justify-content: center; font-size: 1.75rem; margin: 0 auto 1.5rem auto;">
+        <i class="fa-solid fa-shield-halved"></i>
+      </div>
+      <h3 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 0.5rem; color: #fff;">Área Confidencial de Equipo</h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem;">
+        Introduce el PIN de acceso del proyecto para consultar la Carta Gantt, el Manual de 8 Pasos y los Prompts de producción.
+      </p>
+      
+      <form onsubmit="handleAuthSubmit(event)">
+        <div style="margin-bottom: 1.25rem;">
+          <input type="password" id="team-pin-input" class="form-input" placeholder="Introduce el PIN de acceso" style="text-align: center; font-size: 1.2rem; letter-spacing: 4px; font-weight: 700;" required autofocus>
+          <div id="auth-error-msg" style="color: var(--pink); font-size: 0.85rem; margin-top: 0.5rem; display: none;">PIN incorrecto. Vuelve a intentarlo.</div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 1rem; margin-bottom: 0.75rem;">
+          <i class="fa-solid fa-lock-open"></i> Desbloquear Panel
+        </button>
+        <div style="font-size: 0.78rem; color: var(--text-dim);">
+          (PIN provisional para miembros: <code>2026</code>)
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 Los Manejadores (Proyecto INCEL). Todos los derechos reservados.</p>
+    <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--text-dim);">Desarrollado para la gestión estratégica entre Alemania y Canadá.</p>
+  </footer>
+
+  <!-- App JS JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>

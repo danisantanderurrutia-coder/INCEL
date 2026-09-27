@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Neon Gradients -->
+    <linearGradient id="neon-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0abfc" />
+      <stop offset="50%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#9333ea" />
+    </linearGradient>
+    <linearGradient id="neon-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67e8f9" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <!-- Filters for Neon Glow -->
+    <filter id="neon-glow-purple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="neon-glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g transform="translate(16, 16)">
+    <!-- Concentric Background Rings -->
+    <circle cx="240" cy="220" r="140" fill="none" stroke="url(#neon-cyan)" stroke-width="4" opacity="0.4" stroke-dasharray="12 8" />
+    <circle cx="240" cy="220" r="110" fill="none" stroke="url(#neon-purple)" stroke-width="3" opacity="0.35" />
+
+    <!-- Outer Speech Bubble (Neon Purple 3D Tube) -->
+    <path d="M 140 100 
+             L 340 100 
+             C 380 100, 400 120, 400 160 
+             L 400 300 
+             C 400 340, 380 360, 340 360 
+             L 200 360 
+             L 120 440 
+             L 150 360 
+             L 140 360 
+             C 100 360, 80 340, 80 300 
+             L 80 160 
+             C 80 120, 100 100, 140 100 Z" 
+          fill="none" 
+          stroke="url(#neon-purple)" 
+          stroke-width="18" 
+          stroke-linejoin="round" 
+          stroke-linecap="round" 
+          filter="url(#neon-glow-purple)" />
+
+    <path d="M 140 100 
+             L 340 100 
+             C 380 100, 400 120, 400 160 
+             L 400 300 
+             C 400 340, 380 360, 340 360 
+             L 200 360 
+             L 120 440 
+             L 150 360 
+             L 140 360 
+             C 100 360, 80 340, 80 300 
+             L 80 160 
+             C 80 120, 100 100, 140 100 Z" 
+          fill="none" 
+          stroke="#ffffff" 
+          stroke-width="4" 
+          stroke-linejoin="round" 
+          stroke-linecap="round" 
+          opacity="0.85" />
+
+    <!-- Inner Play Triangle -->
+    <polygon points="190,170 310,230 190,290" 
+             fill="none" 
+             stroke="url(#neon-purple)" 
+             stroke-width="12" 
+             stroke-linejoin="round" 
+             filter="url(#neon-glow-purple)" />
+
+    <!-- Ascending Growth Arrow (Double 3D Line in Neon Cyan) -->
+    <path d="M 110 320 
+             L 210 210 
+             L 270 270 
+             L 390 120 
+             M 390 120 
+             L 330 120 
+             M 390 120 
+             L 390 180" 
+          fill="none" 
+          stroke="url(#neon-cyan)" 
+          stroke-width="22" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          filter="url(#neon-glow-cyan)" />
+
+    <path d="M 110 320 
+             L 210 210 
+             L 270 270 
+             L 390 120 
+             M 390 120 
+             L 330 120 
+             M 390 120 
+             L 390 180" 
+          fill="none" 
+          stroke="#ffffff" 
+          stroke-width="6" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          opacity="0.95" />
+  </g>
+</svg>
