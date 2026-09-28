@@ -504,20 +504,20 @@ const influencersData = {
       }
     },
     monetizationFunnel: [
-      { step: "Nivel 1 (Viralidad Dev & Teasers)", detail: "Devlogs en YouTube y videos cortos en TikTok/X: 'Cómo programé la IA de mi juego', análisis de privacidad y estética cyberpunk." },
-      { step: "Nivel 2 (Comunidad & Wishlist)", detail: "Comunidad exclusiva en Discord, streams de gamedev en vivo y conversión directa a listas de deseados (Wishlist) en Steam." },
-      { step: "Nivel 3 (Monetización Fanvue & Patreon VIP)", detail: "Suscripción recurrente VIP ($18 USD/mes) validada con más de 500 suscriptores: sets fotográficos cyberpunk exclusivos, código fuente y roles especiales." }
+      { step: "Nivel 1 (Videos Cortos Virales)", detail: "TikTok, Shorts y Reels de 30-45 segundos recomendando juegos indie baratos y mostrando estética gamer cyberpunk." },
+      { step: "Nivel 2 (Comunidad Gamer Gratuita)", detail: "Comunidad abierta en Discord con canales para compartir capturas de pantalla, recomendaciones y organizar partidas." },
+      { step: "Nivel 3 (Descargas Digitales & VIP)", detail: "Venta simple de packs de wallpapers 4K ($7 USD), guías de juegos de Steam ($10 USD) y rol VIP en Discord ($8 USD/mes)." }
     ],
     posts: [
       {
-        caption: "3:00 AM y los shaders de agua por fin compilaron sin tirar error de memoria 🎮💻 El juego está cobrando vida propia. Mañana nuevo devlog en YouTube explicando la física de los saltos y por qué usamos Godot para mantener el proyecto 100% libre de royalties 🚀👾",
+        caption: "3 juegos de Steam por menos de $5 que te van a obsesionar este fin de semana si te gusta la estética retro y la buena música 🎮🕹️ Dejé la lista completa y los links en mi Discord!",
         likes: "24,800",
         comments: "1,040",
         date: "Ayer",
         platform: "TikTok / YouTube"
       },
       {
-        caption: "Neon lights and late night code. La privacidad digital no es un crimen, es tu derecho fundamental 🌌⚡ Nuevo set fotográfico cyberpunk dev exclusivo arriba en mi link en bio!",
+        caption: "Nuevo setup nocturno listo 🌌⚡ Subí el nuevo pack de 30 wallpapers 4K cyberpunk a mi tienda en bio por si quieren darle vibra neón a sus pantallas!",
         likes: "21,300",
         comments: "880",
         date: "Hace 2 días",
@@ -525,57 +525,47 @@ const influencersData = {
       }
     ],
     ecommerce: {
-      storeName: "Voss Indie Game Studio & Steam Portal (Steam + Itch.io)",
-      storeUrl: "https://kiravoss.games",
-      storeType: "Estudio de Videojuegos Indie • Claves Steam, Acceso Alpha & Bundles",
-      avgOrderValue: "$34 USD",
-      grossMargin: "94%",
-      conversionRate: "6.8%",
-      fulfillment: "Entrega instantánea de claves de activación en Steam / Epic Games / Itch.io",
-      description: "Videojuegos independientes de rol táctico, hackeo y estética cyberpunk desarrollados por Kira en Godot 4 y Unreal Engine 5, con claves directas de activación, soundtracks en FLAC y pases de temporada.",
+      storeName: "Kira Voss • Zona Gamer & Descargas Cyberpunk (Gumroad)",
+      storeUrl: "https://kiravoss.gumroad.com",
+      storeType: "Wallpapers 4K, Guías de Juegos Indie y Comunidad Gamer",
+      avgOrderValue: "$15 USD",
+      grossMargin: "98%",
+      conversionRate: "6.4%",
+      fulfillment: "Descarga digital instantánea en Gumroad / Discord",
+      description: "Descargas digitales simples para amantes del gaming y la estética cyberpunk: selecciones curadas de los mejores juegos indie para probar cada fin de semana, packs de wallpapers 4K y comunidad privada en Discord.",
       products: [
         {
-          name: "CyberProtocol 2084: Definitive Edition (Steam Key Global)",
-          price: "$24.99 USD",
-          cost: "$1.50 USD",
-          category: "Videojuego Completo",
-          tag: "Top Ventas Steam",
-          salesVolume: "1.850 claves/mes",
-          desc: "RPG táctico cyberpunk con generación procedural de niveles y soundtrack synthwave original.",
-          fulfillment: "Steam Key Digital Instantánea"
+          name: "Pack 30 Wallpapers 4K Cyberpunk & Neon Battlestations",
+          price: "$6.99 USD",
+          cost: "$0.00 USD",
+          category: "Fondos de Pantalla",
+          tag: "Descarga Directa",
+          salesVolume: "1.450 descargas/mes",
+          desc: "Colección exclusiva de fondos de pantalla en resolución 4K para monitor y smartphone.",
+          fulfillment: "Descarga Inmediata ZIP"
         },
         {
-          name: "Neon Infiltration: Early Access Alpha Pass + Artbook Digital",
-          price: "$34.99 USD",
+          name: "Guía Digital '50 Joyas Ocultas de Steam' (Juegos Indie Adictivos)",
+          price: "$9.99 USD",
+          cost: "$0.00 USD",
+          category: "Guía en PDF",
+          tag: "Top Ventas",
+          salesVolume: "820 ventas/mes",
+          desc: "Selección curada por categorías de juegos baratos, livianos y adictivos que valen cada centavo.",
+          fulfillment: "Descarga Inmediata PDF"
+        },
+        {
+          name: "Pase a la Comunidad Gamer VIP en Discord (Membresía Mensual)",
+          price: "$7.99 USD/mes",
           cost: "$0.50 USD",
-          category: "Acceso Anticipado",
-          tag: "Exclusivo Comunidad",
-          salesVolume: "720 ventas/mes",
-          desc: "Pase alpha jugable para el nuevo roguelike de sigilo con mención en créditos y acceso a canal de feedback en Discord.",
-          fulfillment: "Descarga Directa + Rol Discord"
-        },
-        {
-          name: "Kira's Indie Game Dev Vault: 3 Juegos Comerciales + Código Fuente",
-          price: "$79.00 USD",
-          cost: "$2.00 USD",
-          category: "Bundle Desarrollador",
-          tag: "Mayor Ticket",
-          salesVolume: "340 ventas/mes",
-          desc: "Bundle con 3 videojuegos completos de Kira + proyectos fuente en Godot 4 con licencia de reutilización comercial.",
-          fulfillment: "Repositorio GitHub Privado"
-        },
-        {
-          name: "Caja Coleccionista 'Glitch Runner' (USB Retro + Cómic Físico)",
-          price: "$49.00 USD",
-          cost: "$12.00 USD",
-          category: "Edición Física Coleccionista",
-          tag: "Edición Limitada",
-          salesVolume: "290 uds/mes",
-          desc: "Caja metálica serigrafiada con el juego en pendrive USB retro con forma de disquete 3.5, stickers y cómic precuela.",
-          fulfillment: "Envío Postal Global (Courier)"
+          category: "Comunidad / Suscripción",
+          tag: "Recurrente",
+          salesVolume: "480 miembros",
+          desc: "Acceso a canales exclusivos de juego conjunto, sorteos mensuales de claves de Steam y rol VIP.",
+          fulfillment: "Acceso Instantáneo a Discord"
         }
       ],
-      funnelStrategy: "Devlogs y directos en Twitch/YouTube mostrando desarrollo de mecánicas y game feel -> Demo jugable gratuita en Steam e Itch.io -> Venta de keys completas y bundles con descuento por lanzamiento -> Conversión a testers VIP en Discord con pases anticipados."
+      funnelStrategy: "Videos cortos en TikTok/Shorts recomendando juegos baratos -> Link a Discord gratuito con recomendaciones -> Oferta del pack de wallpapers y la guía completa de Steam."
     }
   },
 
@@ -778,58 +768,64 @@ const influencersData = {
       }
     },
     ecommerce: {
-      storeName: "AlphaCapital Tools & Academy (Shopify / Whop)",
-      storeUrl: "https://alphacapital.tools",
-      storeType: "E-Commerce FinTech • Modelos, Software & Newsletter",
-      avgOrderValue: "$120 USD",
-      grossMargin: "88%",
-      conversionRate: "4.5%",
-      fulfillment: "Entrega digital inmediata con soporte de comunidad privada en Discord/Telegram",
-      description: "Hub de herramientas cuantitativas para inversores particulares y family offices. Mateo comercializa plantillas financieras avanzadas en Python y Excel, membresías a su newsletter de asignación de activos y masterclasses de Real Estate Tech.",
+      storeName: "Mateo Silva • Finanzas Personales & Ahorro Práctico (Gumroad)",
+      storeUrl: "https://mateosilva.gumroad.com",
+      storeType: "Plantillas de Control de Gastos en Notion y Guías en PDF para Ahorrar",
+      avgOrderValue: "$18 USD",
+      grossMargin: "98%",
+      conversionRate: "5.6%",
+      fulfillment: "Descarga digital instantánea de plantillas en Notion y guías PDF",
+      description: "Herramientas sencillas para personas reales que quieren ordenar sus finanzas, controlar sus gastos mensuales y empezar a ahorrar sin complicaciones matemáticas.",
       products: [
         {
-          name: "MacroQuant Portfolio Valuation Model (Excel + Python API)",
-          price: "$149 USD",
-          cost: "$8 USD",
-          category: "Herramienta Digital",
-          tag: "Best-Seller B2B",
-          salesVolume: "480 uds/mes"
+          name: "Plantilla de Control de Gastos y Ahorro en Notion / Google Sheets",
+          price: "$14.99 USD",
+          cost: "$0.00 USD",
+          category: "Plantilla Digital",
+          tag: "Top Ventas",
+          salesVolume: "920 descargas/mes",
+          desc: "Sistema visual con gráficos automáticos para registrar gastos fijos, compras diarias y metas de ahorro.",
+          fulfillment: "Enlace Duplicable en Notion"
         },
         {
-          name: "Membresía Mensual 'The Macro Brief' (Newsletter VIP)",
-          price: "$29 USD/mes",
-          cost: "$2 USD",
-          category: "Suscripción Recurrente",
-          tag: "Alto LTV",
-          salesVolume: "1.150 suscriptores"
+          name: "Guía en PDF 'Cómo Empezar a Invertir desde Cero' (Paso a Paso)",
+          price: "$18.99 USD",
+          cost: "$0.00 USD",
+          category: "Guía en PDF",
+          tag: "Para Principiantes",
+          salesVolume: "540 ventas/mes",
+          desc: "Manual de 25 páginas claro y directo sobre cuentas de ahorro de alto rendimiento, fondos indexados y hábitos financieros.",
+          fulfillment: "Descarga Inmediata PDF"
         },
         {
-          name: "Masterclass: Estructuración Patrimonial Internacional & Real Estate Tokenizado",
-          price: "$390 USD",
-          cost: "$25 USD",
-          category: "Formación Ejecutiva",
-          tag: "High-Ticket",
-          salesVolume: "120 alumnos/cohorte"
+          name: "Pack Completo 'Orden Financiero Total' (Plantilla + Guía + Checklist)",
+          price: "$27.00 USD",
+          cost: "$0.00 USD",
+          category: "Bundle de Ahorro",
+          tag: "Mejor Valor",
+          salesVolume: "310 ventas/mes",
+          desc: "Todo lo necesario para organizar tus cuentas y planificar tu presupuesto anual en un solo fin de semana.",
+          fulfillment: "Descarga Inmediata ZIP"
         }
       ],
-      funnelStrategy: "Videos en YouTube con breakdown de balances corporativos -> Link a modelo gratuito en Excel (Lead Magnet para captar email) -> Secuencia educativa automatizada de 4 correos -> Venta de modelo completo MacroQuant con upsell a Membresía VIP -> Comunidad exclusiva para miembros."
+      funnelStrategy: "Videos cortos en TikTok/Reels de 30-45 segundos con tips prácticos (ej: 'El error que cometes al cobrar tu sueldo', 'Cómo ahorrar $200 al mes') -> Link a plantilla básica gratuita en bio -> Oferta de la plantilla completa de Notion y la guía práctica."
     },
     monetizationFunnel: [
-      { step: "Nivel 1 (Atracción Masiva)", detail: "YouTube Long-form (análisis de estados financieros y tendencias macro) + Hilos en X y posts en LinkedIn." },
-      { step: "Nivel 2 (Lead Magnet)", detail: "Plantilla descargable gratuita de seguimiento de patrimonio en Notion/Excel a cambio de suscripción al newsletter." },
-      { step: "Nivel 3 (Suscripción & Software)", detail: "Membresía 'The Macro Brief' ($29 USD/mes) y venta de plantillas premium ($149 USD)." },
-      { step: "Nivel 4 (Patrocinios & B2B)", detail: "Acuerdos institucionales con neobancos, brokers regulados y fondos de inversión inmobiliaria ($2.500 a $8.000 USD/campaña)." }
+      { step: "Nivel 1 (Atracción)", detail: "TikTok, Reels y Shorts con consejos directos de ahorro y finanzas cotidianas para personas normales." },
+      { step: "Nivel 2 (Lead Magnet)", detail: "Plantilla básica gratuita de control de gastos para captar correos de personas interesadas en ahorrar." },
+      { step: "Nivel 3 (Venta Directa)", detail: "Venta de la plantilla completa de Notion y guías de ahorro e inversión para principiantes ($15 a $27 USD)." },
+      { step: "Nivel 4 (Afiliados Simples)", detail: "Recomendación con enlace de afiliado de neobancos o cuentas de ahorro seguras y reguladas." }
     ],
     posts: [
       {
-        caption: "La mayoría mira el precio; los inversores cuantitativos miran la desviación estándar y el flujo de caja descontado. Aquí tienes la estructura de cartera que utilizamos para resistir ciclos de tipos de interés altos 📊📈",
+        caption: "La regla del 50/30/20 explicada fácil: 50% para tus gastos fijos (arriendo, comida), 30% para tus gustos y 20% para tu fondo de paz mental 📊 Si no sabes a dónde se te va el sueldo, te dejé una plantilla gratuita en mi bio para anotarlo en 2 minutos.",
         likes: "19,840",
         comments: "842",
         date: "Hace 1 día",
-        platform: "LinkedIn / X"
+        platform: "TikTok / Instagram"
       },
       {
-        caption: "El 82% del retorno a largo plazo no depende del 'timing' de entrada, sino de la diversificación factorial. Dejo en el enlace de la bio el modelo en Python que usamos para calcular la frontera eficiente de Markowitz 💻🚀",
+        caption: "Tener tu dinero parado en una cuenta corriente que te da 0% de interés es perder poder de compra todos los meses 📉 Compara cuentas remuneradas antes de invertir en cosas raras. Link en bio con la comparativa gratuita.",
         likes: "26,150",
         comments: "1,120",
         date: "Hace 3 días",
@@ -944,6 +940,123 @@ const influencersData = {
         }
       ],
       funnelStrategy: "Prospección B2B y formulario de diagnóstico en #empresas -> Demostración de avatar personalizado en 48 horas -> Firma de contrato de licenciamiento y plan mensual de generación de contenidos."
+    }
+  },
+
+  alina: {
+    id: "alina",
+    name: "Alina Van Dijk",
+    niche: "Sex-Positive Dominatrix, BDSM Consciente & Erotismo Terapéutico",
+    badge: "Nicho Adulto VIP • Sex-Positive & Erotismo Consciente",
+    avatar: "alina_avatar.png",
+    tagline: "Exploración de fetiches sin culpa, dominación psicológica elegante y educación erótica con consentimiento.",
+    keyMarkets: "España, México, Argentina, Chile, Colombia y público hispano en EE.UU. y Europa.",
+    story: "Nacida en Ámsterdam de madre neerlandesa y padre de raíces latinas, y actualmente radicada entre Barcelona y Tulum, Alina creció en un entorno cultural donde la sexualidad se aborda con naturalidad, diálogo y sin tabúes asfixiantes. Formada en sexología clínica y dinámicas de poder consensuadas (BDSM seguro, SSC: Sano, Seguro y Consensuado), Alina descubrió que la dominación psicológica y el juego de roles son herramientas terapéuticas poderosas para liberar el estrés acumulado, explorar fantasías reprimidas y reconectar con el placer auténtico. Con su cabello pelirrojo, pecas naturales, labios carmesí y una mirada penetrante pero empática, Alina lidera una comunidad privada donde el deseo se celebra con respeto, elegancia y sin juicios morales.",
+    bio: "Alina Van Dijk (28 años) es una creadora sex-positive, dominatrix psicológica y educadora de erotismo consciente. A través de un enfoque magnético, elegante y profundamente respetuoso, guía a hombres y parejas en la exploración de fetiches, sumisión consensuada, disciplina sensual y estimulación auditiva. En sus redes abiertas comparte reflexiones sobre el deseo, consentimiento y desestigmatización de fantasías, mientras que en su club privado de Fanvue y Telegram VIP ofrece sesiones exclusivas de dominación mental, sets sensoriales 4K y audios binaurales personalizados.",
+    archetype: "The Elegant Dominatrix & Sex-Positive Mentor (Poderosa, magnética, lúdica y segura)",
+    techStack: "Flux.1 Dev 4K Master LoRA (Redhead / Freckles) + ElevenLabs Inflexión Susurrada Íntima + Kling 3.0 Motion + Pasarela Segura Fanvue",
+    targetAudience: "Hombres y parejas de 25 a 55 años interesados en erotismo de alta gama, juegos de dominación psicológica, estimulación auditiva binaural y exploración de fetiches sin tabúes.",
+    channels: "Twitter/X (@alina.vandijk), Instagram (@alina.mindcontrol - SFW), Telegram VIP, Fanvue VIP ($25 USD/mes)",
+    gallery: [
+      {
+        img: "alina_avatar.png",
+        tag: "Master 4K",
+        label: "Alina • Retrato Sensual Natural",
+        desc: "Mirada magnética y pecas naturales bajo luz de sol tropical, cabello pelirrojo en moño alto y labios rojos."
+      }
+    ],
+    voice: {
+      title: "Voz Susurrada Íntima & Hipnótica (ElevenLabs)",
+      badge: "Voice ID: Alina-Hypno-v1",
+      duration: "0:22",
+      transcript: "«Respira hondo y suelta el control. No hay nada sucio en tus fantasías cuando hay consentimiento y respeto. Aquí estás a salvo para ser exactamente quien deseas ser.»",
+      rate: 0.95,
+      pitch: 0.98,
+      lang: "es-ES"
+    },
+    roi: {
+      defaultFollowers: 70000,
+      defaultConversion: 4.5,
+      defaultTicket: 25
+    },
+    promptScenes: {
+      casual: {
+        label: "🌴 Tropical Sensual",
+        tags: ["Flux.1 Dev", "Natural Daylight", "--ar 4:5"],
+        text: "Close-up sensual portrait of 28yo redhead woman Alina Van Dijk with freckled skin, vivid green eyes, red lipstick, hair in a high bun, wearing a black bikini, lush green tropical jungle foliage in soft focus background, natural dappled sunlight, realistic skin texture, unposed --ar 4:5"
+      },
+      editorial: {
+        label: "🖤 Dominatrix Elegante Studio",
+        tags: ["Studio Master", "High-End Fetish", "--ar 16:9"],
+        text: "Cinematic moody studio portrait of Alina Van Dijk wearing sleek black leather corset and tailored choker, intense commanding yet warm gaze, chiaroscuro lighting, deep shadows, 85mm f/1.4 lens, 8k photographic master --ar 16:9"
+      }
+    },
+    monetizationFunnel: [
+      { step: "Nivel 1 (Atracción SFW en X e Instagram)", detail: "Reflexiones sobre fetiches sin culpa, consentimiento, fotos de estilo bikini/boudoir sugerente y micro-clips de voz relajante." },
+      { step: "Nivel 2 (Canal Telegram Gratuito)", detail: "Micro-audios binaurales de muestra, encuestas sobre fantasías y anticipos de sesiones temáticas." },
+      { step: "Nivel 3 (Fanvue VIP & PPV)", detail: "Membresía VIP ($25 USD/mes) con acceso a sets fotográficos explícitos, biblioteca de audios eróticos inmersivos y sesiones personalizadas por mensaje privado (PPV de $35 a $150 USD)." }
+    ],
+    posts: [
+      {
+        caption: "La verdadera sumisión no es debilidad; es la máxima confianza de entregar el control a quien sabe cuidarte. ¿Cuál es esa fantasía que nunca te has atrevido a confesar en voz alta? 🖤🔥 Te leo en privado.",
+        likes: "14,350",
+        comments: "890",
+        date: "Hoy",
+        platform: "Twitter/X / Fanvue"
+      }
+    ],
+    ecommerce: {
+      storeName: "Alina Van Dijk • Experiencias Sensoriales & Audios Eróticos (Fanvue VIP)",
+      storeUrl: "https://fanvue.com/alinavandijk",
+      storeType: "Membresía VIP, Audios Binaurales Eróticos & Guías Fetish",
+      avgOrderValue: "$65 USD",
+      grossMargin: "96%",
+      conversionRate: "7.8%",
+      fulfillment: "Descargas digitales instantáneas en Fanvue / Telegram Bot privado",
+      description: "Catálogo de audios inmersivos binaurales de dominación psicológica, guías de exploración de fetiches seguros y sets fotográficos de alta fidelidad sin censura.",
+      products: [
+        {
+          name: "Suscripción Fanvue VIP Mensual (Acceso Total + Chat Directo)",
+          price: "$25.00 USD/mes",
+          cost: "$2.00 USD",
+          category: "Suscripción VIP",
+          tag: "Top Ventas",
+          salesVolume: "840 miembros",
+          desc: "Acceso ilimitado al feed sin censura, sesiones fotográficas exclusivas y chat conversacional directo.",
+          fulfillment: "Acceso Instantáneo en Fanvue"
+        },
+        {
+          name: "Pack 5 Audios Inmersivos Binaurales 'Mind Relaxation & Submission'",
+          price: "$39.00 USD",
+          cost: "$1.00 USD",
+          category: "Audio Erótico 3D",
+          tag: "Experiencia Sensorial",
+          salesVolume: "520 ventas/mes",
+          desc: "Audios eróticos en sonido 3D para auriculares guiados por Alina para inducir relajación profunda y entrega sensorial.",
+          fulfillment: "Descarga de Audio FLAC / MP3"
+        },
+        {
+          name: "Guía Digital 'Explora tus Fetiches con Seguridad y sin Culpa' (PDF)",
+          price: "$19.00 USD",
+          cost: "$0.00 USD",
+          category: "Guía Educativa",
+          tag: "Sex-Positive",
+          salesVolume: "380 ventas/mes",
+          desc: "Manual claro y desestigmatizante para descubrir fantasías, negociar límites y jugar con dinámicas de poder consensuadas.",
+          fulfillment: "Descarga Inmediata PDF"
+        },
+        {
+          name: "Sesión Personalizada de Dominación Mental por Mensaje Privado (PPV 24h)",
+          price: "$75.00 USD",
+          cost: "$3.00 USD",
+          category: "Experiencia 1 a 1",
+          tag: "Mayor Ticket",
+          salesVolume: "140 sesiones/mes",
+          desc: "Interacción personalizada y guiada de 24 horas por chat privado con consignas, notas de voz exclusivas y atención dedicada.",
+          fulfillment: "Canal Privado Telegram / Fanvue"
+        }
+      ],
+      funnelStrategy: "Reels y posts en X hablando de fetiches comunes sin vergüenza -> Muestra de 30s de audio susurrado en Telegram -> Conversión al club VIP de Fanvue y venta de packs de audio binaural."
     }
   }
 };
@@ -1400,7 +1513,8 @@ function renderInfluencerOpsMatrix() {
     { id: 'mateo', name: 'Mateo Silva', handler: 'Daniel / Pancho (Alemania/Canadá)', niche: 'FinTech, Inversiones & Real Estate Tech', status: 'Listo • Live (Top RPM)', ticket: '$29 USD/m (VIP)' },
     { id: 'maite', name: 'Maite Valenzuela', handler: 'Equipo (Los Manejadores)', niche: 'Cumbia Ranchera Pop & Mercado Chile', status: 'Listo • Live (Equipo)', ticket: '$15 USD/m (VIP)' },
     { id: 'kira', name: 'Kira Voss', handler: 'Equipo (Los Manejadores)', niche: 'Indie Game Dev & Cyberpunk Glamour (Validado)', status: 'Validado • Live (Equipo)', ticket: '$18 USD/m (VIP)' },
-    { id: 'alejandra', name: 'Alejandra (Prototipo B2B)', handler: 'Comercial B2B (Pancho / Daniel)', niche: 'Embajadora Virtual • Disponible para Negocios', status: 'En Adopción B2B', ticket: 'Licencia B2B' }
+    { id: 'alejandra', name: 'Alejandra (Prototipo B2B)', handler: 'Comercial B2B (Pancho / Daniel)', niche: 'Embajadora Virtual • Disponible para Negocios', status: 'En Adopción B2B', ticket: 'Licencia B2B' },
+    { id: 'alina', name: 'Alina Van Dijk', handler: 'Equipo (Submarca Adulto VIP)', niche: 'Dominatrix Consciente & Erotismo Terapéutico', status: 'Listo • Live (Adulto VIP)', ticket: '$25 USD/m (VIP)' }
   ];
 
   let rows = characters.map(c => {
@@ -1973,11 +2087,13 @@ const defaultInfluencerPlatforms = {
   elena: ["flux", "comfy", "elevenlabs", "claude", "capcut", "instagram", "tiktok", "fanvue"],
   julia: ["mj", "comfy", "elevenlabs", "chatgpt", "premiere", "instagram", "tiktok", "fanvue"],
   laura: ["flux", "nanobanana", "elevenlabs", "claude", "notion", "capcut", "instagram", "tiktok", "fanvue"],
+  mateo: ["flux", "nanobanana", "elevenlabs", "claude", "notion", "capcut", "tiktok", "instagram", "youtube"],
   maite: ["flux", "kling", "suno", "elevenlabs", "chatgpt", "capcut", "tiktok", "instagram", "fanvue"],
-  kira: ["mj", "kling", "elevenlabs", "claude", "davinci", "twitter", "youtube", "patreon", "discord"],
-  liravoss: ["flux", "comfy", "realesrgan", "kling", "elevenlabs", "claude", "twitter", "fanvue", "discord"],
-  alejandra: ["mj", "suno", "elevenlabs", "chatgpt", "capcut", "instagram", "patreon"],
-  almendra: ["mj", "suno", "elevenlabs", "chatgpt", "capcut", "instagram", "patreon"]
+  kira: ["mj", "kling", "elevenlabs", "claude", "davinci", "twitter", "youtube", "discord"],
+  liravoss: ["flux", "comfy", "realesrgan", "kling", "elevenlabs", "claude", "twitter", "discord"],
+  alejandra: ["flux", "kling", "elevenlabs", "claude", "capcut", "instagram", "linkedin"],
+  almendra: ["flux", "kling", "elevenlabs", "claude", "capcut", "instagram", "linkedin"],
+  alina: ["flux", "comfy", "elevenlabs", "kling", "capcut", "twitter", "instagram", "telegram", "fanvue"]
 };
 
 const defaultInfluencerOpsConfig = {
@@ -2008,6 +2124,15 @@ const defaultInfluencerOpsConfig = {
     status: "Activo / Producción Live",
     sop: "1. Extracción de paper científico o metanálisis en PubMed.\n2. Prompt visual en Flux.1 Dev: Laura en cocina minimalista o consultorio moderno sosteniendo suplemento/comida.\n3. Generación de script riguroso y accesible en Claude 3.5 Sonnet.\n4. Audio sintético con acento neutro en ElevenLabs.\n5. Montaje en CapCut Pro con gráficos de datos e infografías."
   },
+  mateo: {
+    handle: "@mateosilva.finanzas",
+    vipUrl: "https://mateosilva.gumroad.com",
+    cadence: "4 videos/sem + 1 newsletter/sem",
+    scheduler: "Metricool (Horario laboral 12:00 CET/EST)",
+    responsible: "Daniel / Pancho (Alemania/Canadá)",
+    status: "Activo / Producción Live",
+    sop: "1. Selección de tip de ahorro o comparación financiera cotidiana.\n2. Render en Flux.1 Dev: Mateo en oficina minimalista o café europeo.\n3. Síntesis de voz clara y confiable en ElevenLabs.\n4. Animación en Kling 3.0 con gestos precisos y subtítulos de alto contraste.\n5. Publicación en TikTok/Reels con enlace a plantilla gratuita en bio."
+  },
   maite: {
     handle: "@maite.valenzuela.musica",
     vipUrl: "https://fanvue.com/maite.valenzuela",
@@ -2018,40 +2143,49 @@ const defaultInfluencerOpsConfig = {
     sop: "1. Generación de base musical cumbia ranchera en Suno v3.5 con estribillo pegajoso.\n2. Generación fotográfica de Maite en viñedo o medialuna con sombrero blanco en Flux.1 Dev.\n3. Animación de baile y playback en Kling 3.0.\n4. Edición de teaser viral con 'trend de zapateo' para TikTok y Reels de Chile.\n5. Canal VIP Fanvue para tomas de backstage y sesiones country hot."
   },
   kira: {
-    handle: "@kira.voss.dev",
-    vipUrl: "https://fanvue.com/kiravoss",
-    cadence: "3 devlogs/sem + 3 sets VIP/sem",
-    scheduler: "Metricool + Twitter Scheduled",
+    handle: "@kira.voss.gamer",
+    vipUrl: "https://discord.gg/kiravoss",
+    cadence: "4 videos/sem + 1 directo/sem",
+    scheduler: "Metricool + TikTok Native",
     responsible: "Equipo (Los Manejadores)",
     status: "Validado / Live (Equipo)",
-    sop: "1. Concept art gamedev y renders de alta resolución en Flux.1 con LoRA Cyberpunk.\n2. Capturas de pantalla de motor Godot/Unreal combinadas con estética hot dev.\n3. Síntesis vocal tech con ElevenLabs y animación en Kling 3.0.\n4. Teasers de código y privacidad en YouTube/X con alto engagement.\n5. Conversión directa a Fanvue Premium ($18/mes) y listas de deseados en Steam."
+    sop: "1. Selección de 3 juegos indie en Steam con descuento o temática original.\n2. Render de Kira en setup gamer con iluminación neón en Flux.1.\n3. Síntesis de voz dinámica en ElevenLabs con tono gamer entusiasta.\n4. Edición rápida en CapCut con clips de gameplay de fondo.\n5. Publicación con invitación a unirse al Discord gratuito de recomendaciones."
   },
   liravoss: {
-    handle: "@kira.voss.dev",
-    vipUrl: "https://fanvue.com/kiravoss",
-    cadence: "3 devlogs/sem + 3 sets VIP/sem",
+    handle: "@kira.voss.gamer",
+    vipUrl: "https://discord.gg/kiravoss",
+    cadence: "4 videos/sem",
     scheduler: "Metricool",
     responsible: "Equipo (Los Manejadores)",
     status: "Validado / Live (Equipo)",
-    sop: "Activo unificado con Kira Voss (Game Dev & Cyberpunk Glamour)."
+    sop: "Activo unificado con Kira Voss (Gaming & Cultura Indie)."
   },
   alejandra: {
-    handle: "@alejandra.music",
-    vipUrl: "https://patreon.com/alejandra",
-    cadence: "2 demos/sem",
-    scheduler: "Metricool",
-    responsible: "Pancho / Pipeline",
-    status: "En Concepto (Q2)",
-    sop: "1. Renders indie pop en Midjourney v6.\n2. Temas indie sintetizados en Suno.\n3. Patreon para fans de la música emergente."
+    handle: "@alejandra.b2b",
+    vipUrl: "https://losmanejadores.io/#empresas",
+    cadence: "Demostraciones a demanda",
+    scheduler: "Manual B2B",
+    responsible: "Comercial B2B (Pancho / Daniel)",
+    status: "Disponible para Negocios / En Adopción",
+    sop: "1. Prototipo abierto para demostraciones a marcas y empresas clientes.\n2. Personalización de vestuario corporativo y logo de marca en Flux.1.\n3. Parametrización de voz corporativa a medida en ElevenLabs."
   },
   almendra: {
-    handle: "@alejandra.music",
-    vipUrl: "https://patreon.com/alejandra",
-    cadence: "2 demos/sem",
-    scheduler: "Metricool",
-    responsible: "Pancho / Pipeline",
-    status: "En Concepto (Q2)",
-    sop: "1. Renders indie pop en Midjourney v6.\n2. Temas indie sintetizados en Suno.\n3. Patreon para fans de la música emergente."
+    handle: "@alejandra.b2b",
+    vipUrl: "https://losmanejadores.io/#empresas",
+    cadence: "Demostraciones a demanda",
+    scheduler: "Manual B2B",
+    responsible: "Comercial B2B (Pancho / Daniel)",
+    status: "Disponible para Negocios / En Adopción",
+    sop: "Alias de Alejandra (Prototipo B2B en Adopción)."
+  },
+  alina: {
+    handle: "@alina.mindcontrol",
+    vipUrl: "https://fanvue.com/alinavandijk",
+    cadence: "3 teasers SFW/sem + 2 audios VIP/sem",
+    scheduler: "Metricool + Telegram Scheduled",
+    responsible: "Equipo (Submarca Adulto VIP)",
+    status: "Listo • Live (Adulto VIP)",
+    sop: "1. Generación de retratos sensuales y boudoir en Flux.1 Dev con LoRA Alina Van Dijk.\n2. Scripting de reflexiones sex-positive y dominación psicológica en Claude 3.5 Sonnet.\n3. Grabación de audios binaurales susurrados íntimos en ElevenLabs.\n4. Publicación de contenido SFW en Twitter/X e Instagram con enlace a Telegram VIP.\n5. Conversión a Fanvue para membresía mensual y mensajes PPV personalizados."
   }
 };
 
@@ -3667,23 +3801,106 @@ function renderEmpresasPage() {
     </div>
 
     <!-- Header Banner -->
-    <div style="text-align: center; max-width: 880px; margin: 0 auto 3.5rem auto;">
-      <span class="section-subtitle" style="color: var(--cyan);"><i class="fa-solid fa-building-gear"></i> Consultoría Estratégica & Automatización B2B</span>
+    <div style="text-align: center; max-width: 880px; margin: 0 auto 3rem auto;">
+      <span class="section-subtitle" style="color: var(--cyan);"><i class="fa-solid fa-bolt"></i> SOLUCIONES ÁGILES PARA EMPRESAS & VENTA RÁPIDA</span>
       <h1 style="font-family: var(--font-heading); font-size: 2.85rem; font-weight: 900; margin: 0.5rem 0 1rem 0; line-height: 1.2;">
-        Potencia tu Empresa con Inteligencia Artificial, Agentes y Medios Sintéticos
+        Herramientas de IA y Automatización Simple para Vender Más Rápido
       </h1>
       <p style="color: var(--text-muted); font-size: 1.12rem; line-height: 1.8;">
-        Diseñamos e implementamos soluciones empresariales de IA para optimizar procesos críticos, eliminar cuellos de botella con agentes autónomos, crear embajadores virtuales de marca y escalar producción audiovisual a una fracción del costo tradicional.
+        Implementamos soluciones directas al grano: presencia local en Google Maps, ventas automáticas por WhatsApp y micro-aplicaciones seguras con Safe Vibe Coding entregadas en 24 a 48 horas para negocios que necesitan resultados inmediatos.
       </p>
       
       <!-- Metodología Reference Note -->
       <div style="display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 30px; padding: 0.5rem 1.25rem; margin-top: 1rem; font-size: 0.88rem; color: #cbd5e1;">
         <i class="fa-solid fa-lightbulb" style="color: #f59e0b;"></i>
-        <span>Enfoque alineado a <strong>Gestión por Procesos</strong> y <em>Safe Vibe Coding</em> (<a href="https://www.mariomorales.solutions/" target="_blank" rel="noopener noreferrer" style="color: var(--cyan); text-decoration: underline;">Mario Morales Solutions</a>)</span>
+        <span>Enfoque ágil alineado a <strong>Gestión por Procesos</strong> y <em>Safe Vibe Coding</em> (<a href="https://www.mariomorales.solutions/" target="_blank" rel="noopener noreferrer" style="color: var(--cyan); text-decoration: underline;">Mario Morales Solutions</a>)</span>
       </div>
     </div>
 
-    <!-- 4 Solution Pillars Grid -->
+    <!-- FEATURED PROTAGONIST BLOCK: SAFE VIBE CODING & FORMAS RÁPIDAS DE VENDER (ASPECTO 4) -->
+    <div class="glass-card" style="border: 2px solid var(--cyan); background: radial-gradient(circle at top left, rgba(6, 182, 212, 0.12) 0%, rgba(10, 12, 22, 0.85) 100%); padding: 2.5rem; border-radius: var(--radius-lg); margin-bottom: 3.5rem; box-shadow: 0 15px 45px rgba(6, 182, 212, 0.15);">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+        <div>
+          <span class="detail-badge" style="background: rgba(6, 182, 212, 0.2); color: var(--cyan); border-color: var(--cyan); font-size: 0.78rem;">
+            <i class="fa-solid fa-rocket"></i> SERVICIO DESTACADO • ENTREGA EN 24 A 48 HORAS
+          </span>
+          <h2 style="font-family: var(--font-heading); color: #fff; font-size: 1.85rem; margin: 0.5rem 0 0.25rem 0;">
+            Safe Vibe Coding & Activación Rápida de Ventas Locales
+          </h2>
+          <p style="color: #cbd5e1; font-size: 0.95rem; margin: 0;">
+            Sin meses de desarrollo ni costes desmedidos de agencia. Soluciones cortas, simples y eficientes para que tu negocio empiece a captar clientes y facturar de inmediato.
+          </p>
+        </div>
+        <a href="#b2b-eval-form-section" class="btn btn-primary" style="padding: 0.7rem 1.4rem; font-size: 0.92rem;">
+          <i class="fa-solid fa-bolt"></i> Solicitar Activación Rápida
+        </a>
+      </div>
+
+      <!-- 3 Fast Solutions Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+        <!-- Solución 1: Google Maps -->
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(6, 182, 212, 0.35); border-radius: var(--radius-md); padding: 1.5rem;">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(6, 182, 212, 0.15); color: var(--cyan); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1rem;">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">Indexación Exprés en Google Maps</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+            Alta verificada y optimización total de tu ficha en <strong>Google Business Profile & Google Maps</strong>. Configuramos fotos de alta calidad, palabras clave de búsqueda local, horarios y catálogo para que los clientes que buscan cerca de ti te encuentren y llamen hoy mismo.
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.35rem;">
+            <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.35rem;"></i> Posicionamiento en búsquedas locales de Google</li>
+            <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.35rem;"></i> Sistema automatizado para captar reseñas positivas</li>
+            <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.35rem;"></i> Botón directo a llamada y cómo llegar</li>
+          </ul>
+        </div>
+
+        <!-- Solución 2: WhatsApp Funnel -->
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: var(--radius-md); padding: 1.5rem;">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(16, 185, 129, 0.15); color: #10b981; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1rem;">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">Embudos Rápidos de Venta por WhatsApp</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+            Conectamos tus visitas de Google Maps o redes sociales directo a un WhatsApp automatizado con IA. El asistente responde dudas al instante, muestra tu catálogo con fotos y precios, y toma los datos del pedido en segundos sin esperas.
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.35rem;">
+            <li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> Respuestas automáticas 24/7 sin retrasos</li>
+            <li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> Envío de catálogo en PDF / enlaces de pago</li>
+            <li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> Notificación instantánea a tu equipo para cerrar</li>
+          </ul>
+        </div>
+
+        <!-- Solución 3: Safe Vibe Coding -->
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(139, 92, 246, 0.35); border-radius: var(--radius-md); padding: 1.5rem;">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(139, 92, 246, 0.15); color: var(--purple); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1rem;">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">Micro-Páginas y Cotizadores en 48h</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
+            Creamos páginas de venta específicas para una promoción, cotizadores automáticos y calculadoras de presupuesto bajo la metodología <strong>Safe Vibe Coding</strong>: código limpio, ultra-rápido, alojado en servidores seguros y con estricto cumplimiento RGPD europeo.
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.35rem;">
+            <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Entrega lista para pauta en 24 a 48 horas</li>
+            <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Calculadoras interactivas que filtran clientes</li>
+            <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Cero filtraciones: datos protegidos en Alemania/Canadá</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN COMPLEMENTARIA: CAPACIDADES AVANZADAS PARA ESCALAMIENTO -->
+    <div style="text-align: center; max-width: 750px; margin: 0 auto 2.5rem auto;">
+      <span class="detail-badge" style="background: rgba(255,255,255,0.05); color: #cbd5e1; border-color: var(--border-glass); font-size: 0.75rem;">
+        CAPACIDADES COMPLEMENTARIAS
+      </span>
+      <h3 style="font-family: var(--font-heading); font-size: 1.85rem; color: #fff; margin: 0.5rem 0 0.35rem 0;">
+        Soluciones Corporativas de Escalamiento con IA
+      </h3>
+      <p style="color: var(--text-muted); font-size: 0.95rem;">
+        Para marcas y empresas que además buscan presencia audiovisual o automatización de flujos de trabajo completos.
+      </p>
+    </div>
+
     <div class="b2b-services-grid" style="margin-bottom: 4rem;">
       <!-- Pillar 1 -->
       <div class="b2b-service-card">
@@ -3694,11 +3911,6 @@ function renderEmpresasPage() {
         <p class="b2b-service-desc">
           Creamos personajes digitales hiperrealistas y portavoces exclusivos para tu marca. Sin agendas humanas complejas, sin cancelaciones de rodaje y con disponibilidad 24/7 para campañas globales.
         </p>
-        <ul style="list-style: none; padding: 0; margin: 1rem 0 0 0; font-size: 0.85rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem;">
-          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Consistencia facial fotográfica 4K con LoRAs propios</li>
-          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Clonación de voz multilingüe (ES, EN, DE, FR)</li>
-          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Reducción de costos de producción hasta en un 80%</li>
-        </ul>
       </div>
 
       <!-- Pillar 2 -->
@@ -3706,15 +3918,10 @@ function renderEmpresasPage() {
         <div class="b2b-service-icon" style="background: rgba(6, 182, 212, 0.15); color: var(--cyan);">
           <i class="fa-solid fa-diagram-project"></i>
         </div>
-        <h3 class="b2b-service-title">2. Gestión por Procesos & Agentes Autónomos</h3>
+        <h3 class="b2b-service-title">2. Gestión por Procesos (Mario Morales)</h3>
         <p class="b2b-service-desc">
-          Auditoría y rediseño de procesos empresariales bajo la metodología de Gestión por Procesos. Mapeamos cuellos de botella e implantamos agentes inteligentes que ejecutan tareas repetitivas de forma confiable.
+          Auditoría de cuellos de botella operacionales. Mapeamos tus flujos de trabajo e implantamos agentes inteligentes que ejecutan tareas repetitivas de forma confiable.
         </p>
-        <ul style="list-style: none; padding: 0; margin: 1rem 0 0 0; font-size: 0.85rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem;">
-          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Mapeo de flujos y eliminación de cuellos de botella</li>
-          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Agentes para soporte, prospección B2B y reporting</li>
-          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Integración con CRM (HubSpot, Salesforce, Notion)</li>
-        </ul>
       </div>
 
       <!-- Pillar 3 -->
@@ -3722,31 +3929,10 @@ function renderEmpresasPage() {
         <div class="b2b-service-icon" style="background: rgba(236, 72, 153, 0.15); color: var(--pink);">
           <i class="fa-solid fa-photo-film"></i>
         </div>
-        <h3 class="b2b-service-title">3. Content Factories & Automatización Audiovisual</h3>
+        <h3 class="b2b-service-title">3. Content Factories Audiovisuales</h3>
         <p class="b2b-service-desc">
-          Infraestructura de generación continua de contenidos para equipos de marketing. Producimos cientos de variaciones de anuncios en video, reels y carruseles listos para campañas de alto rendimiento.
+          Infraestructura de generación continua de contenidos para marketing. Producimos cientos de variaciones de anuncios en video, reels y carruseles listos para pauta en Meta y TikTok.
         </p>
-        <ul style="list-style: none; padding: 0; margin: 1rem 0 0 0; font-size: 0.85rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem;">
-          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Pipelines de video generativo (Kling, Flux, LipSync)</li>
-          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Pruebas A/B multivariables masivas para Meta y TikTok</li>
-          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Entregas en menos de 48 horas con control de calidad</li>
-        </ul>
-      </div>
-
-      <!-- Pillar 4 -->
-      <div class="b2b-service-card">
-        <div class="b2b-service-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
-          <i class="fa-solid fa-shield-virus"></i>
-        </div>
-        <h3 class="b2b-service-title">4. Safe Vibe Coding & Asistentes RGPD</h3>
-        <p class="b2b-service-desc">
-          Desarrollo ágil de herramientas internas y software empresarial asistido por IA, garantizando un entorno seguro y con estricto cumplimiento del RGPD europeo (sin exposición ni filtración de secretos industriales).
-        </p>
-        <ul style="list-style: none; padding: 0; margin: 1rem 0 0 0; font-size: 0.85rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem;">
-          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Cumplimiento RGPD (UE) y gobernanza de datos estricta</li>
-          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Vibe coding controlado con validación humana en el bucle</li>
-          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Modelos alojados en servidores seguros en Alemania/Canadá</li>
-        </ul>
       </div>
     </div>
 
@@ -3772,11 +3958,11 @@ function renderEmpresasPage() {
           </div>
           <div class="b2b-form-group">
             <label><i class="fa-solid fa-id-badge"></i> Cargo / Rol *</label>
-            <input type="text" id="b2b-role" placeholder="Ej: Gerente General / Directora de Marketing" required>
+            <input type="text" id="b2b-role" placeholder="Ej: Gerente General / Dueño de Negocio" required>
           </div>
           <div class="b2b-form-group">
             <label><i class="fa-solid fa-building"></i> Empresa / Organización *</label>
-            <input type="text" id="b2b-company" placeholder="Ej: Retail Latam S.A." required>
+            <input type="text" id="b2b-company" placeholder="Ej: Clínica Dental / E-Commerce / Taller" required>
           </div>
           <div class="b2b-form-group">
             <label><i class="fa-solid fa-envelope"></i> Correo Electrónico Corporativo *</label>
@@ -3790,41 +3976,40 @@ function renderEmpresasPage() {
             <label><i class="fa-solid fa-industry"></i> Sector o Industria *</label>
             <select id="b2b-industry" required>
               <option value="" disabled selected>Selecciona tu sector...</option>
+              <option value="Comercio Local & Servicios">Comercio Local & Servicios (Tienda, Salud, Gastronomía, Belleza)</option>
               <option value="Retail & E-Commerce">Retail & E-Commerce</option>
               <option value="Banca, Finanzas & Seguros">Banca, Finanzas & Seguros</option>
-              <option value="Salud, Farma & Bienestar">Salud, Farma & Bienestar</option>
               <option value="Legal & Consultoría Corporativa">Legal & Consultoría Corporativa</option>
               <option value="Tecnología & SaaS">Tecnología & SaaS</option>
-              <option value="Educación & E-learning">Educación & E-learning</option>
-              <option value="Agencia de Publicidad / Medios">Agencia de Publicidad / Medios</option>
+              <option value="Educación & Cursos">Educación & Cursos</option>
               <option value="Otro">Otro sector</option>
             </select>
           </div>
           <div class="b2b-form-group">
             <label><i class="fa-solid fa-users"></i> Tamaño de la Empresa</label>
             <select id="b2b-size">
-              <option value="1-10">1 a 10 colaboradores</option>
-              <option value="11-50" selected>11 a 50 colaboradores</option>
+              <option value="1-10" selected>1 a 10 colaboradores (Pyme / Negocio Local)</option>
+              <option value="11-50">11 a 50 colaboradores</option>
               <option value="51-200">51 a 200 colaboradores</option>
-              <option value="201-1000">201 a 1,000 colaboradores</option>
-              <option value="1000+">Más de 1,000 colaboradores (Enterprise)</option>
+              <option value="200+">Más de 200 colaboradores</option>
             </select>
           </div>
           <div class="b2b-form-group">
-            <label><i class="fa-solid fa-bullseye"></i> Principal Objetivo con IA</label>
+            <label><i class="fa-solid fa-bullseye"></i> Solución que Deseas Implementar Primero *</label>
             <select id="b2b-goal">
-              <option value="Crear un Embajador Virtual / Influencer IA">Crear un Embajador Virtual / Influencer IA de Marca</option>
-              <option value="Optimizar Procesos y Eliminar Cuellos de Botella">Optimizar Procesos y Eliminar Cuellos de Botella</option>
-              <option value="Content Factory (Generación Masiva Audiovisual)">Content Factory (Generación Masiva de Anuncios y Video)</option>
-              <option value="Asistentes Internos Seguros (Safe Vibe Coding)">Asistentes Internos Seguros & Software con IA</option>
-              <option value="Diagnóstico Integral">Diagnóstico Integral y Auditoría de Madurez IA</option>
+              <option value="Indexación Exprés en Google Maps y SEO Local" selected>Indexación Exprés en Google Maps & SEO Local (Vender en mi zona)</option>
+              <option value="Ventas Automáticas por WhatsApp">Ventas Automáticas por WhatsApp con Catálogo IA</option>
+              <option value="Micro-Landing Page o Cotizador en 48h (Safe Vibe Coding)">Micro-Página de Venta o Cotizador en 48h (Safe Vibe Coding)</option>
+              <option value="Crear un Embajador Virtual / Influencer IA">Crear un Embajador Virtual / Influencer IA para mi Marca</option>
+              <option value="Optimizar Procesos Operativos (Mario Morales)">Optimizar Procesos y Eliminar Cuellos de Botella</option>
+              <option value="Diagnóstico Integral">Diagnóstico Integral y Asesoría General</option>
             </select>
           </div>
         </div>
 
         <div class="b2b-form-group" style="margin-top: 1.25rem;">
-          <label><i class="fa-solid fa-comment-dots"></i> Describe brevemente el principal cuello de botella o reto que deseas resolver:</label>
-          <textarea id="b2b-bottleneck" rows="3" placeholder="Ejemplo: Nuestro equipo tarda semanas en producir creatividades para campañas y los costos de productoras tradicionales son insostenibles..." required></textarea>
+          <label><i class="fa-solid fa-comment-dots"></i> ¿Qué producto o servicio ofreces y qué te gustaría vender más rápido?:</label>
+          <textarea id="b2b-bottleneck" rows="3" placeholder="Ejemplo: Tenemos un negocio local / tienda online y queremos que la gente de nuestra zona nos encuentre en Google Maps y nos compre directo por WhatsApp..." required></textarea>
         </div>
 
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-glass);">
