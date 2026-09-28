@@ -48,6 +48,8 @@ const influencersData = {
     badge: "Personaje Listo • A cargo de Daniel",
     avatar: "elena_avatar.png",
     tagline: "European elegant + mindful travel. Reflexiones de psicología y conexión humana desde Miraflores.",
+    keyMarkets: "Perú, España, Chile, México y profesionales hispanohablantes en Europa.",
+    story: "Nacida en San Petersburgo y cautivada por la costa del Pacífico y la luz limeña, Elena se estableció en Miraflores tras culminar sus estudios de psicología aplicada y mindfulness somático. Desde su departamento con vistas al mar, combina su pasión por el pilates reformer con la investigación del bienestar emocional contemporáneo. Elena encarna la sofisticación europea atemporal sin frialdad: es una voz cálida, sabia y cercana que ayuda a profesionales de alta exigencia a pausar, respirar y reconectar con su propósito interior.",
     bio: "Elena Daddario (27 años) es una creadora de origen ruso (San Petersburgo) radicada en Miraflores, Lima. Combina estudios de psicología con un estilo de vida de elegancia europea contemporánea (estilo Viena), práctica de pilates, alta gastronomía consciente y trabajo online con una fundación de reinserción social. Su misión es inspirar el autoconocimiento, la superación de bloqueos emocionales y la vida consciente sin tabúes ni vulgaridad.",
     archetype: "European Elegant + Mindful Psychologist (La Sabia Cálida)",
     techStack: "Nano Banana Pro / Flux LoRA Consistencia (Ref: Olga Nikaloeva) + ElevenLabs Inflexión Eslava Cálida + Kling 3.0",
@@ -138,6 +140,8 @@ const influencersData = {
     badge: "Personaje Listo • A cargo de Pancho Ipinza",
     avatar: "julia_avatar.jpg",
     tagline: "Educación dermocosmética accesible, análisis transparente de fórmulas y cuidado de la piel real.",
+    keyMarkets: "Perú, Colombia, Chile, México y amantes de la cosmética limpia en Latinoamérica.",
+    story: "Crecida entre el malecón de Miraflores y las boticas tradicionales de Lima, Julia se formó con la convicción de que el cuidado de la piel debe basarse en la evidencia química y no en promesas vacías de marketing. Con su conocimiento en dermofarmacia y lectura minuciosa de fórmulas (INCI), enseña a su comunidad a proteger la barrera cutánea frente al clima costero y a encontrar equivalencias de farmacia ('dupes') tan efectivas como marcas de lujo. Su transparencia radical, libre de filtros plásticos y con textura de piel real, la convierten en la aliada más confiable de la dermocosmética.",
     bio: "Julia (24 años) es una comunicadora y especialista en dermofarmacia nacida y residente en Miraflores (San Antonio / La Aurora, Lima). Se dedica a desmitificar la cosmética comercial, analizar listas de ingredientes (INCI), comparar 'dupes' accesibles con productos de alta gama y enseñar el cuidado de la barrera cutánea adaptado al clima húmedo de la costa limeña ('cielo pan de burro') bajo una estética limpia, empática y sin filtros plásticos engañosos.",
     archetype: "Beauty Educator + Honest Science Reviewer",
     techStack: "Gemini Gems ROLOCODEPRE + Midjourney v6 / Flux + HeyGen / Kling LipSync + ElevenLabs (Español Ribereño Peruano didáctico)",
@@ -228,6 +232,8 @@ const influencersData = {
     badge: "Personaje Listo • A cargo de Wladimir Gutierrez",
     avatar: "laura_avatar.png",
     tagline: "Fit-geek con toque sensual y sofisticado. Nutrición aplicada a la pérdida de peso sostenible y entrenamiento funcional basado en evidencia.",
+    keyMarkets: "México (CDMX, Guadalajara, Monterrey), Estados Unidos hispano, Colombia y Chile.",
+    story: "Descendiente de una familia chino-mexicana establecida en el corazón de Ciudad de México, Lau creció fusionando la disciplina y rigor académico oriental con la calidez vibrante de la cultura mexicana. Como nutrióloga clínica y deportista funcional, su misión desde su loft en la colonia Condesa es desterrar los mitos de dietas restrictivas y promover la recomposición corporal con evidencia médica. Con su personalidad magnética de 'fit-geek' sofisticada, Lau enseña que ganar masa muscular es la clave para la longevidad metabólica y la salud integral.",
     bio: "Laura 'Lau' Taeda (32 años) es una nutrióloga e investigadora nacida y radicada en la colonia Condesa / Roma Norte, Ciudad de México, de ascendencia mexicano-china de tercera generación. Su abuelo paterno emigró desde Guangdong y se estableció en el Barrio Chino de CDMX; su padre y su madre construyeron una vida profesional en Condesa. Ese cruce cultural —la disciplina y rigor académico chino con la calidez y cercanía mexicana— define su carácter: exigente consigo misma y cercana con su comunidad. Con su estética 'strong girl' (cuerpo atlético y definido, presencia magnética, seria en el fondo pero con chispa picarona), desmiente mitos de dietas restrictivas y promueve la recomposición corporal mediante proteína adecuada, fuerza funcional y ciencia metabólica rigurosa.",
     archetype: "Fit-Geek / Entrenadora Cuántica (Strong & Sophisticated)",
     techStack: "Flux.1 Dev + RealESRGAN Upscaling + ElevenLabs (Español Latino neutro con cadencia mexicana sutil) + Kling 3.0 Motion Control",
@@ -318,6 +324,8 @@ const influencersData = {
     badge: "Caso Validado • Equipo (Los Manejadores)",
     avatar: "kira_avatar.jpg",
     tagline: "Desarrollo de videojuegos indie (Godot/Unreal), ciber-activismo y estética cyberpunk con monetización validada en Fanvue y Patreon.",
+    keyMarkets: "México, España, Argentina, EE.UU., comunidad global de desarrolladores y cultura gamer.",
+    story: "Creciendo entre terminales de Linux, foros de programación nocturnos y la pasión por el arte digital, Kira aprendió a desarrollar videojuegos independientes con motores de código abierto como Godot y Unreal. Su misión es democratizar la creación interactiva y defender la privacidad digital frente al monopolio corporativo. Desde su estudio bañado en luces de neón en tonos cian y magenta, Kira comparte sus devlogs de shaders, lógica de juego y reflexiones de ciber-activismo. Como el primer activo validado de Los Manejadores con más de 500 suscriptores de pago, Kira es la prueba viva de lealtad comunitaria y monetización validada.",
     bio: "Kira Voss (26 años) es el activo insignia y prueba social validada de Los Manejadores. Combina el desarrollo de videojuegos independientes y activismo por el código abierto con una estética cyberpunk de alto impacto validada de 0 a más de 500 suscriptores recurrentes en Fanvue ($18 USD/mes) y Patreon VIP. Conecta su canal de YouTube DevLogs con transmisiones en vivo y comunidades privadas en Discord.",
     archetype: "La Hacker Rebelde & Hot Indie Dev (Cyber-Activista con Tech Glamour)",
     techStack: "Flux.1 Dev + ComfyUI LoRA Consistencia + RealESRGAN + ElevenLabs + Kling 3.0 + Godot Engine",
@@ -414,6 +422,8 @@ const influencersData = {
     badge: "Personaje Listo • Equipo (Los Manejadores)",
     avatar: "maite_avatar.jpg",
     tagline: "La nueva voz de la cumbia ranchera chilena: pasión campesina, glamour country y videoclips de alto impacto.",
+    keyMarkets: "Chile (Regiones, Santiago, Fiestas Patrias), Argentina, Bolivia y público tropical-ranchero.",
+    story: "Criada en los campos y viñedos de San Fernando en el Valle de Colchagua, Maite creció al ritmo festivo de las guitarras, acordeones y fiestas costumbristas que mueven a todo Chile. Radicada en Santiago, modernizó el género tropical-ranchero —el más masivo y lucrativo del país— creando un estilo único 'country chic' con sombrero blanco texano y botas bordadas. Con su voz enérgica, pícara y cercana, Maite conecta de forma visceral con el público de todas las regiones, convirtiendo cada presentación en una fiesta inolvidable.",
     bio: "Maite Valenzuela (24 años) es una cantante e influencer de cumbia ranchera pop nacida en San Fernando (Valle de Colchagua) y radicada en Santiago de Chile. Con su sombrero blanco texano, botas de cuero bordadas y una presencia magnética y sensual ('hot country chic'), moderniza la música tropical-ranchera —el género musical más masivo, festivo y lucrativo de Chile—. Conecta de forma genuina con el público de regiones y fiestas patrias, mientras capitaliza su atractivo en videoclips cinematográficos, streaming musical en Spotify/YouTube y un club VIP exclusivo en Fanvue ($15 USD/mes) con sesiones fotográficas íntimas en viñedos y backstage.",
     archetype: "La Diva Ranchera / Reina Campesina Contemporánea (Cálida, pícara y festiva)",
     techStack: "Nano Banana Pro / Flux.1 LoRA Ranchera + Suno v3.5 / Udio (Composición Cumbia Ranchera) + ElevenLabs (Acento Chileno Campesino-Urbano Pícaro) + Kling 3.0",
@@ -500,6 +510,8 @@ const influencersData = {
     badge: "En Concepto • Pipeline Q2",
     avatar: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80",
     tagline: "Curaduría musical indie, estética vintage 90s y recomendaciones de vinilos raros.",
+    keyMarkets: "Alemania, España, Chile, México y amantes de la cultura indie y el diseño retro.",
+    story: "Curadora de vinilos de colección, fotografía analógica y ropa de diseño vintage, Alejandra recorre las ferias de pulgas y los clubes de jazz e indie de Berlín y Europa. Diseñada para audiencias sensibles al arte pausado y el coleccionismo físico, conecta con marcas que valoran la autenticidad y la estética analógica de los años 90.",
     bio: "Alejandra (23 años) conecta a audiencias melómanas y amantes del diseño retro. Explora festivales independientes, descubrimientos en vinilo y moda vintage. Diseñada para alianzas con sellos discográficos, marcas de audio de alta fidelidad y suscripciones VIP.",
     archetype: "La Melómana Vintage / Curadora Indie",
     techStack: "Flux.1 LoRA Vintage Aesthetic + ElevenLabs Warm Voice + Kling 3.0",
@@ -755,7 +767,13 @@ function handleAuthSubmit(e) {
     sessionStorage.setItem('los_manejadores_team_auth', 'true');
     closeAuthModal();
     updateAuthUI();
-    showTeamView(pendingTeamTab || 'gantt');
+    if (pendingTeamTab && pendingTeamTab.startsWith('influencer-cockpit:')) {
+      const id = pendingTeamTab.replace('influencer-cockpit:', '');
+      renderInfluencerPage(id, 'cockpit');
+      showDynamicView();
+    } else {
+      showTeamView(pendingTeamTab || 'gantt');
+    }
   } else {
     if (errorMsg) errorMsg.style.display = 'block';
   }
@@ -821,9 +839,18 @@ function handleRoute() {
   const teamView = document.getElementById('view-team');
 
   // Parse routes
-  if (hash.startsWith('#influencer/')) {
+  if (hash.startsWith('#influencer-cockpit/')) {
+    const influencerId = hash.replace('#influencer-cockpit/', '');
+    if (isTeamAuthenticated()) {
+      renderInfluencerPage(influencerId, 'cockpit');
+      showDynamicView();
+    } else {
+      openAuthModal('influencer-cockpit:' + influencerId);
+      showPublicView();
+    }
+  } else if (hash.startsWith('#influencer/')) {
     const influencerId = hash.replace('#influencer/', '');
-    renderInfluencerPage(influencerId);
+    renderInfluencerPage(influencerId, 'product');
     showDynamicView();
   } else if (hash.startsWith('#channel/')) {
     const channelId = hash.replace('#channel/', '');
@@ -1011,11 +1038,11 @@ function renderInfluencerOpsMatrix() {
         </td>
         <td>
           <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
-            <a href="#influencer/${c.id}" class="btn btn-secondary btn-sm" style="font-size: 0.72rem; padding: 0.28rem 0.5rem;">
-              <i class="fa-solid fa-clipboard-question"></i> Briefing
+            <a href="#influencer-cockpit/${c.id}" class="btn btn-primary btn-sm" style="font-size: 0.72rem; padding: 0.28rem 0.5rem;" title="Abrir Cockpit Operativo Privado (Prompts, SOP y Briefing)">
+              <i class="fa-solid fa-sliders"></i> Cockpit
             </a>
-            <a href="#influencer/${c.id}" onclick="setTimeout(()=>{document.getElementById('tab-btn-platforms')?.click();}, 150);" class="btn btn-secondary btn-sm" style="font-size: 0.72rem; padding: 0.28rem 0.5rem; border-color: rgba(6, 182, 212, 0.4); color: var(--cyan); background: rgba(6, 182, 212, 0.08);">
-              <i class="fa-solid fa-layer-group"></i> Plataformas
+            <a href="#influencer/${c.id}" class="btn btn-secondary btn-sm" style="font-size: 0.72rem; padding: 0.28rem 0.5rem; border-color: rgba(6, 182, 212, 0.4); color: var(--cyan); background: rgba(6, 182, 212, 0.08);" title="Ver Ficha Comercial de Producto Pública">
+              <i class="fa-solid fa-eye"></i> Ficha Pública
             </a>
           </div>
         </td>
@@ -1838,8 +1865,386 @@ function renderPlatformsChips(influencerId) {
   }
 }
 
-// RENDER: INFLUENCER PAGE (EXPANDED & MODULAR)
-function renderInfluencerPage(id) {
+// --- VIEW MODE MANAGEMENT & COMMERCIAL INFLUENCER SHOWCASE ---
+let currentInfluencerMode = 'product';
+
+function setInfluencerViewMode(id, mode) {
+  currentInfluencerMode = mode;
+  if (mode === 'cockpit') {
+    if (!isTeamAuthenticated()) {
+      openAuthModal('influencer-cockpit:' + id);
+      return;
+    }
+  }
+  renderInfluencerPage(id, mode);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function requestCockpitAccess(id) {
+  openAuthModal('influencer-cockpit:' + id);
+}
+
+// ROUTER DISPATCHER FOR INFLUENCER PAGE
+function renderInfluencerPage(id, mode = 'product') {
+  currentInfluencerMode = mode;
+  if (mode === 'cockpit') {
+    if (!isTeamAuthenticated()) {
+      openAuthModal('influencer-cockpit:' + id);
+      return;
+    }
+    renderInfluencerCockpit(id);
+  } else {
+    renderInfluencerPublicProduct(id);
+  }
+}
+
+// 1. PUBLIC PRODUCT SHOWROOM (SHOWCASING IA QUALITY, CONSISTENCY, LORE & SERVICES)
+function renderInfluencerPublicProduct(id) {
+  const data = influencersData[id];
+  const container = document.getElementById('view-dynamic');
+  if (!container) return;
+
+  if (!data) {
+    container.innerHTML = `<div style="padding: 4rem; text-align: center;"><h2>Influencer no encontrado</h2><a href="#roster" class="btn btn-primary">Volver al Catálogo</a></div>`;
+    return;
+  }
+
+  const roi = data.roi || { defaultFollowers: 50000, defaultConversion: 1.5, defaultTicket: 14 };
+  const authenticated = isTeamAuthenticated();
+
+  container.innerHTML = `
+    <div class="breadcrumb-bar" style="margin-bottom: 1.25rem;">
+      <div class="breadcrumbs">
+        <a href="#home">Inicio</a>
+        <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
+        <a href="#roster">Catálogo de Influencers IA</a>
+        <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
+        <span class="current">${data.name}</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <a href="#roster" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Catálogo</a>
+        ${authenticated ? `
+          <div class="influencer-mode-toggle">
+            <button class="mode-btn active" title="Ficha comercial visible para marcas y clientes"><i class="fa-solid fa-eye"></i> Ficha Producto</button>
+            <button class="mode-btn" onclick="setInfluencerViewMode('${data.id}', 'cockpit')" title="Cockpit operativo privado de producción (SOP, Prompts y Briefing)"><i class="fa-solid fa-sliders"></i> Cockpit Operativo 🔒</button>
+          </div>
+        ` : `
+          <button class="btn btn-secondary btn-sm" onclick="requestCockpitAccess('${data.id}')" style="font-size: 0.76rem; border-color: rgba(255,255,255,0.15); opacity: 0.75;" title="Área confidencial para miembros del equipo de Los Manejadores">
+            <i class="fa-solid fa-lock"></i> Acceso Equipo
+          </button>
+        `}
+      </div>
+    </div>
+
+    <div class="product-showcase-container">
+      
+      <!-- 1. Hero Showcase Banner -->
+      <div class="product-hero-banner">
+        <div class="product-badge-strip">
+          <span class="product-pill product-pill-purple"><i class="fa-solid fa-gem"></i> Activo Digital Certificado</span>
+          <span class="product-pill product-pill-cyan"><i class="fa-solid fa-fingerprint"></i> 100% Rostro Sintético IA</span>
+          <span class="product-pill product-pill-green"><i class="fa-solid fa-shield-halved"></i> Libre de Derechos de Terceros</span>
+        </div>
+        <h1 class="product-title">${data.name}</h1>
+        <div class="product-niche-lead"><i class="fa-solid fa-tag"></i> ${data.niche}</div>
+        <p class="product-tagline">${data.tagline || data.bio}</p>
+
+        <div class="product-hero-actions">
+          <button class="btn btn-primary" onclick="openBrandInquiryModal('${data.id}')">
+            <i class="fa-solid fa-handshake"></i> Solicitar Colaboración de Marca / Cotizar
+          </button>
+          <a href="#desarrollo" class="btn btn-secondary">
+            <i class="fa-solid fa-microchip"></i> Conocer Nuestro Pipeline I+D
+          </a>
+          <button class="btn btn-secondary" onclick="alert('Conexión con pasarela VIP iniciada para ${data.name}')" style="border-color: rgba(236, 72, 153, 0.4);">
+            <i class="fa-solid fa-star" style="color: var(--pink);"></i> Suscripción VIP ($${roi.defaultTicket}/mes)
+          </button>
+        </div>
+      </div>
+
+      <!-- 2. Two-Column Main Stage -->
+      <div class="product-grid">
+
+        <!-- LEFT COLUMN: Master Visual Portrait, Voice & Consistency Proof -->
+        <div class="product-left-col">
+          
+          <!-- Master Portrait Card -->
+          <div class="product-portrait-card">
+            <img src="${data.avatar}" alt="${data.name}" class="product-portrait-img">
+            <div class="product-portrait-overlay">
+              <span class="product-portrait-badge">
+                <i class="fa-solid fa-circle-check" style="color: #10b981;"></i> Consistencia LoRA >98.8%
+              </span>
+              <span class="product-portrait-badge">
+                <i class="fa-solid fa-camera" style="color: var(--cyan);"></i> Master 4K Ultra Fotorrealista
+              </span>
+            </div>
+          </div>
+
+          <!-- Official Voice Sample Component -->
+          ${data.voice ? `
+            <div class="cockpit-voice-box" id="voice-card-${data.id}" style="margin-bottom: 1.75rem;">
+              <div class="voice-header" style="margin-bottom: 0.5rem;">
+                <div class="voice-title" style="font-size: 0.88rem; font-weight: 600;">
+                  <i class="fa-solid fa-microphone-lines" style="color: var(--cyan);"></i>
+                  <span>Escuchar Voz Oficial del Personaje</span>
+                </div>
+                <span class="voice-badge" style="font-size: 0.68rem; padding: 0.2rem 0.5rem;">${data.voice.badge}</span>
+              </div>
+              <div class="voice-controls-row" style="margin-bottom: 0.6rem;">
+                <button class="voice-play-btn" id="voice-btn-${data.id}" onclick="toggleVoicePlayback('${data.id}')" title="Reproducir voz" style="width: 36px; height: 36px; font-size: 0.85rem; flex-shrink: 0;">
+                  <i class="fa-solid fa-play"></i>
+                </button>
+                <div class="voice-equalizer" style="height: 18px; gap: 2px;">
+                  <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+                  <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+                  <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+                </div>
+                <div class="voice-time-display" id="voice-time-${data.id}" style="font-size: 0.78rem;">0:00 / ${data.voice.duration}</div>
+              </div>
+              <div class="voice-transcript" style="font-size: 0.82rem; max-height: 80px; overflow-y: auto; line-height: 1.45; padding: 0.65rem 0.85rem; background: rgba(0,0,0,0.3); border-radius: var(--radius-sm); border: 1px solid var(--border-glass);">
+                <i class="fa-solid fa-quote-left" style="color: var(--purple); margin-right: 0.35rem;"></i>
+                ${data.voice.transcript}
+              </div>
+            </div>
+          ` : ''}
+
+          <!-- Consistency Lookbook Gallery -->
+          ${data.gallery && data.gallery.length > 0 ? `
+            <div class="product-lookbook-section">
+              <h4 class="product-section-title">
+                <i class="fa-solid fa-images" style="color: var(--cyan);"></i> Lookbook de Consistencia Fotográfica
+              </h4>
+              <p class="product-section-subtitle">
+                Preservación facial idéntica en estudio, exteriores y situaciones dinámicas (haz clic para ampliar):
+              </p>
+              <div class="product-gallery-grid">
+                ${data.gallery.map(g => `
+                  <div class="product-gallery-thumb-card" onclick="openPhotoLightbox('${g.img}', '${g.label.replace(/'/g, "\\'")}', '${g.desc.replace(/'/g, "\\'")}')" title="${g.label}">
+                    <img src="${g.img}" alt="${g.label}" loading="lazy">
+                    <div class="product-gallery-thumb-label">${g.label}</div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
+
+          <!-- Quality Guarantees Card (Positioning Los Manejadores) -->
+          <div class="product-guarantees-card">
+            <h4 class="product-section-title" style="margin-bottom: 1rem;">
+              <i class="fa-solid fa-award" style="color: var(--purple);"></i> Estándar de Producción Los Manejadores
+            </h4>
+            
+            <div class="guarantee-item">
+              <div class="guarantee-icon"><i class="fa-solid fa-sparkles"></i></div>
+              <div class="guarantee-text">
+                <h5>Microtextura & Piel Orgánica</h5>
+                <p>Poros, luminosidad natural y emulación óptica de lentes fotográficos (Leica / Hasselblad). Cero aspecto de dibujo o plástico.</p>
+              </div>
+            </div>
+
+            <div class="guarantee-item">
+              <div class="guarantee-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+              <div class="guarantee-text">
+                <h5>Seguridad Jurídica 100%</h5>
+                <p>Generados puramente mediante difusión matemática. Sin clonación de personas reales ni riesgos de litigio por derechos de imagen.</p>
+              </div>
+            </div>
+
+            <div class="guarantee-item">
+              <div class="guarantee-icon"><i class="fa-solid fa-bolt"></i></div>
+              <div class="guarantee-text">
+                <h5>Producción Ágil sin Rodajes</h5>
+                <p>Entregas de campañas en 24 a 48 horas sin retrasos meteorológicos, agencias tradicionales de modelos ni costes de set.</p>
+              </div>
+            </div>
+
+            <div class="guarantee-item">
+              <div class="guarantee-icon"><i class="fa-solid fa-language"></i></div>
+              <div class="guarantee-text">
+                <h5>Multilingüe & LipSync Nativo</h5>
+                <p>Capacidad de hablar español regional, inglés y otros idiomas con inflexión perfecta y sincronización labial para video.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: Story Lore, Audience, Posts & Brand Services -->
+        <div class="product-right-col">
+          
+          <!-- Story & Narrative Lore Card -->
+          <div class="product-lore-card">
+            <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: #fff; margin-bottom: 0.85rem; display: flex; align-items: center; gap: 0.5rem;">
+              <i class="fa-solid fa-book-open" style="color: var(--purple);"></i> Historia & Universo Narrativo
+            </h3>
+            <p class="product-lore-text">
+              ${data.story || data.bio}
+            </p>
+            <div style="padding: 0.85rem 1.15rem; background: rgba(139, 92, 246, 0.08); border-left: 3px solid var(--purple); border-radius: 4px; font-style: italic; color: #e2e8f0; font-size: 0.92rem; line-height: 1.55;">
+              "${data.bio}"
+            </div>
+          </div>
+
+          <!-- Demographic Specs Grid -->
+          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; color: #fff; margin-bottom: 0.85rem; display: flex; align-items: center; gap: 0.5rem;">
+            <i class="fa-solid fa-users" style="color: var(--cyan);"></i> Perfil de Audiencia & Alcance
+          </h3>
+          <div class="product-specs-grid">
+            <div class="product-spec-box">
+              <div class="product-spec-lbl"><i class="fa-solid fa-masks-theater"></i> Arquetipo Psicológico</div>
+              <div class="product-spec-val">${data.archetype}</div>
+            </div>
+            <div class="product-spec-box">
+              <div class="product-spec-lbl"><i class="fa-solid fa-bullseye"></i> Audiencia Objetivo</div>
+              <div class="product-spec-val">${data.targetAudience}</div>
+            </div>
+            <div class="product-spec-box">
+              <div class="product-spec-lbl"><i class="fa-solid fa-share-nodes"></i> Canales de Difusión</div>
+              <div class="product-spec-val">${data.channels}</div>
+            </div>
+            <div class="product-spec-box">
+              <div class="product-spec-lbl"><i class="fa-solid fa-earth-americas"></i> Mercados Clave</div>
+              <div class="product-spec-val">${data.keyMarkets || 'Hispanoamérica & Mercado Global'}</div>
+            </div>
+          </div>
+
+          <!-- Social Media Content Mockup -->
+          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; color: #fff; margin-bottom: 0.85rem; display: flex; align-items: center; gap: 0.5rem;">
+            <i class="fa-solid fa-hashtag" style="color: var(--pink);"></i> Muestra de Contenido & Engagement
+          </h3>
+          <div style="margin-bottom: 2rem;">
+            ${data.posts && data.posts.length > 0 ? data.posts.map(post => `
+              <div class="social-mockup-card" style="margin-bottom: 1rem;">
+                <div class="social-header">
+                  <img src="${data.avatar}" alt="${data.name}" class="social-avatar">
+                  <div class="social-author-info">
+                    <span class="social-author-name">${data.name} <i class="fa-solid fa-circle-check" style="color: var(--cyan);"></i></span>
+                    <span class="social-handle">@${data.id}.official • ${post.platform}</span>
+                  </div>
+                </div>
+                <div class="social-caption">${post.caption}</div>
+                <div class="social-stats">
+                  <span><i class="fa-regular fa-heart" style="color: var(--pink);"></i> ${post.likes} Me gusta</span>
+                  <span><i class="fa-regular fa-comment" style="color: var(--cyan);"></i> ${post.comments} Comentarios</span>
+                  <span><i class="fa-regular fa-clock"></i> ${post.date}</span>
+                </div>
+              </div>
+            `).join('') : '<p style="color: var(--text-muted);">Sin publicaciones de muestra registradas.</p>'}
+          </div>
+
+          <!-- Commercial Services for Brands -->
+          <h3 style="font-family: var(--font-heading); font-size: 1.25rem; color: #fff; margin-bottom: 0.85rem; display: flex; align-items: center; gap: 0.5rem;">
+            <i class="fa-solid fa-briefcase" style="color: #10b981;"></i> Oportunidades Comerciales para Marcas
+          </h3>
+          <div class="product-services-grid">
+            <div class="product-service-item">
+              <div class="service-item-icon"><i class="fa-solid fa-camera-retro"></i></div>
+              <h4 class="service-item-title">Patrocinio & Product Placement</h4>
+              <p class="service-item-desc">Integración nativa y verosímil de tus productos en publicaciones de feed, reels o historias de su rutina diaria.</p>
+            </div>
+
+            <div class="product-service-item">
+              <div class="service-item-icon" style="color: #f59e0b;"><i class="fa-solid fa-crown"></i></div>
+              <h4 class="service-item-title">Embajadora Virtual de Marca</h4>
+              <p class="service-item-desc">Acuerdos de 3 a 12 meses como rostro oficial digital de tu empresa en eventos, lanzamientos y medios online.</p>
+            </div>
+
+            <div class="product-service-item">
+              <div class="service-item-icon" style="color: var(--pink);"><i class="fa-solid fa-play"></i></div>
+              <h4 class="service-item-title">Creatividades UGC para Ads</h4>
+              <p class="service-item-desc">Videos cortos verticales con ganchos psicológicos validados para optimizar el coste por adquisición en Meta y TikTok Ads.</p>
+            </div>
+
+            <div class="product-service-item">
+              <div class="service-item-icon" style="color: var(--purple);"><i class="fa-solid fa-key"></i></div>
+              <h4 class="service-item-title">Licenciamiento Exclusivo</h4>
+              <p class="service-item-desc">Derechos de explotación exclusivos para tu sector o territorio, o adquisición del activo con entrega de LoRAs y prompts.</p>
+            </div>
+          </div>
+
+          <!-- CTA Conversion Box -->
+          <div class="product-cta-card">
+            <h4 style="font-family: var(--font-heading); font-size: 1.35rem; color: #fff; margin-bottom: 0.45rem;">
+              ¿Quieres a ${data.name} como imagen de tu marca?
+            </h4>
+            <p style="color: var(--text-muted); font-size: 0.88rem; max-width: 520px; margin: 0 auto 1.25rem auto;">
+              Diseñamos una propuesta personalizada con cronograma y tarifas de producción en menos de 24 horas.
+            </p>
+            <button class="btn btn-primary" onclick="openBrandInquiryModal('${data.id}')" style="padding: 0.75rem 2rem; font-size: 1rem;">
+              <i class="fa-solid fa-envelope-open-text"></i> Solicitar Propuesta Comercial & Tarifas
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  `;
+}
+
+// 2. MODAL & LIGHTBOX HANDLERS
+function openBrandInquiryModal(influencerId) {
+  const modal = document.getElementById('brand-inquiry-modal');
+  const inf = influencersData[influencerId];
+  const nameEl = document.getElementById('inquiry-influencer-name');
+  const idEl = document.getElementById('inquiry-influencer-id');
+  if (nameEl) nameEl.textContent = inf ? `${inf.name} (${inf.niche})` : 'Influencer IA';
+  if (idEl) idEl.value = influencerId || '';
+  if (modal) modal.classList.add('active');
+}
+
+function closeBrandInquiryModal() {
+  const modal = document.getElementById('brand-inquiry-modal');
+  if (modal) modal.classList.remove('active');
+}
+
+function handleBrandInquirySubmit(e) {
+  e.preventDefault();
+  const id = document.getElementById('inquiry-influencer-id')?.value || 'elena';
+  const inf = influencersData[id] || { name: 'Influencer' };
+  const name = document.getElementById('inquiry-name')?.value || '';
+  const company = document.getElementById('inquiry-company')?.value || '';
+  const email = document.getElementById('inquiry-email')?.value || '';
+  const service = document.getElementById('inquiry-service')?.value || '';
+  const message = document.getElementById('inquiry-message')?.value || '';
+
+  const subject = encodeURIComponent(`Solicitud Comercial: ${inf.name} - ${company}`);
+  const body = encodeURIComponent(
+    `Hola equipo de Los Manejadores,\n\n` +
+    `Estoy interesado en una colaboración comercial para ${inf.name}.\n\n` +
+    `Nombre: ${name}\n` +
+    `Empresa: ${company}\n` +
+    `Email: ${email}\n` +
+    `Servicio de interés: ${service}\n` +
+    `Mensaje / Objetivos:\n${message}\n\n` +
+    `Quedo atento a su respuesta y propuesta.`
+  );
+
+  closeBrandInquiryModal();
+  alert(`¡Gracias ${name}! Tu solicitud para colaborar con ${inf.name} ha sido recibida. Te abrimos el cliente de correo para enviar los detalles directamente a contacto@losmanejadores.com.`);
+  window.location.href = `mailto:contacto@losmanejadores.com?subject=${subject}&body=${body}`;
+}
+
+function openPhotoLightbox(imgUrl, title, desc) {
+  const modal = document.getElementById('photo-lightbox-modal');
+  const img = document.getElementById('lightbox-img');
+  const titleEl = document.getElementById('lightbox-title');
+  const descEl = document.getElementById('lightbox-desc');
+  if (img) img.src = imgUrl;
+  if (titleEl) titleEl.textContent = title || 'Fotografía de Consistencia Master';
+  if (descEl) descEl.textContent = desc || '';
+  if (modal) modal.classList.add('active');
+}
+
+function closePhotoLightbox() {
+  const modal = document.getElementById('photo-lightbox-modal');
+  if (modal) modal.classList.remove('active');
+}
+
+// 3. PRIVATE COCKPIT FOR INTERNAL TEAM (PRESERVING 5 OPERATIONAL TABS)
+function renderInfluencerCockpit(id) {
   const data = influencersData[id];
   const container = document.getElementById('view-dynamic');
   if (!container) return;
@@ -1857,11 +2262,19 @@ function renderInfluencerPage(id) {
       <div class="breadcrumbs">
         <a href="#home">Inicio</a>
         <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
-        <a href="#roster">Influencers IA</a>
+        <a href="#roster">Catálogo de Influencers IA</a>
         <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
-        <span class="current">${data.name}</span>
+        <span class="current">${data.name} (Cockpit de Producción)</span>
       </div>
-      <a href="#roster" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver a Catálogo</a>
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <div class="influencer-mode-toggle">
+          <button class="mode-btn" onclick="setInfluencerViewMode('${data.id}', 'product')" title="Ver Ficha Comercial Pública de Producto"><i class="fa-solid fa-eye"></i> Ficha Producto</button>
+          <button class="mode-btn active" title="Cockpit operativo privado de producción (SOP, Prompts y Briefing)"><i class="fa-solid fa-sliders"></i> Cockpit Operativo 🔒</button>
+        </div>
+        <button class="btn btn-secondary btn-sm" onclick="showTeamView('influencer-ops')">
+          <i class="fa-solid fa-table-list"></i> Matriz Operativa
+        </button>
+      </div>
     </div>
 
     <!-- Production Cockpit Layout -->
