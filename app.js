@@ -130,7 +130,44 @@ const influencersData = {
         date: "Hace 3 días",
         platform: "TikTok / Reels"
       }
-    ]
+    ],
+    ecommerce: {
+      storeName: "Elena Daddario Mindful Living • Libros & Papelería Guiada (Amazon KDP + Shopify)",
+      storeUrl: "https://elenadaddario.com/tienda",
+      storeType: "Portal Editorial & Bienestar • Libros, Journals & Masterclasses",
+      avgOrderValue: "$34 USD",
+      grossMargin: "82%",
+      conversionRate: "5.2%",
+      fulfillment: "Amazon KDP (Ebooks/Tapa Blanda) + Print-on-Demand de cuadernos encuadernados de lujo",
+      description: "Línea editorial de psicología práctica, diarios de gratitud con diseño estético y masterclasses en audio para reducción del estrés en ejecutivos.",
+      products: [
+        {
+          name: "Libro: 'El Silencio Habitado: Psicología Somática para Tiempos Rápidos'",
+          price: "$18 USD",
+          cost: "$4 USD",
+          category: "Libros / Editorial",
+          tag: "Best-Seller",
+          salesVolume: "1.420 uds/mes"
+        },
+        {
+          name: "Daily Mindfulness Journal • Encuadernación en Lino & Tapa Dura",
+          price: "$28 USD",
+          cost: "$6 USD",
+          category: "Papelería Guiada",
+          tag: "DTC Exclusivo",
+          salesVolume: "890 uds/mes"
+        },
+        {
+          name: "Audio-Masterclass: 'Regulación del Nervio Vago & Pausas Conscientes'",
+          price: "$49 USD",
+          cost: "$2 USD",
+          category: "Digital / Audio",
+          tag: "Margen 95%",
+          salesVolume: "530 descargas/mes"
+        }
+      ],
+      funnelStrategy: "Reflexiones profundas en Reels y Substack -> Descarga del capítulo 1 del libro gratis (Lead Magnet) -> Venta cruzada de libro + diario guiado en Shopify -> Acceso al círculo de lectores VIP."
+    }
   },
 
   julia: {
@@ -222,7 +259,44 @@ const influencersData = {
         date: "Hace 3 días",
         platform: "Instagram Reels"
       }
-    ]
+    ],
+    ecommerce: {
+      storeName: "LUMEN Bio-Dermocosmetics (Shopify DTC)",
+      storeUrl: "https://lumen-skin.myshopify.com",
+      storeType: "Shopify DTC • Clean Beauty & Dermocosmética",
+      avgOrderValue: "$48 USD",
+      grossMargin: "76%",
+      conversionRate: "3.8%",
+      fulfillment: "Fulfillment automatizado con laboratorio dermatológico en Madrid y Miami",
+      description: "Cosmética limpia formulada con ingredientes activos botánicos y biomiméticos, diseñada para proteger la barrera cutánea sin agentes irritantes.",
+      products: [
+        {
+          name: "Sérum Hidratante Niacinamida 10% + Zinc 1%",
+          price: "$34 USD",
+          cost: "$7 USD",
+          category: "Dermocosmética",
+          tag: "Top Ventas",
+          salesVolume: "2.100 uds/mes"
+        },
+        {
+          name: "Protector Solar Mineral Invisible SPF 50 Broad Spectrum",
+          price: "$28 USD",
+          cost: "$6 USD",
+          category: "Protección Solar",
+          tag: "Recurrente",
+          salesVolume: "1.650 uds/mes"
+        },
+        {
+          name: "Beauty Box Estacional: Rutina Completa 'Barrier Repair'",
+          price: "$89 USD",
+          cost: "$22 USD",
+          category: "Caja de Suscripción",
+          tag: "Mayor Ticket",
+          salesVolume: "620 suscriptores"
+        }
+      ],
+      funnelStrategy: "Videos de 60s desmintiendo mitos de ingredientes en TikTok -> Link in bio con código de descuento -15% -> Landing de producto optimizada en Shopify -> Carrito con 1-click upsell -> Secuencia de emails de uso diario."
+    }
   },
 
   laura: {
@@ -314,7 +388,44 @@ const influencersData = {
         date: "Hace 3 días",
         platform: "TikTok"
       }
-    ]
+    ],
+    ecommerce: {
+      storeName: "Taeda Metabolic Health & Nutrition Hub (Shopify + Skool)",
+      storeUrl: "https://taedanutrition.com",
+      storeType: "Portal E-commerce • Nutrición, Recetarios & Suplementación",
+      avgOrderValue: "$65 USD",
+      grossMargin: "74%",
+      conversionRate: "4.1%",
+      fulfillment: "Descarga digital instantánea para guías + Centro de distribución en CDMX y Santiago",
+      description: "Recetarios basados en evidencia metabólica, guías de recomposición corporal y suplementación pura (electrolitos y creatina micronizada) formulada sin rellenos.",
+      products: [
+        {
+          name: "Guía de Recomposición Corporal & Recetario Antiinflamatorio",
+          price: "$39 USD",
+          cost: "$3 USD",
+          category: "E-Book Nutricional",
+          tag: "Descarga Instantánea",
+          salesVolume: "1.850 uds/mes"
+        },
+        {
+          name: "Pack Electrolitos Clean + Creatina Creapure® Micronizada",
+          price: "$45 USD",
+          cost: "$12 USD",
+          category: "Suplementos",
+          tag: "Alta Recompra",
+          salesVolume: "1.120 packs/mes"
+        },
+        {
+          name: "Membresía 'Metabolic Reset' (Menús semanales + Q&A con Lau)",
+          price: "$59 USD/mes",
+          cost: "$5 USD",
+          category: "Comunidad / Suscripción",
+          tag: "Alto LTV",
+          salesVolume: "780 miembros"
+        }
+      ],
+      funnelStrategy: "Shorts y Reels con desmentidos científicos de dietas de moda -> E-book gratuito 'Los 5 alimentos que arruinan tu microbiota' -> Oferta del pack de suplementación con descuento exclusivo -> Suscripción a comunidad mensual."
+    }
   },
 
   kira: {
@@ -412,7 +523,44 @@ const influencersData = {
         date: "Hace 2 días",
         platform: "Twitter/X"
       }
-    ]
+    ],
+    ecommerce: {
+      storeName: "Voss DevLab • Shaders, Game Assets & Merch (Gumroad & Shopify)",
+      storeUrl: "https://vossdev.gumroad.com",
+      storeType: "E-Commerce Digital • Assets para Videojuegos & Streetwear Tech",
+      avgOrderValue: "$42 USD",
+      grossMargin: "91%",
+      conversionRate: "5.8%",
+      fulfillment: "Descarga de repositorios en GitHub / Gumroad + Envíos globales de indumentaria",
+      description: "Shaders optimizados para motores de código abierto (Godot 4 y Unreal Engine), paquetes de efectos visuales retro y accesorios de escritorio para desarrolladores.",
+      products: [
+        {
+          name: "Cyberpunk CRT & Glitch Shaders Pack para Godot 4.3",
+          price: "$35 USD",
+          cost: "$2 USD",
+          category: "Assets para Juegos",
+          tag: "Top Seller Indie",
+          salesVolume: "1.600 descargas/mes"
+        },
+        {
+          name: "Mousepad XXL 'Terminal Hacker' Textura Control 900x400mm",
+          price: "$29 USD",
+          cost: "$8 USD",
+          category: "Hardware / Periféricos",
+          tag: "Físico",
+          salesVolume: "580 uds/mes"
+        },
+        {
+          name: "Hoodie Unisex 'Code Sovereign' Bordado Reflectante",
+          price: "$68 USD",
+          cost: "$20 USD",
+          category: "Indumentaria Dev",
+          tag: "Alta Demanda",
+          salesVolume: "410 uds/mes"
+        }
+      ],
+      funnelStrategy: "Devlogs en YouTube mostrando cómo programar mecánicas en directo -> Link a shader gratuito de muestra en GitHub -> Venta cruzada del pack completo de shaders en Gumroad -> Membresía al servidor de Discord privado para desarrolladores."
+    }
   },
 
   maite: {
@@ -498,6 +646,179 @@ const influencersData = {
         date: "Hace 3 días",
         platform: "Instagram"
       }
+    ],
+    ecommerce: {
+      storeName: "Maite Pop Oficial Fan Store (Shopify)",
+      storeUrl: "https://maitepop.store",
+      storeType: "Tienda Oficial de Merchandising Pop & Experiencias",
+      avgOrderValue: "$38 USD",
+      grossMargin: "68%",
+      conversionRate: "4.6%",
+      fulfillment: "Alianza con imprenta textil y logística de paquetería en Santiago (Chile) y Buenos Aires",
+      description: "Indumentaria streetwear y country chic de edición limitada, preventas de vinilos y entradas a experiencias virtuales para su creciente base de fans de la cumbia pop.",
+      products: [
+        {
+          name: "Polera Oversized 'Corazón Ranchero' Edición Limitada",
+          price: "$32 USD",
+          cost: "$9 USD",
+          category: "Streetwear Pop",
+          tag: "Tiraje Limitado",
+          salesVolume: "950 uds/mes"
+        },
+        {
+          name: "Gorro Trucker Bordado 'Maite de Oro'",
+          price: "$24 USD",
+          cost: "$6 USD",
+          category: "Accesorios",
+          tag: "Trending",
+          salesVolume: "720 uds/mes"
+        },
+        {
+          name: "Pase VIP Virtual Meet & Greet + Escucha Anticipada de Single",
+          price: "$19 USD",
+          cost: "$1 USD",
+          category: "Pase Virtual",
+          tag: "Margen 95%",
+          salesVolume: "1.200 pases/lanzamiento"
+        }
+      ],
+      funnelStrategy: "Lanzamientos de coreografías en TikTok -> Preventas exclusivas con cuenta regresiva en Shopify -> Drops de 48 horas que generan FOMO -> Comunidad de WhatsApp/Telegram para fans de primera fila."
+    }
+  },
+
+  mateo: {
+    id: "mateo",
+    name: "Mateo Silva",
+    niche: "FinTech, Inversiones Cuantitativas & Real Estate Tech",
+    badge: "Nicho Top Monetización • Live",
+    avatar: "mateo_avatar.jpg",
+    tagline: "Estrategias cuantitativas de inversión, modelos en Python y finanzas modernas desde Londres y Fráncfort.",
+    keyMarkets: "España, México, Chile, Colombia, Miami y comunidad de inversores y fundadores tecnológicos en Europa.",
+    story: "Con 30 años y doble titulación en ingeniería financiera y econometría por Frankfurt School of Finance y King's College London, Mateo Silva combina la precisión matemática de los modelos algorítmicos con la accesibilidad de la comunicación digital moderna. Tras desempeñarse como analista cuantitativo en fondos de capital riesgo en Canary Wharf, Mateo creó su ecosistema de divulgación para derribar las falsas promesas de dinero fácil y dotar a inversores y empresarios de herramientas profesionales de análisis patrimonial. Su estilo pulcro, analítico y sereno proyecta la máxima autoridad y sofisticación técnica.",
+    bio: "Mateo Silva (30 años) lidera el nicho con el CPM/RPM publicitario más alto de la industria digital ($18–$45 USD por cada 1.000 vistas en YouTube). Diseñado para monetizar a través de software financiero SaaS, suscripciones B2B a su newsletter macroeconómica, patrocinios de brokers institucionales y venta directa de modelos de valoración en Python/Excel.",
+    archetype: "Quantitative FinTech Executive & Modern Wealth Architect",
+    techStack: "Flux 2 Dev LoRA Consistencia (Ref: Mateo_v1) + ElevenLabs Inflexión Barítono Confiada + Kling 3.0 Motion Control",
+    targetAudience: "Inversores particulares, emprendedores, directivos, consultores y profesionales tecnológicos de 24 a 52 años.",
+    channels: "YouTube (Alpha Capital Insights), Substack (The Macro Brief), LinkedIn (@mateo-silva-capital), X / Twitter (@mateosilva_ai)",
+    gallery: [
+      {
+        img: "mateo_avatar.jpg",
+        tag: "Retrato Matriz LoRA (99.2% Match)",
+        label: "Mateo Silva • Canary Wharf Executive Studio",
+        desc: "Traje sastre azul marino, iluminación natural de rascacielos con tickers bursátiles de fondo. Fotorrealismo 8K."
+      },
+      {
+        img: "mateo_podcast.jpg",
+        tag: "Podcast & Media Studio",
+        label: "Mateo Silva • The Fintech Insights Podcast",
+        desc: "Setup de grabación con micrófono Shure SM7B, iluminación cálida de estudio y estética de alto impacto para clips cortos."
+      },
+      {
+        img: "mateo_lifestyle.jpg",
+        tag: "Lifestyle Ejecutivo & Co-Working",
+        label: "Mateo Silva • Terraza Financiera & Análisis Móvil",
+        desc: "Sesión casual en cafetería ejecutiva en distrito financiero europeo revisando métricas de cartera en iPad."
+      }
+    ],
+    voice: {
+      title: "Inflexión Barítono Confiada (ElevenLabs)",
+      badge: "Voice ID: Mateo-QuantFin",
+      duration: "0:25",
+      transcript: "«El verdadero error en finanzas no es la volatilidad del mercado, sino operar sin un modelo probabilístico. En este análisis te muestro cómo estructurar una cartera defensiva con asignación automatizada y criterio institucional.»",
+      rate: 1.0,
+      pitch: 0.95,
+      lang: "es-ES"
+    },
+    roi: {
+      defaultFollowers: 120000,
+      defaultConversion: 2.8,
+      defaultTicket: 29
+    },
+    promptScenes: {
+      casual: {
+        label: "☕ Terraza Financiera",
+        tags: ["Flux 2 Dev", "LoRA Mateo", "--ar 4:5"],
+        text: "Professional lifestyle candid photo of 30yo handsome financial tech man Mateo Silva with short dark hair, sitting at an outdoor terrace coffee shop in a modern European financial district, holding an espresso cup, modern smart watch on wrist, iPad on table, wearing a crisp charcoal blazer over a white crew neck tee, natural golden hour lighting, photorealistic --ar 4:5"
+      },
+      editorial: {
+        label: "🏢 Canary Wharf Master Studio",
+        tags: ["Studio Master", "Hasselblad", "--ar 16:9"],
+        text: "Ultra-photorealistic 8k portrait of Mateo Silva, 30yo handsome financial executive, navy wool suit, open white dress shirt, Rolex Submariner on wrist, glass high-rise office in London Canary Wharf with blurred financial tickers, cinematic rim lighting, 85mm f/1.4 lens, natural skin pores --ar 16:9"
+      },
+      fitness: {
+        label: "🎙️ Podcast Fintech Insights",
+        tags: ["Media Studio", "4K", "--ar 4:5"],
+        text: "Professional photo of 30yo handsome financial tech man Mateo Silva with short dark hair in a sleek high-end podcast studio, wearing minimalist black turtleneck, studio microphone Shure SM7B in front, warm ambient neon lighting, deep focus, photorealistic --ar 4:5"
+      },
+      video: {
+        label: "🎬 Kling 3.0 Hook Financiero",
+        tags: ["Kling 3.0", "60fps", "FinTech"],
+        text: "Cinematic medium close-up of Mateo Silva explaining algorithmic asset allocation with confident hand gestures, sharp navy suit, dual monitors with candlestick trading charts softly glowing in the background, 4k 60fps"
+      },
+      negative: {
+        label: "🚫 Negative Prompt",
+        tags: ["Negative Matriz"],
+        text: "blurry, amateur, low resolution, bad anatomy, cartoon, 3d render, deformed hands, extra fingers, plastic skin, oversaturated, childish, uncanny valley"
+      }
+    },
+    ecommerce: {
+      storeName: "AlphaCapital Tools & Academy (Shopify / Whop)",
+      storeUrl: "https://alphacapital.tools",
+      storeType: "E-Commerce FinTech • Modelos, Software & Newsletter",
+      avgOrderValue: "$120 USD",
+      grossMargin: "88%",
+      conversionRate: "4.5%",
+      fulfillment: "Entrega digital inmediata con soporte de comunidad privada en Discord/Telegram",
+      description: "Hub de herramientas cuantitativas para inversores particulares y family offices. Mateo comercializa plantillas financieras avanzadas en Python y Excel, membresías a su newsletter de asignación de activos y masterclasses de Real Estate Tech.",
+      products: [
+        {
+          name: "MacroQuant Portfolio Valuation Model (Excel + Python API)",
+          price: "$149 USD",
+          cost: "$8 USD",
+          category: "Herramienta Digital",
+          tag: "Best-Seller B2B",
+          salesVolume: "480 uds/mes"
+        },
+        {
+          name: "Membresía Mensual 'The Macro Brief' (Newsletter VIP)",
+          price: "$29 USD/mes",
+          cost: "$2 USD",
+          category: "Suscripción Recurrente",
+          tag: "Alto LTV",
+          salesVolume: "1.150 suscriptores"
+        },
+        {
+          name: "Masterclass: Estructuración Patrimonial Internacional & Real Estate Tokenizado",
+          price: "$390 USD",
+          cost: "$25 USD",
+          category: "Formación Ejecutiva",
+          tag: "High-Ticket",
+          salesVolume: "120 alumnos/cohorte"
+        }
+      ],
+      funnelStrategy: "Videos en YouTube con breakdown de balances corporativos -> Link a modelo gratuito en Excel (Lead Magnet para captar email) -> Secuencia educativa automatizada de 4 correos -> Venta de modelo completo MacroQuant con upsell a Membresía VIP -> Comunidad exclusiva para miembros."
+    },
+    monetizationFunnel: [
+      { step: "Nivel 1 (Atracción Masiva)", detail: "YouTube Long-form (análisis de estados financieros y tendencias macro) + Hilos en X y posts en LinkedIn." },
+      { step: "Nivel 2 (Lead Magnet)", detail: "Plantilla descargable gratuita de seguimiento de patrimonio en Notion/Excel a cambio de suscripción al newsletter." },
+      { step: "Nivel 3 (Suscripción & Software)", detail: "Membresía 'The Macro Brief' ($29 USD/mes) y venta de plantillas premium ($149 USD)." },
+      { step: "Nivel 4 (Patrocinios & B2B)", detail: "Acuerdos institucionales con neobancos, brokers regulados y fondos de inversión inmobiliaria ($2.500 a $8.000 USD/campaña)." }
+    ],
+    posts: [
+      {
+        caption: "La mayoría mira el precio; los inversores cuantitativos miran la desviación estándar y el flujo de caja descontado. Aquí tienes la estructura de cartera que utilizamos para resistir ciclos de tipos de interés altos 📊📈",
+        likes: "19,840",
+        comments: "842",
+        date: "Hace 1 día",
+        platform: "LinkedIn / X"
+      },
+      {
+        caption: "El 82% del retorno a largo plazo no depende del 'timing' de entrada, sino de la diversificación factorial. Dejo en el enlace de la bio el modelo en Python que usamos para calcular la frontera eficiente de Markowitz 💻🚀",
+        likes: "26,150",
+        comments: "1,120",
+        date: "Hace 3 días",
+        platform: "YouTube Community"
+      }
     ]
   },
 
@@ -564,7 +885,36 @@ const influencersData = {
         date: "Hace 1 día",
         platform: "Instagram"
       }
-    ]
+    ],
+    ecommerce: {
+      storeName: "Alejandra Vinyl & Vintage Club (Shopify)",
+      storeUrl: "https://alejandravinyl.store",
+      storeType: "Tienda Vintage & Audio • Vinilos Raros & Merch Analógico",
+      avgOrderValue: "$52 USD",
+      grossMargin: "65%",
+      conversionRate: "3.2%",
+      fulfillment: "Envíos directos desde Berlín a Europa y América",
+      description: "Curaduría mensual de vinilos importados, accesorios de audio analógico (limpiadores de aguja, slipmats de corcho) y camisetas con arte tipográfico de festivales indie.",
+      products: [
+        {
+          name: "Vinilo Exclusivo 'Berlín Low-Light Sessions' (Edición Prensada a Mano)",
+          price: "$38 USD",
+          cost: "$12 USD",
+          category: "Vinilos / Música",
+          tag: "Tiraje 500 uds",
+          salesVolume: "480 uds/mes"
+        },
+        {
+          name: "Slipmat de Corcho Antiestático para Tocadiscos",
+          price: "$22 USD",
+          cost: "$5 USD",
+          category: "Accesorios Audio",
+          tag: "Audiófilo",
+          salesVolume: "350 uds/mes"
+        }
+      ],
+      funnelStrategy: "Micro-reseñas de discos raros en TikTok -> Link a playlist curada en Spotify con banner a tienda de vinilos -> Preventas por suscripción a newsletter."
+    }
   }
 };
 
@@ -702,10 +1052,38 @@ const channelsData = {
     ],
     pipeline: "Capturas de motor de juego en tiempo real -> Generación de avatar de Kira con sincronización labial Kling/HeyGen -> Edición dinámica estilo devlog de ritmo rápido -> Música synthwave/lo-fi original.",
     monetization: "Patrocinios con marcas de laptops, periféricos gamer, plataformas de hosting/cloud, AdSense Tech de alto RPM ($9–$15 USD) y embudo de conversión a la lista de deseados (Wishlist) en Steam y Fanvue VIP."
+  },
+  mateo_fintech: {
+    id: "mateo_fintech",
+    title: "4. Mateo Silva • Alpha Capital Insights",
+    subtitle: "FinTech, Finanzas Cuantitativas & Real Estate Tech",
+    category: "Finanzas / Tecnología",
+    icon: "fa-arrow-trend-up",
+    color: "var(--cyan)",
+    image: "mateo_avatar.jpg",
+    concept: "Análisis financiero cuantitativo, modelos algorítmicos en Python y estrategias de inversión sin mitos. El canal con mayor RPM de YouTube ($18–$45 USD) para captación de clientes de alto patrimonio y SaaS B2B.",
+    targetAge: "Inversores, ejecutivos y emprendedores de 25 a 55 años.",
+    episodes: [
+      {
+        title: "Episodio #1: Por qué el 90% de los inversores pierde contra el S&P 500 (y el código en Python que lo prueba)",
+        duration: "16:20 min",
+        script: `[MATEO]: "En este análisis no te voy a vender un curso para hacerte rico. Vamos a descargar 40 años de datos de mercado con Python y ver qué factores matemáticos explican el 85% de la rentabilidad real de los mejores fondos cuantitativos..."`,
+        thumbnail: "Mateo Silva en traje sastre azul marino frente a rascacielos con texto: 'EL ALGORITMO DEFENSIVO'."
+      },
+      {
+        title: "Episodio #2: Tokenización Inmobiliaria: Cómo invertir en Real Estate europeo desde $100 USD",
+        duration: "14:45 min",
+        script: `[MATEO]: "La deuda tokenizada y las fracciones inmobiliarias están cambiando las reglas de juego. Te muestro la estructura legal y los rendimientos netos libres de impuestos en Fráncfort y Londres..."`,
+        thumbnail: "Mateo Silva con gráficos de blockchain y edificios modernos de Canary Wharf."
+      }
+    ],
+    pipeline: "Guion de investigación econométrica -> Avatar 4K de Mateo con sincronización labial Kling 3.0 / HeyGen -> Gráficos interactivos de trading en pantalla -> Edición ejecutiva limpia sin saturación de memes.",
+    monetization: "AdSense FinTech de ultra alto RPM ($24–$45 USD), patrocinios con brokers regulados y neobancos ($3.000–$7.000 USD/video), y venta de plantillas de valoración en Python/Excel ($149 USD)."
   }
 };
 
 channelsData.lau_gamedev = channelsData.kira_gamedev;
+channelsData.mateo = channelsData.mateo_fintech;
 
 // --- 3. AUTHENTICATION & ACCESS CONTROL FOR INTERNAL TEAM PANEL ---
 let pendingTeamTab = 'members';
@@ -859,6 +1237,12 @@ function handleRoute() {
   } else if (hash === '#asesorias') {
     renderAdvisoriesPage();
     showDynamicView();
+  } else if (hash === '#empresas') {
+    renderEmpresasPage();
+    showDynamicView();
+  } else if (hash === '#clientes' || hash === '#pitch') {
+    renderClientsPage();
+    showDynamicView();
   } else if (hash === '#logos' || hash === '#copys') {
     if (isTeamAuthenticated()) {
       showTeamView('copys');
@@ -983,6 +1367,7 @@ function renderInfluencerOpsMatrix() {
     { id: 'elena', name: 'Elena Daddario', handler: 'Daniel Santander (Alemania)', niche: 'Psicología & Lifestyle Consciente', status: 'Listo • Live', ticket: '$14 USD/m (VIP)' },
     { id: 'julia', name: 'Julia', handler: 'Pancho Ipinza (Canadá)', niche: 'Dermocosmética & Clean Beauty', status: 'Listo • Live', ticket: '$12 USD/m (VIP)' },
     { id: 'laura', name: 'Laura Taeda', handler: 'Wladimir Gutierrez (Chile)', niche: 'Nutrition Lifestyle + Science-Based Reviews', status: 'Listo • Live', ticket: '$24 USD/m (VIP)' },
+    { id: 'mateo', name: 'Mateo Silva', handler: 'Daniel / Pancho (Alemania/Canadá)', niche: 'FinTech, Inversiones & Real Estate Tech', status: 'Listo • Live (Top RPM)', ticket: '$29 USD/m (VIP)' },
     { id: 'maite', name: 'Maite Valenzuela', handler: 'Equipo (Los Manejadores)', niche: 'Cumbia Ranchera Pop & Mercado Chile', status: 'Listo • Live (Equipo)', ticket: '$15 USD/m (VIP)' },
     { id: 'kira', name: 'Kira Voss', handler: 'Equipo (Los Manejadores)', niche: 'Indie Game Dev & Cyberpunk Glamour (Validado)', status: 'Validado • Live (Equipo)', ticket: '$18 USD/m (VIP)' },
     { id: 'alejandra', name: 'Alejandra', handler: 'Pancho / Pipeline', niche: 'Cultura Indie & Música', status: 'En Concepto (Q2)', ticket: '$10 USD/m (VIP)' }
@@ -2164,6 +2549,87 @@ function renderInfluencerPublicProduct(id) {
             </div>
           </div>
 
+          <!-- E-Commerce Showcase: Productos y Estrategias de Venta Directa -->
+          ${data.ecommerce ? `
+            <div class="ecommerce-showcase-card">
+              <div class="ecommerce-showcase-header">
+                <div>
+                  <span class="product-tag" style="background: rgba(16, 185, 129, 0.15); color: var(--green); border-color: rgba(16, 185, 129, 0.4);">
+                    <i class="fa-solid fa-cart-shopping"></i> Estrategia de Venta Directa & E-Commerce
+                  </span>
+                  <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: #fff; margin: 0.35rem 0;">
+                    ${data.ecommerce.storeName}
+                  </h3>
+                  <div style="font-size: 0.85rem; color: var(--cyan);"><i class="fa-solid fa-store"></i> ${data.ecommerce.storeType}</div>
+                </div>
+                <button class="btn btn-secondary btn-sm" onclick="openBrandInquiryModal('${data.id}')" style="border-color: rgba(16, 185, 129, 0.4); color: var(--green);">
+                  <i class="fa-solid fa-bag-shopping"></i> Vender mis Productos con ${data.name}
+                </button>
+              </div>
+
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem;">
+                ${data.ecommerce.description}
+              </p>
+
+              <!-- Métricas Clave de E-Commerce -->
+              <div class="ecommerce-metrics-row">
+                <div class="ecommerce-metric-item">
+                  <span class="ecommerce-metric-lbl">Ticket Promedio (AOV)</span>
+                  <span class="ecommerce-metric-val">${data.ecommerce.avgOrderValue}</span>
+                </div>
+                <div class="ecommerce-metric-item">
+                  <span class="ecommerce-metric-lbl">Margen Bruto de Producto</span>
+                  <span class="ecommerce-metric-val" style="color: #10b981;">${data.ecommerce.grossMargin}</span>
+                </div>
+                <div class="ecommerce-metric-item">
+                  <span class="ecommerce-metric-lbl">Tasa de Conversión Web</span>
+                  <span class="ecommerce-metric-val" style="color: #a78bfa;">${data.ecommerce.conversionRate}</span>
+                </div>
+                <div class="ecommerce-metric-item">
+                  <span class="ecommerce-metric-lbl">Logística & Fulfillment</span>
+                  <span style="font-size: 0.82rem; color: #fff; font-weight: 600; margin-top: 0.4rem;">${data.ecommerce.fulfillment}</span>
+                </div>
+              </div>
+
+              <!-- Catálogo de Productos Vendidos -->
+              <h4 style="font-family: var(--font-heading); font-size: 1.05rem; color: #fff; margin-bottom: 1rem;">
+                <i class="fa-solid fa-box-open" style="color: var(--purple);"></i> Catálogo de Productos & Volumen de Venta
+              </h4>
+              <div class="ecommerce-products-grid">
+                ${data.ecommerce.products.map(p => `
+                  <div class="ecommerce-product-card">
+                    <div>
+                      <div class="product-tag">${p.tag} • ${p.category}</div>
+                      <h5 style="color: #fff; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem;">${p.name}</h5>
+                      <div style="font-size: 0.78rem; color: var(--cyan);"><i class="fa-solid fa-fire"></i> Volumen: ${p.salesVolume}</div>
+                    </div>
+                    <div class="product-price-row">
+                      <div class="product-price">${p.price}</div>
+                      <div class="product-cost">Costo fab: ${p.cost}</div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+
+              <!-- Arquitectura del Embudo -->
+              <h4 style="font-family: var(--font-heading); font-size: 1.05rem; color: #fff; margin-bottom: 0.5rem;">
+                <i class="fa-solid fa-diagram-next" style="color: var(--cyan);"></i> Embudo de Conversión & Tráfico a Tienda
+              </h4>
+              <div class="funnel-flow-diagram">
+                <span class="funnel-step-node"><i class="fa-solid fa-video"></i> Contenido Orgánico / Shorts</span>
+                <i class="fa-solid fa-arrow-right" style="color: var(--text-muted); font-size: 0.75rem;"></i>
+                <span class="funnel-step-node"><i class="fa-solid fa-gift"></i> Lead Magnet / Descuento</span>
+                <i class="fa-solid fa-arrow-right" style="color: var(--text-muted); font-size: 0.75rem;"></i>
+                <span class="funnel-step-node" style="background: rgba(16, 185, 129, 0.15); color: #10b981;"><i class="fa-solid fa-bag-shopping"></i> Checkout Shopify</span>
+                <i class="fa-solid fa-arrow-right" style="color: var(--text-muted); font-size: 0.75rem;"></i>
+                <span class="funnel-step-node" style="background: rgba(6, 182, 212, 0.15); color: #38bdf8;"><i class="fa-solid fa-repeat"></i> Recompra por Email</span>
+              </div>
+              <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.75rem; font-style: italic;">
+                Estrategia: ${data.ecommerce.funnelStrategy}
+              </p>
+            </div>
+          ` : ''}
+
           <!-- CTA Conversion Box -->
           <div class="product-cta-card">
             <h4 style="font-family: var(--font-heading); font-size: 1.35rem; color: #fff; margin-bottom: 0.45rem;">
@@ -2368,6 +2834,9 @@ function renderInfluencerCockpit(id) {
           <button id="tab-btn-platforms" class="tab-btn cockpit-tab-btn active" onclick="switchTab(this, 'tab-platforms')">
             <i class="fa-solid fa-layer-group"></i> Plataformas & SOP
           </button>
+          <button id="tab-btn-ecommerce" class="tab-btn cockpit-tab-btn" onclick="switchTab(this, 'tab-ecommerce')">
+            <i class="fa-solid fa-cart-shopping"></i> E-Commerce & Catálogo
+          </button>
           <button id="tab-btn-tech" class="tab-btn cockpit-tab-btn" onclick="switchTab(this, 'tab-technical')">
             <i class="fa-solid fa-code"></i> Prompts por Escena
           </button>
@@ -2380,6 +2849,120 @@ function renderInfluencerCockpit(id) {
           <button id="tab-btn-posts" class="tab-btn cockpit-tab-btn" onclick="switchTab(this, 'tab-posts')">
             <i class="fa-solid fa-image"></i> Publicaciones
           </button>
+        </div>
+
+        <!-- Tab: E-Commerce & Catálogo de Venta Directa -->
+        <div id="tab-ecommerce" class="tab-pane">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+            <div>
+              <h3 style="font-family: var(--font-heading); margin-bottom: 0.35rem; font-size: 1.4rem; display: flex; align-items: center; gap: 0.6rem;">
+                <i class="fa-solid fa-cart-shopping" style="color: var(--cyan);"></i> Estrategia de E-Commerce & Monetización Directa
+              </h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">
+                Panel de gestión de productos físicos y digitales vendidos a través de <strong>${data.name}</strong> (${data.ecommerce ? data.ecommerce.storeName : 'Tienda Integrada'}).
+              </p>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <span class="platform-pill highlight" style="display: flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.85rem; font-size: 0.85rem;">
+                <i class="fa-solid fa-bolt" style="color: #10b981;"></i> Webhook ${data.ecommerce ? data.ecommerce.platform.split(' ')[0] : 'Shopify'} Conectado
+              </span>
+            </div>
+          </div>
+
+          ${data.ecommerce ? `
+            <!-- Strategy & Performance Summary -->
+            <div class="glass-card" style="margin-bottom: 1.5rem; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.04);">
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem;">
+                <div>
+                  <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--cyan); font-weight: 700;">Canal & Stack E-Commerce</span>
+                  <h4 style="color: #fff; font-size: 1.15rem; margin: 0.2rem 0 0 0;">${data.ecommerce.storeName}</h4>
+                </div>
+                <span style="font-size: 0.82rem; background: rgba(255,255,255,0.08); padding: 0.3rem 0.75rem; border-radius: 20px; color: #cbd5e1; border: 1px solid var(--border-glass);">
+                  <i class="fa-solid fa-server" style="color: var(--purple); margin-right: 0.35rem;"></i> ${data.ecommerce.platform}
+                </span>
+              </div>
+              <p style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                <strong>Estrategia Comercial:</strong> ${data.ecommerce.strategy}
+              </p>
+
+              <!-- Live Metrics -->
+              <div class="ecommerce-metrics-row" style="margin-bottom: 0;">
+                <div class="ecom-metric-box">
+                  <div class="ecom-metric-val">${data.ecommerce.metrics.aov}</div>
+                  <div class="ecom-metric-lbl"><i class="fa-solid fa-receipt"></i> Ticket Promedio (AOV)</div>
+                </div>
+                <div class="ecom-metric-box">
+                  <div class="ecom-metric-val" style="color: #10b981;">${data.ecommerce.metrics.margin}</div>
+                  <div class="ecom-metric-lbl"><i class="fa-solid fa-chart-pie"></i> Margen Bruto Promedio</div>
+                </div>
+                <div class="ecom-metric-box">
+                  <div class="ecom-metric-val" style="color: var(--cyan);">${data.ecommerce.metrics.conversionRate}</div>
+                  <div class="ecom-metric-lbl"><i class="fa-solid fa-bullseye"></i> Tasa Conversión Tráfico</div>
+                </div>
+                <div class="ecom-metric-box">
+                  <div class="ecom-metric-val" style="color: var(--pink);">${data.ecommerce.metrics.monthlyOrders}</div>
+                  <div class="ecom-metric-lbl"><i class="fa-solid fa-box-open"></i> Pedidos Mensuales Est.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SKU Breakdown Table -->
+            <h4 style="font-family: var(--font-heading); color: #fff; font-size: 1.15rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+              <i class="fa-solid fa-boxes-stacked" style="color: var(--purple);"></i> Desglose Unitario de SKUs & Rentabilidad
+            </h4>
+            <div style="overflow-x: auto; margin-bottom: 1.5rem; border: 1px solid var(--border-glass); border-radius: var(--radius-md);">
+              <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem; text-align: left;">
+                <thead>
+                  <tr style="background: rgba(10, 12, 20, 0.85); color: var(--cyan); border-bottom: 1px solid var(--border-glass);">
+                    <th style="padding: 0.75rem 1rem;">Producto / SKU</th>
+                    <th style="padding: 0.75rem 1rem;">Tipo / Formato</th>
+                    <th style="padding: 0.75rem 1rem;">PVP (Precio)</th>
+                    <th style="padding: 0.75rem 1rem;">COGS (Coste)</th>
+                    <th style="padding: 0.75rem 1rem;">Margen (%)</th>
+                    <th style="padding: 0.75rem 1rem;">Logística / Entrega</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${data.ecommerce.products.map(p => `
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(18, 22, 36, 0.45);">
+                      <td style="padding: 0.85rem 1rem; font-weight: 600; color: #fff;">
+                        ${p.name}
+                        <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 400; margin-top: 0.2rem;">${p.desc}</div>
+                      </td>
+                      <td style="padding: 0.85rem 1rem;">
+                        <span style="background: rgba(139, 92, 246, 0.15); color: #c4b5fd; padding: 0.2rem 0.55rem; border-radius: 4px; font-size: 0.78rem;">
+                          ${p.category || 'Catálogo Oficial'}
+                        </span>
+                      </td>
+                      <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;">${p.price}</td>
+                      <td style="padding: 0.85rem 1rem; color: #94a3b8;">${p.cogs || '$0.00'}</td>
+                      <td style="padding: 0.85rem 1rem; font-weight: 700; color: #10b981;">${p.margin || '75%'}</td>
+                      <td style="padding: 0.85rem 1rem; color: #cbd5e1; font-size: 0.82rem;">${p.fulfillment || 'Digital Instantáneo'}</td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+
+            <!-- E-Commerce Operational Actions Bar -->
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding: 1.25rem; background: rgba(255,255,255,0.02); border: 1px solid var(--border-glass); border-radius: var(--radius-md);">
+              <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <button class="btn btn-primary btn-sm" onclick="alert('Abriendo túnel seguro de administración para la tienda de ${data.name} (${data.ecommerce.storeName}).')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir Portal de Gestión (${data.ecommerce.platform.split(' ')[0]})
+                </button>
+                <button class="btn btn-secondary btn-sm" onclick="alert('Exportando catálogo de productos y mediakit comercial de ${data.name} en PDF/CSV.')">
+                  <i class="fa-solid fa-file-export"></i> Exportar MediaKit de Venta
+                </button>
+              </div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">
+                <i class="fa-solid fa-shield-halved" style="color: var(--cyan);"></i> Pasarela segura Stripe/Shopify con cumplimiento RGPD
+              </div>
+            </div>
+          ` : `
+            <div style="padding: 2.5rem; text-align: center; background: rgba(255,255,255,0.02); border: 1px dashed var(--border-glass); border-radius: var(--radius-md);">
+              <p style="color: var(--text-muted);">Sin catálogo e-commerce configurado actualmente para este perfil.</p>
+            </div>
+          `}
         </div>
 
         <!-- Tab 1: Posts Mockup (Non-active by default in cockpit) -->
@@ -3034,6 +3617,478 @@ function scrollToBooking(planName) {
 function handleBookingSubmit(e) {
   e.preventDefault();
   alert("¡Solicitud recibida con éxito! Nuestro equipo entre Alemania y Canadá se pondrá en contacto contigo para agendar la sesión.");
+}
+
+// ============================================================================
+// RENDER: EMPRESAS B2B SOLUTIONS PAGE
+// ============================================================================
+function renderEmpresasPage() {
+  const container = document.getElementById('view-dynamic');
+  if (!container) return;
+
+  container.innerHTML = `
+    <div class="breadcrumb-bar">
+      <div class="breadcrumbs">
+        <a href="#home">Inicio</a>
+        <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
+        <span class="current">Soluciones para Empresas & IA</span>
+      </div>
+      <a href="#home" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver a Inicio</a>
+    </div>
+
+    <!-- Header Banner -->
+    <div style="text-align: center; max-width: 880px; margin: 0 auto 3.5rem auto;">
+      <span class="section-subtitle" style="color: var(--cyan);"><i class="fa-solid fa-building-gear"></i> Consultoría Estratégica & Automatización B2B</span>
+      <h1 style="font-family: var(--font-heading); font-size: 2.85rem; font-weight: 900; margin: 0.5rem 0 1rem 0; line-height: 1.2;">
+        Potencia tu Empresa con Inteligencia Artificial, Agentes y Medios Sintéticos
+      </h1>
+      <p style="color: var(--text-muted); font-size: 1.12rem; line-height: 1.8;">
+        Diseñamos e implementamos soluciones empresariales de IA para optimizar procesos críticos, eliminar cuellos de botella con agentes autónomos, crear embajadores virtuales de marca y escalar producción audiovisual a una fracción del costo tradicional.
+      </p>
+      
+      <!-- Metodología Reference Note -->
+      <div style="display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 30px; padding: 0.5rem 1.25rem; margin-top: 1rem; font-size: 0.88rem; color: #cbd5e1;">
+        <i class="fa-solid fa-lightbulb" style="color: #f59e0b;"></i>
+        <span>Enfoque alineado a <strong>Gestión por Procesos</strong> y <em>Safe Vibe Coding</em> (<a href="https://www.mariomorales.solutions/" target="_blank" rel="noopener noreferrer" style="color: var(--cyan); text-decoration: underline;">Mario Morales Solutions</a>)</span>
+      </div>
+    </div>
+
+    <!-- 4 Solution Pillars Grid -->
+    <div class="b2b-services-grid" style="margin-bottom: 4rem;">
+      <!-- Pillar 1 -->
+      <div class="b2b-service-card">
+        <div class="b2b-service-icon" style="background: rgba(139, 92, 246, 0.15); color: var(--purple);">
+          <i class="fa-solid fa-user-astronaut"></i>
+        </div>
+        <h3 class="b2b-service-title">1. Embajadores Virtuales & Portavoces IA</h3>
+        <p class="b2b-service-desc">
+          Creamos personajes digitales hiperrealistas y portavoces exclusivos para tu marca. Sin agendas humanas complejas, sin cancelaciones de rodaje y con disponibilidad 24/7 para campañas globales.
+        </p>
+        <ul style="list-style: none; padding: 0; margin: 1rem 0 0 0; font-size: 0.85rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem;">
+          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Consistencia facial fotográfica 4K con LoRAs propios</li>
+          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Clonación de voz multilingüe (ES, EN, DE, FR)</li>
+          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Reducción de costos de producción hasta en un 80%</li>
+        </ul>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div class="b2b-service-card">
+        <div class="b2b-service-icon" style="background: rgba(6, 182, 212, 0.15); color: var(--cyan);">
+          <i class="fa-solid fa-diagram-project"></i>
+        </div>
+        <h3 class="b2b-service-title">2. Gestión por Procesos & Agentes Autónomos</h3>
+        <p class="b2b-service-desc">
+          Auditoría y rediseño de procesos empresariales bajo la metodología de Gestión por Procesos. Mapeamos cuellos de botella e implantamos agentes inteligentes que ejecutan tareas repetitivas de forma confiable.
+        </p>
+        <ul style="list-style: none; padding: 0; margin: 1rem 0 0 0; font-size: 0.85rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem;">
+          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Mapeo de flujos y eliminación de cuellos de botella</li>
+          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Agentes para soporte, prospección B2B y reporting</li>
+          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Integración con CRM (HubSpot, Salesforce, Notion)</li>
+        </ul>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div class="b2b-service-card">
+        <div class="b2b-service-icon" style="background: rgba(236, 72, 153, 0.15); color: var(--pink);">
+          <i class="fa-solid fa-photo-film"></i>
+        </div>
+        <h3 class="b2b-service-title">3. Content Factories & Automatización Audiovisual</h3>
+        <p class="b2b-service-desc">
+          Infraestructura de generación continua de contenidos para equipos de marketing. Producimos cientos de variaciones de anuncios en video, reels y carruseles listos para campañas de alto rendimiento.
+        </p>
+        <ul style="list-style: none; padding: 0; margin: 1rem 0 0 0; font-size: 0.85rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem;">
+          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Pipelines de video generativo (Kling, Flux, LipSync)</li>
+          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Pruebas A/B multivariables masivas para Meta y TikTok</li>
+          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Entregas en menos de 48 horas con control de calidad</li>
+        </ul>
+      </div>
+
+      <!-- Pillar 4 -->
+      <div class="b2b-service-card">
+        <div class="b2b-service-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
+          <i class="fa-solid fa-shield-virus"></i>
+        </div>
+        <h3 class="b2b-service-title">4. Safe Vibe Coding & Asistentes RGPD</h3>
+        <p class="b2b-service-desc">
+          Desarrollo ágil de herramientas internas y software empresarial asistido por IA, garantizando un entorno seguro y con estricto cumplimiento del RGPD europeo (sin exposición ni filtración de secretos industriales).
+        </p>
+        <ul style="list-style: none; padding: 0; margin: 1rem 0 0 0; font-size: 0.85rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem;">
+          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Cumplimiento RGPD (UE) y gobernanza de datos estricta</li>
+          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Vibe coding controlado con validación humana en el bucle</li>
+          <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.4rem;"></i> Modelos alojados en servidores seguros en Alemania/Canadá</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Diagnostic Evaluation Form Card (Referenced from Google Form) -->
+    <div class="b2b-eval-form-card" id="b2b-eval-form-section">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 2rem auto;">
+        <span class="detail-badge" style="background: rgba(6, 182, 212, 0.15); color: var(--cyan); border-color: rgba(6, 182, 212, 0.3); font-size: 0.75rem;">
+          <i class="fa-solid fa-clipboard-check"></i> DIAGNÓSTICO ESTRATÉGICO EN 2 MINUTOS
+        </span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.1rem; color: #fff; margin: 0.75rem 0 0.5rem 0;">
+          Evaluación de Madurez IA & Cuellos de Botella
+        </h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+          Completa este breve formulario y nuestro equipo transnacional (Alemania / Canadá / Chile) preparará un diagnóstico inicial sin costo con oportunidades concretas de automatización para tu negocio.
+        </p>
+      </div>
+
+      <form onsubmit="handleEmpresasDiagnosisSubmit(event)">
+        <div class="b2b-form-grid">
+          <div class="b2b-form-group">
+            <label><i class="fa-solid fa-user"></i> Nombre Completo *</label>
+            <input type="text" id="b2b-name" placeholder="Ej: Carolina Rojas" required>
+          </div>
+          <div class="b2b-form-group">
+            <label><i class="fa-solid fa-id-badge"></i> Cargo / Rol *</label>
+            <input type="text" id="b2b-role" placeholder="Ej: Gerente General / Directora de Marketing" required>
+          </div>
+          <div class="b2b-form-group">
+            <label><i class="fa-solid fa-building"></i> Empresa / Organización *</label>
+            <input type="text" id="b2b-company" placeholder="Ej: Retail Latam S.A." required>
+          </div>
+          <div class="b2b-form-group">
+            <label><i class="fa-solid fa-envelope"></i> Correo Electrónico Corporativo *</label>
+            <input type="email" id="b2b-email" placeholder="nombre@empresa.com" required>
+          </div>
+          <div class="b2b-form-group">
+            <label><i class="fa-brands fa-whatsapp"></i> WhatsApp / Teléfono *</label>
+            <input type="tel" id="b2b-phone" placeholder="+56 9 1234 5678 / +34 600..." required>
+          </div>
+          <div class="b2b-form-group">
+            <label><i class="fa-solid fa-industry"></i> Sector o Industria *</label>
+            <select id="b2b-industry" required>
+              <option value="" disabled selected>Selecciona tu sector...</option>
+              <option value="Retail & E-Commerce">Retail & E-Commerce</option>
+              <option value="Banca, Finanzas & Seguros">Banca, Finanzas & Seguros</option>
+              <option value="Salud, Farma & Bienestar">Salud, Farma & Bienestar</option>
+              <option value="Legal & Consultoría Corporativa">Legal & Consultoría Corporativa</option>
+              <option value="Tecnología & SaaS">Tecnología & SaaS</option>
+              <option value="Educación & E-learning">Educación & E-learning</option>
+              <option value="Agencia de Publicidad / Medios">Agencia de Publicidad / Medios</option>
+              <option value="Otro">Otro sector</option>
+            </select>
+          </div>
+          <div class="b2b-form-group">
+            <label><i class="fa-solid fa-users"></i> Tamaño de la Empresa</label>
+            <select id="b2b-size">
+              <option value="1-10">1 a 10 colaboradores</option>
+              <option value="11-50" selected>11 a 50 colaboradores</option>
+              <option value="51-200">51 a 200 colaboradores</option>
+              <option value="201-1000">201 a 1,000 colaboradores</option>
+              <option value="1000+">Más de 1,000 colaboradores (Enterprise)</option>
+            </select>
+          </div>
+          <div class="b2b-form-group">
+            <label><i class="fa-solid fa-bullseye"></i> Principal Objetivo con IA</label>
+            <select id="b2b-goal">
+              <option value="Crear un Embajador Virtual / Influencer IA">Crear un Embajador Virtual / Influencer IA de Marca</option>
+              <option value="Optimizar Procesos y Eliminar Cuellos de Botella">Optimizar Procesos y Eliminar Cuellos de Botella</option>
+              <option value="Content Factory (Generación Masiva Audiovisual)">Content Factory (Generación Masiva de Anuncios y Video)</option>
+              <option value="Asistentes Internos Seguros (Safe Vibe Coding)">Asistentes Internos Seguros & Software con IA</option>
+              <option value="Diagnóstico Integral">Diagnóstico Integral y Auditoría de Madurez IA</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="b2b-form-group" style="margin-top: 1.25rem;">
+          <label><i class="fa-solid fa-comment-dots"></i> Describe brevemente el principal cuello de botella o reto que deseas resolver:</label>
+          <textarea id="b2b-bottleneck" rows="3" placeholder="Ejemplo: Nuestro equipo tarda semanas en producir creatividades para campañas y los costos de productoras tradicionales son insostenibles..." required></textarea>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-glass);">
+          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+            <button type="submit" class="btn btn-primary" style="padding: 0.85rem 1.75rem; font-size: 1rem;">
+              <i class="fa-solid fa-paper-plane"></i> Enviar Evaluación & Solicitar Diagnóstico
+            </button>
+            <a href="https://forms.gle/pofoZr79gDW44r6y9" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="display: inline-flex; align-items: center; gap: 0.5rem;" title="Abrir en Google Forms">
+              <i class="fa-solid fa-up-right-from-square"></i> O llenar vía Google Forms
+            </a>
+          </div>
+          <div style="font-size: 0.82rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.4rem;">
+            <i class="fa-solid fa-lock" style="color: #10b981;"></i> Datos confidenciales protegidos bajo acuerdo NDA
+          </div>
+        </div>
+      </form>
+    </div>
+  `;
+}
+
+function handleEmpresasDiagnosisSubmit(e) {
+  e.preventDefault();
+  const company = document.getElementById('b2b-company')?.value || 'su empresa';
+  const name = document.getElementById('b2b-name')?.value || '';
+  alert(`¡Gracias ${name}! Hemos recibido la evaluación de ${company}. Nuestro equipo de arquitectura y consultoría IA se pondrá en contacto dentro de las próximas 24 horas hábiles para coordinar el diagnóstico estratégico.`);
+  e.target.reset();
+}
+
+// ============================================================================
+// RENDER: CLIENTES & PITCH DECK PAGE
+// ============================================================================
+function renderClientsPage() {
+  const container = document.getElementById('view-dynamic');
+  if (!container) return;
+
+  container.innerHTML = `
+    <div class="breadcrumb-bar">
+      <div class="breadcrumbs">
+        <a href="#home">Inicio</a>
+        <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
+        <span class="current">Clientes & Inversionistas (Pitch Deck)</span>
+      </div>
+      <a href="#home" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver a Inicio</a>
+    </div>
+
+    <!-- Header Section -->
+    <div class="section-header" style="text-align: center; max-width: 850px; margin: 0 auto 3rem auto;">
+      <span class="section-subtitle" style="color: var(--purple);"><i class="fa-solid fa-chart-pie"></i> PRESENTACIÓN EJECUTIVA</span>
+      <h1 class="section-title" style="font-size: 2.75rem; margin-top: 0.5rem;">Pitch Deck para Clientes & Inversionistas</h1>
+      <p class="section-description" style="margin-top: 0.75rem; line-height: 1.7;">
+        Síntesis estratégica de 10 diapositivas para presentación ante marcas globales, socios comerciales y fondos de capital de riesgo.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+        <button class="btn btn-secondary btn-sm" onclick="window.print()" title="Generar PDF de las diapositivas">
+          <i class="fa-solid fa-file-pdf"></i> Descargar Pitch Deck (PDF)
+        </button>
+        <a href="#client-contact" class="btn btn-primary btn-sm">
+          <i class="fa-solid fa-envelope"></i> Contactar al Equipo Fundador
+        </a>
+      </div>
+    </div>
+
+    <!-- Pitch Deck Slider Container -->
+    <div class="pitch-container" style="margin-bottom: 4rem;">
+      <!-- Slide 1 -->
+      <div class="pitch-slide active-slide" data-slide="1">
+        <span class="slide-num">DIAPOSITIVA 1 DE 10 • PORTADA</span>
+        <h3 class="slide-title">Los Manejadores — Creative AI Studio</h3>
+        <p class="slide-text">Conectamos talentos digitales con el mundo mediante IA generativa, narrativa de alto enganche y monetización estructurada.</p>
+        <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--cyan);"><i class="fa-solid fa-earth-americas"></i> Operaciones Estratégicas: Alemania (CET), Canadá (EST) y Chile (CLT)</div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="pitch-slide" data-slide="2">
+        <span class="slide-num">DIAPOSITIVA 2 DE 10 • EL PROBLEMA</span>
+        <h3 class="slide-title">El Cuello de Botella de los Creadores & Agencias</h3>
+        <p class="slide-text">El 95% de los creadores y marcas sufren saturación operativa: costos de producción prohibitivos ($3,000+/mes por video tradicional), inconsistencia visual, cancelaciones de rodaje y agotamiento de agenda.</p>
+        <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-dim);">
+          <em>TAM global de la economía de creadores excede $250B con 70% de ineficiencia en producción artesanal de contenido.</em>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="pitch-slide" data-slide="3">
+        <span class="slide-num">DIAPOSITIVA 3 DE 10 • LA SOLUCIÓN</span>
+        <h3 class="slide-title">Influencia Virtual Asistida por IA & Consistencia 4K</h3>
+        <p class="slide-text">Creamos avatares hiperrealistas con consistencia facial absoluta y canales automatizados a 1/10 del costo tradicional y con una velocidad de iteración 10 veces mayor.</p>
+        <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--green);">
+          <i class="fa-solid fa-circle-check"></i> Producción 24/7 sin dependencia física de agenda ni fatiga de rodaje.
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="pitch-slide" data-slide="4">
+        <span class="slide-num">DIAPOSITIVA 4 DE 10 • MODELO DE NEGOCIO</span>
+        <h3 class="slide-title">Múltiples Embudos de Monetización Integrados</h3>
+        <p class="slide-text">
+          1. Suscripciones VIP recurrentes (Fanvue / OnlyFans: $12–$25 USD/mes).<br>
+          2. YouTube Automatizado (AdSense de alto RPM + Patrocinios integrados).<br>
+          3. E-Commerce Directo (Shopify, Gumroad, Cosmética limpia, Suplementación, E-books).<br>
+          4. Soluciones B2B & Embajadores Virtuales para Empresas ($2,500 a $15,000 USD).
+        </p>
+        <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-dim);">
+          <em>LTV estimado de suscriptor VIP: $185 USD. Costo de Adquisición (CAC): $18 USD. Margen neto consolidado superior al 65%.</em>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="pitch-slide" data-slide="5">
+        <span class="slide-num">DIAPOSITIVA 5 DE 10 • PRUEBA SOCIAL & PORTAFOLIO</span>
+        <h3 class="slide-title">Roster de Talentos Validados</h3>
+        <p class="slide-text">Julia Schmidt (K-Beauty & Cosmética), Laura Gómez (Fitness & Nutrición), Mateo Silva (Fintech & Inversiones), Elena Ramos (Mindfulness), Maite Valenzuela (Música Urbana) y Kira Voss (Game Dev & Shaders).</p>
+        <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--pink);">
+          <i class="fa-solid fa-chart-line"></i> Retención mensual superior al 70% con interacción automatizada y funnels de conversión directa.
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="pitch-slide" data-slide="6">
+        <span class="slide-num">DIAPOSITIVA 6 DE 10 • ARQUITECTURA TÉCNICA</span>
+        <h3 class="slide-title">Pipeline Tecnológico Propietario de 8 Pasos</h3>
+        <p class="slide-text">Desde la arquitectura de prompts con Gemini (formato ROLOCODEPRE), consistencia LoRA con Flux 2 y Motion Control en Kling 3.0, hasta orquestación autónoma con Antigravity agy CLI.</p>
+        <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--cyan);">
+          <i class="fa-solid fa-microchip"></i> Stack modular capaz de generar hasta 500 piezas audiovisuales al día.
+        </div>
+      </div>
+
+      <!-- Slide 7 -->
+      <div class="pitch-slide" data-slide="7">
+        <span class="slide-num">DIAPOSITIVA 7 DE 10 • SEGURIDAD & COMPLIANCE</span>
+        <h3 class="slide-title">Seguridad, KYC y Marco Legal Transfronterizo</h3>
+        <p class="slide-text">Verificación KYC rigurosa para modelos y plataformas, protección de propiedad intelectual, pasarelas de cobro seguras (Wise Business / Stripe) y estricto cumplimiento normativo GDPR (UE) y PIPEDA (Canadá).</p>
+        <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-dim);">
+          <em>Blindaje de secretos industriales, contratos de confidencialidad y control absoluto de los activos generativos.</em>
+        </div>
+      </div>
+
+      <!-- Slide 8 -->
+      <div class="pitch-slide" data-slide="8">
+        <span class="slide-num">DIAPOSITIVA 8 DE 10 • PLAN FINANCIERO</span>
+        <h3 class="slide-title">Metas Financieras & Expansión Trimestral</h3>
+        <p class="slide-text">
+          • Fase 1: 5 influencers activos en producción y primeros 500 suscriptores pagos.<br>
+          • Fase 2: Expansión de tiendas e-commerce asociadas y 4 contratos B2B con empresas.<br>
+          • Proyección Mes 6: $35,000 USD/mes con margen de contribución superior al 65%.
+        </p>
+        <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-dim);">
+          <em>Inversión en cómputo GPU y APIs estimada en $450 USD/mes por avatar activo.</em>
+        </div>
+      </div>
+
+      <!-- Slide 9 -->
+      <div class="pitch-slide" data-slide="9">
+        <span class="slide-num">DIAPOSITIVA 9 DE 10 • EQUIPO FUNDADOR</span>
+        <h3 class="slide-title">Sinergia Fundadora Multidisciplinaria</h3>
+        <p class="slide-text">
+          <strong>Daniel Santander (Alemania):</strong> Dirección de Arquitectura IA, LoRAs y Automatización con agy CLI.<br>
+          <strong>Pancho Ipinza (Canadá):</strong> Dirección Creativa, Storytelling, Relaciones Públicas y Captación B2B.<br>
+          <strong>Wladimir Gutierrez (Chile):</strong> Media Operations, Motion AI y Escalamiento de Contenido Audiovisual.
+        </p>
+        <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-dim);">
+          <em>Red transnacional de especialistas en edición audiovisual, copywriters y asesores jurídicos internacionales.</em>
+        </div>
+      </div>
+
+      <!-- Slide 10 -->
+      <div class="pitch-slide" data-slide="10">
+        <span class="slide-num">DIAPOSITIVA 10 DE 10 • CALL TO ACTION</span>
+        <h3 class="slide-title">Siguiente Paso: Construyamos Juntos</h3>
+        <p class="slide-text">Únete como inversor estratégico, contrata una campaña de patrocinio con nuestros influencers o desarrolla el avatar virtual propio de tu marca.</p>
+        <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="#client-contact" class="btn btn-primary btn-sm"><i class="fa-solid fa-handshake"></i> Iniciar Conversación Comercial</a>
+          <a href="#empresas" class="btn btn-secondary btn-sm"><i class="fa-solid fa-building-gear"></i> Ver Soluciones B2B</a>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="pitch-controls">
+        <button class="btn btn-secondary" onclick="prevSlide()"><i class="fa-solid fa-chevron-left"></i> Anterior</button>
+        <div class="pitch-dots" id="pitch-dots"></div>
+        <button class="btn btn-primary" onclick="nextSlide()">Siguiente <i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <!-- SECTION: CONTACTO TRANSNACIONAL & ALIANZAS COMERCIALES -->
+    <div class="clients-contact-section" id="client-contact">
+      <div style="text-align: center; max-width: 750px; margin: 0 auto 2.5rem auto;">
+        <span class="detail-badge" style="background: rgba(139, 92, 246, 0.15); color: var(--purple); border-color: rgba(139, 92, 246, 0.3); font-size: 0.75rem;">
+          <i class="fa-solid fa-earth-americas"></i> COBERTURA TRANSNACIONAL
+        </span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.2rem; color: #fff; margin: 0.6rem 0 0.4rem 0;">
+          Alianzas Comerciales & Inversión
+        </h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+          Coordinamos proyectos internacionales con marcas, agencias y fondos desde nuestros tres husos horarios en Europa y las Américas.
+        </p>
+      </div>
+
+      <!-- 3 Office Hub Cards -->
+      <div class="contact-cards-grid">
+        <div class="contact-card">
+          <div style="font-size: 2.5rem; line-height: 1;">🇩🇪</div>
+          <div>
+            <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.2rem;">Alemania (Berlín)</h4>
+            <div style="font-size: 0.8rem; color: var(--cyan); margin-bottom: 0.35rem;"><i class="fa-regular fa-clock"></i> CET (UTC+1 / UTC+2)</div>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Hub de Arquitectura de IA, LoRAs, Seguridad RGPD e Infraestructura de Servidores.</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div style="font-size: 2.5rem; line-height: 1;">🇨🇦</div>
+          <div>
+            <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.2rem;">Canadá (Costa Este)</h4>
+            <div style="font-size: 0.8rem; color: var(--pink); margin-bottom: 0.35rem;"><i class="fa-regular fa-clock"></i> EST (UTC-5)</div>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Hub de Dirección Creativa, Relaciones Públicas, Audio Sintético y Alianzas Norteamérica.</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div style="font-size: 2.5rem; line-height: 1;">🇨🇱</div>
+          <div>
+            <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.2rem;">Chile (Santiago)</h4>
+            <div style="font-size: 0.8rem; color: var(--purple); margin-bottom: 0.35rem;"><i class="fa-regular fa-clock"></i> CLT (UTC-3)</div>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0;">Hub de Operaciones Audiovisuales, Motion AI, Video Generativo y Expansión Latam.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Direct Contact & Inquiry Form -->
+      <div class="glass-card" style="margin-top: 2rem; padding: 2.25rem;">
+        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: #fff; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+          <i class="fa-solid fa-paper-plane" style="color: var(--cyan);"></i> Envía tu Propuesta de Colaboración o Inversión
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.75rem;">
+          Responderemos en menos de 24 horas con la información ejecutiva correspondiente.
+        </p>
+
+        <form onsubmit="handleClientsContactSubmit(event)">
+          <div class="b2b-form-grid">
+            <div class="b2b-form-group">
+              <label>Nombre y Apellido *</label>
+              <input type="text" id="client-name" placeholder="Tu nombre" required>
+            </div>
+            <div class="b2b-form-group">
+              <label>Empresa, Fondo o Agencia *</label>
+              <input type="text" id="client-company" placeholder="Nombre de tu organización" required>
+            </div>
+            <div class="b2b-form-group">
+              <label>Correo Electrónico *</label>
+              <input type="email" id="client-email" placeholder="correo@organizacion.com" required>
+            </div>
+            <div class="b2b-form-group">
+              <label>Tipo de Interés / Alianza *</label>
+              <select id="client-type" required>
+                <option value="Campaña con Influencer IA">Campaña de Patrocinio con Influencer del Catálogo</option>
+                <option value="Creación de Embajador Virtual">Creación de Embajador Virtual Exclusivo para Marca</option>
+                <option value="Inversión / Equity">Inversión de Capital / Equity en el Estudio</option>
+                <option value="Soluciones B2B Procesos">Soluciones B2B & Consultoría de Procesos con IA</option>
+                <option value="Prensa / Difusión">Contacto de Prensa / Medios</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="b2b-form-group" style="margin-top: 1.25rem;">
+            <label>Mensaje o Descripción de la Oportunidad *</label>
+            <textarea id="client-message" rows="3" placeholder="Cuéntanos brevemente sobre tu proyecto o interés de inversión..." required></textarea>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 1.75rem;">
+            <button type="submit" class="btn btn-primary" style="padding: 0.8rem 1.8rem;">
+              <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje a Dirección Ejecutiva
+            </button>
+            <div style="font-size: 0.82rem; color: var(--text-muted);">
+              <i class="fa-solid fa-shield-halved" style="color: #10b981;"></i> Trato confidencial y seguro
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  `;
+
+  // Initialize Pitch Deck Slider after insertion into DOM
+  setTimeout(() => {
+    initPitchDeck();
+    showSlide(1);
+  }, 30);
+}
+
+function handleClientsContactSubmit(e) {
+  e.preventDefault();
+  const name = document.getElementById('client-name')?.value || '';
+  const company = document.getElementById('client-company')?.value || '';
+  alert(`¡Gracias ${name}! Hemos registrado tu solicitud para ${company}. El equipo fundador (Daniel, Pancho y Wladimir) se pondrá en contacto a la brevedad.`);
+  e.target.reset();
 }
 
 // RENDER: LOGO PROPOSALS SHOWCASE PAGE
