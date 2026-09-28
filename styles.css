@@ -2008,6 +2008,89 @@ body {
   color: var(--text-muted);
 }
 
+/* Quick Access Cockpit Bar in Internal Panel */
+.team-cockpit-quickbar {
+  margin-bottom: 2.25rem;
+  padding: 1.25rem 1.75rem;
+  background: linear-gradient(135deg, rgba(30, 27, 75, 0.45) 0%, rgba(15, 23, 42, 0.65) 100%);
+  border: 1px solid var(--border-highlight);
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.cockpit-quickbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cockpit-chips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.85rem;
+}
+
+.cockpit-chip-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.65rem 0.95rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.cockpit-chip-btn:hover {
+  background: rgba(139, 92, 246, 0.16);
+  border-color: var(--purple);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(139, 92, 246, 0.25);
+  color: #fff;
+}
+
+.cockpit-chip-btn img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 1.5px solid var(--border-highlight);
+  flex-shrink: 0;
+}
+
+.cockpit-chip-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.cockpit-chip-name {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cockpit-chip-badge {
+  font-size: 0.72rem;
+  color: var(--cyan);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.1rem;
+}
+
 /* Team Directory Cards */
 .team-members-grid {
   display: grid;

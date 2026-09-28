@@ -708,7 +708,7 @@ const channelsData = {
 channelsData.lau_gamedev = channelsData.kira_gamedev;
 
 // --- 3. AUTHENTICATION & ACCESS CONTROL FOR INTERNAL TEAM PANEL ---
-let pendingTeamTab = 'gantt';
+let pendingTeamTab = 'members';
 
 function isTeamAuthenticated() {
   return sessionStorage.getItem('los_manejadores_team_auth') === 'true';
@@ -738,7 +738,7 @@ function updateAuthUI() {
   }
 }
 
-function openAuthModal(targetTab = 'gantt') {
+function openAuthModal(targetTab = 'members') {
   pendingTeamTab = targetTab;
   const modal = document.getElementById('auth-modal');
   const input = document.getElementById('team-pin-input');
@@ -772,7 +772,7 @@ function handleAuthSubmit(e) {
       renderInfluencerPage(id, 'cockpit');
       showDynamicView();
     } else {
-      showTeamView(pendingTeamTab || 'gantt');
+      showTeamView(pendingTeamTab || 'members');
     }
   } else {
     if (errorMsg) errorMsg.style.display = 'block';
@@ -907,7 +907,7 @@ function handleRoute() {
   applyLogo(currentLogoKey);
 }
 
-function showTeamView(subtab = 'gantt') {
+function showTeamView(subtab = 'members') {
   if (!isTeamAuthenticated()) {
     openAuthModal(subtab);
     return;
@@ -949,7 +949,11 @@ function switchTeamTab(tab) {
   [btnGantt, btnPipeline, btnCopys, btnMembers, btnInfluencerOps].forEach(b => { if (b) b.classList.remove('active'); });
   [paneGantt, panePipeline, paneCopys, paneMembers, paneInfluencerOps].forEach(p => { if (p) p.classList.remove('active-pane'); });
 
-  if (tab === 'pipeline') {
+  if (tab === 'gantt') {
+    if (btnGantt) btnGantt.classList.add('active');
+    if (paneGantt) paneGantt.classList.add('active-pane');
+    if (window.location.hash !== '#gantt') window.location.hash = '#gantt';
+  } else if (tab === 'pipeline') {
     if (btnPipeline) btnPipeline.classList.add('active');
     if (panePipeline) panePipeline.classList.add('active-pane');
     if (window.location.hash !== '#pipeline') window.location.hash = '#pipeline';
@@ -957,20 +961,17 @@ function switchTeamTab(tab) {
     if (btnCopys) btnCopys.classList.add('active');
     if (paneCopys) paneCopys.classList.add('active-pane');
     if (window.location.hash !== '#copys') window.location.hash = '#copys';
-  } else if (tab === 'members') {
-    if (btnMembers) btnMembers.classList.add('active');
-    if (paneMembers) paneMembers.classList.add('active-pane');
-    if (window.location.hash !== '#members') window.location.hash = '#members';
-    updateWorldClocks();
   } else if (tab === 'influencer-ops') {
     if (btnInfluencerOps) btnInfluencerOps.classList.add('active');
     if (paneInfluencerOps) paneInfluencerOps.classList.add('active-pane');
     if (window.location.hash !== '#influencer-ops') window.location.hash = '#influencer-ops';
     renderInfluencerOpsMatrix();
   } else {
-    if (btnGantt) btnGantt.classList.add('active');
-    if (paneGantt) paneGantt.classList.add('active-pane');
-    if (window.location.hash !== '#gantt') window.location.hash = '#gantt';
+    // Default tab: 'members' (Posición 1: Equipo Fundador & Roles)
+    if (btnMembers) btnMembers.classList.add('active');
+    if (paneMembers) paneMembers.classList.add('active-pane');
+    if (window.location.hash !== '#members') window.location.hash = '#members';
+    updateWorldClocks();
   }
 }
 
@@ -3317,7 +3318,7 @@ function updateProgressStats() {
 // --- 6. VIEW SWITCHER FOR TEAM DASHBOARD ---
 function switchView(mode) {
   if (mode === 'team') {
-    showTeamView('gantt');
+    showTeamView('members');
   } else {
     window.location.hash = '#home';
     showPublicView();

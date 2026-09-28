@@ -767,27 +767,263 @@
       </div>
     </div>
 
+    <!-- Husos Horarios & Sincronización Transatlántica Fijos en la Cabecera -->
+    <div class="clocks-grid" style="margin-bottom: 1.5rem;">
+      <div class="glass-card clock-card">
+        <div class="clock-flag">🇩🇪</div>
+        <div class="clock-info">
+          <span class="clock-zone">Alemania / Europa Central (CET • UTC+1)</span>
+          <div class="clock-time" id="clock-berlin">--:--:--</div>
+          <span class="clock-note">Base Técnica & Operaciones de IA (Daniel Santander)</span>
+        </div>
+      </div>
+
+      <div class="glass-card clock-card">
+        <div class="clock-flag">🇨🇦</div>
+        <div class="clock-info">
+          <span class="clock-zone">Canadá / Costa Este (EST • UTC-5)</span>
+          <div class="clock-time" id="clock-toronto">--:--:--</div>
+          <span class="clock-note">Base Creativa & Relaciones Públicas (Pancho Ipinza)</span>
+        </div>
+      </div>
+
+      <div class="glass-card clock-card">
+        <div class="clock-flag">🇨🇱</div>
+        <div class="clock-info">
+          <span class="clock-zone">Chile / Santiago (CLT • UTC-3)</span>
+          <div class="clock-time" id="clock-santiago">--:--:--</div>
+          <span class="clock-note">Media Operations & Motion AI (Wladimir Gutierrez)</span>
+        </div>
+      </div>
+
+      <div class="glass-card sync-window-card">
+        <div class="sync-icon"><i class="fa-solid fa-handshake"></i></div>
+        <div>
+          <span class="sync-title">Ventana Óptima de Sincronización Diaria</span>
+          <div class="sync-hours">15:00 – 18:00 CET / 09:00 – 12:00 EST / 11:00 – 14:00 CLT</div>
+          <p class="sync-desc">Franja horaria para standups diarios, revisión de entregables y lanzamientos conjuntos de campañas.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barra Rápida a Cockpits Operativos Privados de Producción -->
+    <div class="team-cockpit-quickbar glass-card">
+      <div class="cockpit-quickbar-header">
+        <div style="display: flex; align-items: center; gap: 0.85rem;">
+          <div class="sync-icon" style="width: 44px; height: 44px; font-size: 1.1rem; background: rgba(139, 92, 246, 0.2); color: var(--purple);">
+            <i class="fa-solid fa-sliders"></i>
+          </div>
+          <div>
+            <h4 style="margin: 0; font-size: 1.05rem; font-weight: 700; color: #fff;">
+              Cockpits Operativos de Producción (Menú Privado de Equipo)
+            </h4>
+            <p style="margin: 0.2rem 0 0 0; font-size: 0.82rem; color: var(--text-muted);">
+              Acceso directo al control diario de cada influencer: Prompts maestros, LoRAs, calibración SOP, plataforma y briefs de video:
+            </p>
+          </div>
+        </div>
+        <button onclick="switchTeamTab('influencer-ops')" class="btn btn-secondary btn-sm" style="font-size: 0.78rem; padding: 0.45rem 0.85rem; border-color: rgba(139, 92, 246, 0.4); color: #c4b5fd;">
+          <i class="fa-solid fa-table-list"></i> Matriz Operativa Completa (Pest. 5)
+        </button>
+      </div>
+
+      <div class="cockpit-chips-grid">
+        <a href="#influencer-cockpit/elena" class="cockpit-chip-btn" title="Abrir Cockpit Operativo de Elena Daddario">
+          <img src="elena_avatar.png" alt="Elena" />
+          <div class="cockpit-chip-info">
+            <span class="cockpit-chip-name">Elena Daddario</span>
+            <span class="cockpit-chip-badge"><i class="fa-solid fa-user-check"></i> Daniel (CET)</span>
+          </div>
+        </a>
+        <a href="#influencer-cockpit/julia" class="cockpit-chip-btn" title="Abrir Cockpit Operativo de Julia">
+          <img src="julia_avatar.jpg" alt="Julia" />
+          <div class="cockpit-chip-info">
+            <span class="cockpit-chip-name">Julia</span>
+            <span class="cockpit-chip-badge"><i class="fa-solid fa-user-check"></i> Pancho (EST)</span>
+          </div>
+        </a>
+        <a href="#influencer-cockpit/laura" class="cockpit-chip-btn" title="Abrir Cockpit Operativo de Laura Taeda">
+          <img src="laura_avatar.png" alt="Laura" />
+          <div class="cockpit-chip-info">
+            <span class="cockpit-chip-name">Laura Taeda</span>
+            <span class="cockpit-chip-badge"><i class="fa-solid fa-user-check"></i> Wladimir (CLT)</span>
+          </div>
+        </a>
+        <a href="#influencer-cockpit/maite" class="cockpit-chip-btn" title="Abrir Cockpit Operativo de Maite Valenzuela">
+          <img src="maite_avatar.jpg" alt="Maite" />
+          <div class="cockpit-chip-info">
+            <span class="cockpit-chip-name">Maite Valenzuela</span>
+            <span class="cockpit-chip-badge"><i class="fa-solid fa-users"></i> Equipo</span>
+          </div>
+        </a>
+        <a href="#influencer-cockpit/kira" class="cockpit-chip-btn" title="Abrir Cockpit Operativo de Kira Voss">
+          <img src="kira_avatar.jpg" alt="Kira" />
+          <div class="cockpit-chip-info">
+            <span class="cockpit-chip-name">Kira Voss</span>
+            <span class="cockpit-chip-badge"><i class="fa-solid fa-users"></i> Equipo</span>
+          </div>
+        </a>
+        <a href="#influencer-cockpit/alejandra" class="cockpit-chip-btn" title="Abrir Cockpit Operativo de Alejandra">
+          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80" alt="Alejandra" />
+          <div class="cockpit-chip-info">
+            <span class="cockpit-chip-name">Alejandra</span>
+            <span class="cockpit-chip-badge" style="color: var(--purple);"><i class="fa-solid fa-lightbulb"></i> En Concepto</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
     <!-- Sub-navigation Tabs for Internal Team Panel -->
     <div class="team-tab-nav">
-      <button id="btn-team-tab-gantt" class="team-tab-btn active" onclick="switchTeamTab('gantt')">
-        <i class="fa-solid fa-chart-gantt"></i> 1. Carta Gantt Operativa (90 Días)
+      <button id="btn-team-tab-members" class="team-tab-btn active" onclick="switchTeamTab('members')">
+        <i class="fa-solid fa-users-gear"></i> 1. Equipo Fundador & Roles
+      </button>
+      <button id="btn-team-tab-gantt" class="team-tab-btn" onclick="switchTeamTab('gantt')">
+        <i class="fa-solid fa-chart-gantt"></i> 2. Carta Gantt Operativa (90 Días)
       </button>
       <button id="btn-team-tab-pipeline" class="team-tab-btn" onclick="switchTeamTab('pipeline')">
-        <i class="fa-solid fa-diagram-project"></i> 2. Pipeline de Producción Detallado & Herramientas
+        <i class="fa-solid fa-diagram-project"></i> 3. Pipeline de Producción Detallado & Herramientas
       </button>
       <button id="btn-team-tab-copys" class="team-tab-btn" onclick="switchTeamTab('copys')">
-        <i class="fa-solid fa-copy"></i> 3. Hub de Copys & Scripts Listos
-      </button>
-      <button id="btn-team-tab-members" class="team-tab-btn" onclick="switchTeamTab('members')">
-        <i class="fa-solid fa-users-gear"></i> 4. Equipo & Husos Horarios
+        <i class="fa-solid fa-copy"></i> 4. Hub de Copys & Scripts Listos
       </button>
       <button id="btn-team-tab-influencer-ops" class="team-tab-btn" onclick="switchTeamTab('influencer-ops')">
         <i class="fa-solid fa-wand-magic-sparkles"></i> 5. Operaciones de Influencers (Guía & Calibración Global)
       </button>
     </div>
 
-    <!-- PÁGINA 1: CARTA GANTT OPERATIVA -->
-    <div id="team-pane-gantt" class="team-pane active-pane">
+    <!-- PÁGINA 1: EQUIPO FUNDADOR & ROLES -->
+    <div id="team-pane-members" class="team-pane active-pane">
+      <section class="section" style="padding-top: 1rem;">
+        <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+          <span class="section-subtitle" style="color: var(--cyan);"><i class="fa-solid fa-users-gear"></i> Directorio y Sincronización Estratégica</span>
+          <h2 class="section-title">Equipo Fundador, Roles & Asignación Operativa</h2>
+          <p class="section-description" style="margin: 0;">
+            Alineación estratégica internacional entre Alemania, Canadá y Chile. Consulta las responsabilidades clave de cada socio y los accesos rápidos a las herramientas de trabajo compartidas.
+          </p>
+        </div>
+
+        <!-- Directorio de Miembros del Equipo -->
+        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin: 1.5rem 0 1.5rem 0; color: #fff;">
+          <i class="fa-solid fa-id-card-clip" style="color: var(--purple);"></i> Miembros del Equipo & Asignación de Responsabilidades
+        </h3>
+
+        <div class="team-members-grid">
+          <!-- Miembro 1: Daniel Santander -->
+          <div class="glass-card member-card">
+            <div class="member-header">
+              <div class="member-avatar-box">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <div>
+                <h4 class="member-name">Daniel Santander</h4>
+                <span class="member-role"><i class="fa-solid fa-microchip"></i> Lead Tech & AI Pipeline Architect</span>
+              </div>
+            </div>
+            <p class="member-bio">
+              Responsable de la infraestructura técnica, modelos de consistencia facial (LoRAs en Flux/SDXL), automatizaciones con Antigravity / agy CLI y despliegue del portal web.
+            </p>
+            <div class="member-meta">
+              <span><i class="fa-solid fa-location-dot"></i> Alemania (CET)</span>
+              <span><i class="fa-solid fa-envelope"></i> daniel@losmanejadores.io</span>
+            </div>
+          </div>
+
+          <!-- Miembro 2: Pancho Ipinza -->
+          <div class="glass-card member-card">
+            <div class="member-header">
+              <div class="member-avatar-box" style="background: rgba(236,72,153,0.15); color: var(--pink);">
+                <i class="fa-solid fa-bullhorn"></i>
+              </div>
+              <div>
+                <h4 class="member-name">Pancho Ipinza</h4>
+                <span class="member-role" style="color: var(--pink);"><i class="fa-solid fa-pen-nib"></i> Creative Director & Strategic Outreach</span>
+              </div>
+            </div>
+            <p class="member-bio">
+              Dirección de narrativa, conceptualización de personajes, guiones para YouTube y vinculación con creadores de contenido, agencias y clientes B2B.
+            </p>
+            <div class="member-meta">
+              <span><i class="fa-solid fa-location-dot"></i> Canadá (EST)</span>
+              <span><i class="fa-solid fa-envelope"></i> pancho@losmanejadores.io</span>
+            </div>
+          </div>
+
+          <!-- Miembro 3: Wladimir Gutierrez -->
+          <div class="glass-card member-card">
+            <div class="member-header">
+              <div class="member-avatar-box" style="background: rgba(6,182,212,0.15); color: var(--cyan);">
+                <i class="fa-solid fa-clapperboard"></i>
+              </div>
+              <div>
+                <h4 class="member-name">Wladimir Gutierrez</h4>
+                <span class="member-role" style="color: var(--cyan);"><i class="fa-solid fa-film"></i> Media Operations & Motion AI Lead</span>
+              </div>
+            </div>
+            <p class="member-bio">
+              Dirección de operaciones audiovisuales, escalamiento de producción en video generativo (Kling 3.0, HeyGen, InVideo), consistencia dinámica y gestión del pipeline de personajes virtuales.
+            </p>
+            <div class="member-meta">
+              <span><i class="fa-solid fa-location-dot"></i> Santiago, Chile (CLT)</span>
+              <span><i class="fa-solid fa-envelope"></i> wladimir@losmanejadores.io</span>
+            </div>
+          </div>
+
+          <!-- Miembro 4: Asesoría Legal & Compliance (Placeholder Lorem Ipsum) -->
+          <div class="glass-card member-card" style="opacity: 0.85; border-style: dashed;">
+            <div class="member-header">
+              <div class="member-avatar-box" style="background: rgba(16,185,129,0.15); color: var(--green);">
+                <i class="fa-solid fa-scale-balanced"></i>
+              </div>
+              <div>
+                <h4 class="member-name">Legal & Compliance Internacional</h4>
+                <span class="member-role" style="color: var(--green);"><i class="fa-solid fa-shield-halved"></i> Consultoría Externa</span>
+              </div>
+            </div>
+            <p class="member-bio">
+              <em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. KYC y pasarelas transfronterizas.</em>
+            </p>
+            <div class="member-meta">
+              <span><i class="fa-solid fa-location-dot"></i> Alemania / Canadá</span>
+              <span><i class="fa-solid fa-shield"></i> Acuerdo de Confidencialidad Activo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enlaces Rápidos de Colaboración Operativa -->
+        <div class="glass-card" style="margin-top: 3rem; padding: 2rem;">
+          <h4 style="font-family: var(--font-heading); font-size: 1.25rem; color: #fff; margin-bottom: 1rem;">
+            <i class="fa-solid fa-link" style="color: var(--cyan);"></i> Enlaces Rápidos del Workspace del Proyecto
+          </h4>
+          <div class="workspace-links-grid">
+            <a href="https://t.me/" target="_blank" class="workspace-link-item">
+              <i class="fa-brands fa-telegram" style="color: #229ED9;"></i>
+              <div>
+                <strong>Grupo Telegram Oficial</strong>
+                <span>Canal diario de coordinación y alertas rápidas</span>
+              </div>
+            </a>
+            <a href="https://notion.so/" target="_blank" class="workspace-link-item">
+              <i class="fa-solid fa-book-bookmark" style="color: #fff;"></i>
+              <div>
+                <strong>Notion Central INCEL</strong>
+                <span>Base de conocimientos, prompts y actas de reuniones</span>
+              </div>
+            </a>
+            <a href="https://drive.google.com/" target="_blank" class="workspace-link-item">
+              <i class="fa-brands fa-google-drive" style="color: #34A853;"></i>
+              <div>
+                <strong>Google Drive de Producción</strong>
+                <span>Carpeta compartida de renders 4K, audios y LoRAs</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PÁGINA 2: CARTA GANTT OPERATIVA (90 DÍAS) -->
+    <div id="team-pane-gantt" class="team-pane">
       <!-- Live Metrics Dashboard -->
       <div class="dash-stats-row">
         <div class="glass-card stat-card">
@@ -1322,175 +1558,6 @@ Agenda consulta gratuita hoy."</div>
             <button onclick="copyToClipboard('copy-6')" class="btn btn-secondary" style="width: 100%; justify-content: center; font-size: 0.85rem; margin-top: 1rem;">
               <i class="fa-regular fa-copy"></i> Copiar Texto
             </button>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- PÁGINA 4: EQUIPO, HUSOS HORARIOS & HUB OPERATIVO -->
-    <div id="team-pane-members" class="team-pane">
-      <section class="section" style="padding-top: 1rem;">
-        <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
-          <span class="section-subtitle" style="color: var(--cyan);"><i class="fa-solid fa-users-gear"></i> Directorio y Sincronización Transatlántica</span>
-          <h2 class="section-title">Equipo Fundador, Roles & Operaciones en Vivo</h2>
-          <p class="section-description" style="margin: 0;">
-            Alineación estratégica internacional entre Alemania, Canadá y Chile. Consulta los husos horarios en vivo y la ventana óptima de trabajo colaborativo diario.
-          </p>
-        </div>
-
-        <!-- Relojes Mundiales en Vivo & Ventana de Sincronización -->
-        <div class="clocks-grid">
-          <div class="glass-card clock-card">
-            <div class="clock-flag">🇩🇪</div>
-            <div class="clock-info">
-              <span class="clock-zone">Alemania / Europa Central (CET • UTC+1)</span>
-              <div class="clock-time" id="clock-berlin">--:--:--</div>
-              <span class="clock-note">Base Técnica & Operaciones de IA (Daniel Santander)</span>
-            </div>
-          </div>
-
-          <div class="glass-card clock-card">
-            <div class="clock-flag">🇨🇦</div>
-            <div class="clock-info">
-              <span class="clock-zone">Canadá / Costa Este (EST • UTC-5)</span>
-              <div class="clock-time" id="clock-toronto">--:--:--</div>
-              <span class="clock-note">Base Creativa & Relaciones Públicas (Pancho Ipinza)</span>
-            </div>
-          </div>
-
-          <div class="glass-card clock-card">
-            <div class="clock-flag">🇨🇱</div>
-            <div class="clock-info">
-              <span class="clock-zone">Chile / Santiago (CLT • UTC-3)</span>
-              <div class="clock-time" id="clock-santiago">--:--:--</div>
-              <span class="clock-note">Media Operations & Motion AI (Wladimir Gutierrez)</span>
-            </div>
-          </div>
-
-          <div class="glass-card sync-window-card">
-            <div class="sync-icon"><i class="fa-solid fa-handshake"></i></div>
-            <div>
-              <span class="sync-title">Ventana Óptima de Sincronización Diaria</span>
-              <div class="sync-hours">15:00 – 18:00 CET / 09:00 – 12:00 EST / 11:00 – 14:00 CLT</div>
-              <p class="sync-desc">Franja horaria para standups diarios, revisión de entregables y lanzamientos conjuntos de campañas.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Directorio de Miembros del Equipo -->
-        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin: 3rem 0 1.5rem 0; color: #fff;">
-          <i class="fa-solid fa-id-card-clip" style="color: var(--purple);"></i> Miembros del Equipo & Asignación de Responsabilidades
-        </h3>
-
-        <div class="team-members-grid">
-          <!-- Miembro 1: Daniel Santander -->
-          <div class="glass-card member-card">
-            <div class="member-header">
-              <div class="member-avatar-box">
-                <i class="fa-solid fa-laptop-code"></i>
-              </div>
-              <div>
-                <h4 class="member-name">Daniel Santander</h4>
-                <span class="member-role"><i class="fa-solid fa-microchip"></i> Lead Tech & AI Pipeline Architect</span>
-              </div>
-            </div>
-            <p class="member-bio">
-              Responsable de la infraestructura técnica, modelos de consistencia facial (LoRAs en Flux/SDXL), automatizaciones con Antigravity / agy CLI y despliegue del portal web.
-            </p>
-            <div class="member-meta">
-              <span><i class="fa-solid fa-location-dot"></i> Alemania (CET)</span>
-              <span><i class="fa-solid fa-envelope"></i> daniel@losmanejadores.io</span>
-            </div>
-          </div>
-
-          <!-- Miembro 2: Pancho Ipinza -->
-          <div class="glass-card member-card">
-            <div class="member-header">
-              <div class="member-avatar-box" style="background: rgba(236,72,153,0.15); color: var(--pink);">
-                <i class="fa-solid fa-bullhorn"></i>
-              </div>
-              <div>
-                <h4 class="member-name">Pancho Ipinza</h4>
-                <span class="member-role" style="color: var(--pink);"><i class="fa-solid fa-pen-nib"></i> Creative Director & Strategic Outreach</span>
-              </div>
-            </div>
-            <p class="member-bio">
-              Dirección de narrativa, conceptualización de personajes, guiones para YouTube y vinculación con creadores de contenido, agencias y clientes B2B.
-            </p>
-            <div class="member-meta">
-              <span><i class="fa-solid fa-location-dot"></i> Canadá (EST)</span>
-              <span><i class="fa-solid fa-envelope"></i> pancho@losmanejadores.io</span>
-            </div>
-          </div>
-
-          <!-- Miembro 3: Wladimir Gutierrez -->
-          <div class="glass-card member-card">
-            <div class="member-header">
-              <div class="member-avatar-box" style="background: rgba(6,182,212,0.15); color: var(--cyan);">
-                <i class="fa-solid fa-clapperboard"></i>
-              </div>
-              <div>
-                <h4 class="member-name">Wladimir Gutierrez</h4>
-                <span class="member-role" style="color: var(--cyan);"><i class="fa-solid fa-film"></i> Media Operations & Motion AI Lead</span>
-              </div>
-            </div>
-            <p class="member-bio">
-              Dirección de operaciones audiovisuales, escalamiento de producción en video generativo (Kling 3.0, HeyGen, InVideo), consistencia dinámica y gestión del pipeline de personajes virtuales.
-            </p>
-            <div class="member-meta">
-              <span><i class="fa-solid fa-location-dot"></i> Santiago, Chile (CLT)</span>
-              <span><i class="fa-solid fa-envelope"></i> wladimir@losmanejadores.io</span>
-            </div>
-          </div>
-
-          <!-- Miembro 4: Asesoría Legal & Compliance (Placeholder Lorem Ipsum) -->
-          <div class="glass-card member-card" style="opacity: 0.85; border-style: dashed;">
-            <div class="member-header">
-              <div class="member-avatar-box" style="background: rgba(16,185,129,0.15); color: var(--green);">
-                <i class="fa-solid fa-scale-balanced"></i>
-              </div>
-              <div>
-                <h4 class="member-name">Legal & Compliance Internacional</h4>
-                <span class="member-role" style="color: var(--green);"><i class="fa-solid fa-shield-halved"></i> Consultoría Externa</span>
-              </div>
-            </div>
-            <p class="member-bio">
-              <em>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. KYC y pasarelas transfronterizas.</em>
-            </p>
-            <div class="member-meta">
-              <span><i class="fa-solid fa-location-dot"></i> Alemania / Canadá</span>
-              <span><i class="fa-solid fa-shield"></i> Acuerdo de Confidencialidad Activo</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Enlaces Rápidos de Colaboración Operativa -->
-        <div class="glass-card" style="margin-top: 3rem; padding: 2rem;">
-          <h4 style="font-family: var(--font-heading); font-size: 1.25rem; color: #fff; margin-bottom: 1rem;">
-            <i class="fa-solid fa-link" style="color: var(--cyan);"></i> Enlaces Rápidos del Workspace del Proyecto
-          </h4>
-          <div class="workspace-links-grid">
-            <a href="https://t.me/" target="_blank" class="workspace-link-item">
-              <i class="fa-brands fa-telegram" style="color: #229ED9;"></i>
-              <div>
-                <strong>Grupo Telegram Oficial</strong>
-                <span>Canal diario de coordinación y alertas rápidas</span>
-              </div>
-            </a>
-            <a href="https://notion.so/" target="_blank" class="workspace-link-item">
-              <i class="fa-solid fa-book-bookmark" style="color: #fff;"></i>
-              <div>
-                <strong>Notion Central INCEL</strong>
-                <span>Base de conocimientos, prompts y actas de reuniones</span>
-              </div>
-            </a>
-            <a href="https://drive.google.com/" target="_blank" class="workspace-link-item">
-              <i class="fa-brands fa-google-drive" style="color: #34A853;"></i>
-              <div>
-                <strong>Google Drive de Producción</strong>
-                <span>Carpeta compartida de renders 4K, audios y LoRAs</span>
-              </div>
-            </a>
           </div>
         </div>
       </section>
