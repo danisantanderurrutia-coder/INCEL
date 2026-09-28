@@ -1388,6 +1388,12 @@ function handleRoute() {
   } else if (hash === '#empresas') {
     renderEmpresasPage();
     showDynamicView();
+  } else if (hash === '#seguridad' || hash === '#seguridad-digital' || hash === '#privacidad') {
+    renderSeguridadPage();
+    showDynamicView();
+  } else if (hash === '#cursos' || hash === '#formacion' || hash === '#talleres') {
+    renderCursosPage();
+    showDynamicView();
   } else if (hash === '#clientes' || hash === '#pitch') {
     renderClientsPage();
     showDynamicView();
@@ -2841,10 +2847,18 @@ function renderInfluencerPublicProduct(id) {
 // 2. MODAL & LIGHTBOX HANDLERS
 function openBrandInquiryModal(influencerId) {
   const modal = document.getElementById('brand-inquiry-modal');
-  const inf = influencersData[influencerId];
+  let displayName = 'Influencer IA';
+  if (influencerId === 'custom-ceo-clone') {
+    displayName = 'Servicio: Clon Digital de Video para CEO / Fundador';
+  } else if (influencerId === 'custom-ecommerce-model') {
+    displayName = 'Servicio: Modelo IA Exclusiva para E-Commerce & Marcas';
+  } else if (influencersData[influencerId]) {
+    const inf = influencersData[influencerId];
+    displayName = `${inf.name} (${inf.niche})`;
+  }
   const nameEl = document.getElementById('inquiry-influencer-name');
   const idEl = document.getElementById('inquiry-influencer-id');
-  if (nameEl) nameEl.textContent = inf ? `${inf.name} (${inf.niche})` : 'Influencer IA';
+  if (nameEl) nameEl.textContent = displayName;
   if (idEl) idEl.value = influencerId || '';
   if (modal) modal.classList.add('active');
 }
@@ -2857,17 +2871,24 @@ function closeBrandInquiryModal() {
 function handleBrandInquirySubmit(e) {
   e.preventDefault();
   const id = document.getElementById('inquiry-influencer-id')?.value || 'elena';
-  const inf = influencersData[id] || { name: 'Influencer' };
+  let infName = 'Influencer IA';
+  if (id === 'custom-ceo-clone') {
+    infName = 'Clon Digital de CEO / Fundador';
+  } else if (id === 'custom-ecommerce-model') {
+    infName = 'Modelo IA Exclusiva para E-Commerce';
+  } else if (influencersData[id]) {
+    infName = influencersData[id].name;
+  }
   const name = document.getElementById('inquiry-name')?.value || '';
   const company = document.getElementById('inquiry-company')?.value || '';
   const email = document.getElementById('inquiry-email')?.value || '';
   const service = document.getElementById('inquiry-service')?.value || '';
   const message = document.getElementById('inquiry-message')?.value || '';
 
-  const subject = encodeURIComponent(`Solicitud Comercial: ${inf.name} - ${company}`);
+  const subject = encodeURIComponent(`Solicitud Comercial: ${infName} - ${company}`);
   const body = encodeURIComponent(
     `Hola equipo de Los Manejadores,\n\n` +
-    `Estoy interesado en una colaboración comercial para ${inf.name}.\n\n` +
+    `Estoy interesado en una propuesta para ${infName}.\n\n` +
     `Nombre: ${name}\n` +
     `Empresa: ${company}\n` +
     `Email: ${email}\n` +
@@ -2877,9 +2898,10 @@ function handleBrandInquirySubmit(e) {
   );
 
   closeBrandInquiryModal();
-  alert(`¡Gracias ${name}! Tu solicitud para colaborar con ${inf.name} ha sido recibida. Te abrimos el cliente de correo para enviar los detalles directamente a contacto@losmanejadores.com.`);
+  alert(`¡Gracias ${name}! Tu solicitud para ${infName} ha sido recibida. Te abrimos el cliente de correo para enviar los detalles directamente a contacto@losmanejadores.com.`);
   window.location.href = `mailto:contacto@losmanejadores.com?subject=${subject}&body=${body}`;
 }
+
 
 function openPhotoLightbox(imgUrl, title, desc) {
   const modal = document.getElementById('photo-lightbox-modal');
@@ -4158,6 +4180,383 @@ function handleEmpresasDiagnosisSubmit(e) {
   const name = document.getElementById('b2b-name')?.value || '';
   alert(`¡Gracias ${name}! Hemos recibido la evaluación de ${company}. Nuestro equipo de arquitectura y consultoría IA se pondrá en contacto dentro de las próximas 24 horas hábiles para coordinar el diagnóstico estratégico.`);
   e.target.reset();
+}
+
+// ============================================================================
+// RENDER: SEGURIDAD DIGITAL & PRIVACIDAD (BORRADO DE HUELLA & ANTI-DEEPFAKES)
+// ============================================================================
+function renderSeguridadPage() {
+  const container = document.getElementById('view-dynamic');
+  if (!container) return;
+
+  container.innerHTML = `
+    <div class="breadcrumb-bar" style="margin-bottom: 1.5rem;">
+      <div class="breadcrumbs">
+        <a href="#home">Inicio</a>
+        <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
+        <span class="current">Seguridad Digital & Borrado de Huella</span>
+      </div>
+      <a href="#home" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Inicio</a>
+    </div>
+
+    <!-- Header Section -->
+    <div style="text-align: center; max-width: 820px; margin: 0 auto 3rem auto;">
+      <span class="detail-badge" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3); font-size: 0.8rem;">
+        <i class="fa-solid fa-shield-halved"></i> CIBERSEGURIDAD PERSONAL, REPUTACIÓN & PRIVACIDAD
+      </span>
+      <h1 style="font-family: var(--font-heading); font-size: 2.6rem; color: #fff; margin: 1rem 0 0.75rem 0; letter-spacing: -0.5px;">
+        Seguridad Digital & Borrado de Huella
+      </h1>
+      <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; margin: 0 auto;">
+        En la era de la inteligencia artificial, tus datos personales, tu voz y tu rostro están más expuestos que nunca. Ayudamos a ejecutivos, profesionales, creadores y familias a <strong>borrar su rastro en internet</strong>, desindexar información en Google y blindarse contra suplantación o deepfakes no autorizados.
+      </p>
+
+      <!-- Trust Badges -->
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+        <span class="product-pill product-pill-green" style="font-size: 0.78rem;">
+          <i class="fa-solid fa-lock"></i> Acuerdo de Confidencialidad Estricto (NDA)
+        </span>
+        <span class="product-pill product-pill-cyan" style="font-size: 0.78rem;">
+          <i class="fa-solid fa-scale-balanced"></i> Cumplimiento RGPD (UE / Alemania) & PIPEDA (Canadá)
+        </span>
+        <span class="product-pill product-pill-purple" style="font-size: 0.78rem;">
+          <i class="fa-solid fa-shield-virus"></i> Cero Retención de Datos
+        </span>
+      </div>
+    </div>
+
+    <!-- 4 Core Service Cards -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.75rem; margin-bottom: 3.5rem;">
+      
+      <!-- Card 1: Borrado de Huella en Data Brokers -->
+      <div class="glass-card" style="border: 1px solid rgba(59, 130, 246, 0.35); padding: 2rem; display: flex; flex-direction: column;">
+        <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(59, 130, 246, 0.15); color: #3b82f6; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+          <i class="fa-solid fa-eraser"></i>
+        </div>
+        <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 0.5rem;">1. Borrado de Huella en Agregadores (Data Brokers)</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
+          Decenas de empresas comercializan tu número privado, dirección de domicilio, registros vehiculares y nombres de familiares sin tu consentimiento. Ejecutamos solicitudes sistemáticas y legales de exclusión (opt-out) para eliminar tus registros de las principales bases de datos mundiales.
+        </p>
+        <ul style="list-style: none; padding: 0; margin: 0 0 1.25rem 0; font-size: 0.84rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
+          <li><i class="fa-solid fa-check" style="color: #3b82f6; margin-right: 0.35rem;"></i> Remoción en más de 80 agregadores de datos comerciales</li>
+          <li><i class="fa-solid fa-check" style="color: #3b82f6; margin-right: 0.35rem;"></i> Blindaje de domicilios y números de teléfono privados</li>
+          <li><i class="fa-solid fa-check" style="color: #3b82f6; margin-right: 0.35rem;"></i> Auditoría de re-aparición periódica</li>
+        </ul>
+      </div>
+
+      <!-- Card 2: Derecho al Olvido & Desindexación Google -->
+      <div class="glass-card" style="border: 1px solid rgba(16, 185, 129, 0.35); padding: 2rem; display: flex; flex-direction: column;">
+        <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(16, 185, 129, 0.15); color: #10b981; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+          <i class="fa-brands fa-google"></i>
+        </div>
+        <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 0.5rem;">2. Desindexación en Google ("Derecho al Olvido")</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
+          ¿Aparecen noticias desactualizadas, publicaciones difamatorias, registros judiciales superados o fotos no deseadas cuando buscan tu nombre en Google? Gestionamos legal y técnicamente la remoción de enlaces en los resultados de búsqueda amparados en normativas internacionales.
+        </p>
+        <ul style="list-style: none; padding: 0; margin: 0 0 1.25rem 0; font-size: 0.84rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
+          <li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> Solicitudes formales de Derecho al Olvido ante Google</li>
+          <li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> Eliminación de imágenes y datos identificatorios en buscadores</li>
+          <li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> Restauración de reputación profesional online</li>
+        </ul>
+      </div>
+
+      <!-- Card 3: Blindaje Anti-Deepfakes -->
+      <div class="glass-card" style="border: 1px solid rgba(239, 68, 68, 0.35); padding: 2rem; display: flex; flex-direction: column;">
+        <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(239, 68, 68, 0.15); color: #ef4444; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+          <i class="fa-solid fa-user-ninja"></i>
+        </div>
+        <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 0.5rem;">3. Blindaje Anti-Deepfakes & Suplantación de Identidad</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
+          Cualquiera puede hoy clonar tu voz o animar tus fotos para estafar a tu empresa o familiares. Detectamos el uso ilegítimo de tu identidad biométrica y emitimos órdenes inmediatas de cese y desestimiento (Take-downs DMCA) para dar de baja clones en 24 a 48 horas.
+        </p>
+        <ul style="list-style: none; padding: 0; margin: 0 0 1.25rem 0; font-size: 0.84rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
+          <li><i class="fa-solid fa-check" style="color: #ef4444; margin-right: 0.35rem;"></i> Monitorización de clones de voz y rostro no consentidos</li>
+          <li><i class="fa-solid fa-check" style="color: #ef4444; margin-right: 0.35rem;"></i> Denuncias y take-downs directos a servidores y plataformas</li>
+          <li><i class="fa-solid fa-check" style="color: #ef4444; margin-right: 0.35rem;"></i> Protocolos de verificación familiar contra estafas de voz</li>
+        </ul>
+      </div>
+
+      <!-- Card 4: Auditoría OSINT Dark Web -->
+      <div class="glass-card" style="border: 1px solid rgba(139, 92, 246, 0.35); padding: 2rem; display: flex; flex-direction: column;">
+        <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(139, 92, 246, 0.15); color: var(--purple); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
+          <i class="fa-solid fa-fingerprint"></i>
+        </div>
+        <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 0.5rem;">4. Auditoría OSINT de Fugas & Blindaje de Cuentas</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
+          Rastreamos qué correos, contraseñas, documentos o números de tu entorno están filtrados en bases de datos hackeadas en la dark web. Te entregamos un informe de 1 página con tu diagnóstico de riesgo y configuramos herramientas de blindaje real (llaves 2FA físicas, alias privados).
+        </p>
+        <ul style="list-style: none; padding: 0; margin: 0 0 1.25rem 0; font-size: 0.84rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
+          <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Informe confidencial de brechas de seguridad personales</li>
+          <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Sustitución de contraseñas vulnerables y saneamiento</li>
+          <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Configuración de correos alias para blindar identidad</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Confidential Contact Form -->
+    <div class="glass-card" style="border: 2px solid rgba(59, 130, 246, 0.4); max-width: 800px; margin: 0 auto; padding: 2.5rem; background: radial-gradient(circle at top, rgba(59, 130, 246, 0.12) 0%, rgba(10, 12, 22, 0.9) 100%);">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <span class="detail-badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border-color: rgba(16, 185, 129, 0.3); font-size: 0.75rem;">
+          <i class="fa-solid fa-lock"></i> CANAL ESTRICTAMENTE CONFIDENCIAL
+        </span>
+        <h2 style="font-family: var(--font-heading); color: #fff; font-size: 1.85rem; margin: 0.75rem 0 0.5rem 0;">
+          Solicitar Evaluación de Seguridad o Borrado
+        </h2>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin: 0;">
+          Escríbenos en total privacidad. Tratamos cada solicitud con absoluto secreto profesional y respuesta en menos de 24 horas.
+        </p>
+      </div>
+
+      <form onsubmit="handleSecurityInquirySubmit(event)">
+        <div class="b2b-form-grid">
+          <div class="b2b-form-group">
+            <label><i class="fa-solid fa-user"></i> Nombre o Pseudónimo *</label>
+            <input type="text" id="sec-name" placeholder="Ej: Carlos M." required>
+          </div>
+          <div class="b2b-form-group">
+            <label><i class="fa-solid fa-envelope"></i> Correo Electrónico Seguro *</label>
+            <input type="email" id="sec-email" placeholder="correo@privado.com" required>
+          </div>
+          <div class="b2b-form-group">
+            <label><i class="fa-brands fa-whatsapp"></i> WhatsApp / Signal (Opcional)</label>
+            <input type="tel" id="sec-phone" placeholder="+56 9... / +34...">
+          </div>
+          <div class="b2b-form-group">
+            <label><i class="fa-solid fa-shield-halved"></i> Servicio de Interés *</label>
+            <select id="sec-service" required>
+              <option value="Borrado de Huella Digital en Data Brokers" selected>Borrado de Huella Digital en Data Brokers</option>
+              <option value="Desindexación en Google (Derecho al Olvido)">Desindexación de Enlaces en Google (Derecho al Olvido)</option>
+              <option value="Take-down de Deepfake o Suplantación">Take-down de Deepfake o Suplantación de Identidad</option>
+              <option value="Auditoría OSINT de Filtraciones en Dark Web">Auditoría OSINT de Filtraciones en Dark Web</option>
+              <option value="Blindaje Completo de Privacidad VIP">Blindaje Completo de Privacidad VIP</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="b2b-form-group" style="margin-top: 1.25rem;">
+          <label><i class="fa-solid fa-comment-dots"></i> Describe brevemente tu situación o qué datos/enlaces deseas eliminar:</label>
+          <textarea id="sec-details" rows="3" placeholder="Ejemplo: Aparece mi número y dirección en páginas de internet / Hay un enlace difamatorio que quiero desindexar..." required></textarea>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-glass);">
+          <button type="submit" class="btn btn-primary" style="padding: 0.85rem 1.8rem; font-size: 1rem; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); border-color: #3b82f6;">
+            <i class="fa-solid fa-paper-plane"></i> Enviar Consulta Confidencial
+          </button>
+          <div style="font-size: 0.82rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.4rem;">
+            <i class="fa-solid fa-shield" style="color: #10b981;"></i> Protegido bajo estricto acuerdo de no divulgación
+          </div>
+        </div>
+      </form>
+    </div>
+  `;
+}
+
+function handleSecurityInquirySubmit(e) {
+  e.preventDefault();
+  const name = document.getElementById('sec-name')?.value || 'Usuario';
+  const service = document.getElementById('sec-service')?.value || 'Servicio de Privacidad';
+  alert(`¡Solicitud recibida con éxito, ${name}! Tu consulta sobre «${service}» ha sido registrada bajo cifrado confidencial. Un consultor senior de privacidad te contactará de forma segura en menos de 24 horas.`);
+  e.target.reset();
+}
+
+// ============================================================================
+// RENDER: CURSOS PRÁCTICOS & MICRO-LEARNING CON IA
+// ============================================================================
+function renderCursosPage() {
+  const container = document.getElementById('view-dynamic');
+  if (!container) return;
+
+  const courses = [
+    {
+      id: 'curso-seo-maps',
+      title: 'Atrapar la Nube de Búsquedas en Internet (SEO Exprés en Google Maps & Google)',
+      tagline: 'Cómo capturar a las miles de personas que buscan productos o servicios en tu ciudad todos los días y redirigirlos en automático a tu WhatsApp para cerrar ventas.',
+      category: 'Ventas Locales & SEO',
+      duration: '90 min • Micro-Learning',
+      price: '$39 USD',
+      icon: 'fa-location-dot',
+      color: 'var(--cyan)',
+      learnings: [
+        'Cómo descifrar qué busca la gente de tu zona en Google exactamente.',
+        'Configuración de Google Business Profile para aparecer en el Top 3 local.',
+        'Estrategia de palabras clave sin pagar anuncios de Google Ads.',
+        'Embudos automáticos de derivación desde la ficha de Google directo a WhatsApp.'
+      ],
+      includes: 'Plantilla de palabras clave locales + Checklist de optimización en 24h.'
+    },
+    {
+      id: 'curso-huella-digital',
+      title: 'Borrado de Huella Digital & Autodefensa frente a la IA',
+      tagline: 'Cómo desindexar tus datos privados de Google, solicitar eliminación en bases de datos de brokers y proteger a tu familia contra estafas de voz clonada.',
+      category: 'Privacidad & Seguridad',
+      duration: '60 min • Taller Práctico',
+      price: '$29 USD',
+      icon: 'fa-shield-halved',
+      color: '#3b82f6',
+      learnings: [
+        'Cómo realizar una auditoría personal para ver qué datos tuyos están expuestos.',
+        'Procedimiento legal y técnico para desindexar enlaces en Google (Derecho al Olvido).',
+        'Modelos de cartas para solicitar la eliminación en más de 50 Data Brokers.',
+        'Configuración de contraseñas blindadas, alias de correo y autenticación segura.'
+      ],
+      includes: 'Modelos de cartas legales de remoción + Checklist de blindaje de cuentas.'
+    },
+    {
+      id: 'curso-modelo-ecommerce',
+      title: 'Crea tu Propia Modelo / Influencer IA para E-Commerce sin Saber Programar',
+      tagline: 'Flujo exacto para generar una modelo sintética con rostro consistente que vista las prendas o sostenga los productos de tu marca usando Flux y ComfyUI.',
+      category: 'Modelado IA & E-Commerce',
+      duration: '120 min • Masterclass',
+      price: '$49 USD',
+      icon: 'fa-bag-shopping',
+      color: 'var(--pink)',
+      learnings: [
+        'Creación de identidad facial fija que no cambie entre distintas fotos.',
+        'Técnicas de Inpainting para colocar la ropa real de tu tienda en la modelo IA.',
+        'Iluminación de estudio profesional y prompts fotográficos fotorrealistas.',
+        'Exportación en 4K optimizada para anuncios de Instagram y catálogos web.'
+      ],
+      includes: '3 Workflows de ComfyUI descargables + Pack de 25 prompts maestros de estudio.'
+    },
+    {
+      id: 'curso-clon-ceo',
+      title: 'Clones de Video y Marca Personal para Profesionales & LinkedIn B2B',
+      tagline: 'Cómo clonar tu voz y rostro con IA en 2 minutos para producir 20 videos al mes en minutos, posicionándote como referente de tu sector sin pasar horas grabando.',
+      category: 'Video IA & Marca Personal',
+      duration: '75 min • Taller Práctico',
+      price: '$35 USD',
+      icon: 'fa-video',
+      color: 'var(--purple)',
+      learnings: [
+        'Cómo grabar la muestra de video y audio perfecta para una clonación impecable.',
+        'Herramientas actuales de clonación de voz y animación labial (HeyGen / LivePortrait).',
+        'Generación de guiones magnéticos para LinkedIn con ChatGPT y Claude.',
+        'Automatización del montaje con subtítulos dinámicos en segundos.'
+      ],
+      includes: '15 Plantillas de guiones virales B2B + Preset de subtítulos dinámicos.'
+    },
+    {
+      id: 'curso-safe-vibe-coding',
+      title: 'Safe Vibe Coding: Construye Micro-Páginas y Cotizadores en 24 Horas',
+      tagline: 'Cómo usar asistentes de IA para programar mini-páginas de venta, calculadoras de cotización y formularios inteligentes sin dependencias pesadas ni fallos de seguridad.',
+      category: 'Desarrollo Rápido & IA',
+      duration: '90 min • Hands-on',
+      price: '$45 USD',
+      icon: 'fa-code',
+      color: '#10b981',
+      learnings: [
+        'Metodología Safe Vibe Coding: cómo programar con IA sin generar código basura.',
+        'Construcción de cotizadores interactivos que aumentan la conversión.',
+        'Protección de datos y cumplimiento RGPD europeo en formularios web.',
+        'Despliegue gratuito y ultra-rápido en servidores seguros en menos de 1 hora.'
+      ],
+      includes: 'Boilerplate de código limpio en HTML/JS + Guía de despliegue paso a paso.'
+    }
+  ];
+
+  container.innerHTML = `
+    <div class="breadcrumb-bar" style="margin-bottom: 1.5rem;">
+      <div class="breadcrumbs">
+        <a href="#home">Inicio</a>
+        <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
+        <span class="current">Cursos & Talleres Prácticos</span>
+      </div>
+      <a href="#home" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Inicio</a>
+    </div>
+
+    <!-- Header Section -->
+    <div style="text-align: center; max-width: 820px; margin: 0 auto 3rem auto;">
+      <span class="detail-badge" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3); font-size: 0.8rem;">
+        <i class="fa-solid fa-graduation-cap"></i> MICRO-LEARNING DE IMPACTO INMEDIATO
+      </span>
+      <h1 style="font-family: var(--font-heading); font-size: 2.6rem; color: #fff; margin: 1rem 0 0.75rem 0; letter-spacing: -0.5px;">
+        Cursos Cortos & Habilidades Directas
+      </h1>
+      <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; margin: 0 auto;">
+        Cero teoría de relleno. Aprendizajes prácticos de 60 a 120 minutos diseñados para implementar en el día y <strong>capturar la enorme masa de personas que buscan soluciones en internet</strong> todos los días.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+        <span class="product-pill product-pill-green"><i class="fa-solid fa-bolt"></i> 100% Práctico & Directo al Grano</span>
+        <span class="product-pill product-pill-cyan"><i class="fa-solid fa-file-arrow-down"></i> Plantillas & Workflows Incluidos</span>
+        <span class="product-pill product-pill-purple"><i class="fa-solid fa-unlock"></i> Acceso Inmediato de por Vida</span>
+      </div>
+    </div>
+
+    <!-- Courses Grid -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; margin-bottom: 3.5rem;">
+      ${courses.map(c => `
+        <div class="glass-card" style="border: 1px solid rgba(255,255,255,0.1); padding: 2rem; display: flex; flex-direction: column; position: relative;">
+          
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem;">
+            <div style="width: 50px; height: 50px; border-radius: 12px; background: rgba(255,255,255,0.06); color: ${c.color}; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
+              <i class="fa-solid ${c.icon}"></i>
+            </div>
+            <span class="detail-badge" style="background: rgba(255,255,255,0.06); color: #cbd5e1; border-color: rgba(255,255,255,0.15); font-size: 0.72rem;">
+              ${c.duration}
+            </span>
+          </div>
+
+          <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px; color: ${c.color}; font-weight: 700; margin-bottom: 0.4rem;">
+            ${c.category}
+          </span>
+          <h3 style="color: #fff; font-size: 1.25rem; line-height: 1.4; margin-bottom: 0.75rem;">
+            ${c.title}
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem;">
+            ${c.tagline}
+          </p>
+
+          <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 1rem; margin-bottom: 1.25rem; flex-grow: 1;">
+            <div style="font-size: 0.76rem; text-transform: uppercase; color: #94a3b8; font-weight: 600; margin-bottom: 0.5rem;">
+              <i class="fa-solid fa-bullseye" style="color: ${c.color};"></i> Qué vas a saber hacer:
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem;">
+              ${c.learnings.map(l => `<li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> ${l}</li>`).join('')}
+            </ul>
+          </div>
+
+          <div style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 1.25rem;">
+            <i class="fa-solid fa-download" style="color: ${c.color}; margin-right: 0.35rem;"></i> <strong>Incluye:</strong> ${c.includes}
+          </div>
+
+          <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Acceso completo</span>
+              <span style="font-size: 1.4rem; font-weight: 700; color: #fff;">${c.price}</span>
+            </div>
+            <button onclick="handleCourseEnrollment('${c.title.replace(/'/g, "\\'")}', '${c.price}')" class="btn btn-primary btn-sm" style="padding: 0.55rem 1.1rem; font-size: 0.85rem;">
+              <i class="fa-solid fa-bolt"></i> Inscribirme Ahora
+            </button>
+          </div>
+
+        </div>
+      `).join('')}
+    </div>
+
+    <!-- Need customized training box -->
+    <div class="glass-card" style="text-align: center; padding: 2.5rem; border: 1px dashed rgba(245, 158, 11, 0.4); max-width: 750px; margin: 0 auto;">
+      <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 0.5rem;">¿Buscas capacitación privada para tu equipo o empresa?</h3>
+      <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.25rem;">
+        Diseñamos talleres in-company en vivo de 2 a 4 horas sobre implementación de IA, Safe Vibe Coding y seguridad para equipos comerciales o de desarrollo.
+      </p>
+      <a href="#empresas" class="btn btn-secondary">
+        <i class="fa-solid fa-handshake"></i> Solicitar Taller Corporativo In-Company
+      </a>
+    </div>
+  `;
+}
+
+function handleCourseEnrollment(courseTitle, price) {
+  const subject = encodeURIComponent(`Inscripción a Curso: ${courseTitle}`);
+  const body = encodeURIComponent(
+    `Hola equipo de Los Manejadores,\n\n` +
+    `Deseo inscribirme al curso: ${courseTitle} (${price}).\n\n` +
+    `Por favor envíenme el enlace de pago seguro y las credenciales de acceso inmediato al contenido y materiales descargables.\n\n` +
+    `Muchas gracias.`
+  );
+  alert(`¡Excelente elección! Te abrimos tu cliente de correo para confirmar tu inscripción a «${courseTitle}» y enviarte el acceso inmediato.`);
+  window.location.href = `mailto:cursos@losmanejadores.com?subject=${subject}&body=${body}`;
 }
 
 // ============================================================================
