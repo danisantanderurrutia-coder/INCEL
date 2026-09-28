@@ -1064,6 +1064,9 @@ const influencersData = {
 influencersData.almendra = influencersData.alejandra;
 influencersData.liravoss = influencersData.kira;
 influencersData.kiravane = influencersData.kira;
+influencersData['alina-van-dijk'] = influencersData.alina;
+influencersData['alina_van_dijk'] = influencersData.alina;
+influencersData['alinavandijk'] = influencersData.alina;
 
 const channelsData = {
   sofia: {
@@ -1361,7 +1364,8 @@ function handleRoute() {
 
   // Parse routes
   if (hash.startsWith('#influencer-cockpit/')) {
-    const influencerId = hash.replace('#influencer-cockpit/', '');
+    const rawId = hash.replace('#influencer-cockpit/', '');
+    const influencerId = decodeURIComponent(rawId).toLowerCase().trim().replace(/\/$/, '');
     if (isTeamAuthenticated()) {
       renderInfluencerPage(influencerId, 'cockpit');
       showDynamicView();
@@ -1370,7 +1374,8 @@ function handleRoute() {
       showPublicView();
     }
   } else if (hash.startsWith('#influencer/')) {
-    const influencerId = hash.replace('#influencer/', '');
+    const rawId = hash.replace('#influencer/', '');
+    const influencerId = decodeURIComponent(rawId).toLowerCase().trim().replace(/\/$/, '');
     renderInfluencerPage(influencerId, 'product');
     showDynamicView();
   } else if (hash.startsWith('#channel/')) {
@@ -2437,25 +2442,43 @@ function requestCockpitAccess(id) {
 // ROUTER DISPATCHER FOR INFLUENCER PAGE
 function renderInfluencerPage(id, mode = 'product') {
   currentInfluencerMode = mode;
+  const cleanId = (id || '').toLowerCase().trim().replace(/\/$/, '');
   if (mode === 'cockpit') {
     if (!isTeamAuthenticated()) {
-      openAuthModal('influencer-cockpit:' + id);
+      openAuthModal('influencer-cockpit:' + cleanId);
       return;
     }
-    renderInfluencerCockpit(id);
+    renderInfluencerCockpit(cleanId);
   } else {
-    renderInfluencerPublicProduct(id);
+    renderInfluencerPublicProduct(cleanId);
   }
 }
 
 // 1. PUBLIC PRODUCT SHOWROOM (SHOWCASING IA QUALITY, CONSISTENCY, LORE & SERVICES)
 function renderInfluencerPublicProduct(id) {
-  const data = influencersData[id];
+  const cleanId = (id || '').toLowerCase().trim().replace(/\/$/, '');
+  const data = influencersData[cleanId] || influencersData[id];
   const container = document.getElementById('view-dynamic');
   if (!container) return;
 
   if (!data) {
-    container.innerHTML = `<div style="padding: 4rem; text-align: center;"><h2>Influencer no encontrado</h2><a href="#roster" class="btn btn-primary">Volver al Catálogo</a></div>`;
+    container.innerHTML = `
+      <div style="padding: 4rem 1.5rem; text-align: center; max-width: 600px; margin: 0 auto;">
+        <i class="fa-solid fa-user-slash" style="font-size: 3rem; color: var(--pink); margin-bottom: 1rem; opacity: 0.8;"></i>
+        <h2 style="font-family: var(--font-heading); color: #fff; margin-bottom: 0.75rem;">Influencer no encontrado</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.75rem;">
+          Si acabas de acceder tras una actualización del sistema, tu navegador puede tener una versión anterior en memoria caché. Haz clic en "Recargar" para cargar los datos más recientes.
+        </p>
+        <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+          <button onclick="window.location.reload(true)" class="btn btn-secondary">
+            <i class="fa-solid fa-rotate-right"></i> Recargar Página
+          </button>
+          <a href="#roster" class="btn btn-primary">
+            <i class="fa-solid fa-users"></i> Volver al Catálogo
+          </a>
+        </div>
+      </div>
+    `;
     return;
   }
 
@@ -2876,12 +2899,29 @@ function closePhotoLightbox() {
 
 // 3. PRIVATE COCKPIT FOR INTERNAL TEAM (PRESERVING 5 OPERATIONAL TABS)
 function renderInfluencerCockpit(id) {
-  const data = influencersData[id];
+  const cleanId = (id || '').toLowerCase().trim().replace(/\/$/, '');
+  const data = influencersData[cleanId] || influencersData[id];
   const container = document.getElementById('view-dynamic');
   if (!container) return;
 
   if (!data) {
-    container.innerHTML = `<div style="padding: 4rem; text-align: center;"><h2>Influencer no encontrado</h2><a href="#roster" class="btn btn-primary">Volver al Catálogo</a></div>`;
+    container.innerHTML = `
+      <div style="padding: 4rem 1.5rem; text-align: center; max-width: 600px; margin: 0 auto;">
+        <i class="fa-solid fa-user-slash" style="font-size: 3rem; color: var(--pink); margin-bottom: 1rem; opacity: 0.8;"></i>
+        <h2 style="font-family: var(--font-heading); color: #fff; margin-bottom: 0.75rem;">Influencer no encontrado</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.75rem;">
+          Si acabas de acceder tras una actualización del sistema, tu navegador puede tener una versión anterior en memoria caché. Haz clic en "Recargar" para cargar los datos más recientes.
+        </p>
+        <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+          <button onclick="window.location.reload(true)" class="btn btn-secondary">
+            <i class="fa-solid fa-rotate-right"></i> Recargar Página
+          </button>
+          <a href="#roster" class="btn btn-primary">
+            <i class="fa-solid fa-users"></i> Volver al Catálogo
+          </a>
+        </div>
+      </div>
+    `;
     return;
   }
 
