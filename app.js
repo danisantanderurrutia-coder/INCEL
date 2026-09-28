@@ -172,14 +172,14 @@ const influencersData = {
 
   julia: {
     id: "julia",
-    name: "Julia",
+    name: "Julia Schmidt",
     niche: "Dermocosmética Científica, Dupes & Clean Girl Aesthetic",
     badge: "Personaje Listo • A cargo de Pancho Ipinza",
     avatar: "julia_avatar.jpg",
     tagline: "Educación dermocosmética accesible, análisis transparente de fórmulas y cuidado de la piel real.",
     keyMarkets: "Perú, Colombia, Chile, México y amantes de la cosmética limpia en Latinoamérica.",
-    story: "Crecida entre el malecón de Miraflores y las boticas tradicionales de Lima, Julia se formó con la convicción de que el cuidado de la piel debe basarse en la evidencia química y no en promesas vacías de marketing. Con su conocimiento en dermofarmacia y lectura minuciosa de fórmulas (INCI), enseña a su comunidad a proteger la barrera cutánea frente al clima costero y a encontrar equivalencias de farmacia ('dupes') tan efectivas como marcas de lujo. Su transparencia radical, libre de filtros plásticos y con textura de piel real, la convierten en la aliada más confiable de la dermocosmética.",
-    bio: "Julia (24 años) es una comunicadora y especialista en dermofarmacia nacida y residente en Miraflores (San Antonio / La Aurora, Lima). Se dedica a desmitificar la cosmética comercial, analizar listas de ingredientes (INCI), comparar 'dupes' accesibles con productos de alta gama y enseñar el cuidado de la barrera cutánea adaptado al clima húmedo de la costa limeña ('cielo pan de burro') bajo una estética limpia, empática y sin filtros plásticos engañosos.",
+    story: "Crecida entre el malecón de Miraflores y las boticas tradicionales de Lima, Julia Schmidt se formó con la convicción de que el cuidado de la piel debe basarse en la evidencia química y no en promesas vacías de marketing. Con su conocimiento en dermofarmacia y lectura minuciosa de fórmulas (INCI), enseña a su comunidad a proteger la barrera cutánea frente al clima costero y a encontrar equivalencias de farmacia ('dupes') tan efectivas como marcas de lujo. Su transparencia radical, libre de filtros plásticos y con textura de piel real, la convierten en la aliada más confiable de la dermocosmética.",
+    bio: "Julia Schmidt (24 años) es una comunicadora y especialista en dermofarmacia nacida y residente en Miraflores (San Antonio / La Aurora, Lima). Se dedica a desmitificar la cosmética comercial, analizar listas de ingredientes (INCI), comparar 'dupes' accesibles con productos de alta gama y enseñar el cuidado de la barrera cutánea adaptado al clima húmedo de la costa limeña ('cielo pan de burro') bajo una estética limpia, empática y sin filtros plásticos engañosos.",
     archetype: "Beauty Educator + Honest Science Reviewer",
     techStack: "Gemini Gems ROLOCODEPRE + Midjourney v6 / Flux + HeyGen / Kling LipSync + ElevenLabs (Español Ribereño Peruano didáctico)",
     targetAudience: "Mujeres y jóvenes de 18 a 35 años que buscan cuidar su piel con criterio científico, ahorrar dinero en cosmética y evitar estándares inalcanzables.",
@@ -188,7 +188,7 @@ const influencersData = {
       {
         img: "julia_avatar.jpg",
         tag: "Retrato Principal Leica (98.9% Match)",
-        label: "Julia • Clean Beauty",
+        label: "Julia Schmidt • Clean Beauty",
         desc: "Textura cutánea realista con poros visibles, iluminación suave difusa, 85mm f/1.8 Leica."
       },
       {
@@ -202,7 +202,7 @@ const influencersData = {
       title: "Español Limeño Fresco & Didáctico (ElevenLabs)",
       badge: "Voice ID: Julia-PE-v2",
       duration: "0:25",
-      transcript: "«¡Hola chicas y chicos! Soy Julia. Recuerden que una piel sana no necesita diez capas de productos caros. Lo que de verdad importa es entender qué activos funcionan juntos y respetar su barrera cutánea.»",
+      transcript: "«¡Hola chicas y chicos! Soy Julia Schmidt. Recuerden que una piel sana no necesita diez capas de productos caros. Lo que de verdad importa es entender qué activos funcionan juntos y respetar su barrera cutánea.»",
       rate: 1.05,
       pitch: 1.15,
       lang: "es-PE"
@@ -216,22 +216,22 @@ const influencersData = {
       casual: {
         label: "📸 Selfie Rutina Skincare",
         tags: ["Midjourney v6", "Clean Beauty", "--ar 4:5"],
-        text: "Close-up bathroom mirror selfie of Julia, 24yo Peruvian female beauty educator from Lima, fresh glowing natural bare skin with visible pores, wet hair wrapped in a white towel, wearing a simple beige tank top, holding a glass dropper bottle, morning bathroom natural light, shot on 35mm lens, authentic realistic skin, zero beauty filter --ar 4:5"
+        text: "Close-up bathroom mirror selfie of Julia Schmidt, 24yo Peruvian female beauty educator from Lima, fresh glowing natural bare skin with visible pores, wet hair wrapped in a white towel, wearing a simple beige tank top, holding a glass dropper bottle, morning bathroom natural light, shot on 35mm lens, authentic realistic skin, zero beauty filter --ar 4:5"
       },
       editorial: {
         label: "👗 Editorial Dermocosmética",
         tags: ["Flux.1 Dev", "Studio Master", "--ar 16:9"],
-        text: "Editorial portrait of Julia, 24yo Peruvian skincare expert, wearing a structured cream minimalist blazer, standing against a clean neutral warm background with soft architectural shadows, holding an amber cosmetic bottle, softbox studio lighting, 85mm f/1.8 Leica optics, hyper-realistic skin texture, 8k --ar 16:9"
+        text: "Editorial portrait of Julia Schmidt, 24yo Peruvian skincare expert, wearing a structured cream minimalist blazer, standing against a clean neutral warm background with soft architectural shadows, holding an amber cosmetic bottle, softbox studio lighting, 85mm f/1.8 Leica optics, hyper-realistic skin texture, 8k --ar 16:9"
       },
       fitness: {
         label: "🌊 Caminata Malecón Lima",
         tags: ["Midjourney v6", "Lifestyle", "--ar 4:5"],
-        text: "Candid lifestyle shot of Julia walking along the Miraflores Malecón under a soft overcast Lima sky ('cielo pan de burro'), wearing casual athleisure with sunscreen on cheekbones, ocean in soft blur behind, natural coastal breeze, dynamic walking motion, realistic candid photography --ar 4:5"
+        text: "Candid lifestyle shot of Julia Schmidt walking along the Miraflores Malecón under a soft overcast Lima sky ('cielo pan de burro'), wearing casual athleisure with sunscreen on cheekbones, ocean in soft blur behind, natural coastal breeze, dynamic walking motion, realistic candid photography --ar 4:5"
       },
       video: {
         label: "🎬 Video Hook Kling 3.0",
         tags: ["Kling 3.0", "LipSync HeyGen", "4K"],
-        text: "Close-up 4k video of Julia applying a drop of hyaluronic acid to the back of her hand and speaking directly to camera with an engaging friendly smile, natural mouth sync, studio ring light reflection in eyes, high-definition skin pores"
+        text: "Close-up 4k video of Julia Schmidt applying a drop of hyaluronic acid to the back of her hand and speaking directly to camera with an engaging friendly smile, natural mouth sync, studio ring light reflection in eyes, high-definition skin pores"
       },
       negative: {
         label: "🚫 Negative Prompt",
@@ -525,41 +525,57 @@ const influencersData = {
       }
     ],
     ecommerce: {
-      storeName: "Voss DevLab • Shaders, Game Assets & Merch (Gumroad & Shopify)",
-      storeUrl: "https://vossdev.gumroad.com",
-      storeType: "E-Commerce Digital • Assets para Videojuegos & Streetwear Tech",
-      avgOrderValue: "$42 USD",
-      grossMargin: "91%",
-      conversionRate: "5.8%",
-      fulfillment: "Descarga de repositorios en GitHub / Gumroad + Envíos globales de indumentaria",
-      description: "Shaders optimizados para motores de código abierto (Godot 4 y Unreal Engine), paquetes de efectos visuales retro y accesorios de escritorio para desarrolladores.",
+      storeName: "Voss Indie Game Studio & Steam Portal (Steam + Itch.io)",
+      storeUrl: "https://kiravoss.games",
+      storeType: "Estudio de Videojuegos Indie • Claves Steam, Acceso Alpha & Bundles",
+      avgOrderValue: "$34 USD",
+      grossMargin: "94%",
+      conversionRate: "6.8%",
+      fulfillment: "Entrega instantánea de claves de activación en Steam / Epic Games / Itch.io",
+      description: "Videojuegos independientes de rol táctico, hackeo y estética cyberpunk desarrollados por Kira en Godot 4 y Unreal Engine 5, con claves directas de activación, soundtracks en FLAC y pases de temporada.",
       products: [
         {
-          name: "Cyberpunk CRT & Glitch Shaders Pack para Godot 4.3",
-          price: "$35 USD",
-          cost: "$2 USD",
-          category: "Assets para Juegos",
-          tag: "Top Seller Indie",
-          salesVolume: "1.600 descargas/mes"
+          name: "CyberProtocol 2084: Definitive Edition (Steam Key Global)",
+          price: "$24.99 USD",
+          cost: "$1.50 USD",
+          category: "Videojuego Completo",
+          tag: "Top Ventas Steam",
+          salesVolume: "1.850 claves/mes",
+          desc: "RPG táctico cyberpunk con generación procedural de niveles y soundtrack synthwave original.",
+          fulfillment: "Steam Key Digital Instantánea"
         },
         {
-          name: "Mousepad XXL 'Terminal Hacker' Textura Control 900x400mm",
-          price: "$29 USD",
-          cost: "$8 USD",
-          category: "Hardware / Periféricos",
-          tag: "Físico",
-          salesVolume: "580 uds/mes"
+          name: "Neon Infiltration: Early Access Alpha Pass + Artbook Digital",
+          price: "$34.99 USD",
+          cost: "$0.50 USD",
+          category: "Acceso Anticipado",
+          tag: "Exclusivo Comunidad",
+          salesVolume: "720 ventas/mes",
+          desc: "Pase alpha jugable para el nuevo roguelike de sigilo con mención en créditos y acceso a canal de feedback en Discord.",
+          fulfillment: "Descarga Directa + Rol Discord"
         },
         {
-          name: "Hoodie Unisex 'Code Sovereign' Bordado Reflectante",
-          price: "$68 USD",
-          cost: "$20 USD",
-          category: "Indumentaria Dev",
-          tag: "Alta Demanda",
-          salesVolume: "410 uds/mes"
+          name: "Kira's Indie Game Dev Vault: 3 Juegos Comerciales + Código Fuente",
+          price: "$79.00 USD",
+          cost: "$2.00 USD",
+          category: "Bundle Desarrollador",
+          tag: "Mayor Ticket",
+          salesVolume: "340 ventas/mes",
+          desc: "Bundle con 3 videojuegos completos de Kira + proyectos fuente en Godot 4 con licencia de reutilización comercial.",
+          fulfillment: "Repositorio GitHub Privado"
+        },
+        {
+          name: "Caja Coleccionista 'Glitch Runner' (USB Retro + Cómic Físico)",
+          price: "$49.00 USD",
+          cost: "$12.00 USD",
+          category: "Edición Física Coleccionista",
+          tag: "Edición Limitada",
+          salesVolume: "290 uds/mes",
+          desc: "Caja metálica serigrafiada con el juego en pendrive USB retro con forma de disquete 3.5, stickers y cómic precuela.",
+          fulfillment: "Envío Postal Global (Courier)"
         }
       ],
-      funnelStrategy: "Devlogs en YouTube mostrando cómo programar mecánicas en directo -> Link a shader gratuito de muestra en GitHub -> Venta cruzada del pack completo de shaders en Gumroad -> Membresía al servidor de Discord privado para desarrolladores."
+      funnelStrategy: "Devlogs y directos en Twitch/YouTube mostrando desarrollo de mecánicas y game feel -> Demo jugable gratuita en Steam e Itch.io -> Venta de keys completas y bundles con descuento por lanzamiento -> Conversión a testers VIP en Discord con pases anticipados."
     }
   },
 
@@ -826,94 +842,108 @@ const influencersData = {
 
   alejandra: {
     id: "alejandra",
-    name: "Alejandra",
-    niche: "Cultura Indie, Vinilos & Música Alternativa",
-    badge: "En Concepto • Pipeline Q2",
-    avatar: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80",
-    tagline: "Curaduría musical indie, estética vintage 90s y recomendaciones de vinilos raros.",
-    keyMarkets: "Alemania, España, Chile, México y amantes de la cultura indie y el diseño retro.",
-    story: "Curadora de vinilos de colección, fotografía analógica y ropa de diseño vintage, Alejandra recorre las ferias de pulgas y los clubes de jazz e indie de Berlín y Europa. Diseñada para audiencias sensibles al arte pausado y el coleccionismo físico, conecta con marcas que valoran la autenticidad y la estética analógica de los años 90.",
-    bio: "Alejandra (23 años) conecta a audiencias melómanas y amantes del diseño retro. Explora festivales independientes, descubrimientos en vinilo y moda vintage. Diseñada para alianzas con sellos discográficos, marcas de audio de alta fidelidad y suscripciones VIP.",
-    archetype: "La Melómana Vintage / Curadora Indie",
-    techStack: "Flux.1 LoRA Vintage Aesthetic + ElevenLabs Warm Voice + Kling 3.0",
-    targetAudience: "Jóvenes y adultos de 18 a 35 años interesados en música independiente, coleccionismo de vinilo, fotografía analógica y festivales.",
-    channels: "Instagram (@alejandra.indie), TikTok, Spotify Curated Playlists, Fanvue VIP ($10/mes)",
+    name: "Alejandra (Prototipo B2B)",
+    niche: "Embajadora Virtual & Modelo de Marca (Disponible para Negocios)",
+    badge: "Prototipo B2B • En Adopción / Listo para Empresas",
+    avatar: "alejandra_avatar.jpg",
+    tagline: "Prototipo hiperrealista disponible para licenciamiento exclusivo, co-creación y operación por empresas o marcas.",
+    keyMarkets: "Empresas de Moda, Belleza, E-Commerce, Lifestyle o Retail en búsqueda de su propia embajadora virtual.",
+    story: "Alejandra representa nuestro prototipo de nueva generación para el sector empresarial. No ha sido lanzada al público como personaje propio porque está concebida como un activo 'llave en mano' para negocios: una marca comercial puede adoptarla, bautizarla con su propio nombre, definir su tono de voz y utilizar nuestro pipeline de generación continua para campañas publicitarias, videos de producto y e-commerce sin los riesgos ni los elevados costes de contratar modelos o influencers tradicionales.",
+    bio: "Alejandra (Prototipo B2B) es una embajadora virtual hiperrealista lista para ser personalizada y operada para marcas. Combina una presencia visual magnética y fresca con lentes ópticos y sonrisa natural, ideal para campañas de moda, comercio electrónico, accesorios o marcas de bienestar. Disponible bajo modelo de licenciamiento exclusivo o co-gestión integral con Los Manejadores.",
+    archetype: "Virtual Brand Ambassador / Turnkey Commercial Model",
+    techStack: "Flux.1 Dev 4K Master LoRA + LipSync HeyGen / Kling 3.0 + ElevenLabs Multilingüe (Configurable por Marca)",
+    targetAudience: "Empresas, agencias de publicidad y marcas que desean una embajadora virtual propia y exclusiva para sus campañas.",
+    channels: "Canales a definir por la empresa adoptante (Instagram, TikTok, Meta Ads, Sitio Web, Catálogo Digital)",
     gallery: [
       {
-        img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80",
-        tag: "Retrato LoRA Vintage",
-        label: "Alejandra • Tienda de Vinilos",
-        desc: "Luz cálida de atardecer en tienda de discos analógicos, estética cinematográfica 35mm."
+        img: "alejandra_avatar.jpg",
+        tag: "Prototipo Master 4K",
+        label: "Alejandra • Modelo Comercial en Parque",
+        desc: "Retrato hiperrealista en entorno exterior natural con iluminación diurna y textura de piel auténtica."
       }
     ],
     voice: {
-      title: "Voz Cálida & Melódica (ElevenLabs)",
-      badge: "Voice ID: Alejandra-Indie",
+      title: "Voz Personalizable por la Marca (ElevenLabs)",
+      badge: "Configurable B2B",
       duration: "0:18",
-      transcript: "«Un buen vinilo no se escucha: se siente. Cada imperfección en el surco cuenta la historia de un momento irrepetible.»",
+      transcript: "«Hola. Soy el prototipo de embajadora virtual desarrollado por Los Manejadores. Puedo representar a tu marca en múltiples idiomas y formatos con disponibilidad total 24/7 y sin fricción de producción.»",
       rate: 1.0,
       pitch: 1.0,
       lang: "es-ES"
     },
     roi: {
-      defaultFollowers: 35000,
-      defaultConversion: 2.0,
-      defaultTicket: 10
+      defaultFollowers: 50000,
+      defaultConversion: 3.5,
+      defaultTicket: 25
     },
     promptScenes: {
       casual: {
-        label: "🎧 Vintage Record Store",
-        tags: ["Flux.1", "LoRA Alejandra", "--ar 4:5"],
-        text: "analog 35mm film photograph of 23yo indie girl Alejandra browsing vinyl records in a cozy Berlin record shop, oversized vintage sweater, warm golden lamp light, bokeh, candid, hyperrealistic --ar 4:5"
+        label: "🌞 Lifestyle al Aire Libre",
+        tags: ["Flux.1 Dev", "Natural Day", "--ar 4:5"],
+        text: "Candid medium shot of blonde woman Alejandra with delicate round glasses and warm smile, wearing light blue playsuit, sitting on a wooden park bench on a sunny afternoon, natural golden lighting, shallow depth of field, photorealistic skin pores and micro-textures, shot on 35mm lens --ar 4:5"
       },
       editorial: {
-        label: "🎸 Festival Indie Backstage",
-        tags: ["Editorial", "--ar 16:9"],
-        text: "Backstage festival portrait of Alejandra holding an acoustic vintage guitar, sunset twilight glow, subtle film grain, natural aesthetic expression --ar 16:9"
+        label: "🏢 Campaña Comercial de Marca",
+        tags: ["Editorial", "Commercial Look", "--ar 16:9"],
+        text: "Commercial fashion studio portrait of Alejandra with round glasses, modern elegant blazer, warm ambient studio lighting, neutral background, 85mm f/1.8 lens, high-end advertising catalogue quality --ar 16:9"
       }
     },
     monetizationFunnel: [
-      { step: "Nivel 1 (Atracción)", detail: "TikTok y Reels con micro-reseñas de discos y recomendaciones de bandas emergentes." },
-      { step: "Nivel 2 (Comunidad)", detail: "Canal de Telegram con playlists exclusivas y enlaces de afiliados a equipos de audio." },
-      { step: "Nivel 3 (Suscripción VIP)", detail: "Fanvue ($10/mes) con sesiones fotográficas íntimas y live listening parties privadas." }
+      { step: "Nivel 1 (Licenciamiento Exclusivo)", detail: "Cesión de uso comercial exclusiva para una marca o empresa con acuerdo de no-competencia." },
+      { step: "Nivel 2 (Content Factory Mensual)", detail: "Producción recurrente de 20 a 50 piezas de video y fotografía publicitaria por mes lista para pauta en Meta y TikTok." },
+      { step: "Nivel 3 (Asistente Interactivo de Ventas)", detail: "Integración con avatar conversacional con lipsync en tiempo real para atención al cliente y e-commerce." }
     ],
     posts: [
       {
-        caption: "Encontré esta joya de 1974 escondida en una feria de pulgas de Kreuzberg 📻 ¿Cuál es ese disco que podrías escuchar en bucle todo el día?",
-        likes: "4,120",
-        comments: "215",
-        date: "Hace 1 día",
-        platform: "Instagram"
+        caption: "Detrás de cámaras de la sesión de calibración para marcas aliadas 📸✨ La consistencia visual en exteriores y la naturalidad son la clave para conectar de verdad con tu audiencia. ¿Listo para que tu empresa tenga su propia embajadora virtual?",
+        likes: "5,820",
+        comments: "340",
+        date: "Hoy",
+        platform: "Instagram / LinkedIn"
       }
     ],
     ecommerce: {
-      storeName: "Alejandra Vinyl & Vintage Club (Shopify)",
-      storeUrl: "https://alejandravinyl.store",
-      storeType: "Tienda Vintage & Audio • Vinilos Raros & Merch Analógico",
-      avgOrderValue: "$52 USD",
-      grossMargin: "65%",
-      conversionRate: "3.2%",
-      fulfillment: "Envíos directos desde Berlín a Europa y América",
-      description: "Curaduría mensual de vinilos importados, accesorios de audio analógico (limpiadores de aguja, slipmats de corcho) y camisetas con arte tipográfico de festivales indie.",
+      storeName: "Servicios de Licenciamiento & Embajada Virtual para Empresas",
+      storeUrl: "https://losmanejadores.io/#empresas",
+      storeType: "Licenciamiento B2B • Co-Creación de Personaje Virtual para Marcas",
+      avgOrderValue: "$2,800 USD",
+      grossMargin: "88%",
+      conversionRate: "4.5%",
+      fulfillment: "Despliegue de LoRA exclusivo en servidor seguro + Entrega quincenal de activos publicitarios",
+      description: "Servicios de adopción y puesta en marcha de Alejandra como embajadora virtual corporativa: personalización de vestuario, adaptación del tono de voz y producción masiva de campañas audiovisuales.",
       products: [
         {
-          name: "Vinilo Exclusivo 'Berlín Low-Light Sessions' (Edición Prensada a Mano)",
-          price: "$38 USD",
-          cost: "$12 USD",
-          category: "Vinilos / Música",
-          tag: "Tiraje 500 uds",
-          salesVolume: "480 uds/mes"
+          name: "Licencia Exclusiva Anual de Imagen Virtual (Categoría Protegida)",
+          price: "$4,500 USD",
+          cost: "$400 USD",
+          category: "Licenciamiento B2B",
+          tag: "Exclusividad Anual",
+          salesVolume: "Cupo Limitado",
+          desc: "Contrato de cesión comercial exclusiva para representar una marca en su sector industrial sin conflicto de interés.",
+          fulfillment: "Contrato Legal + Entrega de Master LoRA"
         },
         {
-          name: "Slipmat de Corcho Antiestático para Tocadiscos",
-          price: "$22 USD",
-          cost: "$5 USD",
-          category: "Accesorios Audio",
-          tag: "Audiófilo",
-          salesVolume: "350 uds/mes"
+          name: "Pack Mensual Content Factory (25 Reels + 50 Fotos para Meta Ads)",
+          price: "$1,850 USD/mes",
+          cost: "$220 USD",
+          category: "Producción Continua",
+          tag: "Suscripción B2B",
+          salesVolume: "Servicio Recurrente",
+          desc: "Generación mensual continua de videos con lipsync y fotos de producto para anuncios de alto rendimiento.",
+          fulfillment: "Entrega Digital Quincenal en Drive/Cloud"
+        },
+        {
+          name: "Setup de Personalización de Guardarropa & Clonación de Voz de Marca",
+          price: "$950 USD",
+          cost: "$120 USD",
+          category: "Configuración Inicial",
+          tag: "Pago Único",
+          salesVolume: "Setup Onboarding",
+          desc: "Entrenamiento de modelos LoRA con uniformes o prendas de la marca y clonación de voz corporativa a medida.",
+          fulfillment: "Entrega en 5 días hábiles"
         }
       ],
-      funnelStrategy: "Micro-reseñas de discos raros en TikTok -> Link a playlist curada en Spotify con banner a tienda de vinilos -> Preventas por suscripción a newsletter."
+      funnelStrategy: "Prospección B2B y formulario de diagnóstico en #empresas -> Demostración de avatar personalizado en 48 horas -> Firma de contrato de licenciamiento y plan mensual de generación de contenidos."
     }
   }
 };
@@ -1365,12 +1395,12 @@ function renderInfluencerOpsMatrix() {
 
   const characters = [
     { id: 'elena', name: 'Elena Daddario', handler: 'Daniel Santander (Alemania)', niche: 'Psicología & Lifestyle Consciente', status: 'Listo • Live', ticket: '$14 USD/m (VIP)' },
-    { id: 'julia', name: 'Julia', handler: 'Pancho Ipinza (Canadá)', niche: 'Dermocosmética & Clean Beauty', status: 'Listo • Live', ticket: '$12 USD/m (VIP)' },
+    { id: 'julia', name: 'Julia Schmidt', handler: 'Pancho Ipinza (Canadá)', niche: 'Dermocosmética & Clean Beauty', status: 'Listo • Live', ticket: '$12 USD/m (VIP)' },
     { id: 'laura', name: 'Laura Taeda', handler: 'Wladimir Gutierrez (Chile)', niche: 'Nutrition Lifestyle + Science-Based Reviews', status: 'Listo • Live', ticket: '$24 USD/m (VIP)' },
     { id: 'mateo', name: 'Mateo Silva', handler: 'Daniel / Pancho (Alemania/Canadá)', niche: 'FinTech, Inversiones & Real Estate Tech', status: 'Listo • Live (Top RPM)', ticket: '$29 USD/m (VIP)' },
     { id: 'maite', name: 'Maite Valenzuela', handler: 'Equipo (Los Manejadores)', niche: 'Cumbia Ranchera Pop & Mercado Chile', status: 'Listo • Live (Equipo)', ticket: '$15 USD/m (VIP)' },
     { id: 'kira', name: 'Kira Voss', handler: 'Equipo (Los Manejadores)', niche: 'Indie Game Dev & Cyberpunk Glamour (Validado)', status: 'Validado • Live (Equipo)', ticket: '$18 USD/m (VIP)' },
-    { id: 'alejandra', name: 'Alejandra', handler: 'Pancho / Pipeline', niche: 'Cultura Indie & Música', status: 'En Concepto (Q2)', ticket: '$10 USD/m (VIP)' }
+    { id: 'alejandra', name: 'Alejandra (Prototipo B2B)', handler: 'Comercial B2B (Pancho / Daniel)', niche: 'Embajadora Virtual • Disponible para Negocios', status: 'En Adopción B2B', ticket: 'Licencia B2B' }
   ];
 
   let rows = characters.map(c => {
@@ -3906,7 +3936,7 @@ function renderClientsPage() {
       <div class="pitch-slide" data-slide="5">
         <span class="slide-num">DIAPOSITIVA 5 DE 10 • PRUEBA SOCIAL & PORTAFOLIO</span>
         <h3 class="slide-title">Roster de Talentos Validados</h3>
-        <p class="slide-text">Julia Schmidt (K-Beauty & Cosmética), Laura Gómez (Fitness & Nutrición), Mateo Silva (Fintech & Inversiones), Elena Ramos (Mindfulness), Maite Valenzuela (Música Urbana) y Kira Voss (Game Dev & Shaders).</p>
+        <p class="slide-text">Julia Schmidt (K-Beauty & Cosmética), Laura Taeda (Fitness & Nutrición), Mateo Silva (Fintech & Inversiones), Elena Daddario (Mindfulness & Libros), Maite Valenzuela (Música Urbana) y Kira Voss (Desarrollo & Venta de Videojuegos Indie).</p>
         <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--pink);">
           <i class="fa-solid fa-chart-line"></i> Retención mensual superior al 70% con interacción automatizada y funnels de conversión directa.
         </div>
