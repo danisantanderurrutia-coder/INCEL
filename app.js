@@ -4225,71 +4225,95 @@ function renderSeguridadPage() {
       </div>
     </div>
 
-    <!-- 4 Core Service Cards -->
+    <!-- 4 Core Service Cards with Unsplash Photography -->
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.75rem; margin-bottom: 3.5rem;">
       
       <!-- Card 1: Borrado de Huella en Data Brokers -->
-      <div class="glass-card" style="border: 1px solid rgba(59, 130, 246, 0.35); padding: 2rem; display: flex; flex-direction: column;">
-        <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(59, 130, 246, 0.15); color: #3b82f6; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
-          <i class="fa-solid fa-eraser"></i>
+      <div class="glass-card" style="border: 1px solid rgba(59, 130, 246, 0.35); padding: 0 0 1.75rem 0; display: flex; flex-direction: column; overflow: hidden;">
+        <div style="position: relative; height: 160px; width: 100%; overflow: hidden;">
+          <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=700&q=80" alt="Data Brokers & Privacy Scrubbing" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85);" loading="lazy">
+          <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,12,22,0.1) 0%, rgba(10,12,22,0.95) 100%);"></div>
+          <div style="position: absolute; bottom: 0.75rem; left: 1.25rem; width: 44px; height: 44px; border-radius: 12px; background: rgba(59, 130, 246, 0.25); backdrop-filter: blur(8px); border: 1px solid rgba(59, 130, 246, 0.5); color: #60a5fa; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
+            <i class="fa-solid fa-eraser"></i>
+          </div>
         </div>
-        <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 0.5rem;">1. Borrado de Huella en Agregadores (Data Brokers)</h3>
-        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
-          Decenas de empresas comercializan tu número privado, dirección de domicilio, registros vehiculares y nombres de familiares sin tu consentimiento. Ejecutamos solicitudes sistemáticas y legales de exclusión (opt-out) para eliminar tus registros de las principales bases de datos mundiales.
-        </p>
-        <ul style="list-style: none; padding: 0; margin: 0 0 1.25rem 0; font-size: 0.84rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
-          <li><i class="fa-solid fa-check" style="color: #3b82f6; margin-right: 0.35rem;"></i> Remoción en más de 80 agregadores de datos comerciales</li>
-          <li><i class="fa-solid fa-check" style="color: #3b82f6; margin-right: 0.35rem;"></i> Blindaje de domicilios y números de teléfono privados</li>
-          <li><i class="fa-solid fa-check" style="color: #3b82f6; margin-right: 0.35rem;"></i> Auditoría de re-aparición periódica</li>
-        </ul>
+        <div style="padding: 1rem 1.75rem 0 1.75rem; display: flex; flex-direction: column; flex-grow: 1;">
+          <h3 style="color: #fff; font-size: 1.25rem; margin-bottom: 0.5rem;">1. Borrado de Huella en Agregadores (Data Brokers)</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
+            Decenas de empresas comercializan tu número privado, dirección de domicilio, registros vehiculares y nombres de familiares sin tu consentimiento. Ejecutamos solicitudes sistemáticas y legales de exclusión (opt-out) para eliminar tus registros de las principales bases de datos mundiales.
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.84rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
+            <li><i class="fa-solid fa-check" style="color: #60a5fa; margin-right: 0.35rem;"></i> Remoción en más de 80 agregadores comerciales</li>
+            <li><i class="fa-solid fa-check" style="color: #60a5fa; margin-right: 0.35rem;"></i> Blindaje de domicilios y teléfonos privados</li>
+            <li><i class="fa-solid fa-check" style="color: #60a5fa; margin-right: 0.35rem;"></i> Auditoría de re-aparición periódica</li>
+          </ul>
+        </div>
       </div>
 
       <!-- Card 2: Derecho al Olvido & Desindexación Google -->
-      <div class="glass-card" style="border: 1px solid rgba(16, 185, 129, 0.35); padding: 2rem; display: flex; flex-direction: column;">
-        <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(16, 185, 129, 0.15); color: #10b981; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
-          <i class="fa-brands fa-google"></i>
+      <div class="glass-card" style="border: 1px solid rgba(16, 185, 129, 0.35); padding: 0 0 1.75rem 0; display: flex; flex-direction: column; overflow: hidden;">
+        <div style="position: relative; height: 160px; width: 100%; overflow: hidden;">
+          <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=700&q=80" alt="Desindexación en Google y Derecho al Olvido" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85);" loading="lazy">
+          <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,12,22,0.1) 0%, rgba(10,12,22,0.95) 100%);"></div>
+          <div style="position: absolute; bottom: 0.75rem; left: 1.25rem; width: 44px; height: 44px; border-radius: 12px; background: rgba(16, 185, 129, 0.25); backdrop-filter: blur(8px); border: 1px solid rgba(16, 185, 129, 0.5); color: #10b981; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
+            <i class="fa-brands fa-google"></i>
+          </div>
         </div>
-        <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 0.5rem;">2. Desindexación en Google ("Derecho al Olvido")</h3>
-        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
-          ¿Aparecen noticias desactualizadas, publicaciones difamatorias, registros judiciales superados o fotos no deseadas cuando buscan tu nombre en Google? Gestionamos legal y técnicamente la remoción de enlaces en los resultados de búsqueda amparados en normativas internacionales.
-        </p>
-        <ul style="list-style: none; padding: 0; margin: 0 0 1.25rem 0; font-size: 0.84rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
-          <li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> Solicitudes formales de Derecho al Olvido ante Google</li>
-          <li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> Eliminación de imágenes y datos identificatorios en buscadores</li>
-          <li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> Restauración de reputación profesional online</li>
-        </ul>
+        <div style="padding: 1rem 1.75rem 0 1.75rem; display: flex; flex-direction: column; flex-grow: 1;">
+          <h3 style="color: #fff; font-size: 1.25rem; margin-bottom: 0.5rem;">2. Desindexación en Google ("Derecho al Olvido")</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
+            ¿Aparecen noticias desactualizadas, publicaciones difamatorias, registros judiciales superados o fotos no deseadas cuando buscan tu nombre en Google? Gestionamos legal y técnicamente la remoción de enlaces en los resultados de búsqueda amparados en normativas internacionales.
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.84rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
+            <li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> Solicitudes formales de Derecho al Olvido ante Google</li>
+            <li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> Eliminación de imágenes y datos identificatorios</li>
+            <li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> Restauración de reputación profesional online</li>
+          </ul>
+        </div>
       </div>
 
       <!-- Card 3: Blindaje Anti-Deepfakes -->
-      <div class="glass-card" style="border: 1px solid rgba(239, 68, 68, 0.35); padding: 2rem; display: flex; flex-direction: column;">
-        <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(239, 68, 68, 0.15); color: #ef4444; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
-          <i class="fa-solid fa-user-ninja"></i>
+      <div class="glass-card" style="border: 1px solid rgba(239, 68, 68, 0.35); padding: 0 0 1.75rem 0; display: flex; flex-direction: column; overflow: hidden;">
+        <div style="position: relative; height: 160px; width: 100%; overflow: hidden;">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Blindaje Anti-Deepfakes" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85);" loading="lazy">
+          <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,12,22,0.1) 0%, rgba(10,12,22,0.95) 100%);"></div>
+          <div style="position: absolute; bottom: 0.75rem; left: 1.25rem; width: 44px; height: 44px; border-radius: 12px; background: rgba(239, 68, 68, 0.25); backdrop-filter: blur(8px); border: 1px solid rgba(239, 68, 68, 0.5); color: #ef4444; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
+            <i class="fa-solid fa-user-ninja"></i>
+          </div>
         </div>
-        <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 0.5rem;">3. Blindaje Anti-Deepfakes & Suplantación de Identidad</h3>
-        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
-          Cualquiera puede hoy clonar tu voz o animar tus fotos para estafar a tu empresa o familiares. Detectamos el uso ilegítimo de tu identidad biométrica y emitimos órdenes inmediatas de cese y desestimiento (Take-downs DMCA) para dar de baja clones en 24 a 48 horas.
-        </p>
-        <ul style="list-style: none; padding: 0; margin: 0 0 1.25rem 0; font-size: 0.84rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
-          <li><i class="fa-solid fa-check" style="color: #ef4444; margin-right: 0.35rem;"></i> Monitorización de clones de voz y rostro no consentidos</li>
-          <li><i class="fa-solid fa-check" style="color: #ef4444; margin-right: 0.35rem;"></i> Denuncias y take-downs directos a servidores y plataformas</li>
-          <li><i class="fa-solid fa-check" style="color: #ef4444; margin-right: 0.35rem;"></i> Protocolos de verificación familiar contra estafas de voz</li>
-        </ul>
+        <div style="padding: 1rem 1.75rem 0 1.75rem; display: flex; flex-direction: column; flex-grow: 1;">
+          <h3 style="color: #fff; font-size: 1.25rem; margin-bottom: 0.5rem;">3. Blindaje Anti-Deepfakes & Suplantación</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
+            Cualquiera puede hoy clonar tu voz o animar tus fotos para estafar a tu empresa o familiares. Detectamos el uso ilegítimo de tu identidad biométrica y emitimos órdenes inmediatas de cese y desestimiento (Take-downs DMCA) para dar de baja clones en 24 a 48 horas.
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.84rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
+            <li><i class="fa-solid fa-check" style="color: #ef4444; margin-right: 0.35rem;"></i> Monitorización de clones de voz y rostro no consentidos</li>
+            <li><i class="fa-solid fa-check" style="color: #ef4444; margin-right: 0.35rem;"></i> Denuncias y take-downs directos a servidores</li>
+            <li><i class="fa-solid fa-check" style="color: #ef4444; margin-right: 0.35rem;"></i> Protocolos de verificación familiar contra estafas</li>
+          </ul>
+        </div>
       </div>
 
       <!-- Card 4: Auditoría OSINT Dark Web -->
-      <div class="glass-card" style="border: 1px solid rgba(139, 92, 246, 0.35); padding: 2rem; display: flex; flex-direction: column;">
-        <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(139, 92, 246, 0.15); color: var(--purple); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem;">
-          <i class="fa-solid fa-fingerprint"></i>
+      <div class="glass-card" style="border: 1px solid rgba(139, 92, 246, 0.35); padding: 0 0 1.75rem 0; display: flex; flex-direction: column; overflow: hidden;">
+        <div style="position: relative; height: 160px; width: 100%; overflow: hidden;">
+          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=700&q=80" alt="Auditoría OSINT Dark Web" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85);" loading="lazy">
+          <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,12,22,0.1) 0%, rgba(10,12,22,0.95) 100%);"></div>
+          <div style="position: absolute; bottom: 0.75rem; left: 1.25rem; width: 44px; height: 44px; border-radius: 12px; background: rgba(139, 92, 246, 0.25); backdrop-filter: blur(8px); border: 1px solid rgba(139, 92, 246, 0.5); color: var(--purple); display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
+            <i class="fa-solid fa-fingerprint"></i>
+          </div>
         </div>
-        <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 0.5rem;">4. Auditoría OSINT de Fugas & Blindaje de Cuentas</h3>
-        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
-          Rastreamos qué correos, contraseñas, documentos o números de tu entorno están filtrados en bases de datos hackeadas en la dark web. Te entregamos un informe de 1 página con tu diagnóstico de riesgo y configuramos herramientas de blindaje real (llaves 2FA físicas, alias privados).
-        </p>
-        <ul style="list-style: none; padding: 0; margin: 0 0 1.25rem 0; font-size: 0.84rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
-          <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Informe confidencial de brechas de seguridad personales</li>
-          <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Sustitución de contraseñas vulnerables y saneamiento</li>
-          <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Configuración de correos alias para blindar identidad</li>
-        </ul>
+        <div style="padding: 1rem 1.75rem 0 1.75rem; display: flex; flex-direction: column; flex-grow: 1;">
+          <h3 style="color: #fff; font-size: 1.25rem; margin-bottom: 0.5rem;">4. Auditoría OSINT & Blindaje de Cuentas</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">
+            Rastreamos qué correos, contraseñas, documentos o números de tu entorno están filtrados en bases de datos hackeadas en la dark web. Te entregamos un informe de 1 página con tu diagnóstico de riesgo y configuramos herramientas de blindaje real (llaves 2FA físicas, alias privados).
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.84rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
+            <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Informe confidencial de brechas personales</li>
+            <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Sustitución y saneamiento de claves vulnerables</li>
+            <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Configuración de correos alias para blindar identidad</li>
+          </ul>
+        </div>
       </div>
 
     </div>
@@ -4377,6 +4401,7 @@ function renderCursosPage() {
       price: '$39 USD',
       icon: 'fa-location-dot',
       color: 'var(--cyan)',
+      image: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=700&q=80',
       learnings: [
         'Cómo descifrar qué busca la gente de tu zona en Google exactamente.',
         'Configuración de Google Business Profile para aparecer en el Top 3 local.',
@@ -4384,6 +4409,24 @@ function renderCursosPage() {
         'Embudos automáticos de derivación desde la ficha de Google directo a WhatsApp.'
       ],
       includes: 'Plantilla de palabras clave locales + Checklist de optimización en 24h.'
+    },
+    {
+      id: 'curso-procesamiento-datos',
+      title: 'Procesamiento Masivo & Extracción de Datos con IA (De Internet a Decisiones)',
+      tagline: 'Cómo extraer y procesar miles de datos (leads en Google Maps, catálogos, archivos desordenados o PDFs) y convertirlos en tablas limpias y reportes accionables sin programar.',
+      category: 'Datos & Automatización',
+      duration: '90 min • Micro-Learning',
+      price: '$39 USD',
+      icon: 'fa-database',
+      color: '#06b6d4',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80',
+      learnings: [
+        'Extracción masiva de datos y contactos públicos de la nube de internet.',
+        'Limpieza y normalización de Excel/CSVs caóticos en segundos con prompts de datos.',
+        'Conversión automática de cientos de PDFs y facturas a tablas estructuradas.',
+        'Generación de gráficos y dashboards ejecutivos para toma rápida de decisiones.'
+      ],
+      includes: 'Plantillas de prompts de extracción masiva + Script listo en Google Sheets / Colab.'
     },
     {
       id: 'curso-huella-digital',
@@ -4394,6 +4437,7 @@ function renderCursosPage() {
       price: '$29 USD',
       icon: 'fa-shield-halved',
       color: '#3b82f6',
+      image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=700&q=80',
       learnings: [
         'Cómo realizar una auditoría personal para ver qué datos tuyos están expuestos.',
         'Procedimiento legal y técnico para desindexar enlaces en Google (Derecho al Olvido).',
@@ -4411,6 +4455,7 @@ function renderCursosPage() {
       price: '$49 USD',
       icon: 'fa-bag-shopping',
       color: 'var(--pink)',
+      image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80',
       learnings: [
         'Creación de identidad facial fija que no cambie entre distintas fotos.',
         'Técnicas de Inpainting para colocar la ropa real de tu tienda en la modelo IA.',
@@ -4428,6 +4473,7 @@ function renderCursosPage() {
       price: '$35 USD',
       icon: 'fa-video',
       color: 'var(--purple)',
+      image: 'https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=700&q=80',
       learnings: [
         'Cómo grabar la muestra de video y audio perfecta para una clonación impecable.',
         'Herramientas actuales de clonación de voz y animación labial (HeyGen / LivePortrait).',
@@ -4445,6 +4491,7 @@ function renderCursosPage() {
       price: '$45 USD',
       icon: 'fa-code',
       color: '#10b981',
+      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=700&q=80',
       learnings: [
         'Metodología Safe Vibe Coding: cómo programar con IA sin generar código basura.',
         'Construcción de cotizadores interactivos que aumentan la conversión.',
@@ -4486,52 +4533,57 @@ function renderCursosPage() {
     <!-- Courses Grid -->
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; margin-bottom: 3.5rem;">
       ${courses.map(c => `
-        <div class="glass-card" style="border: 1px solid rgba(255,255,255,0.1); padding: 2rem; display: flex; flex-direction: column; position: relative;">
+        <div class="glass-card" style="border: 1px solid rgba(255,255,255,0.1); padding: 0 0 1.75rem 0; display: flex; flex-direction: column; position: relative; overflow: hidden;">
           
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem;">
-            <div style="width: 50px; height: 50px; border-radius: 12px; background: rgba(255,255,255,0.06); color: ${c.color}; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
-              <i class="fa-solid ${c.icon}"></i>
-            </div>
-            <span class="detail-badge" style="background: rgba(255,255,255,0.06); color: #cbd5e1; border-color: rgba(255,255,255,0.15); font-size: 0.72rem;">
+          <div style="position: relative; height: 180px; width: 100%; overflow: hidden;">
+            <img src="${c.image}" alt="${c.title}" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85);" loading="lazy">
+            <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,12,22,0.15) 0%, rgba(10,12,22,0.95) 100%);"></div>
+            <span class="detail-badge" style="position: absolute; top: 1rem; right: 1rem; background: rgba(10,12,22,0.75); backdrop-filter: blur(8px); color: #cbd5e1; border-color: rgba(255,255,255,0.2); font-size: 0.72rem;">
               ${c.duration}
             </span>
-          </div>
-
-          <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px; color: ${c.color}; font-weight: 700; margin-bottom: 0.4rem;">
-            ${c.category}
-          </span>
-          <h3 style="color: #fff; font-size: 1.25rem; line-height: 1.4; margin-bottom: 0.75rem;">
-            ${c.title}
-          </h3>
-          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem;">
-            ${c.tagline}
-          </p>
-
-          <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 1rem; margin-bottom: 1.25rem; flex-grow: 1;">
-            <div style="font-size: 0.76rem; text-transform: uppercase; color: #94a3b8; font-weight: 600; margin-bottom: 0.5rem;">
-              <i class="fa-solid fa-bullseye" style="color: ${c.color};"></i> Qué vas a saber hacer:
+            <div style="position: absolute; bottom: 0.75rem; left: 1.25rem; width: 44px; height: 44px; border-radius: 12px; background: rgba(10,12,22,0.85); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.15); color: ${c.color}; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
+              <i class="fa-solid ${c.icon}"></i>
             </div>
-            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem;">
-              ${c.learnings.map(l => `<li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> ${l}</li>`).join('')}
-            </ul>
           </div>
 
-          <div style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 1.25rem;">
-            <i class="fa-solid fa-download" style="color: ${c.color}; margin-right: 0.35rem;"></i> <strong>Incluye:</strong> ${c.includes}
-          </div>
+          <div style="padding: 1rem 1.75rem 0 1.75rem; display: flex; flex-direction: column; flex-grow: 1;">
+            <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px; color: ${c.color}; font-weight: 700; margin-bottom: 0.4rem;">
+              ${c.category}
+            </span>
+            <h3 style="color: #fff; font-size: 1.25rem; line-height: 1.4; margin-bottom: 0.75rem;">
+              ${c.title}
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem;">
+              ${c.tagline}
+            </p>
 
-          <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
-            <div>
-              <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Acceso completo</span>
-              <span style="font-size: 1.4rem; font-weight: 700; color: #fff;">${c.price}</span>
+            <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 1rem; margin-bottom: 1.25rem; flex-grow: 1;">
+              <div style="font-size: 0.76rem; text-transform: uppercase; color: #94a3b8; font-weight: 600; margin-bottom: 0.5rem;">
+                <i class="fa-solid fa-bullseye" style="color: ${c.color};"></i> Qué vas a saber hacer:
+              </div>
+              <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem;">
+                ${c.learnings.map(l => `<li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> ${l}</li>`).join('')}
+              </ul>
             </div>
-            <button onclick="handleCourseEnrollment('${c.title.replace(/'/g, "\\'")}', '${c.price}')" class="btn btn-primary btn-sm" style="padding: 0.55rem 1.1rem; font-size: 0.85rem;">
-              <i class="fa-solid fa-bolt"></i> Inscribirme Ahora
-            </button>
+
+            <div style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 1.25rem;">
+              <i class="fa-solid fa-download" style="color: ${c.color}; margin-right: 0.35rem;"></i> <strong>Incluye:</strong> ${c.includes}
+            </div>
+
+            <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Acceso completo</span>
+                <span style="font-size: 1.4rem; font-weight: 700; color: #fff;">${c.price}</span>
+              </div>
+              <button onclick="handleCourseEnrollment('${c.title.replace(/'/g, "\\'")}', '${c.price}')" class="btn btn-primary btn-sm" style="padding: 0.55rem 1.1rem; font-size: 0.85rem;">
+                <i class="fa-solid fa-bolt"></i> Inscribirme Ahora
+              </button>
+            </div>
           </div>
 
         </div>
       `).join('')}
+    </div>
     </div>
 
     <!-- Need customized training box -->
