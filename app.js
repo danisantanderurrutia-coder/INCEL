@@ -3876,55 +3876,135 @@ function renderEmpresasPage() {
         </a>
       </div>
 
-      <!-- 3 Fast Solutions Grid -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-        <!-- Solución 1: Google Maps -->
-        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(6, 182, 212, 0.35); border-radius: var(--radius-md); padding: 1.5rem;">
-          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(6, 182, 212, 0.15); color: var(--cyan); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1rem;">
-            <i class="fa-solid fa-location-dot"></i>
+      <!-- 6 Agile Solutions Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+        
+        <!-- Solución 1: Reactivación de Clientes WhatsApp + Google Maps (Idea 2) -->
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: var(--radius-md); padding: 1.6rem; display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(16, 185, 129, 0.15); color: #10b981; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <span class="detail-badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border-color: rgba(16, 185, 129, 0.3); font-size: 0.72rem;">
+              VENTA INMEDIATA • 48H
+            </span>
           </div>
-          <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">Indexación Exprés en Google Maps</h3>
-          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
-            Alta verificada y optimización total de tu ficha en <strong>Google Business Profile & Google Maps</strong>. Configuramos fotos de alta calidad, palabras clave de búsqueda local, horarios y catálogo para que los clientes que buscan cerca de ti te encuentren y llamen hoy mismo.
+          <h3 style="color: #fff; font-size: 1.22rem; margin-bottom: 0.5rem;">Reactivación de Clientes por WhatsApp & Google Maps</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem; flex-grow: 1;">
+            Convertimos bases de datos inactivas en ventas líquidas en 48 horas con mensajes personalizados sin gastar en publicidad. Además, automatizamos la respuesta al 100% de reseñas en <strong>Google Maps</strong> con SEO local para atraer clientes de tu barrio.
           </p>
-          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.35rem;">
-            <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.35rem;"></i> Posicionamiento en búsquedas locales de Google</li>
-            <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.35rem;"></i> Sistema automatizado para captar reseñas positivas</li>
-            <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.35rem;"></i> Botón directo a llamada y cómo llegar</li>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
+            <li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> Reactivación de clientes inactivos sin costo de pauta</li>
+            <li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> Respuesta automática con SEO en Google Maps</li>
+            <li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> Enlaces de pago y catálogo directo al chat</li>
           </ul>
         </div>
 
-        <!-- Solución 2: WhatsApp Funnel -->
-        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: var(--radius-md); padding: 1.5rem;">
-          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(16, 185, 129, 0.15); color: #10b981; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1rem;">
-            <i class="fa-brands fa-whatsapp"></i>
+        <!-- Solución 2: Clon Digital del CEO / Fundador (Idea 3) -->
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(139, 92, 246, 0.4); border-radius: var(--radius-md); padding: 1.6rem; display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(139, 92, 246, 0.15); color: var(--purple); display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
+              <i class="fa-solid fa-video"></i>
+            </div>
+            <span class="detail-badge" style="background: rgba(139, 92, 246, 0.15); color: var(--purple); border-color: rgba(139, 92, 246, 0.3); font-size: 0.72rem;">
+              MARCA PERSONAL B2B
+            </span>
           </div>
-          <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">Embudos Rápidos de Venta por WhatsApp</h3>
-          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
-            Conectamos tus visitas de Google Maps o redes sociales directo a un WhatsApp automatizado con IA. El asistente responde dudas al instante, muestra tu catálogo con fotos y precios, y toma los datos del pedido en segundos sin esperas.
+          <h3 style="color: #fff; font-size: 1.22rem; margin-bottom: 0.5rem;">Clon Digital de Video para CEOs & Fundadores</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem; flex-grow: 1;">
+            Con una grabación única de 2 minutos, clonamos tu voz y tu rostro. Producimos de <strong>15 a 20 videos mensuales</strong> listos para LinkedIn, TikTok y YouTube para posicionarte como referente de tu sector sin perder horas frente a una cámara.
           </p>
-          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.35rem;">
-            <li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> Respuestas automáticas 24/7 sin retrasos</li>
-            <li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> Envío de catálogo en PDF / enlaces de pago</li>
-            <li><i class="fa-solid fa-check" style="color: #10b981; margin-right: 0.35rem;"></i> Notificación instantánea a tu equipo para cerrar</li>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
+            <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Clonación hiperrealista de voz y rostro</li>
+            <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Guiones estratégicos adaptados a tu industria</li>
+            <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Edición completa con subtítulos dinámicos</li>
           </ul>
         </div>
 
-        <!-- Solución 3: Safe Vibe Coding -->
-        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(139, 92, 246, 0.35); border-radius: var(--radius-md); padding: 1.5rem;">
-          <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(139, 92, 246, 0.15); color: var(--purple); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1rem;">
-            <i class="fa-solid fa-code"></i>
+        <!-- Solución 3: Modelo IA Exclusiva de Marca Blanca para E-Commerce (Idea 4) -->
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(236, 72, 153, 0.4); border-radius: var(--radius-md); padding: 1.6rem; display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(236, 72, 153, 0.15); color: var(--pink); display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+            <span class="detail-badge" style="background: rgba(236, 72, 153, 0.15); color: var(--pink); border-color: rgba(236, 72, 153, 0.3); font-size: 0.72rem;">
+              E-COMMERCE & RETAIL
+            </span>
           </div>
-          <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem;">Micro-Páginas y Cotizadores en 48h</h3>
-          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">
-            Creamos páginas de venta específicas para una promoción, cotizadores automáticos y calculadoras de presupuesto bajo la metodología <strong>Safe Vibe Coding</strong>: código limpio, ultra-rápido, alojado en servidores seguros y con estricto cumplimiento RGPD europeo.
+          <h3 style="color: #fff; font-size: 1.22rem; margin-bottom: 0.5rem;">Modelo IA Exclusiva para E-Commerce</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem; flex-grow: 1;">
+            Diseñamos la modelo virtual oficial y exclusiva de tu tienda o marca. Entregamos sesiones fotográficas mensuales vistiendo tus prendas, cosméticos o accesorios a <strong>1/5 del costo</strong> de una sesión tradicional con modelos humanas.
           </p>
-          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.35rem;">
-            <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Entrega lista para pauta en 24 a 48 horas</li>
-            <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Calculadoras interactivas que filtran clientes</li>
-            <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Cero filtraciones: datos protegidos en Alemania/Canadá</li>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
+            <li><i class="fa-solid fa-check" style="color: var(--pink); margin-right: 0.35rem;"></i> Pack mensual de 20 a 40 fotos en alta resolución</li>
+            <li><i class="fa-solid fa-check" style="color: var(--pink); margin-right: 0.35rem;"></i> 100% libre de derechos de imagen de terceros</li>
+            <li><i class="fa-solid fa-check" style="color: var(--pink); margin-right: 0.35rem;"></i> Consistencia visual idéntica en cada colección</li>
           </ul>
         </div>
+
+        <!-- Solución 4: Safe Vibe Coding (Micro-Páginas & Cotizadores en 48h) -->
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(6, 182, 212, 0.4); border-radius: var(--radius-md); padding: 1.6rem; display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(6, 182, 212, 0.15); color: var(--cyan); display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <span class="detail-badge" style="background: rgba(6, 182, 212, 0.15); color: var(--cyan); border-color: rgba(6, 182, 212, 0.3); font-size: 0.72rem;">
+              DESARROLLO EXPRÉS • 48H
+            </span>
+          </div>
+          <h3 style="color: #fff; font-size: 1.22rem; margin-bottom: 0.5rem;">Micro-Páginas y Cotizadores en 48h (Safe Vibe Coding)</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem; flex-grow: 1;">
+            Páginas de venta rápida para promociones específicas, calculadoras interactivas de presupuesto y formularios inteligentes. Código ultra-ligero y seguro alojado en servidores en Alemania y Canadá bajo cumplimiento estricto del RGPD europeo.
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
+            <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.35rem;"></i> Entrega lista para pauta en 24 a 48 horas</li>
+            <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.35rem;"></i> Cotizadores dinámicos que filtran clientes ideales</li>
+            <li><i class="fa-solid fa-check" style="color: var(--cyan); margin-right: 0.35rem;"></i> Infraestructura blindada con cero fugas de datos</li>
+          </ul>
+        </div>
+
+        <!-- Solución 5: Privacidad Digital & Borrado de Huella / Deepfakes (Ciberseguridad) -->
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(59, 130, 246, 0.4); border-radius: var(--radius-md); padding: 1.6rem; display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(59, 130, 246, 0.15); color: #3b82f6; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
+              <i class="fa-solid fa-user-shield"></i>
+            </div>
+            <span class="detail-badge" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3); font-size: 0.72rem;">
+              CIBERSEGURIDAD & PRIVACIDAD
+            </span>
+          </div>
+          <h3 style="color: #fff; font-size: 1.22rem; margin-bottom: 0.5rem;">Privacidad, Borrado de Huella & Blindaje Anti-Deepfakes</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem; flex-grow: 1;">
+            Protegemos la identidad de ejecutivos, profesionales y particulares. Eliminamos datos privados expuestos (teléfonos, direcciones) en agregadores (Data Brokers), gestionamos desindexación en Google (Derecho al Olvido) y bajamos clones o deepfakes no autorizados.
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
+            <li><i class="fa-solid fa-check" style="color: #60a5fa; margin-right: 0.35rem;"></i> Desindexación de enlaces y datos personales en Google</li>
+            <li><i class="fa-solid fa-check" style="color: #60a5fa; margin-right: 0.35rem;"></i> Remoción activa en bases de datos públicas y brokers</li>
+            <li><i class="fa-solid fa-check" style="color: #60a5fa; margin-right: 0.35rem;"></i> Take-down legal de clones no consentidos y deepfakes</li>
+          </ul>
+        </div>
+
+        <!-- Solución 6: Agente Telefónico de Voz IA 24/7 (Idea 1 - En Implementación) -->
+        <div style="background: rgba(255, 255, 255, 0.02); border: 1px dashed rgba(245, 158, 11, 0.5); border-radius: var(--radius-md); padding: 1.6rem; display: flex; flex-direction: column; opacity: 0.95;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(245, 158, 11, 0.15); color: #f59e0b; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <span class="detail-badge" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border-color: rgba(245, 158, 11, 0.4); font-size: 0.72rem;">
+              <i class="fa-solid fa-screwdriver-wrench"></i> EN IMPLEMENTACIÓN • BETA
+            </span>
+          </div>
+          <h3 style="color: #fff; font-size: 1.22rem; margin-bottom: 0.5rem;">Agente Telefónico de Voz IA 24/7</h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem; flex-grow: 1;">
+            Recepción telefónica inteligente con voz humana natural (Vapi / ElevenLabs). Atiende llamadas entrantes a cualquier hora, responde preguntas sobre precios o servicios y agenda citas directamente en el calendario de tu equipo sin esperas.
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
+            <li><i class="fa-solid fa-clock" style="color: #f59e0b; margin-right: 0.35rem;"></i> Cero llamadas perdidas fuera de horario comercial</li>
+            <li><i class="fa-solid fa-clock" style="color: #f59e0b; margin-right: 0.35rem;"></i> Sincronización directa con Google Calendar y CRM</li>
+            <li><i class="fa-solid fa-clock" style="color: #f59e0b; margin-right: 0.35rem;"></i> Acceso prioritario para clientes en lista de espera Beta</li>
+          </ul>
+        </div>
+
       </div>
     </div>
 
@@ -4037,11 +4117,13 @@ function renderEmpresasPage() {
           <div class="b2b-form-group">
             <label><i class="fa-solid fa-bullseye"></i> Solución que Deseas Implementar Primero *</label>
             <select id="b2b-goal">
-              <option value="Indexación Exprés en Google Maps y SEO Local" selected>Indexación Exprés en Google Maps & SEO Local (Vender en mi zona)</option>
-              <option value="Ventas Automáticas por WhatsApp">Ventas Automáticas por WhatsApp con Catálogo IA</option>
-              <option value="Micro-Landing Page o Cotizador en 48h (Safe Vibe Coding)">Micro-Página de Venta o Cotizador en 48h (Safe Vibe Coding)</option>
-              <option value="Crear un Embajador Virtual / Influencer IA">Crear un Embajador Virtual / Influencer IA para mi Marca</option>
-              <option value="Optimizar Procesos Operativos (Mario Morales)">Optimizar Procesos y Eliminar Cuellos de Botella</option>
+              <option value="Reactivación de Clientes por WhatsApp y Google Maps" selected>Reactivación por WhatsApp & Google Maps (Ventas en 48h)</option>
+              <option value="Clon Digital de Video para CEO / Fundador">Clon Digital de Video para CEO / Fundador (Marca Personal B2B)</option>
+              <option value="Modelo IA Exclusiva para E-Commerce">Modelo IA Exclusiva para E-Commerce & Catálogo</option>
+              <option value="Micro-Páginas o Cotizadores en 48h (Safe Vibe Coding)">Micro-Páginas o Cotizadores en 48h (Safe Vibe Coding)</option>
+              <option value="Privacidad Digital y Borrado de Huella / Deepfakes">Privacidad Digital, Borrado de Huella & Blindaje Anti-Deepfakes</option>
+              <option value="Agente Telefónico de Voz IA (Lista de Espera Beta)">Agente Telefónico de Voz IA 24/7 (Lista de Espera Beta)</option>
+              <option value="Optimizar Procesos Operativos (Mario Morales)">Gestión por Procesos y Cuellos de Botella (Mario Morales)</option>
               <option value="Diagnóstico Integral">Diagnóstico Integral y Asesoría General</option>
             </select>
           </div>
