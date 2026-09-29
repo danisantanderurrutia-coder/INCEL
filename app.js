@@ -1385,9 +1385,15 @@ function handleRoute() {
   } else if (hash === '#asesorias') {
     renderAdvisoriesPage();
     showDynamicView();
-  } else if (hash === '#empresas') {
+  } else if (hash === '#empresas' || hash === '#desarrollo') {
     renderEmpresasPage();
     showDynamicView();
+    if (hash === '#desarrollo') {
+      setTimeout(() => {
+        const el = document.getElementById('desarrollo');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 80);
+    }
   } else if (hash === '#seguridad' || hash === '#seguridad-digital' || hash === '#privacidad') {
     renderSeguridadPage();
     showDynamicView();
@@ -2532,7 +2538,7 @@ function renderInfluencerPublicProduct(id) {
           <button class="btn btn-primary" onclick="openBrandInquiryModal('${data.id}')">
             <i class="fa-solid fa-handshake"></i> Solicitar Colaboración de Marca / Cotizar
           </button>
-          <a href="#desarrollo" class="btn btn-secondary">
+          <a href="#empresas" class="btn btn-secondary">
             <i class="fa-solid fa-microchip"></i> Conocer Nuestro Pipeline I+D
           </a>
           <button class="btn btn-secondary" onclick="alert('Conexión con pasarela VIP iniciada para ${data.name}')" style="border-color: rgba(236, 72, 153, 0.4);">
@@ -3857,14 +3863,14 @@ function renderEmpresasPage() {
       <div class="breadcrumbs">
         <a href="#home">Inicio</a>
         <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
-        <span class="current">Soluciones para Empresas & IA</span>
+        <span class="current">Soluciones para Empresas & I+D</span>
       </div>
       <a href="#home" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver a Inicio</a>
     </div>
 
     <!-- Header Banner -->
     <div style="text-align: center; max-width: 880px; margin: 0 auto 3rem auto;">
-      <span class="section-subtitle" style="color: var(--cyan);"><i class="fa-solid fa-bolt"></i> SOLUCIONES ÁGILES PARA EMPRESAS & VENTA RÁPIDA</span>
+      <span class="section-subtitle" style="color: var(--cyan);"><i class="fa-solid fa-bolt"></i> SOLUCIONES PARA EMPRESAS & PIPELINE I+D</span>
       <h1 style="font-family: var(--font-heading); font-size: 2.85rem; font-weight: 900; margin: 0.5rem 0 1rem 0; line-height: 1.2;">
         Herramientas de IA y Automatización Simple para Vender Más Rápido
       </h1>
@@ -3923,45 +3929,53 @@ function renderEmpresasPage() {
         </div>
 
         <!-- Solución 2: Clon Digital del CEO / Fundador (Idea 3) -->
-        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(139, 92, 246, 0.4); border-radius: var(--radius-md); padding: 1.6rem; display: flex; flex-direction: column;">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
-            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(139, 92, 246, 0.15); color: var(--purple); display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(139, 92, 246, 0.4); border-radius: var(--radius-md); padding: 0 0 1.6rem 0; display: flex; flex-direction: column; overflow: hidden;">
+          <div style="position: relative; width: 100%; aspect-ratio: 4 / 5; max-height: 380px; overflow: hidden;">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&h=1000&crop=faces&q=80" alt="Clon Digital para CEOs & Fundadores" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;" loading="lazy">
+            <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,12,22,0) 60%, rgba(10,12,22,0.65) 85%, rgba(10,12,22,0.95) 100%); pointer-events: none;"></div>
+            <div style="position: absolute; bottom: 0.75rem; left: 1.25rem; width: 44px; height: 44px; border-radius: 12px; background: rgba(139, 92, 246, 0.35); backdrop-filter: blur(8px); border: 1px solid rgba(139, 92, 246, 0.6); color: var(--purple); display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
               <i class="fa-solid fa-video"></i>
             </div>
-            <span class="detail-badge" style="background: rgba(139, 92, 246, 0.15); color: var(--purple); border-color: rgba(139, 92, 246, 0.3); font-size: 0.72rem;">
+            <span class="detail-badge" style="position: absolute; top: 0.75rem; right: 0.75rem; background: rgba(139, 92, 246, 0.3); backdrop-filter: blur(8px); color: #c084fc; border-color: rgba(139, 92, 246, 0.5); font-size: 0.72rem;">
               MARCA PERSONAL B2B
             </span>
           </div>
-          <h3 style="color: #fff; font-size: 1.22rem; margin-bottom: 0.5rem;">Clon Digital de Video para CEOs & Fundadores</h3>
-          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem; flex-grow: 1;">
-            Con una grabación única de 2 minutos, clonamos tu voz y tu rostro. Producimos de <strong>15 a 20 videos mensuales</strong> listos para LinkedIn, TikTok y YouTube para posicionarte como referente de tu sector sin perder horas frente a una cámara.
-          </p>
-          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
-            <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Clonación hiperrealista de voz y rostro</li>
-            <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Guiones estratégicos adaptados a tu industria</li>
-            <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Edición completa con subtítulos dinámicos</li>
-          </ul>
+          <div style="padding: 1rem 1.6rem 0 1.6rem; display: flex; flex-direction: column; flex-grow: 1;">
+            <h3 style="color: #fff; font-size: 1.22rem; margin-bottom: 0.5rem;">Clon Digital de Video para CEOs & Fundadores</h3>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem; flex-grow: 1;">
+              Con una grabación única de 2 minutos, clonamos tu voz y tu rostro. Producimos de <strong>15 a 20 videos mensuales</strong> listos para LinkedIn, TikTok y YouTube para posicionarte como referente de tu sector sin perder horas frente a una cámara.
+            </p>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
+              <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Clonación hiperrealista de voz y rostro</li>
+              <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Guiones estratégicos adaptados a tu industria</li>
+              <li><i class="fa-solid fa-check" style="color: var(--purple); margin-right: 0.35rem;"></i> Edición completa con subtítulos dinámicos</li>
+            </ul>
+          </div>
         </div>
 
         <!-- Solución 3: Modelo IA Exclusiva de Marca Blanca para E-Commerce (Idea 4) -->
-        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(236, 72, 153, 0.4); border-radius: var(--radius-md); padding: 1.6rem; display: flex; flex-direction: column;">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
-            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(236, 72, 153, 0.15); color: var(--pink); display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(236, 72, 153, 0.4); border-radius: var(--radius-md); padding: 0 0 1.6rem 0; display: flex; flex-direction: column; overflow: hidden;">
+          <div style="position: relative; width: 100%; aspect-ratio: 4 / 5; max-height: 380px; overflow: hidden;">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&h=1000&crop=faces&q=80" alt="Modelo IA Exclusiva para E-Commerce" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;" loading="lazy">
+            <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,12,22,0) 60%, rgba(10,12,22,0.65) 85%, rgba(10,12,22,0.95) 100%); pointer-events: none;"></div>
+            <div style="position: absolute; bottom: 0.75rem; left: 1.25rem; width: 44px; height: 44px; border-radius: 12px; background: rgba(236, 72, 153, 0.35); backdrop-filter: blur(8px); border: 1px solid rgba(236, 72, 153, 0.6); color: var(--pink); display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
               <i class="fa-solid fa-bag-shopping"></i>
             </div>
-            <span class="detail-badge" style="background: rgba(236, 72, 153, 0.15); color: var(--pink); border-color: rgba(236, 72, 153, 0.3); font-size: 0.72rem;">
+            <span class="detail-badge" style="position: absolute; top: 0.75rem; right: 0.75rem; background: rgba(236, 72, 153, 0.3); backdrop-filter: blur(8px); color: #f472b6; border-color: rgba(236, 72, 153, 0.5); font-size: 0.72rem;">
               E-COMMERCE & RETAIL
             </span>
           </div>
-          <h3 style="color: #fff; font-size: 1.22rem; margin-bottom: 0.5rem;">Modelo IA Exclusiva para E-Commerce</h3>
-          <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem; flex-grow: 1;">
-            Diseñamos la modelo virtual oficial y exclusiva de tu tienda o marca. Entregamos sesiones fotográficas mensuales vistiendo tus prendas, cosméticos o accesorios a <strong>1/5 del costo</strong> de una sesión tradicional con modelos humanas.
-          </p>
-          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
-            <li><i class="fa-solid fa-check" style="color: var(--pink); margin-right: 0.35rem;"></i> Pack mensual de 20 a 40 fotos en alta resolución</li>
-            <li><i class="fa-solid fa-check" style="color: var(--pink); margin-right: 0.35rem;"></i> 100% libre de derechos de imagen de terceros</li>
-            <li><i class="fa-solid fa-check" style="color: var(--pink); margin-right: 0.35rem;"></i> Consistencia visual idéntica en cada colección</li>
-          </ul>
+          <div style="padding: 1rem 1.6rem 0 1.6rem; display: flex; flex-direction: column; flex-grow: 1;">
+            <h3 style="color: #fff; font-size: 1.22rem; margin-bottom: 0.5rem;">Modelo IA Exclusiva para E-Commerce</h3>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem; flex-grow: 1;">
+              Diseñamos la modelo virtual oficial y exclusiva de tu tienda o marca. Entregamos sesiones fotográficas mensuales vistiendo tus prendas, cosméticos o accesorios a <strong>1/5 del costo</strong> de una sesión tradicional con modelos humanas.
+            </p>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.82rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.4rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem;">
+              <li><i class="fa-solid fa-check" style="color: var(--pink); margin-right: 0.35rem;"></i> Pack mensual de 20 a 40 fotos en alta resolución</li>
+              <li><i class="fa-solid fa-check" style="color: var(--pink); margin-right: 0.35rem;"></i> 100% libre de derechos de imagen de terceros</li>
+              <li><i class="fa-solid fa-check" style="color: var(--pink); margin-right: 0.35rem;"></i> Consistencia visual idéntica en cada colección</li>
+            </ul>
+          </div>
         </div>
 
         <!-- Solución 4: Safe Vibe Coding (Micro-Páginas & Cotizadores en 48h) -->
@@ -4027,6 +4041,70 @@ function renderEmpresasPage() {
           </ul>
         </div>
 
+      </div>
+    </div>
+
+    <!-- CÓMO DESARROLLAMOS: PIPELINE I+D PROPIETARIO & ARQUITECTURA DE ACTIVOS -->
+    <div id="desarrollo" class="glass-card" style="padding: 2.5rem; border-radius: var(--radius-lg); margin-bottom: 3.5rem; border: 1px solid rgba(139, 92, 246, 0.4); background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.1) 0%, rgba(10, 12, 22, 0.9) 100%);">
+      <div style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem auto;">
+        <span class="detail-badge" style="background: rgba(139, 92, 246, 0.2); color: var(--purple); border-color: var(--purple); font-size: 0.78rem;">
+          <i class="fa-solid fa-microchip"></i> METODOLOGÍA PROPIETARIA I+D
+        </span>
+        <h2 style="font-family: var(--font-heading); color: #fff; font-size: 2.1rem; margin: 0.6rem 0 0.4rem 0;">
+          Cómo Desarrollamos Activos Virtuales Rentables
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin: 0;">
+          De la concepción psicológica al despliegue comercial: nuestro pipeline estandarizado de 4 etapas para producir influencers, portavoces y activos con 100% de propiedad intelectual.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+        
+        <div class="glass-card" style="border-left: 3px solid var(--purple); background: rgba(255,255,255,0.02);">
+          <div style="font-size: 1.6rem; color: var(--purple); margin-bottom: 0.75rem;"><i class="fa-solid fa-fingerprint"></i></div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.15rem; color: #fff; margin-bottom: 0.5rem;">1. Psicometría & Identidad</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+            Definición del arquetipo, contradicciones creíbles, tono de voz exacto, do's/don'ts y límites éticos infranqueables.
+          </p>
+        </div>
+
+        <div class="glass-card" style="border-left: 3px solid var(--cyan); background: rgba(255,255,255,0.02);">
+          <div style="font-size: 1.6rem; color: var(--cyan); margin-bottom: 0.75rem;"><i class="fa-solid fa-microchip"></i></div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.15rem; color: #fff; margin-bottom: 0.5rem;">2. Consagración LoRA 4K</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+            Entrenamiento de modelos con +50 renders base en ComfyUI/Flux para consistencia visual absoluta en cualquier pose, lente y luz.
+          </p>
+        </div>
+
+        <div class="glass-card" style="border-left: 3px solid var(--pink); background: rgba(255,255,255,0.02);">
+          <div style="font-size: 1.6rem; color: var(--pink); margin-bottom: 0.75rem;"><i class="fa-solid fa-waveform-lines"></i></div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.15rem; color: #fff; margin-bottom: 0.5rem;">3. Voz & Lipsync Dinámico</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+            Clonación de voz multilingüe hiperrealista (ElevenLabs) y animación de video generativa (Kling/Hailuo) para formatos verticales.
+          </p>
+        </div>
+
+        <div class="glass-card" style="border-left: 3px solid #10b981; background: rgba(255,255,255,0.02);">
+          <div style="font-size: 1.6rem; color: #10b981; margin-bottom: 0.75rem;"><i class="fa-solid fa-funnel-dollar"></i></div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.15rem; color: #fff; margin-bottom: 0.5rem;">4. Embudo de Venta & VIP</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+            Estrategia de conversión Safe → Teaser → Pago: atracción orgánica en TikTok/Reels hacia membresías Fanvue y acuerdos de marca.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Commercial Licensing Callout -->
+      <div class="glass-card" style="margin-top: 1.75rem; padding: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.25rem; border-color: rgba(139, 92, 246, 0.4); background: rgba(139, 92, 246, 0.08);">
+        <div style="max-width: 680px;">
+          <h4 style="color: #fff; font-family: var(--font-heading); font-size: 1.12rem; margin-bottom: 0.35rem;">
+            <i class="fa-solid fa-handshake" style="color: var(--cyan); margin-right: 0.4rem;"></i> Modelos de Venta B2B & Licenciamiento Exclusivo
+          </h4>
+          <p style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.5; margin: 0;">
+            Licenciamos nuestros personajes existentes para campañas de marcas o desarrollamos el embajador virtual oficial para tu empresa con 100% de propiedad intelectual exclusiva.
+          </p>
+        </div>
+        <a href="#b2b-eval-form-section" class="btn btn-primary btn-sm"><i class="fa-solid fa-file-invoice-dollar"></i> Solicitar Propuesta I+D</a>
       </div>
     </div>
 
