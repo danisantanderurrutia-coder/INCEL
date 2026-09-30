@@ -4544,6 +4544,153 @@ function previewArchiveTrack(title, bpm, key) {
   alert(`▶ Reproduciendo muestra de audio masterizado: "${title}"\nTempo: ${bpm} BPM | Escala: ${key}\nMasterizado profesional a -14 LUFS.`);
 }
 
+// Master Blueprint Studio Tab Switcher
+function switchBlueprintStudioTab(tabId) {
+  const tabs = ['sop', 'audio', 'visual', 'branding', 'seo'];
+  tabs.forEach(t => {
+    const btn = document.getElementById(`blueprint-tab-btn-${t}`);
+    const pane = document.getElementById(`blueprint-pane-${t}`);
+    if (btn) btn.classList.toggle('active', t === tabId);
+    if (pane) pane.style.display = t === tabId ? 'block' : 'none';
+  });
+}
+
+function filterStudioAudioTome(tomeKey, btn) {
+  const parent = btn.parentElement;
+  if (parent) {
+    const btns = parent.querySelectorAll('button');
+    btns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+
+  const groups = ['tome1', 'tome2', 'tome3'];
+  groups.forEach(g => {
+    const groupEl = document.getElementById(`studio-audio-${g}`);
+    if (groupEl) groupEl.style.display = g === tomeKey ? 'flex' : 'none';
+  });
+}
+
+const STUDIO_YOUTUBE_TEMPLATES = {
+  1: `TÍTULO SUGERIDO:
+Ancient Elven Library (Ambient Fantasy Music & Rain) 1.5 HOURS | Deep Reading & Tranquil Study
+
+DESCRIPCIÓN COMPLETA:
+"Has cruzado el umbral del Gran Arcano. Frente a ti se abre Tome I — Whispers of the Moonlit Sanctuary, un registro sonoro y visual custodiado en la Bóveda del Vacío."
+
+🌌 LORE DEL REGISTRO:
+En los claustros de cristal de Sylveria, el Archicanciller Aurelius y el dragón Umbraxion preservan las frecuencias de los mundos perdidos. El polvo cósmico lila suspendido en el aire y la lluvia tenue disuelven la prisa mortal, abriendo el umbral de la concentración pura.
+
+Este compendio acústico ha sido forjado para lectura reflexiva, concentración prolongada y reducción de cortisol, sin saltos de volumen abruptos ni fatiga auditiva.
+
+⏱️ MARCADORES DE TIEMPO (TIMESTAMPS & TRACKLIST):
+00:00 - Track 1A: Sylverian Starlight Harp & Dew (60 BPM | D Dorian)
+30:00 - Track 1B: Breeze Through the High Scriptorium (58 BPM | A Pentatonic)
+1:00:00 - Track 1C: The Starlight Maiden’s Incantation (62 BPM | E Aeolian)
+
+🍅 TÉCNICA DE ESTUDIO RECOMENDADA (DEEP FOCUS POMODORO 50/10):
+00:00 - Bloque de Enfoque Profundo I (50 min)
+50:00 - Transición / Pausa de respiración, agua y descanso visual (10 min)
+1:00:00 - Bloque de Enfoque Profundo II (50 min)
+1:50:00 - Cierre del Tomo y asimilación
+
+🎧 ESPECIFICACIONES TÉCNICAS DE AUDIO:
+• Masterizado profesional a -14 LUFS Integrated para YouTube.
+• Afinación armónica a 432 Hz / Frecuencias sub-graves templadas a 50 Hz.
+• Apto para auriculares abiertos, monitores de estudio y parlantes de escritorio.
+
+📜 DESCARGO ÉTICO, LEGAL Y CREATIVE COMMONS:
+Todas las piezas musicales y cinemáticas visuales de The Infinite Archive son generadas mediante ingeniería de prompts propietaria, modelos de síntesis de audio/video de última generación y masterización profesional en DAW.
+• LIBRE DE CONTENT ID: Puedes utilizar este video como fondo musical para tus transmisiones en vivo (Twitch, YouTube, Kick) o sesiones de estudio sin riesgo de reclamos de derechos ni desmonetización.
+
+🔗 CONEXIÓN CON LA BÓVEDA DEL GRAN ARCANO:
+• Plataforma Web Interactiva: https://infinitearchive.vault
+• Repositorio GitHub: https://github.com/danisantanderurrutia-coder/INCEL
+• Grimorio & Comunidad: https://discord.gg/infinite-archive
+
+#TheInfiniteArchive #ElvenMusic #FantasyStudy #DeepCalm #AmbientMusic #StudyWithMe
+
+TAGS (25 ETIQUETAS ESTRATÉGICAS):
+fantasy study music, medieval ambient focus, elven library ambience, deep work music coding, programmer focus beats, flow state ambient, dark academia study music, reading music fantasy, calm harp ambience, dwarven forge ambience, winter keep fireplace, ambient music 2 hours, lofi fantasy ambient, sleep fantasy sounds, relaxing rpg music, tabletop background music, dnd study playlist, focus music no drums, rain on window fantasy, chillwave fantasy, cinemagraph study background, medieval writing music, ambient soundscape study, study with me fantasy, the infinite archive`,
+
+  2: `TÍTULO SUGERIDO:
+Dwarven Forge Deep Work Ambience (65 BPM Hammer & Drone) 2 HOURS | Flow State & Coding
+
+DESCRIPCIÓN COMPLETA:
+"Has descendido a las fraguas abisales de Kar-Thuldum, registradas en el Códice II del Gran Arcano por Aurelius y el dragón Umbraxion."
+
+🌌 LORE DEL REGISTRO:
+Bajo las raíces de la cordillera subterránea, los maestros herreros funden aleaciones estelares con martillazos acompasados. El pulso hipnótico del yunque y los drones de piedra activan el estado de hiperconcentración ideal para arquitectos de software, matemáticos y artesanos intelectuales.
+
+⏱️ MARCADORES DE TIEMPO (TIMESTAMPS & TRACKLIST):
+00:00 - Track 2A: The Rhythmic Strike of the Anvil (65 BPM | C Minor Dorian)
+40:00 - Track 2B: Chants of the Subterranean Guilds (65 BPM | G Deep Minor)
+1:20:00 - Track 2C: Gears in the Magma Chamber (66 BPM | D Minor)
+
+🍅 TÉCNICA DE ESTUDIO RECOMENDADA (DEEP CODING FLOW 50/10):
+00:00 - Sprint de Programación y Arquitectura I (50 min)
+50:00 - Descanso ergonómico y estiramiento (10 min)
+1:00:00 - Sprint de Programación y Refactor II (50 min)
+1:50:00 - Debugging final y cierre de sesión
+
+🎧 ESPECIFICACIONES TÉCNICAS DE AUDIO:
+• Masterizado a -14 LUFS Integrated.
+• Pulso a 65 BPM actuando como metrónomo cognitivo sin fatiga.
+• Resonancia de graves a 50Hz, sin agudos estridentes.
+
+📜 DESCARGO ÉTICO, LEGAL Y CREATIVE COMMONS:
+Piezas sonoras y visuales generadas con IA y masterizadas en estudio analógico/digital.
+• LIBRE DE CONTENT ID: Apto para streaming en vivo (Twitch, YouTube) sin reclamos de derechos.
+
+#DwarvenForge #FlowState #DeepCoding #TheInfiniteArchive #ProductivityMusic
+
+TAGS (25 ETIQUETAS ESTRATÉGICAS):
+dwarven forge ambience, deep work music coding, programmer focus beats, flow state ambient, study music for programmers, mechanical study beats, fantasy forge ambience, dwarven fantasy music, rhythmic study music, coding background noise, non fatiguing study music, ambient drone coding, dark fantasy study, 65 bpm focus music, taiko drums study, bronze singing bowls, subterranean ambient, focus beats no vocals, software engineer music, 2 hours coding music, productive study session, epic ambient flow, deep thought music, technical writing ambience, the infinite archive`,
+
+  3: `TÍTULO SUGERIDO:
+Medieval Winter Keep (Sad Cello & Blizzard Fireplace) 2 HOURS | Writing & Deep Solitude
+
+DESCRIPCIÓN COMPLETA:
+"Afuera aúlla la ventisca polar del fin del mundo; dentro del Bastión de Obsidiana, el fuego resguarda tus palabras junto al Gran Arcano."
+
+🌌 LORE DEL REGISTRO:
+En el confín helado de las Tierras Sombrías, una torre de obsidiana resiste el viento gélido. En su interior, un fuego de roble crepita mientras un violonchelo solitario teje la banda sonora de la memoria, el aislamiento creativo y el análisis minucioso.
+
+⏱️ MARCADORES DE TIEMPO (TIMESTAMPS & TRACKLIST):
+00:00 - Track 3A: The Solitary Cellist of the Bastion (56 BPM | B Minor Aeolian)
+40:00 - Track 3B: Old Parchment and Bitter Cold (58 BPM | F# Minor)
+1:20:00 - Track 3C: Bell of the Frozen Keep (50 BPM | C# Ambient Drone)
+
+🍅 TÉCNICA DE ESTUDIO RECOMENDADA (WRITING INTROSPECTION 50/10):
+00:00 - Sesión de Redacción e Investigación I (50 min)
+50:00 - Pausa de té caliente y reposo mental (10 min)
+1:00:00 - Sesión de Redacción Creativa II (50 min)
+1:50:00 - Pulido y lectura final
+
+🎧 ESPECIFICACIONES TÉCNICAS DE AUDIO:
+• Masterizado a -14 LUFS Integrated.
+• Afinación armónica a 432 Hz con texturas acústicas de arco y leña.
+
+#ObsidianBastion #WinterAmbience #WritingMusic #DarkAcademia #SadCello #SolitudeStudy
+
+TAGS (25 ETIQUETAS ESTRATÉGICAS):
+winter keep fireplace ambience, sad cello study music, medieval blizzard writing music, dark academia focus, lonely castle ambience, writing music fantasy, melancholic cello ambient, fireplace snow storm, study with me winter, dark fantasy writing, deep solitude ambience, medieval lute study, quiet study room blizzard, cold winter ambience, creative writing playlist, emotional ambient strings, rain and fire study, essay writing music, worldbuilding ambient, peaceful winter sleep, reading by the fireplace, 432 hz fantasy music, atmospheric cello drone, nocturnal study vibes, the infinite archive`
+};
+
+function loadStudioYouTubeTome(tomeNum, btn) {
+  const parent = btn.parentElement;
+  if (parent) {
+    const btns = parent.querySelectorAll('button');
+    btns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+
+  const exportEl = document.getElementById('studio-youtube-export');
+  if (exportEl && STUDIO_YOUTUBE_TEMPLATES[tomeNum]) {
+    exportEl.value = STUDIO_YOUTUBE_TEMPLATES[tomeNum];
+    showCopyFeedback(btn);
+  }
+}
+
 function renderAdminYoutubeStudio(channelId = 'arcano') {
   const container = document.getElementById('team-admin-youtube-content');
   if (!container) return;
@@ -4552,111 +4699,524 @@ function renderAdminYoutubeStudio(channelId = 'arcano') {
 
   if (channelId === 'arcano' || channelId === 'infinite-archive') {
     container.innerHTML = `
-      <!-- Panel de Control para El Gran Arcano -->
-      <div style="background: rgba(14,19,31,0.85); border: 1px solid rgba(168,85,247,0.3); border-radius: 14px; padding: 2rem; margin-bottom: 2rem;">
+      <!-- ============================================================== -->
+      <!-- MASTER BLUEPRINT CONTENT CREATION STUDIO • THE INFINITE ARCHIVE -->
+      <!-- ============================================================== -->
+      <div style="background: rgba(14,19,31,0.95); border: 1px solid rgba(168,85,247,0.35); border-radius: 16px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 20px 50px rgba(0,0,0,0.6); position: relative; overflow: hidden;">
         
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+        <!-- Ambient glow header -->
+        <div style="position: absolute; top: -50px; right: -50px; width: 250px; height: 250px; background: radial-gradient(circle, rgba(168,85,247,0.18) 0%, transparent 70%); pointer-events: none;"></div>
+        <div style="position: absolute; bottom: -50px; left: -50px; width: 250px; height: 250px; background: radial-gradient(circle, rgba(34,211,238,0.15) 0%, transparent 70%); pointer-events: none;"></div>
+
+        <!-- Studio Header -->
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.75rem; flex-wrap: wrap; gap: 1rem; position: relative; z-index: 2;">
           <div>
-            <span class="detail-badge" style="background: rgba(168,85,247,0.25); color: #e9d5ff; border-color: #a855f7;">
-              STUDIO KIT • EL GRAN ARCANO
-            </span>
-            <h3 style="color: #fff; font-family: var(--font-heading); font-size: 1.6rem; margin: 0.5rem 0 0.25rem 0;">
-              The Infinite Archive: Prompts de Producción & Metadatos
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem;">
+              <span class="detail-badge" style="background: rgba(168,85,247,0.2); color: #e9d5ff; border-color: #a855f7; font-size: 0.72rem; padding: 0.25rem 0.65rem;">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> MASTER BLUEPRINT STUDIO
+              </span>
+              <span style="font-size: 0.72rem; font-family: monospace; color: #22d3ee; background: rgba(34,211,238,0.1); border: 1px solid rgba(34,211,238,0.3); padding: 0.2rem 0.55rem; border-radius: 4px;">
+                Pipeline v2.0 • 5 Fases
+              </span>
+            </div>
+            <h3 style="color: #fff; font-family: var(--font-heading); font-size: 1.75rem; margin: 0 0 0.35rem 0; font-weight: 800; letter-spacing: -0.01em;">
+              Estudio de Creación de Material: The Infinite Archive
             </h3>
-            <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0;">
-              Herramientas de generación de imágenes con Midjourney v6.1 / Flux Pro y metadatos SEO con marcas de tiempo.
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0; max-width: 780px; line-height: 1.6;">
+              Guía operativa, generador de prompts (Audio IA + Cinemagraphs Loops) y ensamblador de metadatos SEO. Cómo crear y publicar cada pieza siguiendo el Master Blueprint oficial.
             </p>
           </div>
-          
-          <button onclick="copyToClipboard(document.getElementById('arcano-full-kit').value, this)" class="btn btn-primary" style="background: linear-gradient(135deg, #a855f7, #7c3aed); border: none; font-size: 0.85rem;">
-            <i class="fa-solid fa-copy"></i> Copiar Paquete Completo
+
+          <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
+            <button onclick="copyToClipboard(document.getElementById('studio-youtube-export').value, this)" class="btn btn-primary" style="background: linear-gradient(135deg, #22d3ee, #0284c7); border: none; font-size: 0.82rem; font-weight: 700; box-shadow: 0 0 20px rgba(34,211,238,0.25);">
+              <i class="fa-solid fa-bolt"></i> Copiar Paquete YouTube (1-Click)
+            </button>
+            <button onclick="switchView('archive')" class="btn btn-secondary" style="font-size: 0.82rem; border-color: rgba(255,255,255,0.2);">
+              <i class="fa-solid fa-eye"></i> Ver Bóveda Pública
+            </button>
+          </div>
+        </div>
+
+        <!-- Pestañas del Studio de Creación -->
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.75rem;">
+          <button id="blueprint-tab-btn-sop" class="archive-subtab-btn active" onclick="switchBlueprintStudioTab('sop')">
+            <i class="fa-solid fa-list-check" style="color: #f59e0b;"></i> 1. SOP de Creación (Paso a Paso)
+          </button>
+          <button id="blueprint-tab-btn-audio" class="archive-subtab-btn" onclick="switchBlueprintStudioTab('audio')">
+            <i class="fa-solid fa-music" style="color: #22d3ee;"></i> 2. Prompts de Audio IA (Udio / Suno)
+          </button>
+          <button id="blueprint-tab-btn-visual" class="archive-subtab-btn" onclick="switchBlueprintStudioTab('visual')">
+            <i class="fa-solid fa-camera-retro" style="color: #a855f7;"></i> 3. Prompts Visuales & Loops (Midjourney / Runway)
+          </button>
+          <button id="blueprint-tab-btn-branding" class="archive-subtab-btn" onclick="switchBlueprintStudioTab('branding')">
+            <i class="fa-solid fa-palette" style="color: #ec4899;"></i> 4. Tokens de Marca & Diseño
+          </button>
+          <button id="blueprint-tab-btn-seo" class="archive-subtab-btn" onclick="switchBlueprintStudioTab('seo')">
+            <i class="fa-brands fa-youtube" style="color: #ef4444;"></i> 5. Kit SEO & Exportador
           </button>
         </div>
 
-        <!-- Prompts Visuales Midjourney -->
-        <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.75rem;">
-          <i class="fa-solid fa-wand-magic-sparkles" style="color: #22d3ee; margin-right: 0.4rem;"></i> Prompts Visuales Midjourney v6.1 / Flux Pro (16:9 Cinemagraphs)
-        </h4>
-
-        <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
-          
-          <div style="background: #06080d; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1rem;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-              <strong style="color: #22d3ee; font-size: 0.85rem;">Escena 1: Aurelius en la Ventana de la Aguja (Tower Window)</strong>
-              <button onclick="copyToClipboard('Aurelius Chronovoid standing in front of high arch needle window of ancient stone tower Kar-Kaelum, cinematic dark fantasy, neonwave lilac and cosmic purple nebula glow, cold starlight, detailed bronze and dark stone astrolabe on his chest, photorealistic, intricate textures, 8k --ar 16:9 --style raw --v 6.1 --stylize 250', this)" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">
-                <i class="fa-solid fa-copy"></i> Copiar Prompt
-              </button>
-            </div>
-            <code style="font-size: 0.78rem; color: #cbd5e1; display: block; line-height: 1.5;">
-              Aurelius Chronovoid standing in front of high arch needle window of ancient stone tower Kar-Kaelum, cinematic dark fantasy, neonwave lilac and cosmic purple nebula glow, cold starlight, detailed bronze and dark stone astrolabe on his chest, photorealistic, intricate textures, 8k --ar 16:9 --style raw --v 6.1 --stylize 250
-            </code>
+        <!-- ========================================================= -->
+        <!-- PESTAÑA 1: SOP DE CREACIÓN PASO A PASO                     -->
+        <!-- ========================================================= -->
+        <div id="blueprint-pane-sop" class="blueprint-studio-pane" style="display: block;">
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="color: #fff; font-size: 1.15rem; margin: 0 0 0.5rem 0;">
+              <i class="fa-solid fa-compass" style="color: #f59e0b; margin-right: 0.4rem;"></i> Procedimiento Operativo Estándar (SOP de 5 Fases)
+            </h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">
+              Sigue esta secuencia para fabricar cada entrega audiovisual de 1.5h a 2h con cero reclamos de copyright y máxima retención auditiva.
+            </p>
           </div>
 
-          <div style="background: #06080d; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1rem;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-              <strong style="color: #d4af37; font-size: 0.85rem;">Escena 2: Aurelius en la Biblioteca con Códice Dorado (Library Study)</strong>
-              <button onclick="copyToClipboard('Aurelius Chronovoid in silent ancient medieval library, studying illuminated fantasy manuscript on weathered dark wood desk, warm golden candle flame dancing, glowing lilac dust particles floating in the air, bookshelves filled with antique grimoires, moody chiaroscuro lighting --ar 16:9 --style raw --v 6.1', this)" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">
-                <i class="fa-solid fa-copy"></i> Copiar Prompt
-              </button>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+            
+            <!-- Fase 1 -->
+            <div style="background: #06080d; border: 1px solid rgba(245,158,11,0.3); border-radius: 10px; padding: 1.25rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 0.72rem; font-family: monospace; color: #f59e0b; font-weight: 700;">FASE 1 • CONCEPCIÓN</span>
+                <span style="font-size: 0.75rem; background: rgba(245,158,11,0.15); color: #fde68a; padding: 0.15rem 0.45rem; border-radius: 4px;">Paso 1</span>
+              </div>
+              <h5 style="color: #fff; font-size: 0.95rem; margin: 0 0 0.5rem 0;">Lore del Tomo & Mindset</h5>
+              <ul style="color: #cbd5e1; font-size: 0.8rem; line-height: 1.6; padding-left: 1.2rem; margin: 0;">
+                <li>Selecciona el reino: <em>Élfico (60 BPM)</em>, <em>Enano (65 BPM)</em> o <em>Norteño (56 BPM)</em>.</li>
+                <li>Redacta la historia del Códice como narrador del Gran Arcano (Aurelius y Umbraxion).</li>
+                <li>Define la afinación a <strong>432 Hz</strong> para propósitos de calma y estudio.</li>
+              </ul>
             </div>
-            <code style="font-size: 0.78rem; color: #cbd5e1; display: block; line-height: 1.5;">
-              Aurelius Chronovoid in silent ancient medieval library, studying illuminated fantasy manuscript on weathered dark wood desk, warm golden candle flame dancing, glowing lilac dust particles floating in the air, bookshelves filled with antique grimoires, moody chiaroscuro lighting --ar 16:9 --style raw --v 6.1
-            </code>
-          </div>
 
-          <div style="background: #06080d; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1rem;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-              <strong style="color: #a855f7; font-size: 0.85rem;">Escena 3: El Dragón Negro Umbraxion en el Gran Salón (Obsidian Dragon Hall)</strong>
-              <button onclick="copyToClipboard('Massive black dragon Umbraxion resting in a monumental vaulted stone hall with cyclopean pillars, glossy obsidian scales reflecting soft starlight, wizard Aurelius gently placing his palm on the dragon\'s snout, peaceful serene atmosphere, cinematic rim lighting --ar 16:9 --style raw --v 6.1', this)" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">
-                <i class="fa-solid fa-copy"></i> Copiar Prompt
-              </button>
+            <!-- Fase 2 -->
+            <div style="background: #06080d; border: 1px solid rgba(34,211,238,0.3); border-radius: 10px; padding: 1.25rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 0.72rem; font-family: monospace; color: #22d3ee; font-weight: 700;">FASE 2 • AUDIO SÍNTESIS</span>
+                <span style="font-size: 0.75rem; background: rgba(34,211,238,0.15); color: #a5f3fc; padding: 0.15rem 0.45rem; border-radius: 4px;">Paso 2</span>
+              </div>
+              <h5 style="color: #fff; font-size: 0.95rem; margin: 0 0 0.5rem 0;">Generación Acústica (Udio/Suno)</h5>
+              <ul style="color: #cbd5e1; font-size: 0.8rem; line-height: 1.6; padding-left: 1.2rem; margin: 0;">
+                <li>Usa la fórmula: <code>[Instrumento líder] + [Fondo atmosférico] + [BPM exacto] + [Escala menor/dórica]</code>.</li>
+                <li>Comando negativo obligatorio: <em>no drums, no abrupt peaks, non-fatiguing mixdown</em>.</li>
+                <li>Genera 3 pistas de 3 a 5 minutos y expórtalas en WAV 24-bit.</li>
+              </ul>
             </div>
-            <code style="font-size: 0.78rem; color: #cbd5e1; display: block; line-height: 1.5;">
-              Massive black dragon Umbraxion resting in a monumental vaulted stone hall with cyclopean pillars, glossy obsidian scales reflecting soft starlight, wizard Aurelius gently placing his palm on the dragon's snout, peaceful serene atmosphere, cinematic rim lighting --ar 16:9 --style raw --v 6.1
-            </code>
-          </div>
 
+            <!-- Fase 3 -->
+            <div style="background: #06080d; border: 1px solid rgba(168,85,247,0.3); border-radius: 10px; padding: 1.25rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 0.72rem; font-family: monospace; color: #a855f7; font-weight: 700;">FASE 3 • CINEMAGRAPHS</span>
+                <span style="font-size: 0.75rem; background: rgba(168,85,247,0.15); color: #e9d5ff; padding: 0.15rem 0.45rem; border-radius: 4px;">Paso 3</span>
+              </div>
+              <h5 style="color: #fff; font-size: 0.95rem; margin: 0 0 0.5rem 0;">Visuales en Bucle 8K</h5>
+              <ul style="color: #cbd5e1; font-size: 0.8rem; line-height: 1.6; padding-left: 1.2rem; margin: 0;">
+                <li>Genera el frame base en Midjourney v6.1 con <code>--ar 16:9 --style raw</code>.</li>
+                <li>Incluye polvo lila cósmico, iluminación neonwave y texturas góticas.</li>
+                <li>Anima en Runway Gen-3 / Luma con <em>Static Camera, subtle breathing loop, seamless 10-15s</em>.</li>
+              </ul>
+            </div>
+
+            <!-- Fase 4 -->
+            <div style="background: #06080d; border: 1px solid rgba(56,189,248,0.3); border-radius: 10px; padding: 1.25rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 0.72rem; font-family: monospace; color: #38bdf8; font-weight: 700;">FASE 4 • MONTAJE & MASTER</span>
+                <span style="font-size: 0.75rem; background: rgba(56,189,248,0.15); color: #bae6fd; padding: 0.15rem 0.45rem; border-radius: 4px;">Paso 4</span>
+              </div>
+              <h5 style="color: #fff; font-size: 0.95rem; margin: 0 0 0.5rem 0;">Timeline NLE (DaVinci/Premiere)</h5>
+              <ul style="color: #cbd5e1; font-size: 0.8rem; line-height: 1.6; padding-left: 1.2rem; margin: 0;">
+                <li>Extiende la duración a 1.5h o 2.0h encadenando las 3 pistas temáticas.</li>
+                <li>Aplica fundido cruzado constante de 10 a 12 segundos para evitar pausas.</li>
+                <li>Masteriza el audio final a <strong>-14 LUFS Integrated</strong> (estándar YouTube).</li>
+              </ul>
+            </div>
+
+            <!-- Fase 5 -->
+            <div style="background: #06080d; border: 1px solid rgba(16,185,129,0.3); border-radius: 10px; padding: 1.25rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 0.72rem; font-family: monospace; color: #10b981; font-weight: 700;">FASE 5 • PUBLICACIÓN</span>
+                <span style="font-size: 0.75rem; background: rgba(16,185,129,0.15); color: #a7f3d0; padding: 0.15rem 0.45rem; border-radius: 4px;">Paso 5</span>
+              </div>
+              <h5 style="color: #fff; font-size: 0.95rem; margin: 0 0 0.5rem 0;">YouTube Studio & Distribución</h5>
+              <ul style="color: #cbd5e1; font-size: 0.8rem; line-height: 1.6; padding-left: 1.2rem; margin: 0;">
+                <li>Copia el título optimizado y descripción estructurada con Pomodoro 50/10.</li>
+                <li>Pega el bloque de 25 etiquetas de nicho focus/fantasy.</li>
+                <li>Declara contenido de IA en YouTube Studio y marca <strong>Categoría: Música</strong>.</li>
+              </ul>
+            </div>
+
+          </div>
         </div>
 
-        <!-- Metadatos de YouTube & SEO -->
-        <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.75rem;">
-          <i class="fa-brands fa-youtube" style="color: #ef4444; margin-right: 0.4rem;"></i> Paquete de Metadatos YouTube Studio (Copy-Paste)
-        </h4>
+        <!-- ========================================================= -->
+        <!-- PESTAÑA 2: PROMPTS DE AUDIO IA (UDIO / SUNO)               -->
+        <!-- ========================================================= -->
+        <div id="blueprint-pane-audio" class="blueprint-studio-pane" style="display: none;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 0.75rem;">
+            <div>
+              <h4 style="color: #fff; font-size: 1.15rem; margin: 0;">
+                <i class="fa-solid fa-music" style="color: #22d3ee; margin-right: 0.4rem;"></i> Prompts de Audio IA por Tomo & Universo
+              </h4>
+              <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0.25rem 0 0 0;">
+                Afinados para 432 Hz, sin fatiga auditiva, con tempo controlado para estudio y codificación.
+              </p>
+            </div>
+            
+            <div style="display: flex; gap: 0.5rem;">
+              <button class="archive-filter-btn active" onclick="filterStudioAudioTome('tome1', this)">🌿 Tomo I (Élfico)</button>
+              <button class="archive-filter-btn" onclick="filterStudioAudioTome('tome2', this)">⚒️ Codex II (Enano)</button>
+              <button class="archive-filter-btn" onclick="filterStudioAudioTome('tome3', this)">❄️ Archive III (Norteño)</button>
+            </div>
+          </div>
 
-        <textarea id="arcano-full-kit" readonly style="width: 100%; height: 260px; background: #06080d; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #cbd5e1; font-family: monospace; font-size: 0.78rem; padding: 1rem; resize: vertical; line-height: 1.5;">
-TÍTULO:
-Ancient Elven Library (Ambient Fantasy Music & Rain) 2 HOURS | Deep Reading, Focus & Coding Beats
+          <!-- Pistas Tomo 1 -->
+          <div id="studio-audio-tome1" class="studio-audio-group" style="display: flex; flex-direction: column; gap: 1rem;">
+            
+            <div style="background: #06080d; border: 1px solid rgba(34,211,238,0.25); border-radius: 8px; padding: 1.1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <div>
+                  <strong style="color: #22d3ee; font-size: 0.9rem;">Track 1A: Sylverian Starlight Harp & Dew</strong>
+                  <span style="font-size: 0.75rem; font-family: monospace; color: #d4af37; margin-left: 0.5rem;">60 BPM • D Minor Dorian</span>
+                </div>
+                <button onclick="copyToClipboard('Ethereal ambient elven music, floating acoustic Celtic harp arpeggios, gentle bamboo bansuri flute melodies, warm legato string quartet, deep sub-bass drone, soft night forest rain and gentle river water stream soundscape, 60 BPM, D minor dorian, spacious reverb, crystal clear mix, no percussion, no drums, master quality', this)" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.3rem 0.7rem;">
+                  <i class="fa-solid fa-copy"></i> Copiar Prompt
+                </button>
+              </div>
+              <code style="font-size: 0.78rem; color: #cbd5e1; display: block; line-height: 1.5; background: rgba(0,0,0,0.5); padding: 0.6rem; border-radius: 4px;">
+                Ethereal ambient elven music, floating acoustic Celtic harp arpeggios, gentle bamboo bansuri flute melodies, warm legato string quartet, deep sub-bass drone, soft night forest rain and gentle river water stream soundscape, 60 BPM, D minor dorian, spacious reverb, crystal clear mix, no percussion, no drums, master quality
+              </code>
+            </div>
 
-DESCRIPCIÓN:
-"Has cruzado el umbral del Gran Arcano. Frente a ti se abre Tome I — Whispers of the Moonlit Sanctuary, custodiado en la Bóveda del Vacío."
+            <div style="background: #06080d; border: 1px solid rgba(34,211,238,0.25); border-radius: 8px; padding: 1.1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <div>
+                  <strong style="color: #22d3ee; font-size: 0.9rem;">Track 1B: Breeze Through the High Scriptorium</strong>
+                  <span style="font-size: 0.75rem; font-family: monospace; color: #d4af37; margin-left: 0.5rem;">58 BPM • A Minor Pentatonic</span>
+                </div>
+                <button onclick="copyToClipboard('Nocturnal ambient soundscape, soft felt piano chords, bowed glass harmonics, distant night wind blowing through crystalline vaulted ceilings, subtle bioluminescent bell chimes, binaural theta wave hum (6Hz), meditative study atmosphere, cinematic fantasy score, 58 BPM, peaceful and nostalgic, unhurried pacing', this)" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.3rem 0.7rem;">
+                  <i class="fa-solid fa-copy"></i> Copiar Prompt
+                </button>
+              </div>
+              <code style="font-size: 0.78rem; color: #cbd5e1; display: block; line-height: 1.5; background: rgba(0,0,0,0.5); padding: 0.6rem; border-radius: 4px;">
+                Nocturnal ambient soundscape, soft felt piano chords, bowed glass harmonics, distant night wind blowing through crystalline vaulted ceilings, subtle bioluminescent bell chimes, binaural theta wave hum (6Hz), meditative study atmosphere, cinematic fantasy score, 58 BPM, peaceful and nostalgic, unhurried pacing
+              </code>
+            </div>
+
+            <div style="background: #06080d; border: 1px solid rgba(34,211,238,0.25); border-radius: 8px; padding: 1.1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <div>
+                  <strong style="color: #22d3ee; font-size: 0.9rem;">Track 1C: The Starlight Maiden’s Incantation</strong>
+                  <span style="font-size: 0.75rem; font-family: monospace; color: #d4af37; margin-left: 0.5rem;">62 BPM • E Minor Aeolian</span>
+                </div>
+                <button onclick="copyToClipboard('Angelic female soprano wordless vocalise, distant choir pads, soft raindrops splashing on stained glass rose windows, warm analog synth warmth under fantasy orchestral cello, 62 BPM, ethereal fantasy chillwave, sparkling high frequencies, gentle meditation, deep sleep and profound reading focus', this)" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.3rem 0.7rem;">
+                  <i class="fa-solid fa-copy"></i> Copiar Prompt
+                </button>
+              </div>
+              <code style="font-size: 0.78rem; color: #cbd5e1; display: block; line-height: 1.5; background: rgba(0,0,0,0.5); padding: 0.6rem; border-radius: 4px;">
+                Angelic female soprano wordless vocalise, distant choir pads, soft raindrops splashing on stained glass rose windows, warm analog synth warmth under fantasy orchestral cello, 62 BPM, ethereal fantasy chillwave, sparkling high frequencies, gentle meditation, deep sleep and profound reading focus
+              </code>
+            </div>
+
+          </div>
+
+          <!-- Pistas Tomo 2 (Enano) -->
+          <div id="studio-audio-tome2" class="studio-audio-group" style="display: none; flex-direction: column; gap: 1rem;">
+            
+            <div style="background: #06080d; border: 1px solid rgba(212,175,55,0.25); border-radius: 8px; padding: 1.1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <div>
+                  <strong style="color: #d4af37; font-size: 0.9rem;">Track 2A: The Rhythmic Strike of the Anvil</strong>
+                  <span style="font-size: 0.75rem; font-family: monospace; color: #22d3ee; margin-left: 0.5rem;">65 BPM • C Minor Dorian</span>
+                </div>
+                <button onclick="copyToClipboard('Deep steady atmospheric coding music, distant muffled metallic hammer strikes acting as steady 65 BPM metronome, resonant bronze singing bowls, low C-string drone of double bass and contrabass, warm industrial fantasy textures, dark stone echo, subtle ember crackle, hypnotic productivity flow state soundtrack, no abrasive highs, non-fatiguing mixdown', this)" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.3rem 0.7rem;">
+                  <i class="fa-solid fa-copy"></i> Copiar Prompt
+                </button>
+              </div>
+              <code style="font-size: 0.78rem; color: #cbd5e1; display: block; line-height: 1.5; background: rgba(0,0,0,0.5); padding: 0.6rem; border-radius: 4px;">
+                Deep steady atmospheric coding music, distant muffled metallic hammer strikes acting as steady 65 BPM metronome, resonant bronze singing bowls, low C-string drone of double bass and contrabass, warm industrial fantasy textures, dark stone echo, subtle ember crackle, hypnotic productivity flow state soundtrack, no abrasive highs, non-fatiguing mixdown
+              </code>
+            </div>
+
+            <div style="background: #06080d; border: 1px solid rgba(212,175,55,0.25); border-radius: 8px; padding: 1.1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <div>
+                  <strong style="color: #d4af37; font-size: 0.9rem;">Track 2B: Chants of the Subterranean Guilds</strong>
+                  <span style="font-size: 0.75rem; font-family: monospace; color: #22d3ee; margin-left: 0.5rem;">65 BPM • G Deep Minor</span>
+                </div>
+                <button onclick="copyToClipboard('Ultra-low guttural male throat singing drone, solemn Nordic and dwarven harmonic chanting, echoing through a massive basalt cavern, resonant forge air blowers breathing in slow rhythm, gentle fire furnace hum, warm sub frequencies (50Hz), deep work and programming endurance soundtrack', this)" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.3rem 0.7rem;">
+                  <i class="fa-solid fa-copy"></i> Copiar Prompt
+                </button>
+              </div>
+              <code style="font-size: 0.78rem; color: #cbd5e1; display: block; line-height: 1.5; background: rgba(0,0,0,0.5); padding: 0.6rem; border-radius: 4px;">
+                Ultra-low guttural male throat singing drone, solemn Nordic and dwarven harmonic chanting, echoing through a massive basalt cavern, resonant forge air blowers breathing in slow rhythm, gentle fire furnace hum, warm sub frequencies (50Hz), deep work and programming endurance soundtrack
+              </code>
+            </div>
+
+            <div style="background: #06080d; border: 1px solid rgba(212,175,55,0.25); border-radius: 8px; padding: 1.1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <div>
+                  <strong style="color: #d4af37; font-size: 0.9rem;">Track 2C: Gears in the Magma Chamber</strong>
+                  <span style="font-size: 0.75rem; font-family: monospace; color: #22d3ee; margin-left: 0.5rem;">66 BPM • D Minor</span>
+                </div>
+                <button onclick="copyToClipboard('Low warm acoustic frame drums and muffled taiko rolling pattern, heavy rhythmic pulse without sudden peaks, rhythmic ticking of brass clockwork gears, deep tectonic earth rumble, steady focus music for software engineering and technical writing, rich analog warmth, zero vocal distraction', this)" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.3rem 0.7rem;">
+                  <i class="fa-solid fa-copy"></i> Copiar Prompt
+                </button>
+              </div>
+              <code style="font-size: 0.78rem; color: #cbd5e1; display: block; line-height: 1.5; background: rgba(0,0,0,0.5); padding: 0.6rem; border-radius: 4px;">
+                Low warm acoustic frame drums and muffled taiko rolling pattern, heavy rhythmic pulse without sudden peaks, rhythmic ticking of brass clockwork gears, deep tectonic earth rumble, steady focus music for software engineering and technical writing, rich analog warmth, zero vocal distraction
+              </code>
+            </div>
+
+          </div>
+
+          <!-- Pistas Tomo 3 (Norteño) -->
+          <div id="studio-audio-tome3" class="studio-audio-group" style="display: none; flex-direction: column; gap: 1rem;">
+            
+            <div style="background: #06080d; border: 1px solid rgba(168,85,247,0.25); border-radius: 8px; padding: 1.1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <div>
+                  <strong style="color: #a855f7; font-size: 0.9rem;">Track 3A: The Solitary Cellist of the Bastion</strong>
+                  <span style="font-size: 0.75rem; font-family: monospace; color: #f59e0b; margin-left: 0.5rem;">56 BPM • B Minor Aeolian</span>
+                </div>
+                <button onclick="copyToClipboard('Solo melancholic acoustic cello melody, expressive bow scraping textures, warm wood crackling fireplace sounds, distant arctic winter blizzard howling gently outside thick stone walls, 56 BPM, slow emotional phrasing, Renaissance modal harmonies, dark academia focus music, profound introspection and nocturnal writing', this)" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.3rem 0.7rem;">
+                  <i class="fa-solid fa-copy"></i> Copiar Prompt
+                </button>
+              </div>
+              <code style="font-size: 0.78rem; color: #cbd5e1; display: block; line-height: 1.5; background: rgba(0,0,0,0.5); padding: 0.6rem; border-radius: 4px;">
+                Solo melancholic acoustic cello melody, expressive bow scraping textures, warm wood crackling fireplace sounds, distant arctic winter blizzard howling gently outside thick stone walls, 56 BPM, slow emotional phrasing, Renaissance modal harmonies, dark academia focus music, profound introspection and nocturnal writing
+              </code>
+            </div>
+
+            <div style="background: #06080d; border: 1px solid rgba(168,85,247,0.25); border-radius: 8px; padding: 1.1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <div>
+                  <strong style="color: #a855f7; font-size: 0.9rem;">Track 3B: Old Parchment and Bitter Cold</strong>
+                  <span style="font-size: 0.75rem; font-family: monospace; color: #f59e0b; margin-left: 0.5rem;">58 BPM • F# Minor</span>
+                </div>
+                <button onclick="copyToClipboard('Medieval lute and viola da gamba counterpoint in minor key, warm close-mic recording, slow delicate plucked strings, soft breath of cold wind against glass, creaking ancient floorboards, historical dark medieval ambient for researching, essay writing and worldbuilding', this)" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.3rem 0.7rem;">
+                  <i class="fa-solid fa-copy"></i> Copiar Prompt
+                </button>
+              </div>
+              <code style="font-size: 0.78rem; color: #cbd5e1; display: block; line-height: 1.5; background: rgba(0,0,0,0.5); padding: 0.6rem; border-radius: 4px;">
+                Medieval lute and viola da gamba counterpoint in minor key, warm close-mic recording, slow delicate plucked strings, soft breath of cold wind against glass, creaking ancient floorboards, historical dark medieval ambient for researching, essay writing and worldbuilding
+              </code>
+            </div>
+
+            <div style="background: #06080d; border: 1px solid rgba(168,85,247,0.25); border-radius: 8px; padding: 1.1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <div>
+                  <strong style="color: #a855f7; font-size: 0.9rem;">Track 3C: Bell of the Frozen Keep</strong>
+                  <span style="font-size: 0.75rem; font-family: monospace; color: #f59e0b; margin-left: 0.5rem;">50 BPM • C# Drone</span>
+                </div>
+                <button onclick="copyToClipboard('Cold ambient winter drone, crystalline overtone singing bowls, distant deep brass fortress bell chiming once every two minutes, soft falling snow white noise texture, dark atmosphere, peaceful solitude, deep reflection, winter fantasy study ambience', this)" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.3rem 0.7rem;">
+                  <i class="fa-solid fa-copy"></i> Copiar Prompt
+                </button>
+              </div>
+              <code style="font-size: 0.78rem; color: #cbd5e1; display: block; line-height: 1.5; background: rgba(0,0,0,0.5); padding: 0.6rem; border-radius: 4px;">
+                Cold ambient winter drone, crystalline overtone singing bowls, distant deep brass fortress bell chiming once every two minutes, soft falling snow white noise texture, dark atmosphere, peaceful solitude, deep reflection, winter fantasy study ambience
+              </code>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- PESTAÑA 3: PROMPTS VISUALES & LOOPS (MIDJOURNEY / RUNWAY)  -->
+        <!-- ========================================================= -->
+        <div id="blueprint-pane-visual" class="blueprint-studio-pane" style="display: none;">
+          <div style="margin-bottom: 1.25rem;">
+            <h4 style="color: #fff; font-size: 1.15rem; margin: 0 0 0.5rem 0;">
+              <i class="fa-solid fa-camera-retro" style="color: #a855f7; margin-right: 0.4rem;"></i> Fórmulas de Cinemagraphs 8K (Midjourney + Runway Gen-3)
+            </h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">
+              Imágenes estáticas con bucle suave de partículas, humo o lluvia. 100% consistentes con el Archicanciller Aurelius y el dragón Umbraxion.
+            </p>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            
+            <div style="background: #06080d; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1.1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <strong style="color: #22d3ee; font-size: 0.88rem;">1. Escena Torre & Nebulosa (Aurelius mirando la Ciudad Destruida)</strong>
+                <button onclick="copyToClipboard('Cinematic shot of an ancient wise arch-mage with long white hair and a flowing long white beard, wearing dark weathered celestial robes, with an intricate brass astrolabe pendant hanging around his neck. He stands looking out a giant stone arched gothic window from a very high castle tower, gazing down at the eerie remnants of a ruined ancient city below. Outside, the dark sky blends seamlessly into deep space with glowing stars, cosmic nebula, and glittering lilac and violet dust motes. Chillwave neonwave atmospheric lighting, cyan and purple rim glow, melancholy and tranquil mood, highly detailed 8k cinematic fantasy concept art --ar 16:9 --v 6.1 --style raw', this)" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.3rem 0.7rem;">
+                  <i class="fa-solid fa-copy"></i> Copiar Prompt
+                </button>
+              </div>
+              <code style="font-size: 0.78rem; color: #cbd5e1; display: block; line-height: 1.5; background: rgba(0,0,0,0.5); padding: 0.6rem; border-radius: 4px;">
+                Cinematic shot of an ancient wise arch-mage with long white hair and a flowing long white beard, wearing dark weathered celestial robes, with an intricate brass astrolabe pendant hanging around his neck. He stands looking out a giant stone arched gothic window from a very high castle tower, gazing down at the eerie remnants of a ruined ancient city below. Outside, the dark sky blends seamlessly into deep space with glowing stars, cosmic nebula, and glittering lilac and violet dust motes. Chillwave neonwave atmospheric lighting, cyan and purple rim glow, melancholy and tranquil mood, highly detailed 8k cinematic fantasy concept art --ar 16:9 --v 6.1 --style raw
+              </code>
+              <span style="display: block; margin-top: 0.4rem; font-size: 0.72rem; color: #94a3b8; font-family: monospace;">
+                Instrucción Runway Gen-3: <em>Static camera. Subtle floating lilac dust particles, gentle wind blowing through white hair, seamless 10s loop.</em>
+              </span>
+            </div>
+
+            <div style="background: #06080d; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1.1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <strong style="color: #d4af37; font-size: 0.88rem;">2. Escena Estudio & Vela (Aurelius leyendo Códices Antiguos)</strong>
+                <button onclick="copyToClipboard('Cinematic atmospheric view of the same elderly arch-mage with long white hair and flowing white beard, wearing an ornate brass astrolabe necklace over dark celestial robes. He is sitting in a cozy medieval castle chamber library at night, reading a massive ancient leather-bound chronicle book under the warm golden glow of a flickering candlestick. Around him are stone walls with floating lilac and neon cyan dust particles, scrolls, glass hourglasses, and subtle cosmic twilight glowing through a high arched stone window. Chillwave synthwave atmosphere, highly detailed, photorealistic 8k fantasy art --ar 16:9 --v 6.1 --style raw', this)" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.3rem 0.7rem;">
+                  <i class="fa-solid fa-copy"></i> Copiar Prompt
+                </button>
+              </div>
+              <code style="font-size: 0.78rem; color: #cbd5e1; display: block; line-height: 1.5; background: rgba(0,0,0,0.5); padding: 0.6rem; border-radius: 4px;">
+                Cinematic atmospheric view of the same elderly arch-mage with long white hair and flowing white beard, wearing an ornate brass astrolabe necklace over dark celestial robes. He is sitting in a cozy medieval castle chamber library at night, reading a massive ancient leather-bound chronicle book under the warm golden glow of a flickering candlestick. Around him are stone walls with floating lilac and neon cyan dust particles, scrolls, glass hourglasses, and subtle cosmic twilight glowing through a high arched stone window. Chillwave synthwave atmosphere, highly detailed, photorealistic 8k fantasy art --ar 16:9 --v 6.1 --style raw
+              </code>
+              <span style="display: block; margin-top: 0.4rem; font-size: 0.72rem; color: #94a3b8; font-family: monospace;">
+                Instrucción Runway Gen-3: <em>Static camera. Candle flame dancing smoothly, floating glittering lilac particles, warm shadows oscillating gently.</em>
+              </span>
+            </div>
+
+            <div style="background: #06080d; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1.1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <strong style="color: #a855f7; font-size: 0.88rem;">3. Escena El Dragón Negro (Umbraxion en el Gran Salón Gótico)</strong>
+                <button onclick="copyToClipboard('Cinematic epic shot of the same elderly arch-mage with long white hair, flowing white beard and a brass astrolabe pendant around his neck, gently placing his hand affectionately on the massive snout of a colossal, magnificent friendly black dragon that is peacefully resting curled up in the center of a gigantic gothic castle hall. Colossal vaulted ceilings and gothic columns, with floating lilac, purple, and neon cyan sparkling dust motes and soft ambient chillwave fog. Soft golden light on the mage and the dragon scales, deep celestial starry night visible through huge high windows. Emotional, awe-inspiring, hyper-detailed 8k concept art --ar 16:9 --v 6.1 --style raw', this)" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.3rem 0.7rem;">
+                  <i class="fa-solid fa-copy"></i> Copiar Prompt
+                </button>
+              </div>
+              <code style="font-size: 0.78rem; color: #cbd5e1; display: block; line-height: 1.5; background: rgba(0,0,0,0.5); padding: 0.6rem; border-radius: 4px;">
+                Cinematic epic shot of the same elderly arch-mage with long white hair, flowing white beard and a brass astrolabe pendant around his neck, gently placing his hand affectionately on the massive snout of a colossal, magnificent friendly black dragon that is peacefully resting curled up in the center of a gigantic gothic castle hall. Colossal vaulted ceilings and gothic columns, with floating lilac, purple, and neon cyan sparkling dust motes and soft ambient chillwave fog. Soft golden light on the mage and the dragon scales, deep celestial starry night visible through huge high windows. Emotional, awe-inspiring, hyper-detailed 8k concept art --ar 16:9 --v 6.1 --style raw
+              </code>
+              <span style="display: block; margin-top: 0.4rem; font-size: 0.72rem; color: #94a3b8; font-family: monospace;">
+                Instrucción Runway Gen-3: <em>Static shot. Dragon chest breathing slowly in deep rhythm, soft smoke exhaling from nostrils, glowing dust particles drifting.</em>
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- PESTAÑA 4: TOKENS DE MARCA & DISEÑO                        -->
+        <!-- ========================================================= -->
+        <div id="blueprint-pane-branding" class="blueprint-studio-pane" style="display: none;">
+          <div style="margin-bottom: 1.25rem;">
+            <h4 style="color: #fff; font-size: 1.15rem; margin: 0 0 0.5rem 0;">
+              <i class="fa-solid fa-palette" style="color: #ec4899; margin-right: 0.4rem;"></i> Sistema Visual & Tokens Semánticos (Click para copiar HEX)
+            </h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">
+              Paleta oficial para miniaturas de YouTube, overlays, elementos gráficos de la plataforma y material promocional.
+            </p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+            
+            <div onclick="copyToClipboard('#06080D', this)" class="contact-card" style="background: #06080D; border: 1px solid rgba(255,255,255,0.2); cursor: pointer; padding: 1rem; border-radius: 8px;">
+              <div>
+                <strong style="color: #fff; font-size: 0.85rem; display: block;">Dark Void / Obsidian</strong>
+                <span style="color: #94a3b8; font-family: monospace; font-size: 0.75rem;">#06080D (Fondo Primario)</span>
+              </div>
+            </div>
+
+            <div onclick="copyToClipboard('#0E131F', this)" class="contact-card" style="background: #0E131F; border: 1px solid rgba(255,255,255,0.2); cursor: pointer; padding: 1rem; border-radius: 8px;">
+              <div>
+                <strong style="color: #fff; font-size: 0.85rem; display: block;">Arcane Slate</strong>
+                <span style="color: #94a3b8; font-family: monospace; font-size: 0.75rem;">#0E131F (Superficies)</span>
+              </div>
+            </div>
+
+            <div onclick="copyToClipboard('#161F30', this)" class="contact-card" style="background: #161F30; border: 1px solid rgba(255,255,255,0.2); cursor: pointer; padding: 1rem; border-radius: 8px;">
+              <div>
+                <strong style="color: #fff; font-size: 0.85rem; display: block;">Parchment Dark</strong>
+                <span style="color: #94a3b8; font-family: monospace; font-size: 0.75rem;">#161F30 (Contenedores)</span>
+              </div>
+            </div>
+
+            <div onclick="copyToClipboard('#D4AF37', this)" class="contact-card" style="background: #1a1608; border: 1px solid #D4AF37; cursor: pointer; padding: 1rem; border-radius: 8px;">
+              <div>
+                <strong style="color: #D4AF37; font-size: 0.85rem; display: block;">Aura de Runa (Oro)</strong>
+                <span style="color: #fde68a; font-family: monospace; font-size: 0.75rem;">#D4AF37 (Acento Primario)</span>
+              </div>
+            </div>
+
+            <div onclick="copyToClipboard('#22D3EE', this)" class="contact-card" style="background: #061924; border: 1px solid #22D3EE; cursor: pointer; padding: 1rem; border-radius: 8px;">
+              <div>
+                <strong style="color: #22D3EE; font-size: 0.85rem; display: block;">Luz Élfica (Cian)</strong>
+                <span style="color: #a5f3fc; font-family: monospace; font-size: 0.75rem;">#22D3EE (Acento Neonwave)</span>
+              </div>
+            </div>
+
+            <div onclick="copyToClipboard('#A855F7', this)" class="contact-card" style="background: #190a29; border: 1px solid #A855F7; cursor: pointer; padding: 1rem; border-radius: 8px;">
+              <div>
+                <strong style="color: #A855F7; font-size: 0.85rem; display: block;">Magenta Astral (Lila)</strong>
+                <span style="color: #e9d5ff; font-family: monospace; font-size: 0.75rem;">#A855F7 (Polvo Chillwave)</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div style="background: #06080d; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1.25rem;">
+            <h5 style="color: #fff; font-size: 0.9rem; margin: 0 0 0.5rem 0;">Reglas de Composición de Assets de YouTube:</h5>
+            <ul style="color: #94a3b8; font-size: 0.8rem; line-height: 1.6; margin: 0; padding-left: 1.2rem;">
+              <li><strong>Miniatura (1280x720):</strong> Sujeto principal iluminado con halo cian o dorado en tercio derecho/central; tipografía máxima de 4 palabras en <em>Cinzel Bold</em> con trazo negro y glow lila.</li>
+              <li><strong>Banner (2560x1440):</strong> Safe Zone central de <strong>1546 x 423 px</strong> para el lema <em>"The Infinite Archive — Chronicled by The Grand Arcanum"</em> y el astrolabio central.</li>
+              <li><strong>Avatar / Sigil (1:1):</strong> Emblema geométrico rúnico centrado con fondo transparente o Dark Void con borde circular de oro alquímico.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- PESTAÑA 5: KIT SEO & EXPORTADOR YOUTUBE                    -->
+        <!-- ========================================================= -->
+        <div id="blueprint-pane-seo" class="blueprint-studio-pane" style="display: none;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 0.75rem;">
+            <div>
+              <h4 style="color: #fff; font-size: 1.15rem; margin: 0;">
+                <i class="fa-brands fa-youtube" style="color: #ef4444; margin-right: 0.4rem;"></i> Paquete SEO Listo para YouTube Studio
+              </h4>
+              <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0.25rem 0 0 0;">
+                Selecciona el tomo para cargar instantáneamente su título, lore, timestamps con técnica Pomodoro y 25 tags.
+              </p>
+            </div>
+            
+            <div style="display: flex; gap: 0.5rem;">
+              <button class="archive-filter-btn active" onclick="loadStudioYouTubeTome(1, this)">Tomo I (1.5h)</button>
+              <button class="archive-filter-btn" onclick="loadStudioYouTubeTome(2, this)">Codex II (2h)</button>
+              <button class="archive-filter-btn" onclick="loadStudioYouTubeTome(3, this)">Archive III (2h)</button>
+            </div>
+          </div>
+
+          <textarea id="studio-youtube-export" readonly style="width: 100%; height: 280px; background: #06080d; border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; color: #cbd5e1; font-family: monospace; font-size: 0.78rem; padding: 1rem; resize: vertical; line-height: 1.55;">
+TÍTULO SUGERIDO:
+Ancient Elven Library (Ambient Fantasy Music & Rain) 1.5 HOURS | Deep Reading & Tranquil Study
+
+DESCRIPCIÓN COMPLETA:
+"Has cruzado el umbral del Gran Arcano. Frente a ti se abre Tome I — Whispers of the Moonlit Sanctuary, un registro sonoro y visual custodiado en la Bóveda del Vacío."
 
 🌌 LORE DEL REGISTRO:
-El tomo que tienes ante ti recopila las frecuencias registradas en los santuarios de cristal de Sylveria por el Archicanciller Aurelius y el dragón Umbraxion. Diseñado específicamente para acompañar sesiones de estudio prolongado, lectura inmersiva o codificación sin fatiga auditiva.
+En los claustros de cristal de Sylveria, el Archicanciller Aurelius y el dragón Umbraxion preservan las frecuencias de los mundos perdidos. El polvo cósmico lila suspendido en el aire y la lluvia tenue disuelven la prisa mortal, abriendo el umbral de la concentración pura.
 
-⏱️ TIMESTAMPS & TRACKLIST:
+Este compendio acústico ha sido forjado para lectura reflexiva, concentración prolongada y reducción de cortisol, sin saltos de volumen abruptos ni fatiga auditiva.
+
+⏱️ MARCADORES DE TIEMPO (TIMESTAMPS & TRACKLIST):
 00:00 - Track 1A: Sylverian Starlight Harp & Dew (60 BPM | D Dorian)
 30:00 - Track 1B: Breeze Through the High Scriptorium (58 BPM | A Pentatonic)
 1:00:00 - Track 1C: The Starlight Maiden’s Incantation (62 BPM | E Aeolian)
-1:30:00 - Track 1D: The Dragon's Quiet Slumber (52 BPM | C Minor)
+
+🍅 TÉCNICA DE ESTUDIO RECOMENDADA (DEEP FOCUS POMODORO 50/10):
+00:00 - Bloque de Enfoque Profundo I (50 min)
+50:00 - Transición / Pausa de respiración, agua y descanso visual (10 min)
+1:00:00 - Bloque de Enfoque Profundo II (50 min)
+1:50:00 - Cierre del Tomo y asimilación
 
 🎧 ESPECIFICACIONES TÉCNICAS DE AUDIO:
-• Masterizado a -14 LUFS Integrated para YouTube.
-• Afinación armónica a 432 Hz / Frecuencias binaurales sub-graves templadas.
+• Masterizado profesional a -14 LUFS Integrated para YouTube.
+• Afinación armónica a 432 Hz / Frecuencias sub-graves templadas a 50 Hz.
+• Apto para auriculares abiertos, monitores de estudio y parlantes de escritorio.
 
-📜 DESCARGO ÉTICO Y LEGAL (LIBRE DE CONTENT ID):
-Toda la música y los visuales de The Infinite Archive son generados mediante IA de última generación y masterizados profesionalmente. Puedes utilizar este video en tus streams de Twitch o YouTube sin strikes de copyright.
+📜 DESCARGO ÉTICO, LEGAL Y CREATIVE COMMONS:
+Todas las piezas musicales y cinemáticas visuales de The Infinite Archive son generadas mediante ingeniería de prompts propietaria, modelos de síntesis de audio/video de última generación y masterización profesional en DAW.
+• LIBRE DE CONTENT ID: Puedes utilizar este video como fondo musical para tus transmisiones en vivo (Twitch, YouTube, Kick) o sesiones de estudio sin riesgo de reclamos de derechos ni desmonetización.
+
+🔗 CONEXIÓN CON LA BÓVEDA DEL GRAN ARCANO:
+• Plataforma Web Interactiva: https://infinitearchive.vault
+• Repositorio GitHub: https://github.com/danisantanderurrutia-coder/INCEL
+• Grimorio & Comunidad: https://discord.gg/infinite-archive
+
+#TheInfiniteArchive #ElvenMusic #FantasyStudy #DeepCalm #AmbientMusic #StudyWithMe
 
 TAGS (25 ETIQUETAS ESTRATÉGICAS):
 fantasy study music, medieval ambient focus, elven library ambience, deep work music coding, programmer focus beats, flow state ambient, dark academia study music, reading music fantasy, calm harp ambience, dwarven forge ambience, winter keep fireplace, ambient music 2 hours, lofi fantasy ambient, sleep fantasy sounds, relaxing rpg music, tabletop background music, dnd study playlist, focus music no drums, rain on window fantasy, chillwave fantasy, cinemagraph study background, medieval writing music, ambient soundscape study, study with me fantasy, the infinite archive
-        </textarea>
+          </textarea>
 
-        <div style="margin-top: 1rem; display: flex; gap: 0.75rem;">
-          <button onclick="copyToClipboard(document.getElementById('arcano-full-kit').value, this)" class="btn btn-primary" style="font-size: 0.82rem;">
-            <i class="fa-solid fa-copy"></i> Copiar Texto Completo
-          </button>
-          <a href="#channel/arcano" class="btn btn-secondary" style="font-size: 0.82rem;">
-            <i class="fa-solid fa-eye"></i> Ver Vista Pública de Producto
-          </a>
+          <div style="margin-top: 1rem; display: flex; gap: 0.75rem; justify-content: flex-end;">
+            <button onclick="copyToClipboard(document.getElementById('studio-youtube-export').value, this)" class="btn btn-primary" style="background: linear-gradient(135deg, #22d3ee, #0284c7); border: none; font-size: 0.85rem; font-weight: 700;">
+              <i class="fa-solid fa-copy"></i> Copiar Paquete Completo
+            </button>
+          </div>
         </div>
 
       </div>

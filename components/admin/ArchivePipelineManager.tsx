@@ -59,6 +59,7 @@ export const ArchivePipelineManager: React.FC<ArchivePipelineManagerProps> = ({
   const [isEditorOpen, setIsEditorOpen] = useState<boolean>(false);
   const [isYouTubeModalOpen, setIsYouTubeModalOpen] = useState<boolean>(false);
   const [copiedNotification, setCopiedNotification] = useState<string | null>(null);
+  const [adminTab, setAdminTab] = useState<'kanban' | 'sop' | 'audio_prompts' | 'visual_prompts' | 'brand_tokens'>('kanban');
 
   // Mover tomo a otra columna
   const moveTomeStatus = (tomeId: string, nextStatus: TomeStatus) => {
@@ -149,7 +150,7 @@ ${tome.seoMetadata.tags.join(', ')}
       )}
 
       {/* Barra Superior */}
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-[#1E293B]">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-[#1E293B]">
         <div>
           <div className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] mb-1">
             Production Pipeline • Master Control Room
@@ -184,7 +185,31 @@ ${tome.seoMetadata.tags.join(', ')}
         </div>
       </div>
 
-      {/* Tablero Kanban (5 Fases) */}
+      {/* Barra de Sub-Navegación del Master Blueprint */}
+      <div className="max-w-7xl mx-auto flex gap-2 flex-wrap mb-6 border-b border-[#1E293B] pb-4">
+        {[
+          { id: 'kanban', label: '📊 Tablero Kanban (5 Fases)', icon: 'fa-table-columns' },
+          { id: 'sop', label: '📋 SOP de Producción (Paso a Paso)', icon: 'fa-list-check' },
+          { id: 'audio_prompts', label: '🎵 Prompts de Audio IA', icon: 'fa-music' },
+          { id: 'visual_prompts', label: '🔮 Prompts Visuales & Loops', icon: 'fa-film' },
+          { id: 'brand_tokens', label: '🎨 Tokens de Marca (HEX)', icon: 'fa-palette' }
+        ].map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => setAdminTab(tab.id as any)}
+            className={`px-3.5 py-2 text-xs font-semibold rounded-lg transition-all flex items-center gap-2 ${
+              adminTab === tab.id
+                ? 'bg-[#22D3EE]/15 text-[#22D3EE] border border-[#22D3EE]/50 shadow-[0_0_15px_rgba(34,211,238,0.2)]'
+                : 'bg-[#121824] text-[#94A3B8] border border-[#1E293B] hover:text-white hover:border-white/20'
+            }`}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+
+      {/* VISTA 1: TABLERO KANBAN */}
+      {adminTab === 'kanban' && (
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 overflow-x-auto pb-6">
         {PIPELINE_COLUMNS.map((col) => {
           const colTomes = tomes.filter((t) => t.status === col.id);
@@ -283,6 +308,205 @@ ${tome.seoMetadata.tags.join(', ')}
           );
         })}
       </div>
+      )}
+
+      {/* VISTA 2: SOP DE PRODUCCIÓN (PASO A PASO) */}
+      {adminTab === 'sop' && (
+        <div className="max-w-7xl mx-auto space-y-6">
+          <div className="bg-[#0A0E17] border border-[#1E293B] rounded-2xl p-6 lg:p-8">
+            <h3 className="text-lg font-serif font-bold text-white mb-2 flex items-center gap-2">
+              <span className="text-[#F59E0B]">📋</span> Procedimiento Operativo Estándar (SOP de 5 Fases)
+            </h3>
+            <p className="text-xs text-[#94A3B8] mb-6">
+              Sigue esta secuencia para fabricar cada entrega audiovisual de 1.5h a 2h con cero reclamos de copyright y máxima retención auditiva.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="bg-[#121824] border border-[#F59E0B]/30 rounded-xl p-4 space-y-2">
+                <div className="flex justify-between items-center text-xs font-mono text-[#F59E0B]">
+                  <span>FASE 1</span>
+                  <span>Paso 1</span>
+                </div>
+                <h4 className="text-sm font-bold text-white">Lore del Tomo & Mindset</h4>
+                <p className="text-xs text-[#CBD5E1] leading-relaxed">
+                  Elige universo: Élfico (60 BPM), Enano (65 BPM) o Norteño (56 BPM). Redacta la historia y define la afinación base a 432 Hz.
+                </p>
+              </div>
+
+              <div className="bg-[#121824] border border-[#22D3EE]/30 rounded-xl p-4 space-y-2">
+                <div className="flex justify-between items-center text-xs font-mono text-[#22D3EE]">
+                  <span>FASE 2</span>
+                  <span>Paso 2</span>
+                </div>
+                <h4 className="text-sm font-bold text-white">Generación de Audio (Udio/Suno)</h4>
+                <p className="text-xs text-[#CBD5E1] leading-relaxed">
+                  Formula: Instrumento líder + textura ambiental + tempo exacto BPM + modo menor. Comando negativo: no drums, no sudden peaks, non-fatiguing mixdown.
+                </p>
+              </div>
+
+              <div className="bg-[#121824] border border-[#A855F7]/30 rounded-xl p-4 space-y-2">
+                <div className="flex justify-between items-center text-xs font-mono text-[#A855F7]">
+                  <span>FASE 3</span>
+                  <span>Paso 3</span>
+                </div>
+                <h4 className="text-sm font-bold text-white">Visuales en Bucle 8K (Midjourney + Runway)</h4>
+                <p className="text-xs text-[#CBD5E1] leading-relaxed">
+                  Genera el frame base en Midjourney v6.1 en ratio 16:9 con polvo lila y glow neonwave. Anima en Runway con cámara estática en ciclo de 10-15s.
+                </p>
+              </div>
+
+              <div className="bg-[#121824] border border-[#38BDF8]/30 rounded-xl p-4 space-y-2">
+                <div className="flex justify-between items-center text-xs font-mono text-[#38BDF8]">
+                  <span>FASE 4</span>
+                  <span>Paso 4</span>
+                </div>
+                <h4 className="text-sm font-bold text-white">Timeline NLE & Masterizado (DaVinci/Premiere)</h4>
+                <p className="text-xs text-[#CBD5E1] leading-relaxed">
+                  Extiende a 1.5h o 2h encadenando 3 pistas con crossfades continuos de 10-12s. Normaliza a -14 LUFS Integrated.
+                </p>
+              </div>
+
+              <div className="bg-[#121824] border border-[#10B981]/30 rounded-xl p-4 space-y-2">
+                <div className="flex justify-between items-center text-xs font-mono text-[#10B981]">
+                  <span>FASE 5</span>
+                  <span>Paso 5</span>
+                </div>
+                <h4 className="text-sm font-bold text-white">Publicación en YouTube Studio</h4>
+                <p className="text-xs text-[#CBD5E1] leading-relaxed">
+                  Aplica título con fórmula de alto CTR, descripción con timestamps y técnica Pomodoro 50/10, y el bloque de 25 tags estratégicas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* VISTA 3: PROMPTS DE AUDIO IA */}
+      {adminTab === 'audio_prompts' && (
+        <div className="max-w-7xl mx-auto space-y-4">
+          <div className="bg-[#0A0E17] border border-[#1E293B] rounded-2xl p-6 lg:p-8 space-y-6">
+            <h3 className="text-lg font-serif font-bold text-white flex items-center gap-2">
+              <span className="text-[#22D3EE]">🎵</span> Prompts Maestros de Audio IA (Udio / Suno / MusicGen)
+            </h3>
+            
+            {tomes.map((tome) => (
+              <div key={tome.id} className="space-y-3 pt-3 border-t border-[#1E293B]">
+                <div className="flex justify-between items-center">
+                  <h4 className="text-sm font-bold text-[#E5C158]">{tome.romanNumeral}: {tome.title} ({tome.universe})</h4>
+                  <span className="text-xs font-mono text-[#94A3B8]">{tome.targetMindset}</span>
+                </div>
+                <div className="grid grid-cols-1 gap-3">
+                  {tome.audioTracks.map((tr) => (
+                    <div key={tr.id} className="bg-[#121824] border border-[#1E293B] rounded-xl p-3.5 space-y-2">
+                      <div className="flex justify-between items-center">
+                        <span className="text-xs font-bold text-white">{tr.code}: {tr.name} ({tr.bpm} BPM | {tr.keyScale})</span>
+                        <button
+                          onClick={() => {
+                            navigator.clipboard.writeText(tr.prompt);
+                            showNotification(`Prompt de ${tr.code} copiado`);
+                          }}
+                          className="text-[11px] font-mono text-[#22D3EE] hover:underline"
+                        >
+                          Copiar Prompt
+                        </button>
+                      </div>
+                      <p className="text-xs font-mono text-[#CBD5E1] bg-[#06080D] p-2.5 rounded-lg border border-white/5">
+                        {tr.prompt}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* VISTA 4: PROMPTS VISUALES & LOOPS */}
+      {adminTab === 'visual_prompts' && (
+        <div className="max-w-7xl mx-auto space-y-4">
+          <div className="bg-[#0A0E17] border border-[#1E293B] rounded-2xl p-6 lg:p-8 space-y-6">
+            <h3 className="text-lg font-serif font-bold text-white flex items-center gap-2">
+              <span className="text-[#A855F7]">🔮</span> Prompts Visuales Midjourney v6.1 & Runway Gen-3 Loops
+            </h3>
+            
+            <div className="grid grid-cols-1 gap-4">
+              {[
+                {
+                  title: '1. Aurelius en la Ventana de la Aguja (Tower Window)',
+                  prompt: 'Cinematic shot of an ancient wise arch-mage with long white hair and a flowing long white beard, wearing dark weathered celestial robes, with an intricate brass astrolabe pendant hanging around his neck. He stands looking out a giant stone arched gothic window from a very high castle tower, gazing down at the eerie remnants of a ruined ancient city below. Outside, the dark sky blends seamlessly into deep space with glowing stars, cosmic nebula, and glittering lilac and violet dust motes. Chillwave neonwave atmospheric lighting, cyan and purple rim glow, melancholy and tranquil mood, highly detailed 8k cinematic fantasy concept art --ar 16:9 --v 6.1 --style raw',
+                  videoNote: 'Runway Gen-3: Static camera. Subtle floating lilac dust particles, gentle wind blowing through white hair, seamless 10s loop.'
+                },
+                {
+                  title: '2. Aurelius en la Biblioteca con Códice Dorado (Library Study)',
+                  prompt: 'Cinematic atmospheric view of the same elderly arch-mage with long white hair and flowing white beard, wearing an ornate brass astrolabe necklace over dark celestial robes. He is sitting in a cozy medieval castle chamber library at night, reading a massive ancient leather-bound chronicle book under the warm golden glow of a flickering candlestick. Around him are stone walls with floating lilac and neon cyan dust particles, scrolls, glass hourglasses, and subtle cosmic twilight glowing through a high arched stone window. Chillwave synthwave atmosphere, highly detailed, photorealistic 8k fantasy art --ar 16:9 --v 6.1 --style raw',
+                  videoNote: 'Runway Gen-3: Static camera. Candle flame dancing smoothly, floating glittering lilac particles, warm shadows oscillating gently.'
+                },
+                {
+                  title: '3. El Dragón Negro Umbraxion en el Gran Salón (Obsidian Dragon Hall)',
+                  prompt: 'Cinematic epic shot of the same elderly arch-mage with long white hair, flowing white beard and a brass astrolabe pendant around his neck, gently placing his hand affectionately on the massive snout of a colossal, magnificent friendly black dragon that is peacefully resting curled up in the center of a gigantic gothic castle hall. Colossal vaulted ceilings and gothic columns, with floating lilac, purple, and neon cyan sparkling dust motes and soft ambient chillwave fog. Soft golden light on the mage and the dragon scales, deep celestial starry night visible through huge high windows. Emotional, awe-inspiring, hyper-detailed 8k concept art --ar 16:9 --v 6.1 --style raw',
+                  videoNote: 'Runway Gen-3: Static shot. Dragon chest breathing slowly in deep rhythm, soft smoke exhaling from nostrils, glowing dust particles drifting.'
+                }
+              ].map((vis, idx) => (
+                <div key={idx} className="bg-[#121824] border border-[#1E293B] rounded-xl p-4 space-y-2">
+                  <div className="flex justify-between items-center">
+                    <strong className="text-xs text-white">{vis.title}</strong>
+                    <button
+                      onClick={() => {
+                        navigator.clipboard.writeText(vis.prompt);
+                        showNotification('Prompt visual copiado');
+                      }}
+                      className="text-xs font-mono text-[#A855F7] hover:underline"
+                    >
+                      Copiar Prompt
+                    </button>
+                  </div>
+                  <p className="text-xs font-mono text-[#CBD5E1] bg-[#06080D] p-3 rounded-lg border border-white/5">
+                    {vis.prompt}
+                  </p>
+                  <span className="text-[11px] font-mono text-[#94A3B8] block">{vis.videoNote}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* VISTA 5: TOKENS DE MARCA & DISEÑO */}
+      {adminTab === 'brand_tokens' && (
+        <div className="max-w-7xl mx-auto space-y-4">
+          <div className="bg-[#0A0E17] border border-[#1E293B] rounded-2xl p-6 lg:p-8 space-y-6">
+            <h3 className="text-lg font-serif font-bold text-white flex items-center gap-2">
+              <span className="text-[#EC4899]">🎨</span> Tokens Semánticos de Marca (Click para Copiar HEX)
+            </h3>
+            
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+              {[
+                { name: 'Dark Void', hex: '#06080D', role: 'Fondo Primario' },
+                { name: 'Arcane Slate', hex: '#0E131F', role: 'Superficies' },
+                { name: 'Parchment Dark', hex: '#161F30', role: 'Contenedores' },
+                { name: 'Aura de Runa', hex: '#D4AF37', role: 'Oro Alquímico' },
+                { name: 'Luz Élfica', hex: '#22D3EE', role: 'Cian Neonwave' },
+                { name: 'Magenta Astral', hex: '#A855F7', role: 'Polvo Lila' }
+              ].map((tok) => (
+                <div
+                  key={tok.hex}
+                  onClick={() => {
+                    navigator.clipboard.writeText(tok.hex);
+                    showNotification(`Color ${tok.name} (${tok.hex}) copiado`);
+                  }}
+                  className="p-3.5 rounded-xl border border-white/10 cursor-pointer hover:scale-105 transition-all space-y-2"
+                  style={{ backgroundColor: tok.hex }}
+                >
+                  <span className="text-xs font-bold text-white block drop-shadow-md">{tok.name}</span>
+                  <span className="text-[10px] font-mono text-white/80 block drop-shadow-md">{tok.hex}</span>
+                  <span className="text-[9px] text-white/60 block drop-shadow-md">{tok.role}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Modal Visor y Copiador SEO de YouTube */}
       {isYouTubeModalOpen && activeTome && (
