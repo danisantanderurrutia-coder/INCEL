@@ -1069,6 +1069,57 @@ influencersData['alina_van_dijk'] = influencersData.alina;
 influencersData['alinavandijk'] = influencersData.alina;
 
 const channelsData = {
+  arcano: {
+    id: "arcano",
+    title: "The Infinite Archive (El Gran Arcano)",
+    subtitle: "Bóveda Fuera del Tiempo • Fantasía Oscura & Chillwave Lo-Fi",
+    category: "Fantasía Oscura / Música Chillwave & Deep Work",
+    icon: "fa-gem",
+    color: "#a855f7",
+    image: "arcano_tower_window.jpg",
+    concept: "Franquicia multimedia y canal faceless de alta retención que combina atmósferas chillwave/neonwave, ambient medieval y relatos de fantasía cósmica. Custodiado por Aurelius Chronovoid y el dragón Umbraxion en la fortaleza de Kar-Kaelum. Diseñado para sesiones de programación (coding beats), estudio profundo y meditación inmersiva.",
+    targetAge: "Audiencia global de 18 a 45 años: programadores, estudiantes de STEM, creadores de contenido, gamers de rol/D&D y amantes del dark academia y synthwave.",
+    episodes: [
+      {
+        title: "Tomo I • La Torre sobre las Cenizas (Sesión de Estudio 2h)",
+        duration: "2:04:12 h",
+        script: "[NARRADOR / AURELIUS]: \"Las guerras desgarraron los continentes de carne y piedra, pero el sonido de las estrellas es inmortal. Aquí aguardo con Umbraxion hasta que el tiempo decida recomenzar.\"\n[ATMÓSFERA]: Viento cósmico lila, arpa celta suspendida, frecuencias binaurales 432 Hz y crepitar de fuego eterno.\n[OBJETIVO]: Inducción de estado de flujo profundo (flow state) para programación y estudio continuo.",
+        thumbnail: "Aurelius mirando desde la ventana de la aguja hacia el espacio profundo y las nebulosas púrpuras con astrolabio brillante."
+      },
+      {
+        title: "Tomo II • El Manuscrito de las Eras (Lectura & Fuego Eterno)",
+        duration: "1:48:30 h",
+        script: "[NARRADOR / AURELIUS]: \"Un libro no es tinta muerta; es una partitura del alma. Mientras alguien lea sus historias, sus mundos siguen latiendo en la penumbra.\"\n[ATMÓSFERA]: Susurro de páginas milenarias, laúd acústico, lluvia sobre vitrales góticos y resonancia sub-grave de Umbraxion.",
+        thumbnail: "Aurelius en su biblioteca de piedra descifrando un códice dorado con pluma y polvo bioluminiscente."
+      },
+      {
+        title: "Tomo III • La Bestia del Vacío (Frecuencias Delta & Sueño)",
+        duration: "3:00:00 h",
+        script: "[NARRADOR / AURELIUS]: \"No temas a la oscuridad si camina a tu lado. Umbraxion nació del vacío primordial, y en su pecho late la calma de un millón de noches serenas.\"\n[ATMÓSFERA]: Latido rítmico y respiración del dragón de obsidiana a 0.5 Hz, disipando la tensión nerviosa y el insomnio.",
+        thumbnail: "Umbraxion reposando en el gran salón con escamas de obsidiana y Aurelius posando su mano en su hocico."
+      }
+    ],
+    pipeline: "Generación de lore y poemas con LLM especializado -> Diseño de paisajes sonoros y pistas modulares con Suno v3.5/Udio -> Masterización DAW profesional (-14 LUFS / 432 Hz) -> Cinemagrafías en 4K con Midjourney v6.1 y Kling 3.0 / Runway Gen-3 -> Transmisión en bucle 24/7 y videos largos de 2 a 3 horas.",
+    monetization: "Licencias de sincronización para videojuegos y podcasts, patrocinios in-stream con marcas tech/gaming/café, AdSense de alta permanencia (promedio de reproducción 42 min por sesión) y membresías de la Bóveda Secreta en Fanvue/Patreon.",
+    commercialProducts: [
+      {
+        name: "Licencia de Biblioteca Sonora Libre de Content ID",
+        desc: "Acceso ilimitado a más de 50 temas masterizados para uso en streams de Twitch/YouTube, podcasts o bandas sonoras sin riesgo de reclamos de copyright.",
+        price: "$490 USD / licencia perpetua"
+      },
+      {
+        name: "Patrocinio In-Stream & Mención Visual en YouTube",
+        desc: "Colocación de tu marca en el entorno 3D (ej. libro en la mesa de Aurelius, terminal holográfica o banner en pantalla) + mención en descripción con enlace de afiliado.",
+        price: "$850 USD / mes (presencia en 4 videos largos)"
+      },
+      {
+        name: "Desarrollo de Canal Faceless a Medida (Llave en Mano)",
+        desc: "Creamos un universo sonoro y visual exclusivo con tu propia identidad de marca, 5 primeros videos largos de 2h producidos y canal configurado.",
+        price: "$2.900 USD (entrega en 10 días)"
+      }
+    ]
+  },
+
   sofia: {
     id: "sofia",
     title: "1. Los viajes en el tiempo de Sofía",
@@ -1230,6 +1281,8 @@ const channelsData = {
 
 channelsData.lau_gamedev = channelsData.kira_gamedev;
 channelsData.mateo = channelsData.mateo_fintech;
+channelsData["infinite-archive"] = channelsData.arcano;
+channelsData.arcano = channelsData.arcano;
 
 // --- 3. AUTHENTICATION & ACCESS CONTROL FOR INTERNAL TEAM PANEL ---
 let pendingTeamTab = 'members';
@@ -1295,6 +1348,10 @@ function handleAuthSubmit(e) {
       const id = pendingTeamTab.replace('influencer-cockpit:', '');
       renderInfluencerPage(id, 'cockpit');
       showDynamicView();
+    } else if (pendingTeamTab && pendingTeamTab.startsWith('youtube-channel:')) {
+      const channelId = pendingTeamTab.replace('youtube-channel:', '');
+      showTeamView('youtube-studio');
+      selectAdminChannel(channelId);
     } else {
       showTeamView(pendingTeamTab || 'members');
     }
@@ -1382,6 +1439,22 @@ function handleRoute() {
     const channelId = hash.replace('#channel/', '');
     renderChannelPage(channelId);
     showDynamicView();
+  } else if (hash === '#roster' || hash === '#influencers') {
+    renderInfluencersPage();
+    showDynamicView();
+  } else if (hash === '#youtube' || hash === '#canales') {
+    renderYoutubeCatalogPage();
+    showDynamicView();
+  } else if (hash === '#arcano' || hash === '#infinite-archive') {
+    renderChannelPage('arcano');
+    showDynamicView();
+  } else if (hash === '#team-youtube' || hash === '#youtube-studio') {
+    if (isTeamAuthenticated()) {
+      showTeamView('youtube-studio');
+    } else {
+      openAuthModal('youtube-studio');
+      showPublicView();
+    }
   } else if (hash === '#asesorias') {
     renderAdvisoriesPage();
     showDynamicView();
@@ -1485,15 +1558,17 @@ function switchTeamTab(tab) {
   const btnCopys = document.getElementById('btn-team-tab-copys');
   const btnMembers = document.getElementById('btn-team-tab-members');
   const btnInfluencerOps = document.getElementById('btn-team-tab-influencer-ops');
+  const btnYoutubeStudio = document.getElementById('btn-team-tab-youtube-studio');
 
   const paneGantt = document.getElementById('team-pane-gantt');
   const panePipeline = document.getElementById('team-pane-pipeline');
   const paneCopys = document.getElementById('team-pane-copys');
   const paneMembers = document.getElementById('team-pane-members');
   const paneInfluencerOps = document.getElementById('team-pane-influencer-ops');
+  const paneYoutubeStudio = document.getElementById('team-pane-youtube-studio');
 
-  [btnGantt, btnPipeline, btnCopys, btnMembers, btnInfluencerOps].forEach(b => { if (b) b.classList.remove('active'); });
-  [paneGantt, panePipeline, paneCopys, paneMembers, paneInfluencerOps].forEach(p => { if (p) p.classList.remove('active-pane'); });
+  [btnGantt, btnPipeline, btnCopys, btnMembers, btnInfluencerOps, btnYoutubeStudio].forEach(b => { if (b) b.classList.remove('active'); });
+  [paneGantt, panePipeline, paneCopys, paneMembers, paneInfluencerOps, paneYoutubeStudio].forEach(p => { if (p) p.classList.remove('active-pane'); });
 
   if (tab === 'gantt') {
     if (btnGantt) btnGantt.classList.add('active');
@@ -1512,6 +1587,11 @@ function switchTeamTab(tab) {
     if (paneInfluencerOps) paneInfluencerOps.classList.add('active-pane');
     if (window.location.hash !== '#influencer-ops') window.location.hash = '#influencer-ops';
     renderInfluencerOpsMatrix();
+  } else if (tab === 'youtube-studio') {
+    if (btnYoutubeStudio) btnYoutubeStudio.classList.add('active');
+    if (paneYoutubeStudio) paneYoutubeStudio.classList.add('active-pane');
+    if (window.location.hash !== '#team-youtube') window.location.hash = '#team-youtube';
+    renderAdminYoutubeStudio(window.pendingAdminChannel || 'arcano');
   } else {
     // Default tab: 'members' (Posición 1: Equipo Fundador & Roles)
     if (btnMembers) btnMembers.classList.add('active');
@@ -3611,7 +3691,477 @@ function renderInfluencerCockpit(id) {
   }, 30);
 }
 
-// RENDER: CHANNEL PAGE
+
+// --- RENDER: INFLUENCERS DEDICATED CATALOG PAGE ---
+function renderInfluencersPage(categoryFilter = 'all') {
+  const container = document.getElementById('view-dynamic');
+  if (!container) return;
+
+  const list = [
+    {
+      id: 'elena',
+      name: 'Elena Daddario',
+      avatar: 'elena_avatar.png',
+      nicheIcon: 'fa-brain',
+      niche: 'Psicología & Lifestyle Europeo',
+      category: 'lifestyle',
+      badge: 'Activo Certificado • Lifestyle Consciente',
+      badgeColor: '#60a5fa',
+      desc: '27 años. Rusa en Miraflores. Elegancia atemporal, psicología y bienestar emocional. Disponible para campañas de marcas conscientes, moda y lifestyle.',
+      tags: ['Psicología', 'Moda Europea', 'Miraflores']
+    },
+    {
+      id: 'julia',
+      name: 'Julia Schmidt',
+      avatar: 'julia_avatar.jpg',
+      nicheIcon: 'fa-spa',
+      niche: 'Dermocosmética & Clean Beauty',
+      category: 'beauty',
+      badge: 'Activo Certificado • Clean Beauty',
+      badgeColor: '#ec4899',
+      desc: '24 años. Miraflores. Reseñas científicas sin filtro, dupes accesibles y skincare real. Ideal para colaboraciones con marcas dermocosméticas y belleza limpia.',
+      tags: ['Skincare', 'Clean Beauty', 'Dermocosmética']
+    },
+    {
+      id: 'maite',
+      name: 'Maite Valenzuela',
+      avatar: 'maite_avatar.jpg',
+      nicheIcon: 'fa-music',
+      niche: 'Cumbia Campesina & Tradición Chilena',
+      category: 'music',
+      badge: 'Activo Certificado • Cumbia Ranchera',
+      badgeColor: '#f59e0b',
+      desc: '22 años. Curicó/Santiago. Carisma popular, música festiva chilena y cercanía rural. Gran fidelización y tracción masiva para festivales y marcas de consumo masivo.',
+      tags: ['Música Chilena', 'Cumbia Ranchera', 'Fiestas Patrias']
+    },
+    {
+      id: 'mateo',
+      name: 'Mateo Silva',
+      avatar: 'mateo_avatar.jpg',
+      nicheIcon: 'fa-arrow-trend-up',
+      niche: 'FinTech, Inversiones Cuantitativas & Real Estate',
+      category: 'finance',
+      badge: 'Activo Certificado • FinTech & Wealth',
+      badgeColor: 'var(--cyan)',
+      desc: '31 años. Fráncfort/Santiago. Análisis cuantitativo con Python, tokenización de activos y asesoría en Real Estate europeo. Alto poder adquisitivo.',
+      tags: ['Finanzas', 'Python Trading', 'Real Estate Tech']
+    },
+    {
+      id: 'kira',
+      name: 'Kira Vane',
+      avatar: 'kira_avatar.png',
+      nicheIcon: 'fa-gamepad',
+      niche: 'Desarrollo Indie, Godot & Ciber-Activismo',
+      category: 'tech',
+      badge: 'Activo Certificado • Gaming & Open Source',
+      badgeColor: '#10b981',
+      desc: '23 años. Berlín/Valparaíso. Programadora independiente, devlogs técnicos y defensa de la soberanía digital y el software libre.',
+      tags: ['GameDev', 'Godot Engine', 'Open Source']
+    },
+    {
+      id: 'laura',
+      name: 'Laura Santos',
+      avatar: 'laura_avatar.png',
+      nicheIcon: 'fa-dumbbell',
+      niche: 'Fitness Funcional, Calistenia & Nutrición',
+      category: 'lifestyle',
+      badge: 'Activo Certificado • High-Performance',
+      badgeColor: '#f97316',
+      desc: '26 años. Santiago/Viña del Mar. Rutinas de alta intensidad, biohacking accesible y suplementación limpia sin mitos comerciales.',
+      tags: ['Fitness', 'Calistenia', 'Biohacking']
+    },
+    {
+      id: 'liravoss',
+      name: 'Lira Voss',
+      avatar: 'liravoss_avatar.png',
+      nicheIcon: 'fa-laptop-code',
+      niche: 'Vibe Coding, AI Agents & Cyberpunk Aesthetic',
+      category: 'tech',
+      badge: 'Activo Certificado • Creative Tech',
+      badgeColor: '#a855f7',
+      desc: '25 años. Toronto/Berlín. Exploradora de interfaces futuristas, flujos generativos de audio y creación de software autónomo con agentes de IA.',
+      tags: ['AI Agents', 'Vibe Coding', 'Cyberpunk']
+    }
+  ];
+
+  const filtered = categoryFilter === 'all' ? list : list.filter(item => item.category === categoryFilter);
+
+  container.innerHTML = `
+    <div class="breadcrumb-bar">
+      <div class="breadcrumbs">
+        <a href="#home">Inicio</a>
+        <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
+        <span class="current">Catálogo de Influencers IA</span>
+      </div>
+      <a href="#home" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver a Inicio</a>
+    </div>
+
+    <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem auto;">
+      <span class="section-subtitle" style="color: var(--purple);"><i class="fa-solid fa-gem"></i> Catálogo Comercial & Licenciamiento</span>
+      <h1 style="font-family: var(--font-heading); font-size: 2.8rem; font-weight: 900; margin: 0.5rem 0 1rem 0;">
+        Influencers IA: Modelos Listos para Venta y Escalamiento
+      </h1>
+      <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7;">
+        Activos digitales hiperrealistas con consistencia consagrada. Listos para acuerdos de marca, patrocinios B2B, embudos directos a suscripción VIP (Fanvue / PPV) y contratos de representación comercial.
+      </p>
+
+      <!-- Category Filter Tabs -->
+      <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+        <button class="archive-filter-btn ${categoryFilter === 'all' ? 'active' : ''}" onclick="renderInfluencersPage('all')">Todos (${list.length})</button>
+        <button class="archive-filter-btn ${categoryFilter === 'lifestyle' ? 'active' : ''}" onclick="renderInfluencersPage('lifestyle')">Lifestyle & Moda</button>
+        <button class="archive-filter-btn ${categoryFilter === 'beauty' ? 'active' : ''}" onclick="renderInfluencersPage('beauty')">Belleza & Skincare</button>
+        <button class="archive-filter-btn ${categoryFilter === 'music' ? 'active' : ''}" onclick="renderInfluencersPage('music')">Música & Regional</button>
+        <button class="archive-filter-btn ${categoryFilter === 'finance' ? 'active' : ''}" onclick="renderInfluencersPage('finance')">FinTech & Inversión</button>
+        <button class="archive-filter-btn ${categoryFilter === 'tech' ? 'active' : ''}" onclick="renderInfluencersPage('tech')">Gaming & Tech</button>
+      </div>
+    </div>
+
+    <div class="roster-grid">
+      ${filtered.map(item => `
+        <div class="glass-card influencer-card" style="border-color: rgba(255, 255, 255, 0.12);">
+          <div class="influencer-img-wrapper">
+            <img src="${item.avatar}" alt="${item.name}" class="influencer-img" loading="lazy">
+            <span class="influencer-badge" style="color: ${item.badgeColor}; border-color: ${item.badgeColor}; background: rgba(10, 12, 24, 0.85); backdrop-filter: blur(8px);">
+              <i class="fa-solid fa-gem"></i> ${item.badge}
+            </span>
+          </div>
+          <div class="influencer-info">
+            <h3 class="influencer-name">${item.name}</h3>
+            <span class="influencer-niche"><i class="fa-solid ${item.nicheIcon}"></i> ${item.niche}</span>
+            <p class="influencer-desc">${item.desc}</p>
+            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.85rem;">
+              ${item.tags.map(t => `<span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: rgba(255,255,255,0.06); border-radius: 4px; color: var(--text-muted);">${t}</span>`).join('')}
+            </div>
+            <div style="display: flex; gap: 0.5rem; margin-top: auto;">
+              <a href="#influencer/${item.id}" class="btn btn-primary influencer-btn" style="flex: 1; justify-content: center; font-size: 0.82rem;">
+                <i class="fa-solid fa-arrow-right"></i> Ver Ficha de Producto
+              </a>
+              <button onclick="openInfluencerCockpit('${item.id}')" class="btn btn-secondary" style="padding: 0.5rem 0.75rem; font-size: 0.82rem;" title="Cockpit Operativo (Admin)">
+                <i class="fa-solid fa-lock"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+
+    <!-- Commercial Avatar Custom Creation Callout -->
+    <div class="glass-card" style="margin-top: 3.5rem; padding: 2.2rem; border-color: rgba(139, 92, 246, 0.4); background: radial-gradient(circle at center, rgba(139, 92, 246, 0.1) 0%, rgba(10, 12, 22, 0.95) 100%); border-radius: var(--radius-lg); text-align: center;">
+      <span class="detail-badge" style="background: rgba(139, 92, 246, 0.2); color: var(--purple); border-color: var(--purple); margin-bottom: 0.75rem;">
+        CREACIÓN EXCLUSIVA PARA MARCAS
+      </span>
+      <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: #fff; margin-bottom: 0.75rem;">
+        ¿Deseas Crear un Influencer Virtual Propio para tu Empresa?
+      </h3>
+      <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 680px; margin: 0 auto 1.5rem auto; line-height: 1.6;">
+        Diseñamos avatares con consistencia facial 100% exclusiva, entrenados con LoRA privado y adaptados a los valores corporativos de tu marca. Sin regalías a modelos humanas y con entrega de activos en 48 horas.
+      </p>
+      <a href="#clientes" class="btn btn-primary" style="font-size: 0.95rem; padding: 0.75rem 1.75rem;">
+        <i class="fa-solid fa-handshake"></i> Solicitar Creación de Modelo a Medida
+      </a>
+    </div>
+  `;
+}
+
+// --- RENDER: YOUTUBE DEDICATED CATALOG PAGE ---
+function renderYoutubeCatalogPage() {
+  const container = document.getElementById('view-dynamic');
+  if (!container) return;
+
+  const channelsList = [
+    {
+      id: 'mateo_fintech',
+      title: 'Mateo Silva • Alpha Capital Insights',
+      subtitle: 'FinTech, Modelos en Python & Real Estate Tech',
+      category: 'Finanzas Cuantitativas',
+      icon: 'fa-arrow-trend-up',
+      color: 'var(--cyan)',
+      image: 'mateo_avatar.jpg',
+      duration: '16:20 / Análisis',
+      desc: 'Análisis financiero cuantitativo, modelos algorítmicos en Python y estrategias de inversión sin mitos. El canal con mayor RPM del portafolio.',
+      monetization: 'AdSense FinTech ($24–$45 USD RPM) + Patrocinios Neobancos + Venta de Algoritmos'
+    },
+    {
+      id: 'kira_gamedev',
+      title: 'Kira Vane • DevLogs & Ciber-Activismo',
+      subtitle: 'Desarrollo Indie en Godot & Soberanía Digital',
+      category: 'Gaming & Open Source',
+      icon: 'fa-gamepad',
+      color: '#10b981',
+      image: 'yt_kira_thumb.jpg',
+      duration: '14:15 / DevLog',
+      desc: 'Devlogs de programación en Godot/Unreal y ensayos sobre soberanía de código y privacidad digital presentados por Kira Vane.',
+      monetization: 'Patrocinios SaaS Cloud + Wishlists Steam + AdSense Dev ($9–$15 USD RPM)'
+    },
+    {
+      id: 'ranchera',
+      title: 'Maite & La Fiebre Ranchera',
+      subtitle: 'Cumbia Campesina & Videoclips 4K',
+      category: 'Música & Cono Sur',
+      icon: 'fa-music',
+      color: '#f59e0b',
+      image: 'yt_ranchera_thumb.jpg',
+      duration: '60:00 / Mix Festivo',
+      desc: 'Videoclips 4K generativos y mixes festivos de 1h para asados y fiestas populares en Chile y el Cono Sur con la voz de Maite Valenzuela.',
+      monetization: 'AdSense Sesiones Largas ($4.5–$7 USD RPM) + Spotify/Apple Music + Licores'
+    },
+    {
+      id: 'arcanotech',
+      title: 'Los Gemelos Arcanotech',
+      subtitle: 'Solarpunk vs Cyberpunk',
+      category: 'Sci-Fi & Futurismo',
+      icon: 'fa-atom',
+      color: 'var(--cyan)',
+      image: 'yt_arcanotech_thumb.jpg',
+      duration: '12:40 / Debate',
+      desc: 'Debates narrativos entre dos magos gemelos: utopías solares ecológicas vs distopías cibernéticas nocturnas. Alta afinidad para comunidad dev.',
+      monetization: 'Patrocinios Tech/VPNs + AdSense Sci-Fi ($6–$9.5 USD RPM) + Afiliados Hardware'
+    },
+    {
+      id: 'sagrados',
+      title: 'Cuentos Sagrados (sin autor)',
+      subtitle: 'Historia de las Religiones & Mitología',
+      category: 'Historia & Filosofía',
+      icon: 'fa-scroll',
+      color: 'var(--purple)',
+      image: 'yt_sagrados_thumb.jpg',
+      duration: '18:20 / Documental',
+      desc: 'Relatos universales y mitos fundacionales narrados con sobriedad y arte generativo estilo óleo al claroscuro. Gran consumo en audiencias maduras.',
+      monetization: 'Audiolibros Audible + AdSense Premium ($7–$12 USD RPM) + Licencias Educativas'
+    },
+    {
+      id: 'sofia',
+      title: 'Los viajes en el tiempo de Sofía',
+      subtitle: 'Canal Infantil & Educativo de Historia',
+      category: 'Infantil / Historia',
+      icon: 'fa-child-reaching',
+      color: 'var(--pink)',
+      image: 'yt_sofia_thumb.jpg',
+      duration: '0:58 / Short',
+      desc: 'Micro-aventuras animadas de 60 segundos por portales temporales (Egipto, Roma, Renacimiento). Alta retención y valores familiares.',
+      monetization: 'AdSense Kids ($3.5–$5 USD RPM) + Libros KDP en Amazon + Merchandising'
+    }
+  ];
+
+  container.innerHTML = `
+    <div class="breadcrumb-bar">
+      <div class="breadcrumbs">
+        <a href="#home">Inicio</a>
+        <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
+        <span class="current">Canales de YouTube & The Infinite Archive</span>
+      </div>
+      <a href="#home" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver a Inicio</a>
+    </div>
+
+    <!-- Header Section -->
+    <div style="text-align: center; max-width: 840px; margin: 0 auto 2.5rem auto;">
+      <span class="section-subtitle" style="color: #ef4444;"><i class="fa-brands fa-youtube"></i> Producción Automatizada & Universos IP</span>
+      <h1 style="font-family: var(--font-heading); font-size: 2.8rem; font-weight: 900; margin: 0.5rem 0 1rem 0;">
+        Canales de YouTube: Universos Propietarios y Formatos Automatizados
+      </h1>
+      <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7;">
+        Creamos canales faceless de alta retención generados con inteligencia artificial, masterización sonora en DAW y consistencia visual 4K. Modelos de monetización probados vía AdSense, patrocinios B2B y licencias de IP.
+      </p>
+    </div>
+
+    <!-- =================================================================== -->
+    <!-- PREMIER SHOWCASE: THE INFINITE ARCHIVE (EL GRAN ARCANO)              -->
+    <!-- Destacado al inicio más grande que el resto                         -->
+    <!-- =================================================================== -->
+    <div class="glass-card" style="border: 2px solid rgba(168, 85, 247, 0.5); background: radial-gradient(circle at top right, rgba(168, 85, 247, 0.18) 0%, rgba(10, 12, 24, 0.98) 100%); border-radius: var(--radius-lg); padding: 2.5rem; margin-bottom: 4rem; position: relative; overflow: hidden; box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(168, 85, 247, 0.15);">
+      
+      <!-- Top Badge -->
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem;">
+        <span class="detail-badge" style="background: rgba(168, 85, 247, 0.25); color: #e9d5ff; border-color: rgba(168, 85, 247, 0.6); font-size: 0.82rem; font-weight: 700; padding: 0.4rem 0.85rem;">
+          <i class="fa-solid fa-gem" style="color: #22d3ee; margin-right: 0.4rem;"></i> ACTIVO INSIGNIA • EL GRAN ARCANO (THE INFINITE ARCHIVE)
+        </span>
+        <span style="font-family: monospace; font-size: 0.78rem; color: #22d3ee; background: rgba(34,211,238,0.1); border: 1px solid rgba(34,211,238,0.3); padding: 0.25rem 0.6rem; border-radius: 4px;">
+          <i class="fa-solid fa-shield-halved"></i> 100% LIBRE DE CONTENT ID • 432 HZ / -14 LUFS
+        </span>
+      </div>
+
+      <!-- Main Split: Visual Scene Viewer & Narrative/Product Offering -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center; margin-bottom: 2rem;">
+        
+        <!-- Left Column: Scene Viewer -->
+        <div>
+          <div style="position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; border: 1px solid rgba(168, 85, 247, 0.35); box-shadow: 0 12px 35px rgba(0,0,0,0.8);">
+            <img id="archive-current-scene-img" src="arcano_tower_window.jpg" alt="Aurelius en la Aguja" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,12,24,0.85) 0%, transparent 60%); pointer-events: none;"></div>
+            <div style="position: absolute; bottom: 0.85rem; left: 1rem; right: 1rem; display: flex; justify-content: space-between; align-items: flex-end;">
+              <span id="archive-scene-badge" style="font-size: 0.76rem; font-family: monospace; color: #d4af37; text-transform: uppercase; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">
+                Capítulo I • La Torre sobre las Cenizas
+              </span>
+              <span style="font-size: 0.72rem; background: rgba(0,0,0,0.75); color: #e2e8f0; padding: 0.2rem 0.5rem; border-radius: 4px; font-family: monospace;">
+                Loop 4K Cinemagráfico
+              </span>
+            </div>
+          </div>
+
+          <!-- Scene Selector Thumbnails -->
+          <div style="display: flex; gap: 0.5rem; margin-top: 0.85rem;">
+            <button id="thumb-scene-1" class="archive-scene-thumb-card active" onclick="selectArchiveScene(1)" style="flex: 1; padding: 0.4rem; background: rgba(14,19,31,0.8); border: 1px solid rgba(168,85,247,0.4); border-radius: 8px; cursor: pointer; text-align: center;">
+              <span style="font-size: 0.75rem; color: #e9d5ff; font-weight: 600; display: block;">I. La Aguja</span>
+            </button>
+            <button id="thumb-scene-2" class="archive-scene-thumb-card" onclick="selectArchiveScene(2)" style="flex: 1; padding: 0.4rem; background: rgba(14,19,31,0.8); border: 1px solid rgba(168,85,247,0.2); border-radius: 8px; cursor: pointer; text-align: center;">
+              <span style="font-size: 0.75rem; color: #e9d5ff; font-weight: 600; display: block;">II. Biblioteca</span>
+            </button>
+            <button id="thumb-scene-3" class="archive-scene-thumb-card" onclick="selectArchiveScene(3)" style="flex: 1; padding: 0.4rem; background: rgba(14,19,31,0.8); border: 1px solid rgba(168,85,247,0.2); border-radius: 8px; cursor: pointer; text-align: center;">
+              <span style="font-size: 0.75rem; color: #e9d5ff; font-weight: 600; display: block;">III. Umbraxion</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column: Lore Hook & What This Product Is -->
+        <div>
+          <span style="font-size: 0.8rem; font-family: monospace; color: #c084fc; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.35rem;">
+            Franquicia Multimedia & Universo Sonoro
+          </span>
+          <h2 id="archive-scene-title" style="font-family: var(--font-heading); font-size: 2.1rem; color: #fff; font-weight: 800; line-height: 1.25; margin-bottom: 0.85rem;">
+            Aurelius Chronovoid en la Ventana de la Aguja
+          </h2>
+          <p id="archive-scene-desc" style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem; font-weight: 300;">
+            Desde la aguja más alta de la fortaleza de Kar-Kaelum, Aurelius y el dragón negro Umbraxion custodian los registros acústicos del multiverso. Un universo de fantasía oscura y atmósferas chillwave/neonwave diseñado para inducir estado de flujo (flow state), concentración en programación y relajación profunda.
+          </p>
+
+          <blockquote id="archive-scene-quote" style="border-left: 3px solid #d4af37; padding: 0.6rem 1rem; color: #f59e0b; font-style: italic; font-size: 0.88rem; background: rgba(212,175,55,0.06); border-radius: 0 8px 8px 0; margin-bottom: 1.25rem;">
+            "Las guerras desgarraron los continentes de carne y piedra, pero el sonido de las estrellas es inmortal. Aquí aguardo con Umbraxion hasta que el tiempo decida recomenzar."
+          </blockquote>
+
+          <!-- Audio Demo Bar -->
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; background: rgba(6,8,13,0.7); border: 1px solid rgba(34,211,238,0.3); border-radius: 10px; margin-bottom: 1.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <button onclick="previewArchiveTrack('The Infinite Archive • Tome I', 60, 'D Dorian')" class="btn btn-primary" style="padding: 0.4rem 0.85rem; font-size: 0.82rem; background: linear-gradient(135deg, #06b6d4, #0284c7); border: none;">
+                <i class="fa-solid fa-play"></i> Escuchar Muestra (432 Hz)
+              </button>
+              <div>
+                <div style="color: #fff; font-size: 0.82rem; font-weight: 600;">Códice I: Whispers of the Sanctuary</div>
+                <div style="color: var(--text-muted); font-size: 0.74rem;">Arpa Céltica • 60 BPM • Lluvia Tenue & Binaural 6Hz</div>
+              </div>
+            </div>
+            <span style="color: #22d3ee; font-family: monospace; font-size: 0.78rem;">-14 LUFS</span>
+          </div>
+
+          <!-- Action Buttons -->
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="#channel/arcano" class="btn btn-primary" style="background: linear-gradient(135deg, #7c3aed, #a855f7); border: none; font-size: 0.9rem; padding: 0.75rem 1.5rem; box-shadow: 0 0 25px rgba(168,85,247,0.4);">
+              <i class="fa-solid fa-gem"></i> Ver Ficha Completa del Producto & Bóveda
+            </a>
+            <a href="#clientes" class="btn btn-secondary" style="font-size: 0.9rem; padding: 0.75rem 1.25rem;">
+              <i class="fa-solid fa-handshake"></i> Solicitar Licencia / Coproducción
+            </a>
+            <button onclick="openAdminChannel('arcano')" class="btn btn-secondary" style="border-color: rgba(139,92,246,0.5); color: #c4b5fd; font-size: 0.85rem;" title="Abrir herramientas de generación y prompts en Panel Interno">
+              <i class="fa-solid fa-lock"></i> Panel Administrador (Prompts & Studio)
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 3 Clear Commercial Products for Clients -->
+      <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; margin-top: 1rem;">
+        <h4 style="color: #fff; font-size: 0.95rem; font-family: var(--font-heading); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">
+          <i class="fa-solid fa-cart-shopping" style="color: #22d3ee; margin-right: 0.4rem;"></i> Modelos de Venta y Aplicación Comercial para Clientes:
+        </h4>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem;">
+          
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(34,211,238,0.25); border-radius: 10px; padding: 1.1rem;">
+            <div style="color: #22d3ee; font-size: 1.1rem; margin-bottom: 0.35rem;"><i class="fa-solid fa-compact-disc"></i></div>
+            <h5 style="color: #fff; font-size: 0.95rem; margin-bottom: 0.3rem;">1. Licencia de Biblioteca Sonora</h5>
+            <p style="color: var(--text-muted); font-size: 0.82rem; line-height: 1.5; margin: 0;">
+              Catálogo de más de 50 temas masterizados libre de Content ID para uso en streams de Twitch/YouTube, podcasts o videojuegos indie sin riesgo de copyright.
+            </p>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(168,85,247,0.25); border-radius: 10px; padding: 1.1rem;">
+            <div style="color: #c084fc; font-size: 1.1rem; margin-bottom: 0.35rem;"><i class="fa-solid fa-tv"></i></div>
+            <h5 style="color: #fff; font-size: 0.95rem; margin-bottom: 0.3rem;">2. Canal Faceless Llave en Mano</h5>
+            <p style="color: var(--text-muted); font-size: 0.82rem; line-height: 1.5; margin: 0;">
+              Creamos universos sonoros y canales temáticos automatizados para marcas corporativas, apps de meditación, hoteles boutique o fondos de inversión.
+            </p>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(245,158,11,0.25); border-radius: 10px; padding: 1.1rem;">
+            <div style="color: #f59e0b; font-size: 1.1rem; margin-bottom: 0.35rem;"><i class="fa-solid fa-bullhorn"></i></div>
+            <h5 style="color: #fff; font-size: 0.95rem; margin-bottom: 0.3rem;">3. Patrocinio Inmersivo In-Stream</h5>
+            <p style="color: var(--text-muted); font-size: 0.82rem; line-height: 1.5; margin: 0;">
+              Integración visual orgánica de productos tech, hardware, café o sillas ergonómicas en las transmisiones 24/7 y videos largos de 2 a 10 horas.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- =================================================================== -->
+    <!-- LISTADO DE OTROS CANALES DE YOUTUBE AUTOMATIZADOS                   -->
+    <!-- =================================================================== -->
+    <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+      <span class="section-subtitle" style="color: var(--cyan);"><i class="fa-brands fa-youtube"></i> Portafolio de Canales Automatizados</span>
+      <h2 class="section-title">Canales de YouTube: Formatos Automatizados y Monetizables</h2>
+      <p class="section-description" style="margin: 0;">
+        Canales faceless y conducidos por avatares de alta retención generados con IA. Modelos de negocio listos para monetización diversificada vía AdSense, patrocinios B2B y venta de activos.
+      </p>
+    </div>
+
+    <div class="channels-grid">
+      ${channelsList.map(ch => `
+        <div class="channel-card">
+          <div class="channel-thumb-wrapper">
+            <img src="${ch.image}" alt="${ch.title}" class="channel-thumb-img" loading="lazy">
+            <div class="channel-thumb-overlay"></div>
+            <span class="channel-thumb-badge"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> ${ch.category}</span>
+            <div style="position: absolute; bottom: 0.65rem; right: 0.75rem; background: rgba(0,0,0,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px; z-index: 2;">
+              ${ch.duration}
+            </div>
+          </div>
+          <div class="channel-card-body">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+              <div class="channel-icon-box" style="background: rgba(255,255,255,0.06); color: ${ch.color};"><i class="fa-solid ${ch.icon}"></i></div>
+              <div>
+                <h3 style="font-family: var(--font-heading); font-size: 1.15rem; margin: 0; color: #fff;">${ch.title}</h3>
+                <span style="color: ${ch.color}; font-size: 0.8rem; font-weight: 600;">${ch.subtitle}</span>
+              </div>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.85rem; line-height: 1.5; flex-grow: 1;">
+              ${ch.desc}
+            </p>
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-bottom: 1rem; font-size: 0.75rem; color: #e2e8f0;">
+              <i class="fa-solid fa-sack-dollar" style="color: #10b981; margin-right: 0.3rem;"></i> <strong>Venta:</strong> ${ch.monetization}
+            </div>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="#channel/${ch.id}" class="btn btn-primary" style="flex: 1; font-size: 0.82rem; justify-content: center;">
+                <i class="fa-solid fa-clapperboard"></i> Ver Detalle del Producto
+              </a>
+              <button onclick="openAdminChannel('${ch.id}')" class="btn btn-secondary" style="padding: 0.5rem 0.75rem; font-size: 0.82rem;" title="Editar en Panel de Administrador">
+                <i class="fa-solid fa-lock"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+
+    <!-- Commercial Channel Coproduction Callout -->
+    <div class="glass-card" style="margin-top: 3.5rem; padding: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; border-color: rgba(6, 182, 212, 0.35); border-radius: var(--radius-lg);">
+      <div style="max-width: 720px;">
+        <h4 style="color: #fff; font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 0.4rem;">
+          <i class="fa-brands fa-youtube" style="color: #ef4444; margin-right: 0.4rem;"></i> Coproducción de Canales & Venta Llave en Mano
+        </h4>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin: 0;">
+          ¿Quieres lanzar un canal temático automatizado para tu marca o fondo? Estructuramos el canal desde la arquitectura de marca y las voces sintéticas hasta los guiones y renders semanales en 4K con esquemas de rev-share o venta completa.
+        </p>
+      </div>
+      <a href="#clientes" class="btn btn-primary" style="font-size: 0.95rem; padding: 0.75rem 1.5rem; white-space: nowrap;">
+        <i class="fa-solid fa-handshake"></i> Consultar Alianza Comercial
+      </a>
+    </div>
+  `;
+}
+
+// --- RENDER: CHANNEL DEDICATED PRODUCT PAGE ---
 function renderChannelPage(id) {
   const data = channelsData[id];
   const container = document.getElementById('view-dynamic');
@@ -3622,6 +4172,204 @@ function renderChannelPage(id) {
     return;
   }
 
+  // Check if this is the premier IP: The Infinite Archive / El Gran Arcano
+  if (id === 'arcano' || id === 'infinite-archive') {
+    container.innerHTML = `
+      <div class="breadcrumb-bar">
+        <div class="breadcrumbs">
+          <a href="#home">Inicio</a>
+          <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
+          <a href="#youtube">Canales YouTube</a>
+          <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
+          <span class="current">The Infinite Archive (El Gran Arcano)</span>
+        </div>
+        <a href="#youtube" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver a Canales</a>
+      </div>
+
+      <!-- Master Hero Banner with 16:9 Display -->
+      <div class="channel-hero-card" style="margin-bottom: 2.5rem; border-radius: var(--radius-lg); overflow: hidden; border: 2px solid rgba(168,85,247,0.5); background: #0c0f1d; position: relative;">
+        <div style="position: relative; width: 100%; aspect-ratio: 16 / 9; max-height: 480px; overflow: hidden; background: #080a14;">
+          <img src="arcano_tower_window.jpg" alt="The Infinite Archive" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(12,15,29,0.98) 0%, rgba(12,15,29,0.4) 60%, transparent 100%);"></div>
+          
+          <div style="position: absolute; top: 1.5rem; left: 1.5rem;">
+            <span class="detail-badge" style="background: rgba(168,85,247,0.3); border-color: #a855f7; color: #e9d5ff; font-size: 0.82rem; backdrop-filter: blur(8px);">
+              <i class="fa-solid fa-gem" style="color: #22d3ee;"></i> FRANQUICIA IP INSIGNIA • MULTIMEDIA SHOWCASE
+            </span>
+          </div>
+
+          <div style="position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <h1 class="detail-title" style="margin: 0; font-size: 2.2rem; text-shadow: 0 2px 14px rgba(0,0,0,0.9); color: #fff;">
+                The Infinite Archive (El Gran Arcano)
+              </h1>
+              <div style="color: #c084fc; font-size: 1rem; font-weight: 600; margin-top: 0.35rem;">
+                Bóveda Fuera del Tiempo • Fantasía Oscura, Acústica Chillwave & Deep Work
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <button class="btn btn-primary" onclick="previewArchiveTrack('Tome I: Whispers of the Sanctuary', 60, 'D Dorian')" style="background: linear-gradient(135deg, #06b6d4, #0284c7); border: none; box-shadow: 0 0 20px rgba(6,182,212,0.35);">
+                <i class="fa-solid fa-play"></i> Simular Reproducción (432 Hz)
+              </button>
+              <button onclick="openAdminChannel('arcano')" class="btn btn-secondary" style="border-color: rgba(139,92,246,0.6); color: #e9d5ff;">
+                <i class="fa-solid fa-lock"></i> Panel Administrador
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 1.5rem 1.8rem; font-size: 1rem; color: #cbd5e1; line-height: 1.7; border-top: 1px solid rgba(255,255,255,0.08); background: rgba(10,12,24,0.6);">
+          ${data.concept}
+        </div>
+      </div>
+
+      <!-- Specs Grid -->
+      <div class="specs-grid" style="margin-bottom: 2.5rem;">
+        <div class="spec-card">
+          <div class="spec-icon" style="color: #a855f7;"><i class="fa-solid fa-users"></i></div>
+          <div class="spec-label">Audiencia Objetivo</div>
+          <div class="spec-value" style="font-size: 0.95rem;">${data.targetAge}</div>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon" style="color: #22d3ee;"><i class="fa-solid fa-diagram-project"></i></div>
+          <div class="spec-label">Pipeline de Producción</div>
+          <div class="spec-value" style="font-size: 0.9rem;">${data.pipeline}</div>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-icon" style="color: #d4af37;"><i class="fa-solid fa-sack-dollar"></i></div>
+          <div class="spec-label">Modelo de Monetización</div>
+          <div class="spec-value" style="font-size: 0.9rem;">${data.monetization}</div>
+        </div>
+      </div>
+
+      <!-- Interactive Scene Gallery -->
+      <div class="glass-card" style="padding: 2rem; margin-bottom: 2.5rem; border-color: rgba(168,85,247,0.35); background: rgba(14,19,31,0.7);">
+        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: #fff; margin-bottom: 1.25rem;">
+          <i class="fa-solid fa-camera-retro" style="color: #c084fc; margin-right: 0.4rem;"></i> Entornos Cinemagráficos 4K (Visor de Escenas)
+        </h3>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+          
+          <div style="background: rgba(6,8,13,0.8); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; padding: 1.2rem;">
+            <div style="aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; margin-bottom: 0.85rem;">
+              <img src="arcano_tower_window.jpg" alt="Escena I" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h4 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.35rem;">Capítulo I: La Torre sobre las Cenizas</h4>
+            <p style="color: var(--text-muted); font-size: 0.84rem; line-height: 1.5;">Aurelius contemplando el horizonte cósmico desde la aguja de Kar-Kaelum. Loop de 15 segundos sin cortes visibles.</p>
+          </div>
+
+          <div style="background: rgba(6,8,13,0.8); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; padding: 1.2rem;">
+            <div style="aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; margin-bottom: 0.85rem;">
+              <img src="arcano_reading.jpg" alt="Escena II" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h4 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.35rem;">Capítulo II: El Estudio de Historias</h4>
+            <p style="color: var(--text-muted); font-size: 0.84rem; line-height: 1.5;">La calidez de la biblioteca de piedra y la llama eterna mientras descifra códices antiguos con polvo bioluminiscente.</p>
+          </div>
+
+          <div style="background: rgba(6,8,13,0.8); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; padding: 1.2rem;">
+            <div style="aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; margin-bottom: 0.85rem;">
+              <img src="arcano_dragon.jpg" alt="Escena III" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <h4 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.35rem;">Capítulo III: El Dragón Umbraxion</h4>
+            <p style="color: var(--text-muted); font-size: 0.84rem; line-height: 1.5;">Encuentro en el gran salón abovedado. Escamas de obsidiana y resonancia rítmica subsónica a 0.5 Hz.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Commercial Pricing Packages for Clients -->
+      <div class="glass-card" style="padding: 2.2rem; margin-bottom: 2.5rem; border-color: rgba(34,211,238,0.35); background: radial-gradient(circle at top right, rgba(34,211,238,0.08) 0%, rgba(10,12,24,0.95) 100%);">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 2rem auto;">
+          <span class="detail-badge" style="background: rgba(34,211,238,0.15); color: #22d3ee; border-color: rgba(34,211,238,0.4); margin-bottom: 0.5rem;">
+            PROPUESTAS COMERCIALES
+          </span>
+          <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: #fff;">Planes de Licenciamiento & Coproducción</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem;">Opciones flexibles para creadores, empresas y marcas interesadas en The Infinite Archive:</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          
+          <div class="glass-card" style="padding: 1.5rem; border-color: rgba(34,211,238,0.3); display: flex; flex-direction: column;">
+            <span style="font-size: 0.75rem; color: #22d3ee; font-family: monospace; text-transform: uppercase;">Licencia A</span>
+            <h4 style="color: #fff; font-size: 1.2rem; margin: 0.35rem 0 0.5rem 0;">Biblioteca Sonora</h4>
+            <div style="font-size: 1.6rem; font-weight: 800; color: #fff; margin-bottom: 1rem;">$490 <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: normal;">USD / perpetua</span></div>
+            <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem 0; font-size: 0.84rem; color: var(--text-muted); line-height: 1.6; flex-grow: 1;">
+              <li><i class="fa-solid fa-check" style="color: #22d3ee; margin-right: 0.4rem;"></i> Más de 50 pistas masterizadas en WAV 24-bit</li>
+              <li><i class="fa-solid fa-check" style="color: #22d3ee; margin-right: 0.4rem;"></i> Libre de Content ID en YouTube y Twitch</li>
+              <li><i class="fa-solid fa-check" style="color: #22d3ee; margin-right: 0.4rem;"></i> Uso en videojuegos, podcasts y videos de marca</li>
+            </ul>
+            <a href="#clientes" class="btn btn-secondary" style="justify-content: center; font-size: 0.85rem;">Solicitar Licencia</a>
+          </div>
+
+          <div class="glass-card" style="padding: 1.5rem; border-color: rgba(168,85,247,0.45); background: rgba(168,85,247,0.06); display: flex; flex-direction: column;">
+            <span style="font-size: 0.75rem; color: #c084fc; font-family: monospace; text-transform: uppercase;">Patrocinio B</span>
+            <h4 style="color: #fff; font-size: 1.2rem; margin: 0.35rem 0 0.5rem 0;">Sponsor In-Stream</h4>
+            <div style="font-size: 1.6rem; font-weight: 800; color: #fff; margin-bottom: 1rem;">$850 <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: normal;">USD / mes</span></div>
+            <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem 0; font-size: 0.84rem; color: var(--text-muted); line-height: 1.6; flex-grow: 1;">
+              <li><i class="fa-solid fa-check" style="color: #c084fc; margin-right: 0.4rem;"></i> Presencia visual en 4 videos largos (2h cada uno)</li>
+              <li><i class="fa-solid fa-check" style="color: #c084fc; margin-right: 0.4rem;"></i> Integración de tu marca en el escenario 3D</li>
+              <li><i class="fa-solid fa-check" style="color: #c084fc; margin-right: 0.4rem;"></i> Enlaces destacados y fijados en comentarios</li>
+            </ul>
+            <a href="#clientes" class="btn btn-primary" style="background: linear-gradient(135deg, #7c3aed, #a855f7); justify-content: center; font-size: 0.85rem;">Contratar Sponsor</a>
+          </div>
+
+          <div class="glass-card" style="padding: 1.5rem; border-color: rgba(245,158,11,0.3); display: flex; flex-direction: column;">
+            <span style="font-size: 0.75rem; color: #fbbf24; font-family: monospace; text-transform: uppercase;">Solución C</span>
+            <h4 style="color: #fff; font-size: 1.2rem; margin: 0.35rem 0 0.5rem 0;">Canal Llave en Mano</h4>
+            <div style="font-size: 1.6rem; font-weight: 800; color: #fff; margin-bottom: 1rem;">$2.900 <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: normal;">USD / setup</span></div>
+            <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem 0; font-size: 0.84rem; color: var(--text-muted); line-height: 1.6; flex-grow: 1;">
+              <li><i class="fa-solid fa-check" style="color: #fbbf24; margin-right: 0.4rem;"></i> Creación de universo temático exclusivo para tu marca</li>
+              <li><i class="fa-solid fa-check" style="color: #fbbf24; margin-right: 0.4rem;"></i> 5 primeros videos largos de 2h producidos y subidos</li>
+              <li><i class="fa-solid fa-check" style="color: #fbbf24; margin-right: 0.4rem;"></i> Traspaso total de derechos y canales de AdSense</li>
+            </ul>
+            <a href="#clientes" class="btn btn-secondary" style="justify-content: center; font-size: 0.85rem;">Solicitar Cotización</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Episode Outlines & Sample Scripts -->
+      <h3 style="font-family: var(--font-heading); margin-bottom: 1.5rem; font-size: 1.5rem; color: #fff;">
+        Capítulos & Desglose de Guiones Oficiales
+      </h3>
+      ${data.episodes.map(ep => `
+        <div class="social-mockup-card" style="margin-bottom: 1.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+            <h4 style="font-family: var(--font-heading); font-size: 1.2rem; color: #fff;">${ep.title}</h4>
+            <span class="detail-badge" style="background: rgba(168,85,247,0.15); color: #c084fc; border-color: #a855f7;">${ep.duration}</span>
+          </div>
+          
+          <div class="script-box">
+            <span class="script-tag" style="background: rgba(168,85,247,0.2); color: #e9d5ff;">Guión Narrativo & Registro Sonoro</span>
+            <div>${ep.script.replace(/\n/g, '<br>')}</div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-sm); font-size: 0.9rem; color: var(--text-muted);">
+            <strong style="color: #fff;"><i class="fa-solid fa-clapperboard"></i> Dirección Visual (Cinemagraph):</strong> ${ep.thumbnail}
+          </div>
+        </div>
+      `).join('')}
+
+      <!-- Bottom Action Bar -->
+      <div style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding: 1.5rem; background: rgba(10,12,24,0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md);">
+        <a href="#youtube" class="btn btn-secondary"><i class="fa-solid fa-arrow-left"></i> Volver al Catálogo de YouTube</a>
+        <div style="display: flex; gap: 0.75rem;">
+          <button onclick="openAdminChannel('arcano')" class="btn btn-secondary" style="border-color: rgba(139,92,246,0.6); color: #c4b5fd;">
+            <i class="fa-solid fa-lock"></i> Editar en Panel de Administrador
+          </button>
+          <a href="#clientes" class="btn btn-primary" style="background: linear-gradient(135deg, #7c3aed, #a855f7); border: none;">
+            <i class="fa-solid fa-envelope"></i> Contactar para Licencia Comercial
+          </a>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  // Generic Channel Detail Page for all other channels
   container.innerHTML = `
     <div class="breadcrumb-bar">
       <div class="breadcrumbs">
@@ -3647,9 +4395,14 @@ function renderChannelPage(id) {
             <h1 class="detail-title" style="margin: 0; font-size: 1.85rem; text-shadow: 0 2px 12px rgba(0,0,0,0.85);">${data.title}</h1>
             <div style="color: ${data.color}; font-size: 0.95rem; font-weight: 600; margin-top: 0.35rem;">${data.subtitle} • ${data.category}</div>
           </div>
-          <button class="btn btn-primary" onclick="alert('Abriendo simulador de reproducción para ${data.title}')" style="box-shadow: 0 0 20px rgba(6,182,212,0.35);">
-            <i class="fa-solid fa-play"></i> Simular Reproducción
-          </button>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button class="btn btn-primary" onclick="alert('Abriendo simulador de reproducción para ${data.title}')" style="box-shadow: 0 0 20px rgba(6,182,212,0.35);">
+              <i class="fa-solid fa-play"></i> Simular Reproducción
+            </button>
+            <button onclick="openAdminChannel('${data.id}')" class="btn btn-secondary" style="border-color: rgba(139,92,246,0.6); color: #c4b5fd;">
+              <i class="fa-solid fa-lock"></i> Panel Administrador
+            </button>
+          </div>
         </div>
       </div>
       <div style="padding: 1.25rem 1.5rem; font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; border-top: 1px solid var(--border-glass);">
@@ -3658,7 +4411,7 @@ function renderChannelPage(id) {
     </div>
 
     <!-- Specs Grid -->
-    <div class="specs-grid">
+    <div class="specs-grid" style="margin-bottom: 2rem;">
       <div class="spec-card">
         <div class="spec-icon" style="color: ${data.color};"><i class="fa-solid fa-users"></i></div>
         <div class="spec-label">Audiencia Objetivo</div>
@@ -3673,7 +4426,7 @@ function renderChannelPage(id) {
 
       <div class="spec-card">
         <div class="spec-icon" style="color: ${data.color};"><i class="fa-solid fa-sack-dollar"></i></div>
-        <div class="spec-label">Monetización</div>
+        <div class="spec-label">Monetización & Rendimiento</div>
         <div class="spec-value" style="font-size: 0.95rem;">${data.monetization}</div>
       </div>
     </div>
@@ -3697,8 +4450,316 @@ function renderChannelPage(id) {
         </div>
       </div>
     `).join('')}
+
+    <!-- Commercial Action Box -->
+    <div style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding: 1.5rem; background: rgba(10,12,24,0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md);">
+      <a href="#youtube" class="btn btn-secondary"><i class="fa-solid fa-arrow-left"></i> Volver a Todos los Canales</a>
+      <div style="display: flex; gap: 0.75rem;">
+        <button onclick="openAdminChannel('${data.id}')" class="btn btn-secondary" style="border-color: rgba(139,92,246,0.6); color: #c4b5fd;">
+          <i class="fa-solid fa-lock"></i> Editar en Panel de Administrador
+        </button>
+        <a href="#clientes" class="btn btn-primary">
+          <i class="fa-solid fa-handshake"></i> Solicitar Propuesta Comercial para este Canal
+        </a>
+      </div>
+    </div>
   `;
 }
+
+// --- ADMIN YOUTUBE STUDIO & ARCANO CONTROLS ---
+
+function openAdminChannel(channelId) {
+  if (isTeamAuthenticated()) {
+    showTeamView('youtube-studio');
+    selectAdminChannel(channelId);
+  } else {
+    pendingTeamTab = 'youtube-channel:' + channelId;
+    openAuthModal('youtube-channel:' + channelId);
+  }
+}
+
+function selectAdminChannel(channelId) {
+  window.pendingAdminChannel = channelId;
+  const channelBtns = {
+    'arcano': 'studio-btn-arcano',
+    'mateo_fintech': 'studio-btn-mateo',
+    'mateo': 'studio-btn-mateo',
+    'kira_gamedev': 'studio-btn-kira',
+    'kira': 'studio-btn-kira',
+    'ranchera': 'studio-btn-ranchera',
+    'arcanotech': 'studio-btn-arcanotech',
+    'sagrados': 'studio-btn-sagrados',
+    'sofia': 'studio-btn-sofia'
+  };
+
+  // Reset active buttons
+  Object.values(channelBtns).forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.remove('active');
+  });
+
+  const activeBtnId = channelBtns[channelId] || 'studio-btn-arcano';
+  const activeBtn = document.getElementById(activeBtnId);
+  if (activeBtn) activeBtn.classList.add('active');
+
+  renderAdminYoutubeStudio(channelId);
+}
+
+function copyToClipboard(text, btnElement) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(() => {
+      showCopyFeedback(btnElement);
+    });
+  } else {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    showCopyFeedback(btnElement);
+  }
+}
+
+function showCopyFeedback(btnElement) {
+  if (!btnElement) return;
+  const origHtml = btnElement.innerHTML;
+  btnElement.innerHTML = '<i class="fa-solid fa-check" style="color: #10b981;"></i> ¡Copiado!';
+  btnElement.style.borderColor = '#10b981';
+  setTimeout(() => {
+    btnElement.innerHTML = origHtml;
+    btnElement.style.borderColor = '';
+  }, 1800);
+}
+
+function copyCurrentStudioKit() {
+  const currentCh = window.pendingAdminChannel || 'arcano';
+  const data = channelsData[currentCh] || channelsData['arcano'];
+  const text = `CANAL: ${data.title}\nCONCEPTO: ${data.concept}\nPIPELINE: ${data.pipeline}\nMONETIZACIÓN: ${data.monetization}`;
+  copyToClipboard(text, event ? event.target : null);
+  alert(`Paquete de metadatos copiado para: ${data.title}`);
+}
+
+function previewArchiveTrack(title, bpm, key) {
+  alert(`▶ Reproduciendo muestra de audio masterizado: "${title}"\nTempo: ${bpm} BPM | Escala: ${key}\nMasterizado profesional a -14 LUFS.`);
+}
+
+function renderAdminYoutubeStudio(channelId = 'arcano') {
+  const container = document.getElementById('team-admin-youtube-content');
+  if (!container) return;
+
+  const data = channelsData[channelId] || channelsData['arcano'];
+
+  if (channelId === 'arcano' || channelId === 'infinite-archive') {
+    container.innerHTML = `
+      <!-- Panel de Control para El Gran Arcano -->
+      <div style="background: rgba(14,19,31,0.85); border: 1px solid rgba(168,85,247,0.3); border-radius: 14px; padding: 2rem; margin-bottom: 2rem;">
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="detail-badge" style="background: rgba(168,85,247,0.25); color: #e9d5ff; border-color: #a855f7;">
+              STUDIO KIT • EL GRAN ARCANO
+            </span>
+            <h3 style="color: #fff; font-family: var(--font-heading); font-size: 1.6rem; margin: 0.5rem 0 0.25rem 0;">
+              The Infinite Archive: Prompts de Producción & Metadatos
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0;">
+              Herramientas de generación de imágenes con Midjourney v6.1 / Flux Pro y metadatos SEO con marcas de tiempo.
+            </p>
+          </div>
+          
+          <button onclick="copyToClipboard(document.getElementById('arcano-full-kit').value, this)" class="btn btn-primary" style="background: linear-gradient(135deg, #a855f7, #7c3aed); border: none; font-size: 0.85rem;">
+            <i class="fa-solid fa-copy"></i> Copiar Paquete Completo
+          </button>
+        </div>
+
+        <!-- Prompts Visuales Midjourney -->
+        <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.75rem;">
+          <i class="fa-solid fa-wand-magic-sparkles" style="color: #22d3ee; margin-right: 0.4rem;"></i> Prompts Visuales Midjourney v6.1 / Flux Pro (16:9 Cinemagraphs)
+        </h4>
+
+        <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+          
+          <div style="background: #06080d; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <strong style="color: #22d3ee; font-size: 0.85rem;">Escena 1: Aurelius en la Ventana de la Aguja (Tower Window)</strong>
+              <button onclick="copyToClipboard('Aurelius Chronovoid standing in front of high arch needle window of ancient stone tower Kar-Kaelum, cinematic dark fantasy, neonwave lilac and cosmic purple nebula glow, cold starlight, detailed bronze and dark stone astrolabe on his chest, photorealistic, intricate textures, 8k --ar 16:9 --style raw --v 6.1 --stylize 250', this)" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">
+                <i class="fa-solid fa-copy"></i> Copiar Prompt
+              </button>
+            </div>
+            <code style="font-size: 0.78rem; color: #cbd5e1; display: block; line-height: 1.5;">
+              Aurelius Chronovoid standing in front of high arch needle window of ancient stone tower Kar-Kaelum, cinematic dark fantasy, neonwave lilac and cosmic purple nebula glow, cold starlight, detailed bronze and dark stone astrolabe on his chest, photorealistic, intricate textures, 8k --ar 16:9 --style raw --v 6.1 --stylize 250
+            </code>
+          </div>
+
+          <div style="background: #06080d; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <strong style="color: #d4af37; font-size: 0.85rem;">Escena 2: Aurelius en la Biblioteca con Códice Dorado (Library Study)</strong>
+              <button onclick="copyToClipboard('Aurelius Chronovoid in silent ancient medieval library, studying illuminated fantasy manuscript on weathered dark wood desk, warm golden candle flame dancing, glowing lilac dust particles floating in the air, bookshelves filled with antique grimoires, moody chiaroscuro lighting --ar 16:9 --style raw --v 6.1', this)" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">
+                <i class="fa-solid fa-copy"></i> Copiar Prompt
+              </button>
+            </div>
+            <code style="font-size: 0.78rem; color: #cbd5e1; display: block; line-height: 1.5;">
+              Aurelius Chronovoid in silent ancient medieval library, studying illuminated fantasy manuscript on weathered dark wood desk, warm golden candle flame dancing, glowing lilac dust particles floating in the air, bookshelves filled with antique grimoires, moody chiaroscuro lighting --ar 16:9 --style raw --v 6.1
+            </code>
+          </div>
+
+          <div style="background: #06080d; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <strong style="color: #a855f7; font-size: 0.85rem;">Escena 3: El Dragón Negro Umbraxion en el Gran Salón (Obsidian Dragon Hall)</strong>
+              <button onclick="copyToClipboard('Massive black dragon Umbraxion resting in a monumental vaulted stone hall with cyclopean pillars, glossy obsidian scales reflecting soft starlight, wizard Aurelius gently placing his palm on the dragon\'s snout, peaceful serene atmosphere, cinematic rim lighting --ar 16:9 --style raw --v 6.1', this)" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">
+                <i class="fa-solid fa-copy"></i> Copiar Prompt
+              </button>
+            </div>
+            <code style="font-size: 0.78rem; color: #cbd5e1; display: block; line-height: 1.5;">
+              Massive black dragon Umbraxion resting in a monumental vaulted stone hall with cyclopean pillars, glossy obsidian scales reflecting soft starlight, wizard Aurelius gently placing his palm on the dragon's snout, peaceful serene atmosphere, cinematic rim lighting --ar 16:9 --style raw --v 6.1
+            </code>
+          </div>
+
+        </div>
+
+        <!-- Metadatos de YouTube & SEO -->
+        <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.75rem;">
+          <i class="fa-brands fa-youtube" style="color: #ef4444; margin-right: 0.4rem;"></i> Paquete de Metadatos YouTube Studio (Copy-Paste)
+        </h4>
+
+        <textarea id="arcano-full-kit" readonly style="width: 100%; height: 260px; background: #06080d; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #cbd5e1; font-family: monospace; font-size: 0.78rem; padding: 1rem; resize: vertical; line-height: 1.5;">
+TÍTULO:
+Ancient Elven Library (Ambient Fantasy Music & Rain) 2 HOURS | Deep Reading, Focus & Coding Beats
+
+DESCRIPCIÓN:
+"Has cruzado el umbral del Gran Arcano. Frente a ti se abre Tome I — Whispers of the Moonlit Sanctuary, custodiado en la Bóveda del Vacío."
+
+🌌 LORE DEL REGISTRO:
+El tomo que tienes ante ti recopila las frecuencias registradas en los santuarios de cristal de Sylveria por el Archicanciller Aurelius y el dragón Umbraxion. Diseñado específicamente para acompañar sesiones de estudio prolongado, lectura inmersiva o codificación sin fatiga auditiva.
+
+⏱️ TIMESTAMPS & TRACKLIST:
+00:00 - Track 1A: Sylverian Starlight Harp & Dew (60 BPM | D Dorian)
+30:00 - Track 1B: Breeze Through the High Scriptorium (58 BPM | A Pentatonic)
+1:00:00 - Track 1C: The Starlight Maiden’s Incantation (62 BPM | E Aeolian)
+1:30:00 - Track 1D: The Dragon's Quiet Slumber (52 BPM | C Minor)
+
+🎧 ESPECIFICACIONES TÉCNICAS DE AUDIO:
+• Masterizado a -14 LUFS Integrated para YouTube.
+• Afinación armónica a 432 Hz / Frecuencias binaurales sub-graves templadas.
+
+📜 DESCARGO ÉTICO Y LEGAL (LIBRE DE CONTENT ID):
+Toda la música y los visuales de The Infinite Archive son generados mediante IA de última generación y masterizados profesionalmente. Puedes utilizar este video en tus streams de Twitch o YouTube sin strikes de copyright.
+
+TAGS (25 ETIQUETAS ESTRATÉGICAS):
+fantasy study music, medieval ambient focus, elven library ambience, deep work music coding, programmer focus beats, flow state ambient, dark academia study music, reading music fantasy, calm harp ambience, dwarven forge ambience, winter keep fireplace, ambient music 2 hours, lofi fantasy ambient, sleep fantasy sounds, relaxing rpg music, tabletop background music, dnd study playlist, focus music no drums, rain on window fantasy, chillwave fantasy, cinemagraph study background, medieval writing music, ambient soundscape study, study with me fantasy, the infinite archive
+        </textarea>
+
+        <div style="margin-top: 1rem; display: flex; gap: 0.75rem;">
+          <button onclick="copyToClipboard(document.getElementById('arcano-full-kit').value, this)" class="btn btn-primary" style="font-size: 0.82rem;">
+            <i class="fa-solid fa-copy"></i> Copiar Texto Completo
+          </button>
+          <a href="#channel/arcano" class="btn btn-secondary" style="font-size: 0.82rem;">
+            <i class="fa-solid fa-eye"></i> Ver Vista Pública de Producto
+          </a>
+        </div>
+
+      </div>
+    `;
+    return;
+  }
+
+  // Generic Channel Admin Studio
+  container.innerHTML = `
+    <div style="background: rgba(14,19,31,0.85); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 2rem; margin-bottom: 2rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <span class="detail-badge" style="background: rgba(255,255,255,0.06); color: ${data.color}; border-color: ${data.color};">
+            <i class="fa-solid ${data.icon}"></i> ${data.category}
+          </span>
+          <h3 style="color: #fff; font-family: var(--font-heading); font-size: 1.6rem; margin: 0.5rem 0 0.25rem 0;">
+            ${data.title}
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin: 0;">
+            ${data.subtitle} • Gestión de episodios, prompts de miniaturas y optimización SEO.
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 0.5rem;">
+          <a href="#channel/${data.id}" class="btn btn-secondary btn-sm" style="font-size: 0.8rem;">
+            <i class="fa-solid fa-eye"></i> Ver en Catálogo Público
+          </a>
+        </div>
+      </div>
+
+      <!-- Specs Summary Bar -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+        <div style="background: rgba(6,8,13,0.6); padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06);">
+          <div style="font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase;">Estado de Producción</div>
+          <select class="form-input" style="padding: 0.35rem 0.5rem; font-size: 0.82rem; margin-top: 0.4rem; background: #0c0f1d;">
+            <option value="ready">● Listo para Publicar</option>
+            <option value="render">⚙ En Render / Generación</option>
+            <option value="script">📝 Guión Aprobado</option>
+            <option value="draft">💡 Borrador / Ideación</option>
+          </select>
+        </div>
+
+        <div style="background: rgba(6,8,13,0.6); padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06);">
+          <div style="font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase;">Audiencia Principal</div>
+          <div style="font-size: 0.85rem; color: #fff; margin-top: 0.4rem;">${data.targetAge}</div>
+        </div>
+
+        <div style="background: rgba(6,8,13,0.6); padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06);">
+          <div style="font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase;">Pipeline de Trabajo</div>
+          <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.4rem;">${data.pipeline}</div>
+        </div>
+      </div>
+
+      <!-- Guiones y Episodios Editables -->
+      <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.75rem;">
+        <i class="fa-solid fa-file-pen" style="color: var(--cyan); margin-right: 0.4rem;"></i> Guiones de Episodios & Dirección de Miniaturas
+      </h4>
+
+      <div style="display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 2rem;">
+        ${data.episodes.map((ep, idx) => `
+          <div style="background: #06080d; border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <strong style="color: #fff; font-size: 0.95rem;">${ep.title} (${ep.duration})</strong>
+              <button onclick="copyToClipboard('${ep.script.replace(/'/g, "\\'")}', this)" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.25rem 0.6rem;">
+                <i class="fa-solid fa-copy"></i> Copiar Guión
+              </button>
+            </div>
+            
+            <textarea class="form-input" rows="4" style="font-family: monospace; font-size: 0.8rem; line-height: 1.5; margin-bottom: 0.75rem; background: #0c0f1d;">${ep.script}</textarea>
+            
+            <div style="background: rgba(255,255,255,0.03); padding: 0.65rem 0.85rem; border-radius: 6px; font-size: 0.82rem; color: var(--text-muted);">
+              <strong style="color: #e2e8f0;">Prompt Miniatura (CTR):</strong> ${ep.thumbnail}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+
+      <!-- Tags y Metadatos para YouTube -->
+      <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 0.75rem;">
+        <i class="fa-brands fa-youtube" style="color: #ef4444; margin-right: 0.4rem;"></i> Metadatos & SEO para YouTube Studio
+      </h4>
+
+      <div style="background: #06080d; border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 1.25rem;">
+        <div style="margin-bottom: 0.75rem;">
+          <label style="font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; display: block; margin-bottom: 0.25rem;">Título Sugerido</label>
+          <input type="text" class="form-input" value="${data.episodes[0] ? data.episodes[0].title : data.title}" style="background: #0c0f1d; font-size: 0.85rem;">
+        </div>
+
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+            <label style="font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase;">Etiquetas / Tags para YouTube</label>
+            <button onclick="copyToClipboard('${data.category.toLowerCase()}, youtube automation, ai faceless channel, los manejadores, ${data.id}', this)" class="btn btn-secondary btn-sm" style="font-size: 0.75rem; padding: 0.2rem 0.5rem;">
+              <i class="fa-solid fa-copy"></i> Copiar Tags
+            </button>
+          </div>
+          <input type="text" class="form-input" value="${data.category.toLowerCase()}, youtube automation, ai faceless channel, los manejadores, ${data.id}, negocios digitales, inteligencia artificial" style="background: #0c0f1d; font-size: 0.82rem;">
+        </div>
+      </div>
+
+    </div>
+  `;
+}
+
 
 // RENDER: ADVISORIES DEDICATED PAGE
 function renderAdvisoriesPage() {

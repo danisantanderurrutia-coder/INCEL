@@ -45,7 +45,6 @@
       <ul class="nav-links" id="public-nav-links">
         <li><a href="#roster">Influencers</a></li>
         <li><a href="#youtube">Youtube</a></li>
-        <li><a href="#infinite-archive" onclick="switchView('archive')" style="color: #22D3EE; font-weight: 700; text-shadow: 0 0 10px rgba(34,211,238,0.5);"><i class="fa-solid fa-hat-wizard"></i> Infinite Archive</a></li>
         <li><a href="#cursos">Cursos</a></li>
         <li><a href="#seguridad">Seguridad Digital</a></li>
         <li><a href="#empresas">Empresas</a></li>
@@ -70,503 +69,8 @@
     <!-- Rendered dynamically by app.js router -->
   </main>
 
-  <!-- =================================================================== -->
-  <!-- VISTA: THE INFINITE ARCHIVE — FROM THE GRAND ARCANUM                -->
-  <!-- =================================================================== -->
-  <main id="view-archive" class="mode-view archive-view-wrapper">
-    <!-- Luces de Fondo (Neonwave & Lilac Cosmic Glow) -->
-    <div class="archive-cosmic-bg">
-      <div class="archive-glow-lilac"></div>
-      <div class="archive-glow-cyan"></div>
-      <div class="archive-glow-gold"></div>
-    </div>
-
-    <!-- Cabecera de la Bóveda -->
-    <header class="archive-header">
-      <div class="archive-header-inner">
-        <div>
-          <div class="archive-badge-rune">
-            <i class="fa-solid fa-gem" style="color: #22D3EE;"></i>
-            The Grand Arcanum Multiverse Vault • Bóveda Fuera del Tiempo
-          </div>
-          <h1 class="archive-title">The Infinite Archive</h1>
-          <p style="color: #94A3B8; font-size: 0.95rem; max-width: 680px; margin: 0; font-weight: 300;">
-            El nexo cósmico donde convergen registros acústicos ancestrales, atmósferas neonwave chillwave y la custodia del Archicanciller y su dragón negro.
-          </p>
-        </div>
-
-        <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
-          <button onclick="switchView('public')" class="btn btn-secondary" style="font-size: 0.85rem; border-color: rgba(255,255,255,0.15);">
-            <i class="fa-solid fa-arrow-left"></i> Volver a Los Manejadores
-          </button>
-          <a href="https://youtube.com" target="_blank" class="btn btn-primary" style="background: linear-gradient(135deg, #DC2626, #EF4444); border: none; font-size: 0.85rem; box-shadow: 0 0 15px rgba(239,68,68,0.3);">
-            <i class="fa-brands fa-youtube"></i> Canal YouTube
-          </a>
-        </div>
-      </div>
-
-      <!-- Navegación de Subsecciones -->
-      <div class="archive-subtabs-nav">
-        <button id="btn-archive-tab-lore" class="archive-subtab-btn active" onclick="switchArchiveTab('lore')">
-          <i class="fa-solid fa-dragon" style="color: #A855F7;"></i> 1. El Gran Arcano & Dragón Umbraxion
-        </button>
-        <button id="btn-archive-tab-audio" class="archive-subtab-btn" onclick="switchArchiveTab('audio')">
-          <i class="fa-solid fa-headphones" style="color: #22D3EE;"></i> 2. Bóveda Acústica (Audio Vault)
-        </button>
-        <button id="btn-archive-tab-pipeline" class="archive-subtab-btn" onclick="switchArchiveTab('pipeline')">
-          <i class="fa-solid fa-diagram-project" style="color: #D4AF37;"></i> 3. Pipeline & YouTube Studio Kit
-        </button>
-      </div>
-    </header>
-
-    <!-- Contenido de las Secciones -->
-    <div class="archive-body-container">
-      
-      <!-- ========================================== -->
-      <!-- PESTAÑA 1: LORE & PERSONAJE PRINCIPAL       -->
-      <!-- ========================================== -->
-      <section id="archive-pane-lore" class="archive-pane" style="display: block;">
-        
-        <!-- Visor Dinámico de Escenas -->
-        <div class="archive-scene-viewer">
-          <div class="archive-scene-img-box">
-            <img id="archive-current-scene-img" src="arcano_tower_window.jpg" alt="Aurelius mirando hacia el mundo destruido" class="archive-scene-main-img" />
-            <div style="position: absolute; top: 1rem; left: 1rem; background: rgba(6,8,13,0.75); backdrop-filter: blur(8px); padding: 0.35rem 0.85rem; border-radius: 6px; border: 1px solid rgba(168,85,247,0.4); font-size: 0.75rem; font-family: monospace; color: #E9D5FF;">
-              <span style="color: #22D3EE;">●</span> ESCENA EN VIVO • REGISTRO VISUAL
-            </div>
-            <div style="position: absolute; bottom: 1rem; left: 1rem; right: 1rem; background: linear-gradient(to top, rgba(6,8,13,0.9), transparent); padding-top: 2rem; display: flex; justify-content: space-between; align-items: flex-end;">
-              <span id="archive-scene-badge" style="font-size: 0.75rem; font-family: monospace; color: #D4AF37; text-transform: uppercase;">
-                Capítulo I • La Torre sobre las Cenizas
-              </span>
-            </div>
-          </div>
-
-          <div class="archive-scene-info-box">
-            <div>
-              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-                <span style="font-size: 0.75rem; font-family: monospace; color: #A855F7; text-transform: uppercase; letter-spacing: 0.1em;">
-                  Archicanciller del Gran Arcano
-                </span>
-              </div>
-              <h2 id="archive-scene-title" style="font-size: 1.6rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.75rem; line-height: 1.25;">
-                Aurelius Chronovoid en la Ventana de la Aguja
-              </h2>
-              <p id="archive-scene-desc" style="color: #CBD5E1; font-size: 0.9rem; line-height: 1.65; margin-bottom: 1.25rem; font-weight: 300;">
-                Desde la aguja más alta de la fortaleza de Kar-Kaelum, Aurelius contempla la ciudadela deshecha por las Guerras de la Ruptura. El cielo se funde con el espacio profundo: estrellas frías, una nebulosa violeta y polvo cósmico lila que titila suspendido en el aire con destellos chillwave y cian neonwave. El astrolabio de bronce y piedra oscura que pende de su pecho registra cada vibración del multiverso.
-              </p>
-              
-              <blockquote id="archive-scene-quote" style="border-left: 2px solid #D4AF37; padding-left: 1rem; color: #F59E0B; font-style: italic; font-size: 0.85rem; background: rgba(212,175,55,0.05); padding-top: 0.5rem; padding-bottom: 0.5rem; border-radius: 0 6px 6px 0;">
-                "Las guerras desgarraron los continentes de carne y piedra, pero el sonido de las estrellas es inmortal. Aquí aguardo con Umbraxion hasta que el tiempo decida recomenzar."
-              </blockquote>
-            </div>
-
-            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center;">
-              <div style="font-size: 0.8rem; color: #94A3B8;">
-                <strong style="color: #FFFFFF;">Atmósfera:</strong> Neonwave Dark Fantasy / 432Hz
-              </div>
-              <span style="font-size: 0.75rem; font-family: monospace; color: #22D3EE; background: rgba(34,211,238,0.1); padding: 0.25rem 0.6rem; border-radius: 4px; border: 1px solid rgba(34,211,238,0.3);">
-                Polvo Lila • 8K Render
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Selector de Escenas / Miniaturas Clickables -->
-        <div style="margin-bottom: 3rem;">
-          <h3 style="font-size: 1rem; font-weight: 600; color: #FFFFFF; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-            <i class="fa-solid fa-film" style="color: #22D3EE;"></i> Haz click en una escena para cambiar la vista del Arcano:
-          </h3>
-          <div class="archive-scenes-selector">
-            
-            <div id="thumb-scene-1" class="archive-scene-thumb-card active" onclick="selectArchiveScene(1)">
-              <img src="arcano_tower_window.jpg" alt="Mirando por la ventana" />
-              <div class="archive-scene-thumb-title">
-                1. La Mirada al Vasto Abismo
-              </div>
-            </div>
-
-            <div id="thumb-scene-2" class="archive-scene-thumb-card" onclick="selectArchiveScene(2)">
-              <img src="arcano_reading.jpg" alt="Leyendo libro a la luz de la vela" />
-              <div class="archive-scene-thumb-title">
-                2. El Estudio bajo la Vela
-              </div>
-            </div>
-
-            <div id="thumb-scene-3" class="archive-scene-thumb-card" onclick="selectArchiveScene(3)">
-              <img src="arcano_dragon.jpg" alt="Acariciando la palma del dragón negro" />
-              <div class="archive-scene-thumb-title">
-                3. El Pacto de Umbraxion
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Ficha de Lore Profundo -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-          
-          <div style="background: rgba(14,19,31,0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem;">
-            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-              <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(168,85,247,0.15); border: 1px solid rgba(168,85,247,0.4); display: flex; align-items: center; justify-content: center; color: #C084FC; font-size: 1.2rem;">
-                <i class="fa-solid fa-scroll"></i>
-              </div>
-              <div>
-                <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin: 0;">Aurelius Chronovoid</h4>
-                <span style="font-size: 0.75rem; color: #94A3B8; font-family: monospace;">El Último Archicanciller del Gran Arcano</span>
-              </div>
-            </div>
-            <p style="color: #94A3B8; font-size: 0.85rem; line-height: 1.6; margin: 0;">
-              Posee cabello níveo y una barba solemne que roza su pecho. Su túnica celestial bordada en hilos astrales y runas de plata fue tejida antes de la Caída. Lleva colgado al cuello el <strong>Crono-Astrolabio Alquímico</strong>, un artefacto esotérico que decodifica las ondas acústicas emitidas por nebulosas lejanas y antiguos reinos perdidos.
-            </p>
-          </div>
-
-          <div style="background: rgba(14,19,31,0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem;">
-            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-              <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(34,211,238,0.15); border: 1px solid rgba(34,211,238,0.4); display: flex; align-items: center; justify-content: center; color: #22D3EE; font-size: 1.2rem;">
-                <i class="fa-solid fa-dragon"></i>
-              </div>
-              <div>
-                <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin: 0;">Umbraxion, el Dragón del Vacío</h4>
-                <span style="font-size: 0.75rem; color: #94A3B8; font-family: monospace;">Guardián del Salón de las Bóvedas</span>
-              </div>
-            </div>
-            <p style="color: #94A3B8; font-size: 0.85rem; line-height: 1.6; margin: 0;">
-              Una bestia colosal de escamas color obsidiana pulida con reflejos dorados y amatista. No emite rugidos destructivos; su respiración profunda actúa como un drone natural subsónico (a 40-50Hz) que pacifica la mente de Aurelius. Descansa en el gran salón de columnas góticas y responde con dócil afecto a la palma del archicanciller.
-            </p>
-          </div>
-
-          <div style="background: rgba(14,19,31,0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem;">
-            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-              <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(212,175,55,0.15); border: 1px solid rgba(212,175,55,0.4); display: flex; align-items: center; justify-content: center; color: #D4AF37; font-size: 1.2rem;">
-                <i class="fa-solid fa-compass"></i>
-              </div>
-              <div>
-                <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin: 0;">La Bóveda Fuera del Tiempo</h4>
-                <span style="font-size: 0.75rem; color: #94A3B8; font-family: monospace;">Fusión Medieval-Neonwave</span>
-              </div>
-            </div>
-            <p style="color: #94A3B8; font-size: 0.85rem; line-height: 1.6; margin: 0;">
-              La atmósfera de la ciudadela destruida permanece sumergida en una noche cósmica eterna. Partículas luminiscentes de polvo lila flotan ingrávidas entre estanterías de roble fosilizado y pantallas holográficas rúnicas, creando un espacio de concentración absoluta para el estudio, la lectura y la codificación.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- ========================================== -->
-      <!-- PESTAÑA 2: BÓVEDA ACÚSTICA (SHOWCASE)       -->
-      <!-- ========================================== -->
-      <section id="archive-pane-audio" class="archive-pane" style="display: none;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
-          <div>
-            <h2 style="font-size: 1.5rem; font-weight: 700; color: #FFFFFF; margin: 0;">Códices Sonoros de Lanzamiento</h2>
-            <p style="color: #94A3B8; font-size: 0.85rem; margin-top: 0.25rem;">3 Tomos oficiales de 1.5 a 2 horas ensamblados para estados de foco prolongado</p>
-          </div>
-          
-          <!-- Filtro de Reinos -->
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <button class="archive-filter-btn active" onclick="filterArchiveUniverse('all', this)">Todos</button>
-            <button class="archive-filter-btn" onclick="filterArchiveUniverse('elven', this)">🌿 Élfico</button>
-            <button class="archive-filter-btn" onclick="filterArchiveUniverse('dwarf', this)">⚒️ Enano</button>
-            <button class="archive-filter-btn" onclick="filterArchiveUniverse('winter', this)">❄️ Norteño</button>
-          </div>
-        </div>
-
-        <!-- Grid de Tarjetas de Tomos -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem;">
-          
-          <!-- Tomo 1 -->
-          <div class="archive-tome-card" data-universe="elven" style="background: rgba(14,19,31,0.85); border: 1px solid rgba(34,211,238,0.25); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <div style="position: relative; height: 180px; overflow: hidden;">
-                <img src="arcano_reading.jpg" alt="Tomo I" style="width: 100%; height: 100%; object-fit: cover;" />
-                <span style="position: absolute; top: 0.75rem; left: 0.75rem; background: rgba(6,8,13,0.8); border: 1px solid #22D3EE; color: #22D3EE; font-size: 0.7rem; font-family: monospace; padding: 0.2rem 0.6rem; border-radius: 4px;">
-                  TOME I • LECTURA & CALMA
-                </span>
-                <span style="position: absolute; bottom: 0.75rem; right: 0.75rem; background: rgba(0,0,0,0.8); color: #FFFFFF; font-size: 0.7rem; font-family: monospace; padding: 0.2rem 0.5rem; border-radius: 4px;">
-                  1h 30m • 60 BPM
-                </span>
-              </div>
-
-              <div style="padding: 1.25rem;">
-                <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin: 0 0 0.5rem 0;">Whispers of the Moonlit Sanctuary</h3>
-                <p style="color: #94A3B8; font-size: 0.8rem; line-height: 1.5; margin-bottom: 1rem;">
-                  Arpa céltica suspendida, flauta de bambú bansuri, lluvia tenue nocturna y frecuencias binaurales de 6Hz. Ideal para lectura reflexiva.
-                </p>
-
-                <!-- Pistas -->
-                <div style="background: rgba(6,8,13,0.6); border-radius: 8px; padding: 0.75rem; margin-bottom: 1rem;">
-                  <div style="font-size: 0.75rem; font-family: monospace; color: #22D3EE; margin-bottom: 0.4rem; display: flex; justify-content: space-between;">
-                    <span>TRACK-01A: Sylverian Starlight Harp</span>
-                    <span>60 BPM</span>
-                  </div>
-                  <div style="font-size: 0.75rem; font-family: monospace; color: #94A3B8; margin-bottom: 0.4rem; display: flex; justify-content: space-between;">
-                    <span>TRACK-01B: Breeze in High Scriptorium</span>
-                    <span>58 BPM</span>
-                  </div>
-                  <div style="font-size: 0.75rem; font-family: monospace; color: #94A3B8; display: flex; justify-content: space-between;">
-                    <span>TRACK-01C: Starlight Maiden Incantation</span>
-                    <span>62 BPM</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div style="padding: 1rem 1.25rem; background: rgba(10,14,23,0.8); border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center;">
-              <button onclick="previewArchiveTrack('Tome I: Whispers of the Moonlit Sanctuary', 60, 'D Dorian')" class="btn btn-secondary" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;">
-                <i class="fa-solid fa-play" style="color: #22D3EE;"></i> Escuchar Preview
-              </button>
-              <span style="font-size: 0.75rem; color: #22D3EE; font-family: monospace;">-14 LUFS Master</span>
-            </div>
-          </div>
-
-          <!-- Tomo 2 -->
-          <div class="archive-tome-card" data-universe="dwarf" style="background: rgba(14,19,31,0.85); border: 1px solid rgba(212,175,55,0.25); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <div style="position: relative; height: 180px; overflow: hidden;">
-                <img src="arcano_dragon.jpg" alt="Codex II" style="width: 100%; height: 100%; object-fit: cover;" />
-                <span style="position: absolute; top: 0.75rem; left: 0.75rem; background: rgba(6,8,13,0.8); border: 1px solid #D4AF37; color: #D4AF37; font-size: 0.7rem; font-family: monospace; padding: 0.2rem 0.6rem; border-radius: 4px;">
-                  CODEX II • FLOW STATE CODING
-                </span>
-                <span style="position: absolute; bottom: 0.75rem; right: 0.75rem; background: rgba(0,0,0,0.8); color: #FFFFFF; font-size: 0.7rem; font-family: monospace; padding: 0.2rem 0.5rem; border-radius: 4px;">
-                  2h 00m • 65 BPM
-                </span>
-              </div>
-
-              <div style="padding: 1.25rem;">
-                <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin: 0 0 0.5rem 0;">The Deep Forge of the Runesmiths</h3>
-                <p style="color: #94A3B8; font-size: 0.8rem; line-height: 1.5; margin-bottom: 1rem;">
-                  Martillos rítmicos lejanos como metrónomo a 65 BPM, coros guturales profundos y engranajes de bronce. Diseñado para software engineers.
-                </p>
-
-                <!-- Pistas -->
-                <div style="background: rgba(6,8,13,0.6); border-radius: 8px; padding: 0.75rem; margin-bottom: 1rem;">
-                  <div style="font-size: 0.75rem; font-family: monospace; color: #D4AF37; margin-bottom: 0.4rem; display: flex; justify-content: space-between;">
-                    <span>TRACK-02A: Rhythmic Strike of the Anvil</span>
-                    <span>65 BPM</span>
-                  </div>
-                  <div style="font-size: 0.75rem; font-family: monospace; color: #94A3B8; margin-bottom: 0.4rem; display: flex; justify-content: space-between;">
-                    <span>TRACK-02B: Subterranean Guilds Chant</span>
-                    <span>65 BPM</span>
-                  </div>
-                  <div style="font-size: 0.75rem; font-family: monospace; color: #94A3B8; display: flex; justify-content: space-between;">
-                    <span>TRACK-02C: Gears in the Magma Chamber</span>
-                    <span>66 BPM</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div style="padding: 1rem 1.25rem; background: rgba(10,14,23,0.8); border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center;">
-              <button onclick="previewArchiveTrack('Codex II: The Deep Forge of the Runesmiths', 65, 'C Minor')" class="btn btn-secondary" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;">
-                <i class="fa-solid fa-play" style="color: #D4AF37;"></i> Escuchar Preview
-              </button>
-              <span style="font-size: 0.75rem; color: #D4AF37; font-family: monospace;">-14 LUFS Master</span>
-            </div>
-          </div>
-
-          <!-- Tomo 3 -->
-          <div class="archive-tome-card" data-universe="winter" style="background: rgba(14,19,31,0.85); border: 1px solid rgba(168,85,247,0.25); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <div style="position: relative; height: 180px; overflow: hidden;">
-                <img src="arcano_tower_window.jpg" alt="Archive III" style="width: 100%; height: 100%; object-fit: cover;" />
-                <span style="position: absolute; top: 0.75rem; left: 0.75rem; background: rgba(6,8,13,0.8); border: 1px solid #A855F7; color: #A855F7; font-size: 0.7rem; font-family: monospace; padding: 0.2rem 0.6rem; border-radius: 4px;">
-                  ARCHIVE III • ESCRITURA & ANÁLISIS
-                </span>
-                <span style="position: absolute; bottom: 0.75rem; right: 0.75rem; background: rgba(0,0,0,0.8); color: #FFFFFF; font-size: 0.7rem; font-family: monospace; padding: 0.2rem 0.5rem; border-radius: 4px;">
-                  2h 00m • 56 BPM
-                </span>
-              </div>
-
-              <div style="padding: 1.25rem;">
-                <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin: 0 0 0.5rem 0;">The Obsidian Bastion at Winterfall</h3>
-                <p style="color: #94A3B8; font-size: 0.8rem; line-height: 1.5; margin-bottom: 1rem;">
-                  Violonchelo acústico solista, fuego crepitando de roble, laúd renacentista y ventisca polar lejana. Diseñado para redactores y pensadores.
-                </p>
-
-                <!-- Pistas -->
-                <div style="background: rgba(6,8,13,0.6); border-radius: 8px; padding: 0.75rem; margin-bottom: 1rem;">
-                  <div style="font-size: 0.75rem; font-family: monospace; color: #A855F7; margin-bottom: 0.4rem; display: flex; justify-content: space-between;">
-                    <span>TRACK-03A: Solitary Cellist of Bastion</span>
-                    <span>56 BPM</span>
-                  </div>
-                  <div style="font-size: 0.75rem; font-family: monospace; color: #94A3B8; margin-bottom: 0.4rem; display: flex; justify-content: space-between;">
-                    <span>TRACK-03B: Old Parchment and Bitter Cold</span>
-                    <span>58 BPM</span>
-                  </div>
-                  <div style="font-size: 0.75rem; font-family: monospace; color: #94A3B8; display: flex; justify-content: space-between;">
-                    <span>TRACK-03C: Bell of the Frozen Keep</span>
-                    <span>50 BPM</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div style="padding: 1rem 1.25rem; background: rgba(10,14,23,0.8); border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center;">
-              <button onclick="previewArchiveTrack('Archive III: The Obsidian Bastion at Winterfall', 56, 'B Minor')" class="btn btn-secondary" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;">
-                <i class="fa-solid fa-play" style="color: #A855F7;"></i> Escuchar Preview
-              </button>
-              <span style="font-size: 0.75rem; color: #A855F7; font-family: monospace;">-14 LUFS Master</span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Reproductor de Preview Activo Flotante / Inferior -->
-        <div id="archive-audio-player-banner" style="margin-top: 2rem; background: rgba(10,14,23,0.9); border: 1px solid #22D3EE; border-radius: 12px; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; box-shadow: 0 0 25px rgba(34,211,238,0.2);">
-          <div style="display: flex; align-items: center; gap: 1rem;">
-            <div style="width: 40px; height: 40px; border-radius: 8px; background: #22D3EE; color: #06080D; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: bold;">
-              <i class="fa-solid fa-volume-high"></i>
-            </div>
-            <div>
-              <div id="archive-player-title" style="font-weight: 700; color: #FFFFFF; font-size: 0.95rem;">Tome I: Whispers of the Moonlit Sanctuary</div>
-              <div id="archive-player-sub" style="font-size: 0.75rem; color: #94A3B8; font-family: monospace;">60 BPM • D Dorian • Simulación Activa (Sin Fatiga Auditiva)</div>
-            </div>
-          </div>
-
-          <div class="archive-waveform-bars" style="height: 28px;">
-            <div class="archive-waveform-bar" style="animation-delay: 0.1s;"></div>
-            <div class="archive-waveform-bar" style="animation-delay: 0.3s;"></div>
-            <div class="archive-waveform-bar" style="animation-delay: 0.15s;"></div>
-            <div class="archive-waveform-bar" style="animation-delay: 0.4s;"></div>
-            <div class="archive-waveform-bar" style="animation-delay: 0.25s;"></div>
-            <div class="archive-waveform-bar" style="animation-delay: 0.5s;"></div>
-            <div class="archive-waveform-bar" style="animation-delay: 0.2s;"></div>
-            <div class="archive-waveform-bar" style="animation-delay: 0.35s;"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================== -->
-      <!-- PESTAÑA 3: PIPELINE KANBAN & YOUTUBE SEO   -->
-      <!-- ========================================== -->
-      <section id="archive-pane-pipeline" class="archive-pane" style="display: none;">
-        
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
-          <div>
-            <h2 style="font-size: 1.5rem; font-weight: 700; color: #FFFFFF; margin: 0;">Pipeline de Producción & YouTube Studio Kit</h2>
-            <p style="color: #94A3B8; font-size: 0.85rem; margin-top: 0.25rem;">Flujo de trabajo de 5 fases: desde el prompt de lore hasta el copy-paste directo a YouTube Studio.</p>
-          </div>
-
-          <button onclick="copyArchiveYouTubeKit()" class="btn btn-primary" style="background: linear-gradient(135deg, #22D3EE, #0284C7); border: none; font-size: 0.85rem; box-shadow: 0 0 20px rgba(34,211,238,0.3); font-weight: 700;">
-            <i class="fa-solid fa-copy"></i> Copiar Paquete YouTube Studio (1-Click)
-          </button>
-        </div>
-
-        <!-- Tablero Kanban de 5 Columnas -->
-        <div class="archive-kanban-board">
-          
-          <!-- Col 1 -->
-          <div class="archive-kanban-col">
-            <div class="archive-kanban-header">
-              <span style="font-size: 0.8rem; font-weight: 700; color: #F59E0B;">1. Idea / Lore Prompt</span>
-              <span style="background: rgba(245,158,11,0.2); color: #F59E0B; font-size: 0.7rem; font-family: monospace; padding: 0.1rem 0.4rem; border-radius: 4px;">1</span>
-            </div>
-            <div class="archive-kanban-card">
-              <div style="font-size: 0.7rem; color: #F59E0B; font-family: monospace; margin-bottom: 0.25rem;">NUEVO PROYECTO</div>
-              <h5 style="color: #FFFFFF; font-size: 0.85rem; margin: 0 0 0.4rem 0;">Observatorio Celestial de Eldoria</h5>
-              <p style="color: #94A3B8; font-size: 0.75rem; margin: 0;">Cuencos de cuarzo y drones solares para meditación nocturna.</p>
-            </div>
-          </div>
-
-          <!-- Col 2 -->
-          <div class="archive-kanban-col">
-            <div class="archive-kanban-header">
-              <span style="font-size: 0.8rem; font-weight: 700; color: #22D3EE;">2. Audio AI (Udio/Suno)</span>
-              <span style="background: rgba(34,211,238,0.2); color: #22D3EE; font-size: 0.7rem; font-family: monospace; padding: 0.1rem 0.4rem; border-radius: 4px;">3</span>
-            </div>
-            <div class="archive-kanban-card">
-              <div style="font-size: 0.7rem; color: #22D3EE; font-family: monospace; margin-bottom: 0.25rem;">GENERACIÓN DE STEMS</div>
-              <h5 style="color: #FFFFFF; font-size: 0.85rem; margin: 0 0 0.4rem 0;">Pistas 1A, 1B, 1C (Arpa & Lluvia)</h5>
-              <p style="color: #94A3B8; font-size: 0.75rem; margin: 0;">Verificación de BPM (60 BPM exactos) y afinación a 432 Hz.</p>
-            </div>
-          </div>
-
-          <!-- Col 3 -->
-          <div class="archive-kanban-col">
-            <div class="archive-kanban-header">
-              <span style="font-size: 0.8rem; font-weight: 700; color: #A855F7;">3. Loops Visuales AI</span>
-              <span style="background: rgba(168,85,247,0.2); color: #A855F7; font-size: 0.7rem; font-family: monospace; padding: 0.1rem 0.4rem; border-radius: 4px;">3</span>
-            </div>
-            <div class="archive-kanban-card">
-              <div style="font-size: 0.7rem; color: #A855F7; font-family: monospace; margin-bottom: 0.25rem;">RUNWAY GEN-3 / LUMA</div>
-              <h5 style="color: #FFFFFF; font-size: 0.85rem; margin: 0 0 0.4rem 0;">Erudito en Balcón 8K Loop</h5>
-              <p style="color: #94A3B8; font-size: 0.75rem; margin: 0;">Ciclo perfecto de 15 segundos sin cortes visibles de lluvia.</p>
-            </div>
-          </div>
-
-          <!-- Col 4 -->
-          <div class="archive-kanban-col">
-            <div class="archive-kanban-header">
-              <span style="font-size: 0.8rem; font-weight: 700; color: #38BDF8;">4. Montaje & Master</span>
-              <span style="background: rgba(56,189,248,0.2); color: #38BDF8; font-size: 0.7rem; font-family: monospace; padding: 0.1rem 0.4rem; border-radius: 4px;">1</span>
-            </div>
-            <div class="archive-kanban-card">
-              <div style="font-size: 0.7rem; color: #38BDF8; font-family: monospace; margin-bottom: 0.25rem;">DAVINCI / PREMIERE</div>
-              <h5 style="color: #FFFFFF; font-size: 0.85rem; margin: 0 0 0.4rem 0;">Ensamble 1h 30m -14 LUFS</h5>
-              <p style="color: #94A3B8; font-size: 0.75rem; margin: 0;">Normalización de volumen estándar YouTube y transiciones suaves.</p>
-            </div>
-          </div>
-
-          <!-- Col 5 -->
-          <div class="archive-kanban-col">
-            <div class="archive-kanban-header">
-              <span style="font-size: 0.8rem; font-weight: 700; color: #10B981;">5. Listo / YouTube</span>
-              <span style="background: rgba(16,185,129,0.2); color: #10B981; font-size: 0.7rem; font-family: monospace; padding: 0.1rem 0.4rem; border-radius: 4px;">3</span>
-            </div>
-            <div class="archive-kanban-card" style="border-color: rgba(16,185,129,0.4);">
-              <div style="font-size: 0.7rem; color: #10B981; font-family: monospace; margin-bottom: 0.25rem;">PUBLICADO</div>
-              <h5 style="color: #FFFFFF; font-size: 0.85rem; margin: 0 0 0.4rem 0;">Tomo I, Codex II & Archive III</h5>
-              <p style="color: #94A3B8; font-size: 0.75rem; margin: 0;">Metadatos SEO inyectados, 25 tags y sin Content ID.</p>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Cuadro de Vista Previa de los Metadatos Copiables -->
-        <div style="margin-top: 2rem; background: rgba(14,19,31,0.85); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem;">
-          <h4 style="font-size: 0.95rem; font-weight: 700; color: #FFFFFF; margin: 0 0 0.75rem 0;">
-            <i class="fa-brands fa-youtube" style="color: #EF4444;"></i> Previsualización del Paquete de YouTube Studio (Listo para Subir)
-          </h4>
-          <textarea id="archive-youtube-text-preview" readonly style="width: 100%; height: 200px; background: #06080D; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #CBD5E1; font-family: monospace; font-size: 0.75rem; padding: 1rem; resize: vertical; line-height: 1.5;">
-TÍTULO:
-Ancient Elven Library (Ambient Fantasy Music & Rain) 1.5 HOURS | Deep Reading & Tranquil Study
-
-DESCRIPCIÓN:
-"Has cruzado el umbral del Gran Arcano. Frente a ti se abre Tome I — Whispers of the Moonlit Sanctuary, custodiado en la Bóveda del Vacío."
-
-🌌 LORE DEL REGISTRO:
-El tomo que tienes ante ti recopila las frecuencias registradas en los santuarios de cristal de Sylveria por el Archicanciller Aurelius y el dragón Umbraxion. Diseñado específicamente para acompañar sesiones de estudio prolongado, lectura inmersiva o codificación sin fatiga auditiva.
-
-⏱️ TIMESTAMPS & TRACKLIST:
-00:00 - Track 1A: Sylverian Starlight Harp & Dew (60 BPM | D Dorian)
-30:00 - Track 1B: Breeze Through the High Scriptorium (58 BPM | A Pentatonic)
-1:00:00 - Track 1C: The Starlight Maiden’s Incantation (62 BPM | E Aeolian)
-
-🍅 TÉCNICA DE ESTUDIO RECOMENDADA (POMODORO 50/10):
-00:00 - Bloque de Enfoque Profundo I (50 min)
-50:00 - Pausa de respiración e hidratación (10 min)
-1:00:00 - Bloque de Enfoque Profundo II (50 min)
-1:50:00 - Cierre del Tomo
-
-🎧 ESPECIFICACIONES TÉCNICAS DE AUDIO:
-• Masterizado a -14 LUFS Integrated para YouTube.
-• Afinación armónica a 432 Hz / Frecuencias binaurales sub-graves templadas.
-
-📜 DESCARGO ÉTICO Y LEGAL (LIBRE DE CONTENT ID):
-Toda la música y los visuales de The Infinite Archive son generados mediante IA de última generación y masterizados profesionalmente. Puedes utilizar este video en tus streams de Twitch o YouTube sin strikes de copyright.
-
-TAGS (25 ETIQUETAS ESTRATÉGICAS):
-fantasy study music, medieval ambient focus, elven library ambience, deep work music coding, programmer focus beats, flow state ambient, dark academia study music, reading music fantasy, calm harp ambience, dwarven forge ambience, winter keep fireplace, ambient music 2 hours, lofi fantasy ambient, sleep fantasy sounds, relaxing rpg music, tabletop background music, dnd study playlist, focus music no drums, rain on window fantasy, chillwave fantasy, cinemagraph study background, medieval writing music, ambient soundscape study, study with me fantasy, the infinite archive
-          </textarea>
-        </div>
-      </section>
-
-    </div>
-  </main>
-
-  <!-- =================================================================== -->
-  <!-- VISTA PÚBLICA PRINCIPAL (HOME SHOWROOM / PRESENTACIÓN DE PROYECTO)   -->
+    <!-- =================================================================== -->
+  <!-- VISTA PÚBLICA PRINCIPAL (LANDING SHOWROOM CON LO MEJOR DE TODO)     -->
   <!-- =================================================================== -->
   <main id="view-public" class="mode-view active-view">
     
@@ -587,339 +91,40 @@ fantasy study music, medieval ambient focus, elven library ambience, deep work m
           <span class="gradient-text">Escalamos activos digitales.</span>
         </h1>
         <p class="hero-lead">
-          Desarrollamos y comercializamos influencers virtuales hiperrealistas con consistencia consagrada, canales faceless de YouTube y programas de coaching ejecutivo.
+          Desarrollamos y comercializamos influencers virtuales hiperrealistas con consistencia consagrada, canales faceless de YouTube y soluciones digitales de alto impacto para empresas.
         </p>
-        <div class="hero-actions">
+        
+        <!-- Acceso Rápido a Secciones Principales -->
+        <div class="hero-actions" style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;">
           <a href="#roster" class="btn btn-primary">
-            <i class="fa-solid fa-gem"></i> Catálogo de Influencers IA
+            <i class="fa-solid fa-gem"></i> Influencers IA
           </a>
-          <a href="#empresas" class="btn btn-secondary" style="border-color: rgba(6, 182, 212, 0.45);">
+          <a href="#youtube" class="btn btn-secondary" style="border-color: rgba(168, 85, 247, 0.5); color: #d8b4fe;">
+            <i class="fa-brands fa-youtube" style="color: #c084fc;"></i> YouTube & Arcano
+          </a>
+          <a href="#empresas" class="btn btn-secondary" style="border-color: rgba(6, 182, 212, 0.5); color: #67e8f9;">
             <i class="fa-solid fa-building" style="color: var(--cyan);"></i> Soluciones Empresas
           </a>
-          <a href="#clientes" class="btn btn-secondary" style="border-color: rgba(139, 92, 246, 0.45);">
-            <i class="fa-solid fa-briefcase" style="color: var(--purple);"></i> Clientes & Pitch
+          <a href="#seguridad" class="btn btn-secondary" style="border-color: rgba(59, 130, 246, 0.5); color: #93c5fd;">
+            <i class="fa-solid fa-shield-halved" style="color: #60a5fa;"></i> Seguridad Digital
+          </a>
+          <a href="#cursos" class="btn btn-secondary" style="border-color: rgba(245, 158, 11, 0.5); color: #fde68a;">
+            <i class="fa-solid fa-graduation-cap" style="color: #fbbf24;"></i> Cursos IA
+          </a>
+          <a href="#clientes" class="btn btn-secondary" style="border-color: rgba(16, 185, 129, 0.5); color: #6ee7b7;">
+            <i class="fa-solid fa-briefcase" style="color: #34d399;"></i> Clientes & Pitch
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Roster de Influencers IA (Venta & Comercialización) -->
-    <section id="roster" class="section" style="padding-top: 2rem;">
-      <div class="section-header">
-        <span class="section-subtitle">Catálogo Comercial & Licenciamiento</span>
-        <h2 class="section-title">Influencers IA: Modelos Listos para Venta y Escalamiento</h2>
-        <p class="section-description">
-          Activos digitales hiperrealistas con consistencia consagrada. Listos para acuerdos de marca, patrocinios B2B y embudos directos a suscripción VIP (Fanvue / PPV).
-        </p>
-      </div>
-
-      <div class="roster-grid">
-        
-        <!-- 1. Elena Daddario -->
-        <div class="glass-card influencer-card" style="border-color: rgba(96, 165, 250, 0.4);">
-          <div class="influencer-img-wrapper">
-            <img src="elena_avatar.png" alt="Elena Daddario" class="influencer-img">
-            <span class="influencer-badge" style="color: #60a5fa; border-color: #60a5fa; background: rgba(96, 165, 250, 0.15);">
-              <i class="fa-solid fa-gem"></i> Activo Certificado • Lifestyle Consciente
-            </span>
-          </div>
-          <div class="influencer-info">
-            <h3 class="influencer-name">Elena Daddario</h3>
-            <span class="influencer-niche"><i class="fa-solid fa-brain"></i> Psicología & Lifestyle Europeo</span>
-            <p class="influencer-desc">27 años. Rusa en Miraflores. Elegancia atemporal, psicología y bienestar emocional. Disponible para campañas de marcas conscientes, moda y lifestyle.</p>
-            <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem;">
-              <a href="#influencer/elena" class="btn btn-primary influencer-btn" style="flex: 1; justify-content: center;">
-                <i class="fa-solid fa-arrow-right"></i> Ver Ficha de Producto
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. Julia Schmidt -->
-        <div class="glass-card influencer-card" style="border-color: rgba(236, 72, 153, 0.4);">
-          <div class="influencer-img-wrapper">
-            <img src="julia_avatar.jpg" alt="Julia Schmidt" class="influencer-img">
-            <span class="influencer-badge" style="color: #ec4899; border-color: #ec4899; background: rgba(236, 72, 153, 0.15);">
-              <i class="fa-solid fa-gem"></i> Activo Certificado • Clean Beauty
-            </span>
-          </div>
-          <div class="influencer-info">
-            <h3 class="influencer-name">Julia Schmidt</h3>
-            <span class="influencer-niche"><i class="fa-solid fa-spa"></i> Dermocosmética & Clean Beauty</span>
-            <p class="influencer-desc">24 años. Miraflores. Reseñas científicas sin filtro, dupes accesibles y skincare real. Ideal para colaboraciones con marcas dermocosméticas y belleza limpia.</p>
-            <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem;">
-              <a href="#influencer/julia" class="btn btn-primary influencer-btn" style="flex: 1; justify-content: center;">
-                <i class="fa-solid fa-arrow-right"></i> Ver Ficha de Producto
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. Laura "Lau" Taeda (Nutrición con Evidencia) -->
-        <div class="glass-card influencer-card" style="border-color: rgba(16, 185, 129, 0.45);">
-          <div class="influencer-img-wrapper">
-            <img src="laura_avatar.png" alt="Laura Taeda" class="influencer-img">
-            <span class="influencer-badge" style="color: #10b981; border-color: #10b981; background: rgba(16, 185, 129, 0.15);">
-              <i class="fa-solid fa-gem"></i> Activo Certificado • Fit-Geek & Longevidad
-            </span>
-          </div>
-          <div class="influencer-info">
-            <h3 class="influencer-name">Laura "Lau" Taeda</h3>
-            <span class="influencer-niche"><i class="fa-solid fa-apple-whole"></i> Nutrition Lifestyle + Science-Based Reviews</span>
-            <p class="influencer-desc">32 años. CDMX. Nutrióloga bicultural, desmitificación de dietas con evidencia médica y recomposición corporal. Ideal para marcas deportivas, suplementos y salud.</p>
-            <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem;">
-              <a href="#influencer/laura" class="btn btn-primary influencer-btn" style="flex: 1; justify-content: center;">
-                <i class="fa-solid fa-arrow-right"></i> Ver Ficha de Producto
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. Mateo Silva (FinTech, Inversiones Cuantitativas & Real Estate Tech - Nicho Top Monetización) -->
-        <div class="glass-card influencer-card" style="border-color: rgba(6, 182, 212, 0.45);">
-          <div class="influencer-img-wrapper">
-            <img src="mateo_avatar.jpg" alt="Mateo Silva" class="influencer-img">
-            <span class="influencer-badge" style="color: #38bdf8; border-color: #38bdf8; background: rgba(56, 189, 248, 0.15);">
-              <i class="fa-solid fa-chart-line"></i> Nicho Top Monetización • FinTech
-            </span>
-          </div>
-          <div class="influencer-info">
-            <h3 class="influencer-name">Mateo Silva</h3>
-            <span class="influencer-niche"><i class="fa-solid fa-arrow-trend-up"></i> FinTech, Inversiones Cuantitativas & Real Estate</span>
-            <p class="influencer-desc">30 años. Canary Wharf / Fráncfort. Estrategias cuantitativas de inversión, modelos en Python y finanzas modernas. El nicho con mayor CPM/RPM de YouTube ($18–$45 USD) y conversión en SaaS y consultoría B2B.</p>
-            <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem;">
-              <a href="#influencer/mateo" class="btn btn-primary influencer-btn" style="flex: 1; justify-content: center;">
-                <i class="fa-solid fa-arrow-right"></i> Ver Ficha de Producto
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. Maite Valenzuela ("La Rancherita" - Mercado Chile) -->
-        <div class="glass-card influencer-card" style="border-color: rgba(245, 158, 11, 0.45);">
-          <div class="influencer-img-wrapper">
-            <img src="maite_avatar.jpg" alt="Maite Valenzuela" class="influencer-img">
-            <span class="influencer-badge" style="color: #f59e0b; border-color: #f59e0b; background: rgba(245, 158, 11, 0.15);">
-              <i class="fa-solid fa-star"></i> Activo Musical • Cumbia Ranchera
-            </span>
-          </div>
-          <div class="influencer-info">
-            <h3 class="influencer-name">Maite Valenzuela</h3>
-            <span class="influencer-niche"><i class="fa-solid fa-music"></i> Cumbia Ranchera & Country Chic</span>
-            <p class="influencer-desc">24 años. Valle de Colchagua. La voz hot de la cumbia ranchera chilena. Videoclips de alto impacto, streaming musical y presencia en fiestas y festivales.</p>
-            <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem;">
-              <a href="#influencer/maite" class="btn btn-primary influencer-btn" style="flex: 1; justify-content: center;">
-                <i class="fa-solid fa-arrow-right"></i> Ver Ficha de Producto
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. Kira Voss ("The Cyber Dev & Glamour" - Hot Game Dev & Prueba Social Validada) -->
-        <div class="glass-card influencer-card" style="border-color: rgba(6, 182, 212, 0.45);">
-          <div class="influencer-img-wrapper">
-            <img src="kira_avatar.jpg" alt="Kira Voss" class="influencer-img">
-            <span class="influencer-badge" style="color: var(--cyan); border-color: var(--cyan); background: rgba(6, 182, 212, 0.15);">
-              <i class="fa-solid fa-circle-check"></i> Caso Validado • +500 VIPs
-            </span>
-          </div>
-          <div class="influencer-info">
-            <h3 class="influencer-name">Kira Voss</h3>
-            <span class="influencer-niche"><i class="fa-solid fa-terminal"></i> Game Dev, Ciber-Activismo & Tech Glamour</span>
-            <p class="influencer-desc">26 años. Activo insignia: desarrollo de videojuegos indie (Godot/Unreal), tecnología y estética cyberpunk con comunidad fidelizada de más de 500 suscriptores.</p>
-            <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem;">
-              <a href="#influencer/kira" class="btn btn-primary influencer-btn" style="flex: 1; justify-content: center;">
-                <i class="fa-solid fa-arrow-right"></i> Ver Ficha de Producto
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6. Alejandra (Prototipo B2B en Adopción) -->
-        <div class="glass-card influencer-card" style="border-color: rgba(139, 92, 246, 0.45);">
-          <div class="influencer-img-wrapper">
-            <img src="alejandra_avatar.jpg" alt="Alejandra" class="influencer-img">
-            <span class="influencer-badge" style="color: #c084fc; border-color: #a855f7; background: rgba(139, 92, 246, 0.2);">
-              <i class="fa-solid fa-handshake"></i> Prototipo B2B • En Adopción
-            </span>
-          </div>
-          <div class="influencer-info">
-            <h3 class="influencer-name">Alejandra</h3>
-            <span class="influencer-niche"><i class="fa-solid fa-building-user"></i> Embajadora Virtual • Disponible para Negocios</span>
-            <p class="influencer-desc">Prototipo de alta fidelidad estética no implementado comercialmente. Disponible para ser adoptada, bautizada y operada exclusivamente por una marca o empresa aliada.</p>
-            <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem;">
-              <a href="#influencer/alejandra" class="btn btn-secondary influencer-btn" style="flex: 1; justify-content: center;">
-                <i class="fa-solid fa-eye"></i> Ficha Concepto
-              </a>
-              <a href="#empresas" class="btn btn-primary influencer-btn" style="padding: 0.65rem 0.85rem;" title="Consultar para tu Negocio">
-                <i class="fa-solid fa-briefcase"></i> Adoptar
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. Alina Van Dijk (Sex-Positive Dominatrix & Erotismo Consciente) -->
-        <div class="glass-card influencer-card" style="border-color: rgba(239, 68, 68, 0.45);">
-          <div class="influencer-img-wrapper">
-            <img src="alina_avatar.png" alt="Alina Van Dijk" class="influencer-img">
-            <span class="influencer-badge" style="color: #f87171; border-color: #ef4444; background: rgba(239, 68, 68, 0.2);">
-              <i class="fa-solid fa-fire"></i> Nicho Adulto VIP • Sex-Positive
-            </span>
-          </div>
-          <div class="influencer-info">
-            <h3 class="influencer-name">Alina Van Dijk</h3>
-            <span class="influencer-niche"><i class="fa-solid fa-heart-pulse"></i> Dominatrix Consciente & Erotismo Terapéutico</span>
-            <p class="influencer-desc">28 años. Ámsterdam / Barcelona. Exploración de fetiches sin culpa, dominación psicológica elegante y audios inmersivos con actitud positiva y consentimiento.</p>
-            <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem;">
-              <a href="#influencer/alina" class="btn btn-primary influencer-btn" style="flex: 1; justify-content: center; background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%); border-color: #ef4444;">
-                <i class="fa-solid fa-arrow-right"></i> Ver Ficha de Producto
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Servicios B2B a Medida: Clones Digitales & Modelos Sintéticos Exclusivos -->
-      <div class="glass-card" style="margin-top: 3.5rem; padding: 2.2rem; border: 1px solid rgba(139, 92, 246, 0.4); background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.1) 0%, rgba(13, 16, 28, 0.9) 100%);">
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 1rem;">
-          <div>
-            <span class="detail-badge" style="background: rgba(139, 92, 246, 0.15); color: var(--purple); border-color: rgba(139, 92, 246, 0.3); font-size: 0.75rem;">
-              <i class="fa-solid fa-wand-magic-sparkles"></i> SERVICIOS DE PRODUCCIÓN A MEDIDA
-            </span>
-            <h3 style="font-family: var(--font-heading); color: #fff; font-size: 1.6rem; margin: 0.4rem 0 0.2rem 0;">
-              Servicios de Creación: Clones Digitales & Modelos de Marca Blanca
-            </h3>
-            <p style="color: var(--text-muted); font-size: 0.92rem; margin: 0;">
-              Además de nuestro elenco propio, producimos activos sintéticos exclusivos llave en mano para fundadores, marcas de moda y empresas.
-            </p>
-          </div>
-          <a href="#empresas" class="btn btn-secondary btn-sm" style="align-self: center;">
-            <i class="fa-solid fa-arrow-right"></i> Ver Soluciones para Empresas
-          </a>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
-          <!-- Servicio 1: Clon Digital del CEO -->
-          <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: var(--radius-md); padding: 0 0 1.5rem 0; display: flex; flex-direction: column; overflow: hidden;">
-            <div style="position: relative; width: 100%; aspect-ratio: 4 / 5; max-height: 440px; overflow: hidden;">
-              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&h=1000&crop=faces&q=80" alt="Clon Digital para CEOs & Fundadores" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;" loading="lazy">
-              <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,12,22,0) 60%, rgba(10,12,22,0.65) 85%, rgba(10,12,22,0.95) 100%); pointer-events: none;"></div>
-              <div style="position: absolute; bottom: 0.75rem; left: 1.25rem; width: 44px; height: 44px; border-radius: 12px; background: rgba(139, 92, 246, 0.35); backdrop-filter: blur(8px); border: 1px solid rgba(139, 92, 246, 0.6); color: var(--purple); display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
-                <i class="fa-solid fa-video"></i>
-              </div>
-            </div>
-            <div style="padding: 1rem 1.5rem 0 1.5rem; display: flex; flex-direction: column; flex-grow: 1;">
-              <div>
-                <h4 style="color: #fff; font-size: 1.18rem; margin: 0;">Clon Digital para CEOs & Fundadores</h4>
-                <span style="font-size: 0.75rem; color: var(--purple); font-weight: 600;">Marca Personal B2B en LinkedIn / TikTok / YouTube</span>
-              </div>
-              <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin: 0.85rem 0 1.25rem 0; flex-grow: 1;">
-                Con solo una muestra de 2 minutos, clonamos tu rostro y voz en alta resolución. Entregamos de 15 a 20 videos al mes listos para publicar, convirtiéndote en referente de tu industria sin pasar horas frente a una cámara.
-              </p>
-              <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
-                <span style="font-size: 0.82rem; color: #10b981;"><i class="fa-solid fa-bolt"></i> Entrega en 3 a 5 días</span>
-                <button onclick="openBrandInquiryModal('custom-ceo-clone')" class="btn btn-primary btn-sm" style="font-size: 0.8rem; padding: 0.45rem 0.9rem;">
-                  <i class="fa-solid fa-wand-magic-sparkles"></i> Cotizar Clon
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Servicio 2: Modelo IA Exclusiva para E-Commerce -->
-          <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(236, 72, 153, 0.3); border-radius: var(--radius-md); padding: 0 0 1.5rem 0; display: flex; flex-direction: column; overflow: hidden;">
-            <div style="position: relative; width: 100%; aspect-ratio: 4 / 5; max-height: 440px; overflow: hidden;">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&h=1000&crop=faces&q=80" alt="Modelo IA Exclusiva para E-Commerce" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;" loading="lazy">
-              <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,12,22,0) 60%, rgba(10,12,22,0.65) 85%, rgba(10,12,22,0.95) 100%); pointer-events: none;"></div>
-              <div style="position: absolute; bottom: 0.75rem; left: 1.25rem; width: 44px; height: 44px; border-radius: 12px; background: rgba(236, 72, 153, 0.35); backdrop-filter: blur(8px); border: 1px solid rgba(236, 72, 153, 0.6); color: var(--pink); display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
-                <i class="fa-solid fa-bag-shopping"></i>
-              </div>
-            </div>
-            <div style="padding: 1rem 1.5rem 0 1.5rem; display: flex; flex-direction: column; flex-grow: 1;">
-              <div>
-                <h4 style="color: #fff; font-size: 1.18rem; margin: 0;">Modelo IA Exclusiva para E-Commerce</h4>
-                <span style="font-size: 0.75rem; color: var(--pink); font-weight: 600;">Catálogos de Moda, Accesorios & Cosmética</span>
-              </div>
-              <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin: 0.85rem 0 1.25rem 0; flex-grow: 1;">
-                Diseñamos la modelo virtual oficial de tu marca. Generamos sesiones fotográficas fotorrealistas vistiendo tus prendas o usando tus productos a 1/5 del costo de producción tradicional y 100% libre de derechos de terceros.
-              </p>
-              <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
-                <span style="font-size: 0.82rem; color: #10b981;"><i class="fa-solid fa-bolt"></i> Pack 20-40 fotos/mes</span>
-                <button onclick="openBrandInquiryModal('custom-ecommerce-model')" class="btn btn-primary btn-sm" style="font-size: 0.8rem; padding: 0.45rem 0.9rem; background: linear-gradient(135deg, #ec4899 0%, #be185d 100%); border-color: #ec4899;">
-                  <i class="fa-solid fa-bag-shopping"></i> Cotizar Modelo
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Servicios Principales -->
-    <section id="servicios" class="section">
-      <div class="section-header">
-        <span class="section-subtitle">Portfolio Estructurado</span>
-        <h2 class="section-title">Nuestras 3 Líneas de Negocio</h2>
-      </div>
-
-      <div class="services-grid">
-        <!-- Servicio 1 -->
-        <div class="glass-card">
-          <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
-          <h3 class="service-title">1. Influencers Digitales IA</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem;">
-            Creación, gestión y monetización de avatares e influencers virtuales generados por IA con consistencia facial impecable y narrativas envolventes.
-          </p>
-          <ul class="service-list">
-            <li><i class="fa-solid fa-check"></i> Identidad y Backstory Único</li>
-            <li><i class="fa-solid fa-check"></i> Producción de Material Gráfico Base</li>
-            <li><i class="fa-solid fa-check"></i> Embudo de Monetización (Soft a Exclusive)</li>
-            <li><i class="fa-solid fa-check"></i> Inserción en Fanvue / OnlyFans / Patreon</li>
-          </ul>
-        </div>
-
-        <!-- Servicio 2 -->
-        <div class="glass-card">
-          <div class="service-icon" style="background: rgba(236, 72, 153, 0.15); color: var(--pink);"><i class="fa-brands fa-youtube"></i></div>
-          <h3 class="service-title">2. Canales YouTube Educativos</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem;">
-            Canales de alto enganche con guiones educativos, animación generativa y narración envolvente sobre ciencia, historia y filosofía.
-          </p>
-          <ul class="service-list">
-            <li><i class="fa-solid fa-check"></i> Contenido Infantil & Viajes en el Tiempo</li>
-            <li><i class="fa-solid fa-check"></i> Divulgación Sci-Fi & Tecnológica</li>
-            <li><i class="fa-solid fa-check"></i> Narrativas sobre Historias y Religiones</li>
-            <li><i class="fa-solid fa-check"></i> Edición y Optimización de SEO</li>
-          </ul>
-        </div>
-
-        <!-- Servicio 3 -->
-        <div class="glass-card">
-          <div class="service-icon" style="background: rgba(6, 182, 212, 0.15); color: var(--cyan);"><i class="fa-solid fa-user-tie"></i></div>
-          <h3 class="service-title">3. Asesorías Comunicacionales</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem;">
-            Coaching de comunicación, desarrollo de habilidades de expresión, networking profesional y dominio de idiomas para ejecutivos y creadores.
-          </p>
-          <ul class="service-list" style="margin-bottom: 1.5rem;">
-            <li><i class="fa-solid fa-check"></i> Entrenamiento en Oratoria y Presencia</li>
-            <li><i class="fa-solid fa-check"></i> Estrategia de Marca Personal</li>
-            <li><i class="fa-solid fa-check"></i> Coaching de Idiomas y Relaciones</li>
-            <li><i class="fa-solid fa-check"></i> Planes de Posicionamiento B2B</li>
-          </ul>
-          <a href="#asesorias" class="btn btn-primary" style="width: 100%; justify-content: center;">
-            <i class="fa-solid fa-arrow-right"></i> Ver Página de Asesorías
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Executive Snapshot & Unit Economics (Para Socios e Inversionistas) -->
+    <!-- Executive Snapshot & Unit Economics -->
     <section id="executive-snapshot" class="section" style="padding-top: 2rem; padding-bottom: 2rem;">
       <div class="section-header">
         <span class="section-subtitle">Venture Architecture & Unit Economics</span>
         <h2 class="section-title">Rentabilidad & Escalabilidad de la Agencia</h2>
         <p class="section-description">
-          Métricas ejecutivas diseñadas para socios e inversionistas: ventajas asimétricas de los influencers generados por IA frente al talento tradicional.
+          Métricas ejecutivas diseñadas para socios e inversionistas: ventajas asimétricas de los activos generados por IA frente al modelo tradicional.
         </p>
       </div>
 
@@ -935,198 +140,256 @@ fantasy study music, medieval ambient focus, elven library ambience, deep work m
           <div class="exec-metric-icon"><i class="fa-solid fa-bolt"></i></div>
           <div class="exec-metric-val">&lt; 48h</div>
           <div class="exec-metric-label">Time-to-Market por Activo</div>
-          <div class="exec-metric-subtext">Generación de consistencia facial, arquetipo y 50 renders base en alta resolución.</div>
+          <div class="exec-metric-subtext">Consistencia facial, arquetipo y 50 renders base en 4K listos para producción.</div>
         </div>
 
         <div class="exec-metric-card accent-pink">
           <div class="exec-metric-icon"><i class="fa-solid fa-shield-halved"></i></div>
           <div class="exec-metric-val">0%</div>
           <div class="exec-metric-label">Riesgo Reputacional Humano</div>
-          <div class="exec-metric-subtext">Propiedad intelectual 100% interna, sin huelgas, cancelaciones ni demandas contractuales.</div>
+          <div class="exec-metric-subtext">Propiedad intelectual 100% interna, sin cancelaciones, huelgas ni disputas legales.</div>
         </div>
 
         <div class="exec-metric-card">
           <div class="exec-metric-icon"><i class="fa-solid fa-infinity"></i></div>
           <div class="exec-metric-val">24 / 7</div>
           <div class="exec-metric-label">Producción Multicanal Continua</div>
-          <div class="exec-metric-subtext">Generación sincronizada en IG, TikTok, YouTube Shorts y Fanvue sin fatiga operativa.</div>
+          <div class="exec-metric-subtext">Generación continua en Instagram, TikTok, YouTube Shorts y Fanvue sin fatiga.</div>
         </div>
       </div>
     </section>
 
-    <!-- Canales de YouTube: Formatos & Comercialización -->
-    <section id="youtube" class="section">
+    <!-- LANDING SHOWCASE 1: INFLUENCERS IA -->
+    <section class="section" style="padding-top: 1rem;">
       <div class="section-header">
-        <span class="section-subtitle">Producción Automatizada & Monetización</span>
-        <h2 class="section-title">Formatos YouTube: Canales Automatizados y Monetizables</h2>
+        <span class="section-subtitle">Catálogo Comercial & Licenciamiento</span>
+        <h2 class="section-title">Lo Mejor de Nuestros Influencers IA</h2>
         <p class="section-description">
-          Canales faceless de alta retención generados con IA. Modelos de negocio listos para monetización diversificada vía AdSense, patrocinios B2B y licencias educativas.
+          Activos virtuales hiperrealistas con consistencia facial consagrada, listos para campañas publicitarias, acuerdos de marca y suscripción VIP.
         </p>
       </div>
 
-      <div class="channels-grid">
-        <!-- Canal 1: Sofía -->
-        <div class="channel-card">
-          <div class="channel-thumb-wrapper">
-            <img src="yt_sofia_thumb.jpg" alt="Los viajes en el tiempo de Sofía" class="channel-thumb-img" loading="lazy">
-            <div class="channel-thumb-overlay"></div>
-            <span class="channel-thumb-badge"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> Formato Infantil</span>
-            <div style="position: absolute; bottom: 0.65rem; right: 0.75rem; background: rgba(0,0,0,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px; z-index: 2;">
-              0:58 / Short
-            </div>
+      <div class="roster-grid">
+        <!-- Elena Daddario -->
+        <div class="glass-card influencer-card" style="border-color: rgba(96, 165, 250, 0.4);">
+          <div class="influencer-img-wrapper">
+            <img src="elena_avatar.png" alt="Elena Daddario" class="influencer-img" loading="lazy">
+            <span class="influencer-badge" style="color: #60a5fa; border-color: #60a5fa; background: rgba(96, 165, 250, 0.15);">
+              <i class="fa-solid fa-gem"></i> Activo Certificado • Lifestyle Consciente
+            </span>
           </div>
-          <div class="channel-card-body">
-            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-              <div class="channel-icon-box" style="background: rgba(236, 72, 153, 0.15); color: var(--pink);"><i class="fa-solid fa-child-reaching"></i></div>
-              <div>
-                <h3 style="font-family: var(--font-heading); font-size: 1.15rem; margin: 0;">1. Los viajes de Sofía</h3>
-                <span style="color: var(--pink); font-size: 0.8rem; font-weight: 600;">Historia & Valores para Familias</span>
-              </div>
+          <div class="influencer-info">
+            <h3 class="influencer-name">Elena Daddario</h3>
+            <span class="influencer-niche"><i class="fa-solid fa-brain"></i> Psicología & Lifestyle Europeo</span>
+            <p class="influencer-desc">27 años. Rusa en Miraflores. Elegancia atemporal, psicología y bienestar emocional. Disponible para marcas conscientes, moda y lifestyle.</p>
+            <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem;">
+              <a href="#influencer/elena" class="btn btn-primary influencer-btn" style="flex: 1; justify-content: center;">
+                <i class="fa-solid fa-arrow-right"></i> Ver Ficha de Producto
+              </a>
             </div>
-            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.85rem; line-height: 1.5; flex-grow: 1;">
-              Micro-aventuras animadas de 60 segundos por portales temporales (Egipto, Roma, Renacimiento). Alta retención y co-creación con audiencia infantil.
-            </p>
-            <div style="background: rgba(236, 72, 153, 0.1); border: 1px solid rgba(236, 72, 153, 0.25); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-bottom: 1rem; font-size: 0.75rem; color: #f9a8d4;">
-              <i class="fa-solid fa-sack-dollar"></i> <strong>Venta:</strong> AdSense Kids + Libros KDP + Merch Educativo (RPM: $3.5–$5 USD)
-            </div>
-            <a href="#channel/sofia" class="btn btn-primary" style="font-size: 0.82rem; justify-content: center;">
-              <i class="fa-solid fa-clapperboard"></i> Ver Guiones & Monetización
-            </a>
           </div>
         </div>
 
-        <!-- Canal 2: Arcanotech -->
-        <div class="channel-card">
-          <div class="channel-thumb-wrapper">
-            <img src="yt_arcanotech_thumb.jpg" alt="Los Gemelos Arcanotech" class="channel-thumb-img" loading="lazy">
-            <div class="channel-thumb-overlay"></div>
-            <span class="channel-thumb-badge"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> Sci-Fi & Futurismo</span>
-            <div style="position: absolute; bottom: 0.65rem; right: 0.75rem; background: rgba(0,0,0,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px; z-index: 2;">
-              12:40 / Debate Dual
-            </div>
+        <!-- Julia Schmidt -->
+        <div class="glass-card influencer-card" style="border-color: rgba(236, 72, 153, 0.4);">
+          <div class="influencer-img-wrapper">
+            <img src="julia_avatar.jpg" alt="Julia Schmidt" class="influencer-img" loading="lazy">
+            <span class="influencer-badge" style="color: #ec4899; border-color: #ec4899; background: rgba(236, 72, 153, 0.15);">
+              <i class="fa-solid fa-gem"></i> Activo Certificado • Clean Beauty
+            </span>
           </div>
-          <div class="channel-card-body">
-            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-              <div class="channel-icon-box" style="background: rgba(6, 182, 212, 0.15); color: var(--cyan);"><i class="fa-solid fa-atom"></i></div>
-              <div>
-                <h3 style="font-family: var(--font-heading); font-size: 1.15rem; margin: 0;">2. Gemelos Arcanotech</h3>
-                <span style="color: var(--cyan); font-size: 0.8rem; font-weight: 600;">Solarpunk vs Cyberpunk</span>
-              </div>
+          <div class="influencer-info">
+            <h3 class="influencer-name">Julia Schmidt</h3>
+            <span class="influencer-niche"><i class="fa-solid fa-spa"></i> Dermocosmética & Clean Beauty</span>
+            <p class="influencer-desc">24 años. Miraflores. Reseñas científicas sin filtro, dupes accesibles y skincare real. Ideal para colaboraciones dermocosméticas.</p>
+            <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem;">
+              <a href="#influencer/julia" class="btn btn-primary influencer-btn" style="flex: 1; justify-content: center;">
+                <i class="fa-solid fa-arrow-right"></i> Ver Ficha de Producto
+              </a>
             </div>
-            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.85rem; line-height: 1.5; flex-grow: 1;">
-              Debates narrativos entre dos magos gemelos: utopías solares ecológicas vs distopías cibernéticas nocturnas. Atractivo para comunidad tech y dev.
-            </p>
-            <div style="background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.25); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-bottom: 1rem; font-size: 0.75rem; color: #67e8f9;">
-              <i class="fa-solid fa-sack-dollar"></i> <strong>Venta:</strong> Patrocinios Tech/SaaS + AdSense Sci-Fi + Afiliados (RPM: $6–$9.5 USD)
-            </div>
-            <a href="#channel/arcanotech" class="btn btn-primary" style="font-size: 0.82rem; justify-content: center;">
-              <i class="fa-solid fa-clapperboard"></i> Ver Guiones & Monetización
-            </a>
           </div>
         </div>
 
-        <!-- Canal 3: Cuentos Sagrados -->
-        <div class="channel-card">
-          <div class="channel-thumb-wrapper">
-            <img src="yt_sagrados_thumb.jpg" alt="Cuentos Sagrados (sin autor)" class="channel-thumb-img" loading="lazy">
-            <div class="channel-thumb-overlay"></div>
-            <span class="channel-thumb-badge"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> Historia Universal</span>
-            <div style="position: absolute; bottom: 0.65rem; right: 0.75rem; background: rgba(0,0,0,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px; z-index: 2;">
-              18:20 / Documental
-            </div>
+        <!-- Maite Valenzuela -->
+        <div class="glass-card influencer-card" style="border-color: rgba(245, 158, 11, 0.4);">
+          <div class="influencer-img-wrapper">
+            <img src="maite_avatar.jpg" alt="Maite Valenzuela" class="influencer-img" loading="lazy">
+            <span class="influencer-badge" style="color: #f59e0b; border-color: #f59e0b; background: rgba(245, 158, 11, 0.15);">
+              <i class="fa-solid fa-gem"></i> Activo Certificado • Cumbia Ranchera
+            </span>
           </div>
-          <div class="channel-card-body">
-            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-              <div class="channel-icon-box" style="background: rgba(139, 92, 246, 0.15); color: var(--purple);"><i class="fa-solid fa-scroll"></i></div>
-              <div>
-                <h3 style="font-family: var(--font-heading); font-size: 1.15rem; margin: 0;">3. Cuentos Sagrados</h3>
-                <span style="color: var(--purple); font-size: 0.8rem; font-weight: 600;">Mitología & Textos Antiguos</span>
-              </div>
+          <div class="influencer-info">
+            <h3 class="influencer-name">Maite Valenzuela</h3>
+            <span class="influencer-niche"><i class="fa-solid fa-music"></i> Cumbia Campesina & Cono Sur</span>
+            <p class="influencer-desc">22 años. Curicó/Santiago. Carisma popular, música festiva chilena y cercanía rural. Gran fidelización y tracción masiva.</p>
+            <div style="display: flex; gap: 0.5rem; margin-top: 0.75rem;">
+              <a href="#influencer/maite" class="btn btn-primary influencer-btn" style="flex: 1; justify-content: center;">
+                <i class="fa-solid fa-arrow-right"></i> Ver Ficha de Producto
+              </a>
             </div>
-            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.85rem; line-height: 1.5; flex-grow: 1;">
-              Relatos universales y mitos fundacionales narrados con sobriedad y arte generativo estilo óleo al claroscuro. Gran consumo en audiencias maduras.
-            </p>
-            <div style="background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.25); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-bottom: 1rem; font-size: 0.75rem; color: #c4b5fd;">
-              <i class="fa-solid fa-sack-dollar"></i> <strong>Venta:</strong> Audiolibros Audible + AdSense Premium + Licencias (RPM: $7–$12 USD)
-            </div>
-            <a href="#channel/sagrados" class="btn btn-primary" style="font-size: 0.82rem; justify-content: center;">
-              <i class="fa-solid fa-clapperboard"></i> Ver Guiones & Monetización
-            </a>
-          </div>
-        </div>
-
-        <!-- Canal 4: Maite Ranchera -->
-        <div class="channel-card">
-          <div class="channel-thumb-wrapper">
-            <img src="yt_ranchera_thumb.jpg" alt="Maite & La Fiebre Ranchera" class="channel-thumb-img" loading="lazy">
-            <div class="channel-thumb-overlay"></div>
-            <span class="channel-thumb-badge"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> Música Chilena</span>
-            <div style="position: absolute; bottom: 0.65rem; right: 0.75rem; background: rgba(0,0,0,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px; z-index: 2;">
-              60:00 / Mix Festivo
-            </div>
-          </div>
-          <div class="channel-card-body">
-            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-              <div class="channel-icon-box" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b;"><i class="fa-solid fa-music"></i></div>
-              <div>
-                <h3 style="font-family: var(--font-heading); font-size: 1.15rem; margin: 0;">4. Maite Ranchera</h3>
-                <span style="color: #f59e0b; font-size: 0.8rem; font-weight: 600;">Cumbia Campesina & Cono Sur</span>
-              </div>
-            </div>
-            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.85rem; line-height: 1.5; flex-grow: 1;">
-              Videoclips 4K generativos y mixes festivos de 1h para asados y fiestas populares en Chile y el Cono Sur con la voz y carisma de Maite Valenzuela.
-            </p>
-            <div style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-bottom: 1rem; font-size: 0.75rem; color: #fde68a;">
-              <i class="fa-solid fa-sack-dollar"></i> <strong>Venta:</strong> AdSense Sesiones Largas + Streaming Spotify + Licores (RPM: $4.5–$7 USD)
-            </div>
-            <a href="#channel/ranchera" class="btn btn-primary" style="font-size: 0.82rem; justify-content: center;">
-              <i class="fa-solid fa-clapperboard"></i> Ver Guiones & Monetización
-            </a>
-          </div>
-        </div>
-
-        <!-- Canal 5: Kira Vane DevLogs -->
-        <div class="channel-card">
-          <div class="channel-thumb-wrapper">
-            <img src="yt_kira_thumb.jpg" alt="Kira Vane • DevLogs & Ciber-Activismo" class="channel-thumb-img" loading="lazy">
-            <div class="channel-thumb-overlay"></div>
-            <span class="channel-thumb-badge"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> Gaming & DevLogs</span>
-            <div style="position: absolute; bottom: 0.65rem; right: 0.75rem; background: rgba(0,0,0,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 4px; z-index: 2;">
-              14:15 / DevLog
-            </div>
-          </div>
-          <div class="channel-card-body">
-            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-              <div class="channel-icon-box" style="background: rgba(6, 182, 212, 0.15); color: var(--cyan);"><i class="fa-solid fa-gamepad"></i></div>
-              <div>
-                <h3 style="font-family: var(--font-heading); font-size: 1.15rem; margin: 0;">5. Kira Vane DevLogs</h3>
-                <span style="color: var(--cyan); font-size: 0.8rem; font-weight: 600;">Desarrollo Indie & Ciber-Activismo</span>
-              </div>
-            </div>
-            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.85rem; line-height: 1.5; flex-grow: 1;">
-              Devlogs de programación de videojuegos en Godot/Unreal y ensayos sobre soberanía de código y privacidad digital presentados por Kira Vane.
-            </p>
-            <div style="background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.25); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-bottom: 1rem; font-size: 0.75rem; color: #67e8f9;">
-              <i class="fa-solid fa-sack-dollar"></i> <strong>Venta:</strong> Patrocinios SaaS Tech + Wishlists Steam + AdSense Dev (RPM: $9–$15 USD)
-            </div>
-            <a href="#channel/kira_gamedev" class="btn btn-primary" style="font-size: 0.82rem; justify-content: center;">
-              <i class="fa-solid fa-clapperboard"></i> Ver Guiones & Monetización
-            </a>
           </div>
         </div>
       </div>
 
-      <!-- Commercial Channel Coproduction Callout -->
-      <div class="glass-card" style="margin-top: 1.5rem; padding: 1.25rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-color: rgba(6, 182, 212, 0.35);">
-        <div>
-          <h4 style="color: #fff; font-family: var(--font-heading); font-size: 1.05rem; margin-bottom: 0.2rem;">
-            <i class="fa-brands fa-youtube" style="color: var(--pink); margin-right: 0.4rem;"></i> Coproducción de Canales & Venta Llave en Mano
-          </h4>
-          <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">
-            ¿Quieres lanzar un canal temático automatizado para tu marca o fondo? Estructuramos el canal desde el branding hasta los guiones y renders semanales con esquemas de rev-share o venta completa.
-          </p>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="#roster" class="btn btn-primary" style="font-size: 1rem; padding: 0.85rem 2rem; box-shadow: 0 0 25px rgba(139, 92, 246, 0.35);">
+          <i class="fa-solid fa-gem"></i> Explorar Catálogo Completo de Influencers (7 Modelos) <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- LANDING SHOWCASE 2: YOUTUBE & EL GRAN ARCANO -->
+    <section class="section" style="padding-top: 2rem;">
+      <div class="section-header">
+        <span class="section-subtitle" style="color: #a855f7;"><i class="fa-brands fa-youtube"></i> Producción Automatizada & Universos IP</span>
+        <h2 class="section-title">The Infinite Archive & Canales Faceless de YouTube</h2>
+        <p class="section-description">
+          Franquicias audiovisuales de alta retención generadas con IA. Modelos listos para monetización diversificada vía AdSense, patrocinios B2B y licencias de IP.
+        </p>
+      </div>
+
+      <!-- Feature Card: The Infinite Archive Highlight -->
+      <div class="glass-card" style="border: 1px solid rgba(168, 85, 247, 0.45); background: radial-gradient(circle at top right, rgba(168, 85, 247, 0.15) 0%, rgba(10, 12, 22, 0.95) 100%); padding: 2.2rem; border-radius: var(--radius-lg); margin-bottom: 2rem; position: relative; overflow: hidden;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; align-items: center;">
+          <div style="position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 16 / 9; box-shadow: 0 10px 30px rgba(0,0,0,0.7); border: 1px solid rgba(168, 85, 247, 0.3);">
+            <img src="arcano_tower_window.jpg" alt="The Infinite Archive" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            <span style="position: absolute; top: 0.75rem; left: 0.75rem; background: rgba(10,12,24,0.85); backdrop-filter: blur(8px); border: 1px solid #22d3ee; color: #22d3ee; font-size: 0.72rem; font-weight: 700; padding: 0.3rem 0.65rem; border-radius: 6px;">
+              <i class="fa-solid fa-gem"></i> UNIVERSO PROPIETARIO • THE INFINITE ARCHIVE
+            </span>
+          </div>
+          <div>
+            <div class="detail-badge" style="background: rgba(168, 85, 247, 0.2); color: #c084fc; border-color: rgba(168, 85, 247, 0.4); margin-bottom: 0.75rem; font-size: 0.75rem;">
+              FANTASÍA OSCURA & CHILLWAVE LO-FI • 432 HZ
+            </div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.85rem; color: #fff; margin-bottom: 0.75rem;">
+              The Infinite Archive (El Gran Arcano)
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.25rem;">
+              En la aguja de Kar-Kaelum, Aurelius Chronovoid y el dragón Umbraxion custodian frecuencias sonoras de civilizaciones perdidas. Un universo de relajación profunda y deep-work coding con 100% de música y visuales libres de reclamos de Content ID.
+            </p>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="#channel/arcano" class="btn btn-primary" style="background: linear-gradient(135deg, #7c3aed, #a855f7); border: none;">
+                <i class="fa-solid fa-gem"></i> Ver Ficha del Producto & Bóveda
+              </a>
+              <a href="#youtube" class="btn btn-secondary" style="border-color: rgba(168, 85, 247, 0.5); color: #d8b4fe;">
+                <i class="fa-brands fa-youtube"></i> Ver Todos los Canales de YouTube
+              </a>
+            </div>
+          </div>
         </div>
-        <a href="#pitch" class="btn btn-secondary btn-sm"><i class="fa-solid fa-comments-dollar"></i> Consultar Alianza Comercial</a>
+      </div>
+    </section>
+
+    <!-- LANDING SHOWCASE 3: EMPRESAS -->
+    <section class="section" style="padding-top: 2rem;">
+      <div class="section-header">
+        <span class="section-subtitle" style="color: var(--cyan);"><i class="fa-solid fa-building"></i> Desarrollo Exprés & Ciberseguridad</span>
+        <h2 class="section-title">Soluciones Digitales de Alto Impacto para Empresas</h2>
+        <p class="section-description">
+          Infraestructura de ventas, inteligencia artificial aplicada y blindaje de identidad diseñados para implementación ágil en menos de 48 horas.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+        <div class="glass-card" style="padding: 1.25rem; border-color: rgba(16, 185, 129, 0.35);">
+          <div style="font-size: 1.3rem; color: #10b981; margin-bottom: 0.5rem;"><i class="fa-brands fa-whatsapp"></i></div>
+          <h4 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.35rem;">WhatsApp & Google Maps</h4>
+          <p style="color: var(--text-muted); font-size: 0.84rem; line-height: 1.5; margin: 0;">Reactivación de bases inactivas en 48h y respuesta automatizada a reseñas con SEO local.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 1.25rem; border-color: rgba(139, 92, 246, 0.35);">
+          <div style="font-size: 1.3rem; color: var(--purple); margin-bottom: 0.5rem;"><i class="fa-solid fa-video"></i></div>
+          <h4 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.35rem;">Clon Digital de Video para CEOs</h4>
+          <p style="color: var(--text-muted); font-size: 0.84rem; line-height: 1.5; margin: 0;">Producción de 15 a 20 videos mensuales con tu voz y rostro sin pasar horas frente a cámara.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 1.25rem; border-color: rgba(236, 72, 153, 0.35);">
+          <div style="font-size: 1.3rem; color: var(--pink); margin-bottom: 0.5rem;"><i class="fa-solid fa-bag-shopping"></i></div>
+          <h4 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.35rem;">Modelos IA para E-Commerce</h4>
+          <p style="color: var(--text-muted); font-size: 0.84rem; line-height: 1.5; margin: 0;">Sesiones fotográficas mensuales vistiendo tus productos a 1/5 del costo de una sesión tradicional.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 1.25rem; border-color: rgba(6, 182, 212, 0.35);">
+          <div style="font-size: 1.3rem; color: var(--cyan); margin-bottom: 0.5rem;"><i class="fa-solid fa-code"></i></div>
+          <h4 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.35rem;">Micro-Páginas en 48h</h4>
+          <p style="color: var(--text-muted); font-size: 0.84rem; line-height: 1.5; margin: 0;">Landing pages de alta conversión, cotizadores y formularios inteligentes bajo norma RGPD.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 1.25rem; border-color: rgba(59, 130, 246, 0.35);">
+          <div style="font-size: 1.3rem; color: #60a5fa; margin-bottom: 0.5rem;"><i class="fa-solid fa-user-shield"></i></div>
+          <h4 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.35rem;">Privacidad & Anti-Deepfakes</h4>
+          <p style="color: var(--text-muted); font-size: 0.84rem; line-height: 1.5; margin: 0;">Borrado de datos en brokers, desindexación en Google y remoción de clones no autorizados.</p>
+        </div>
+
+        <div class="glass-card" style="padding: 1.25rem; border-color: rgba(245, 158, 11, 0.35);">
+          <div style="font-size: 1.3rem; color: #fbbf24; margin-bottom: 0.5rem;"><i class="fa-solid fa-headset"></i></div>
+          <h4 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.35rem;">Agente de Voz IA 24/7</h4>
+          <p style="color: var(--text-muted); font-size: 0.84rem; line-height: 1.5; margin: 0;">Recepción telefónica con voz humana natural que agenda citas y responde dudas fuera de horario.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center;">
+        <a href="#empresas" class="btn btn-primary" style="background: linear-gradient(135deg, #0284c7, #06b6d4); font-size: 1rem; padding: 0.85rem 2rem;">
+          <i class="fa-solid fa-building"></i> Ver Todas las Soluciones para Empresas <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- LANDING SHOWCASE 4: SEGURIDAD & CURSOS -->
+    <section class="section" style="padding-top: 2rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+        
+        <div class="glass-card" style="padding: 2rem; border-color: rgba(59, 130, 246, 0.35); background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.1) 0%, rgba(10, 12, 22, 0.95) 100%);">
+          <span class="detail-badge" style="background: rgba(59, 130, 246, 0.2); color: #93c5fd; border-color: rgba(59, 130, 246, 0.4); margin-bottom: 0.75rem;">
+            CIBERSEGURIDAD EJECUTIVA
+          </span>
+          <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin-bottom: 0.75rem;">
+            Privacidad Digital & Borrado de Huella
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+            Eliminamos tu información expuesta en bases públicas, gestionamos el Derecho al Olvido ante motores de búsqueda y blindamos la identidad de directivos.
+          </p>
+          <a href="#seguridad" class="btn btn-secondary" style="border-color: rgba(59, 130, 246, 0.45); color: #93c5fd;">
+            <i class="fa-solid fa-shield-halved"></i> Ver Soluciones de Seguridad Digital
+          </a>
+        </div>
+
+        <div class="glass-card" style="padding: 2rem; border-color: rgba(245, 158, 11, 0.35); background: radial-gradient(circle at top left, rgba(245, 158, 11, 0.1) 0%, rgba(10, 12, 22, 0.95) 100%);">
+          <span class="detail-badge" style="background: rgba(245, 158, 11, 0.2); color: #fde68a; border-color: rgba(245, 158, 11, 0.4); margin-bottom: 0.75rem;">
+            FORMACIÓN DE ÉLITE
+          </span>
+          <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin-bottom: 0.75rem;">
+            Cursos & Masterclasses en IA Aplicada
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+            Programas prácticos para directores, profesionales y creadores: automatización con n8n, consistencia visual en Midjourney/Flux y arquitectura de influencers.
+          </p>
+          <a href="#cursos" class="btn btn-secondary" style="border-color: rgba(245, 158, 11, 0.45); color: #fde68a;">
+            <i class="fa-solid fa-graduation-cap"></i> Ver Catálogo de Cursos
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LANDING SHOWCASE 5: CLIENTES & PITCH COMERCIAL -->
+    <section class="section" style="padding-top: 2rem; padding-bottom: 3rem;">
+      <div class="glass-card" style="padding: 2.5rem; text-align: center; border-color: rgba(139, 92, 246, 0.4); background: radial-gradient(circle at center, rgba(139, 92, 246, 0.12) 0%, rgba(10, 12, 22, 0.98) 100%); border-radius: var(--radius-lg);">
+        <span class="section-subtitle" style="color: var(--purple);"><i class="fa-solid fa-briefcase"></i> Alianzas & Portafolio Comercial</span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; color: #fff; margin: 0.5rem 0 1rem 0;">
+          ¿Listo para Colaborar con Los Manejadores?
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 680px; margin: 0 auto 1.75rem auto; line-height: 1.7;">
+          Explora nuestro pitch de inversión, portafolio de clientes y casos de uso comerciales. Estructuramos campañas de patrocinio, coproducción de canales y modelos virtuales a medida.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="#clientes" class="btn btn-primary" style="font-size: 1rem; padding: 0.8rem 1.8rem;">
+            <i class="fa-solid fa-handshake"></i> Ver Dossier de Clientes & Pitch
+          </a>
+          <button class="btn btn-secondary" onclick="window.print()" style="font-size: 1rem; padding: 0.8rem 1.5rem;">
+            <i class="fa-solid fa-file-pdf"></i> Descargar Dossier PDF
+          </button>
+        </div>
       </div>
     </section>
 
@@ -1139,14 +402,15 @@ fantasy study music, medieval ambient focus, elven library ambience, deep work m
           <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem;">
             El isotipo oficial <strong>3D Neón Play Modular</strong> representa la fusión entre contenido de producción (Play), diálogo comunicacional (Burbuja) y aceleración de audiencias (Flecha de crecimiento).
           </p>
-          <a href="#copys" onclick="switchView('team'); switchTeamTab('copys');" class="btn btn-primary">
-            <i class="fa-solid fa-copy"></i> Ver Hub de Copys del Equipo
-          </a>
+          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+            <a href="#copys" onclick="switchView('team'); switchTeamTab('copys');" class="btn btn-primary">
+              <i class="fa-solid fa-swatchbook"></i> Manual de Marca en Panel
+            </a>
+          </div>
         </div>
-        <div style="display: flex; justify-content: center; align-items: center;">
-          <div style="position: relative; max-width: 520px; width: 100%;">
-            <div style="position: absolute; inset: -15px; background: radial-gradient(circle, rgba(139, 92, 246, 0.45), rgba(6, 182, 212, 0.25), transparent 70%); filter: blur(28px); z-index: -1;"></div>
-            <img src="logo_full.png" alt="Los Manejadores Logo 3D Neón Render" style="width: 100%; border-radius: var(--radius-lg); border: 2px solid var(--border-highlight); box-shadow: 0 20px 50px rgba(0,0,0,0.75), 0 0 45px rgba(139,92,246,0.4); transition: transform 0.4s ease;">
+        <div style="text-align: center;">
+          <div class="logo-preview-box" style="margin: 0 auto; max-width: 320px; padding: 1.5rem; background: radial-gradient(circle, rgba(236,72,153,0.15) 0%, rgba(12,15,29,0.9) 70%); border: 1px solid var(--border-glass); border-radius: var(--radius-md);">
+            <img src="logo_full.png" alt="Logotipo 3D Neón" style="width: 100%; height: auto; filter: drop-shadow(0 0 25px rgba(236,72,153,0.5));" />
           </div>
         </div>
       </div>
@@ -1317,6 +581,9 @@ fantasy study music, medieval ambient focus, elven library ambience, deep work m
       </button>
       <button id="btn-team-tab-influencer-ops" class="team-tab-btn" onclick="switchTeamTab('influencer-ops')">
         <i class="fa-solid fa-wand-magic-sparkles"></i> 5. Operaciones de Influencers (Guía & Calibración Global)
+      </button>
+      <button id="btn-team-tab-youtube-studio" class="team-tab-btn" onclick="switchTeamTab('youtube-studio')">
+        <i class="fa-brands fa-youtube" style="color: #ff0000;"></i> 6. YouTube Studio & El Gran Arcano
       </button>
     </div>
 
@@ -2114,6 +1381,59 @@ Agenda consulta gratuita hoy."</div>
       </section>
     </div>
 
+  
+    <!-- PÁGINA 6: YOUTUBE STUDIO & EL GRAN ARCANO (PRODUCCIÓN & PROMPTS) -->
+    <div id="team-pane-youtube-studio" class="team-pane">
+      <section class="section" style="padding-top: 1rem;">
+        <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <span class="section-subtitle" style="color: #ef4444;"><i class="fa-brands fa-youtube"></i> Panel Confidencial de Producción & Prompts</span>
+              <h2 class="section-title">YouTube Studio & Hub de Generación de Contenido</h2>
+              <p class="section-description" style="margin: 0;">
+                Herramientas internas para creadores: generador de prompts Midjourney/Flux, paquetes de metadatos SEO, especificaciones de audio y edición de guiones para todos los canales.
+              </p>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button onclick="copyCurrentStudioKit()" class="btn btn-primary" style="font-size: 0.82rem; background: linear-gradient(135deg, #ef4444, #dc2626); border: none;">
+                <i class="fa-solid fa-copy"></i> Copiar Paquete del Canal Activo
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selector de Canal en el Studio -->
+        <div class="channel-studio-selector-bar" style="margin-bottom: 2rem; display: flex; gap: 0.6rem; flex-wrap: wrap;">
+          <button id="studio-btn-arcano" class="archive-filter-btn active" onclick="selectAdminChannel('arcano')">
+            <i class="fa-solid fa-gem" style="color: #a855f7;"></i> The Infinite Archive (El Gran Arcano)
+          </button>
+          <button id="studio-btn-mateo" class="archive-filter-btn" onclick="selectAdminChannel('mateo_fintech')">
+            <i class="fa-solid fa-arrow-trend-up" style="color: var(--cyan);"></i> Mateo Silva • Alpha Capital
+          </button>
+          <button id="studio-btn-kira" class="archive-filter-btn" onclick="selectAdminChannel('kira_gamedev')">
+            <i class="fa-solid fa-gamepad" style="color: #10b981;"></i> Kira Vane • DevLogs
+          </button>
+          <button id="studio-btn-ranchera" class="archive-filter-btn" onclick="selectAdminChannel('ranchera')">
+            <i class="fa-solid fa-music" style="color: #f59e0b;"></i> Maite • Fiebre Ranchera
+          </button>
+          <button id="studio-btn-arcanotech" class="archive-filter-btn" onclick="selectAdminChannel('arcanotech')">
+            <i class="fa-solid fa-atom" style="color: var(--cyan);"></i> Gemelos Arcanotech
+          </button>
+          <button id="studio-btn-sagrados" class="archive-filter-btn" onclick="selectAdminChannel('sagrados')">
+            <i class="fa-solid fa-scroll" style="color: var(--purple);"></i> Cuentos Sagrados
+          </button>
+          <button id="studio-btn-sofia" class="archive-filter-btn" onclick="selectAdminChannel('sofia')">
+            <i class="fa-solid fa-child-reaching" style="color: var(--pink);"></i> Viajes de Sofía
+          </button>
+        </div>
+
+        <!-- Contenedor Dinámico del Studio del Canal Seleccionado -->
+        <div id="team-admin-youtube-content">
+          <!-- Rendered dynamically by renderAdminYoutubeStudio(channelId) in app.js -->
+        </div>
+      </section>
+    </div>
+
   </main>
 
   <!-- Modal para Perfil de Influencers -->
@@ -2252,6 +1572,6 @@ Agenda consulta gratuita hoy."</div>
   </footer>
 
   <!-- App JS JavaScript -->
-  <script src="app.js?v=20260929_empresas_v2"></script>
+  <script src="app.js?v=20261001_landing_v1"></script>
 </body>
 </html>
