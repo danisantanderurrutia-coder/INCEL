@@ -1460,11 +1460,13 @@ function showTeamView(subtab = 'members') {
   const dynamicView = document.getElementById('view-dynamic');
   const publicView = document.getElementById('view-public');
   const teamView = document.getElementById('view-team');
+  const archiveView = document.getElementById('view-archive');
   const btnPublic = document.getElementById('btn-mode-public');
   const btnTeam = document.getElementById('btn-mode-team');
 
   if (publicView) publicView.style.display = 'none';
   if (dynamicView) dynamicView.style.display = 'none';
+  if (archiveView) archiveView.style.display = 'none';
   if (teamView) {
     teamView.style.display = 'block';
     teamView.classList.add('active-view');
@@ -1620,9 +1622,11 @@ function showDynamicView() {
   const dynamicView = document.getElementById('view-dynamic');
   const publicView = document.getElementById('view-public');
   const teamView = document.getElementById('view-team');
+  const archiveView = document.getElementById('view-archive');
 
   if (publicView) publicView.style.display = 'none';
   if (teamView) teamView.style.display = 'none';
+  if (archiveView) archiveView.style.display = 'none';
   if (dynamicView) {
     dynamicView.style.display = 'block';
     dynamicView.classList.add('active-view');
@@ -1634,9 +1638,11 @@ function showPublicView() {
   const dynamicView = document.getElementById('view-dynamic');
   const publicView = document.getElementById('view-public');
   const teamView = document.getElementById('view-team');
+  const archiveView = document.getElementById('view-archive');
 
   if (dynamicView) dynamicView.style.display = 'none';
   if (teamView) teamView.style.display = 'none';
+  if (archiveView) archiveView.style.display = 'none';
   if (publicView) {
     publicView.style.display = 'block';
     publicView.classList.add('active-view');
@@ -5252,13 +5258,150 @@ function updateProgressStats() {
   if (countTxt) countTxt.textContent = `${completedCount} / ${total}`;
 }
 
-// --- 6. VIEW SWITCHER FOR TEAM DASHBOARD ---
+// --- 6. VIEW SWITCHER FOR TEAM DASHBOARD & INFINITE ARCHIVE ---
 function switchView(mode) {
   if (mode === 'team') {
     showTeamView('members');
+  } else if (mode === 'archive') {
+    showArchiveView('lore');
   } else {
     window.location.hash = '#home';
     showPublicView();
+  }
+}
+
+// --- INFINITE ARCHIVE LOGIC & CONTROLS ---
+
+function showArchiveView(subtab = 'lore') {
+  const dynamicView = document.getElementById('view-dynamic');
+  const publicView = document.getElementById('view-public');
+  const teamView = document.getElementById('view-team');
+  const archiveView = document.getElementById('view-archive');
+
+  if (dynamicView) dynamicView.style.display = 'none';
+  if (publicView) publicView.style.display = 'none';
+  if (teamView) teamView.style.display = 'none';
+
+  if (archiveView) {
+    archiveView.style.display = 'block';
+    archiveView.classList.add('active-view');
+  }
+
+  switchArchiveTab(subtab);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function switchArchiveTab(tab) {
+  const btnLore = document.getElementById('btn-archive-tab-lore');
+  const btnAudio = document.getElementById('btn-archive-tab-audio');
+  const btnPipeline = document.getElementById('btn-archive-tab-pipeline');
+
+  const paneLore = document.getElementById('archive-pane-lore');
+  const paneAudio = document.getElementById('archive-pane-audio');
+  const panePipeline = document.getElementById('archive-pane-pipeline');
+
+  if (btnLore) btnLore.classList.toggle('active', tab === 'lore');
+  if (btnAudio) btnAudio.classList.toggle('active', tab === 'audio');
+  if (btnPipeline) btnPipeline.classList.toggle('active', tab === 'pipeline');
+
+  if (paneLore) paneLore.style.display = tab === 'lore' ? 'block' : 'none';
+  if (paneAudio) paneAudio.style.display = tab === 'audio' ? 'block' : 'none';
+  if (panePipeline) panePipeline.style.display = tab === 'pipeline' ? 'block' : 'none';
+}
+
+const ARCHIVE_SCENES_DATA = {
+  1: {
+    img: 'arcano_tower_window.jpg',
+    badge: 'Capítulo I • La Torre sobre las Cenizas',
+    title: 'Aurelius Chronovoid en la Ventana de la Aguja',
+    desc: 'Desde la aguja más alta de la fortaleza de Kar-Kaelum, Aurelius contempla la ciudadela deshecha por las Guerras de la Ruptura. El cielo se funde con el espacio profundo: estrellas frías, una nebulosa violeta y polvo cósmico lila que titila suspendido en el aire con destellos chillwave y cian neonwave. El astrolabio de bronce y piedra oscura que pende de su pecho registra cada vibración del multiverso.',
+    quote: '"Las guerras desgarraron los continentes de carne y piedra, pero el sonido de las estrellas es inmortal. Aquí aguardo con Umbraxion hasta que el tiempo decida recomenzar."'
+  },
+  2: {
+    img: 'arcano_reading.jpg',
+    badge: 'Capítulo II • El Manuscrito de las Eras',
+    title: 'El Estudio de Historias bajo la Llama Eterna',
+    desc: 'En la calidez silenciosa de su biblioteca personal, rodeado de muros de piedra milenaria y polvo lila bioluminiscente, Aurelius descifra los códices rescatados de los imperios caídos. La llama de una sola vela dorada baila sobre el cuero ajado mientras su mano anota los acordes de civilizaciones que ya no existen.',
+    quote: '"Un libro no es tinta muerta; es una partitura del alma. Mientras alguien lea sus historias, sus mundos siguen latiendo en la penumbra."'
+  },
+  3: {
+    img: 'arcano_dragon.jpg',
+    badge: 'Capítulo III • La Bestia del Vacío',
+    title: 'El Vínculo con Umbraxion en el Gran Salón',
+    desc: 'En el centro del salón abovedado de columnas ciclópeas, Umbraxion reposa con sus alas plegadas y sus escamas de obsidiana reflejando la luz de las estrellas. Aurelius posa con ternura su palma sobre el hocico del dragón negro, cuya respiración rítmica y profunda genera una vibración subsónica que disipa el estrés y protege la torre.',
+    quote: '"No temas a la oscuridad si camina a tu lado. Umbraxion nació del vacío primordial, y en su pecho late la calma de un millón de noches serenas."'
+  }
+};
+
+function selectArchiveScene(index) {
+  const scene = ARCHIVE_SCENES_DATA[index];
+  if (!scene) return;
+
+  const imgEl = document.getElementById('archive-current-scene-img');
+  const badgeEl = document.getElementById('archive-scene-badge');
+  const titleEl = document.getElementById('archive-scene-title');
+  const descEl = document.getElementById('archive-scene-desc');
+  const quoteEl = document.getElementById('archive-scene-quote');
+
+  if (imgEl) {
+    imgEl.style.opacity = '0.2';
+    setTimeout(() => {
+      imgEl.src = scene.img;
+      imgEl.style.opacity = '1';
+    }, 200);
+  }
+
+  if (badgeEl) badgeEl.textContent = scene.badge;
+  if (titleEl) titleEl.textContent = scene.title;
+  if (descEl) descEl.textContent = scene.desc;
+  if (quoteEl) quoteEl.textContent = scene.quote;
+
+  for (let i = 1; i <= 3; i++) {
+    const thumb = document.getElementById(`thumb-scene-${i}`);
+    if (thumb) thumb.classList.toggle('active', i === index);
+  }
+}
+
+function filterArchiveUniverse(category, btn) {
+  const allBtns = document.querySelectorAll('.archive-filter-btn');
+  allBtns.forEach((b) => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+
+  const cards = document.querySelectorAll('.archive-tome-card');
+  cards.forEach((card) => {
+    if (category === 'all' || card.dataset.universe === category) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+function previewArchiveTrack(name, bpm, key) {
+  const titleEl = document.getElementById('archive-player-title');
+  const subEl = document.getElementById('archive-player-sub');
+  const banner = document.getElementById('archive-audio-player-banner');
+
+  if (titleEl) titleEl.textContent = name;
+  if (subEl) subEl.textContent = `${bpm} BPM • ${key} • Simulación Activa (Sin Fatiga Auditiva)`;
+  if (banner) {
+    banner.style.boxShadow = '0 0 35px rgba(34,211,238,0.45)';
+    setTimeout(() => {
+      banner.style.boxShadow = '0 0 25px rgba(34,211,238,0.2)';
+    }, 800);
+  }
+}
+
+function copyArchiveYouTubeKit() {
+  const preview = document.getElementById('archive-youtube-text-preview');
+  if (preview) {
+    navigator.clipboard.writeText(preview.value).then(() => {
+      alert('✨ ¡Paquete de YouTube Studio copiado al portapapeles!\n(Título, Lore, Timestamps Pomodoro, Descargo Legal y 25 Tags)');
+    }).catch(() => {
+      preview.select();
+      document.execCommand('copy');
+      alert('✨ ¡Paquete de YouTube Studio copiado al portapapeles!');
+    });
   }
 }
 

@@ -45,6 +45,7 @@
       <ul class="nav-links" id="public-nav-links">
         <li><a href="#roster">Influencers</a></li>
         <li><a href="#youtube">Youtube</a></li>
+        <li><a href="#infinite-archive" onclick="switchView('archive')" style="color: #22D3EE; font-weight: 700; text-shadow: 0 0 10px rgba(34,211,238,0.5);"><i class="fa-solid fa-hat-wizard"></i> Infinite Archive</a></li>
         <li><a href="#cursos">Cursos</a></li>
         <li><a href="#seguridad">Seguridad Digital</a></li>
         <li><a href="#empresas">Empresas</a></li>
@@ -67,6 +68,501 @@
   <!-- Dynamic Router Container for Dedicated Subpages -->
   <main id="view-dynamic" class="mode-view">
     <!-- Rendered dynamically by app.js router -->
+  </main>
+
+  <!-- =================================================================== -->
+  <!-- VISTA: THE INFINITE ARCHIVE — FROM THE GRAND ARCANUM                -->
+  <!-- =================================================================== -->
+  <main id="view-archive" class="mode-view archive-view-wrapper">
+    <!-- Luces de Fondo (Neonwave & Lilac Cosmic Glow) -->
+    <div class="archive-cosmic-bg">
+      <div class="archive-glow-lilac"></div>
+      <div class="archive-glow-cyan"></div>
+      <div class="archive-glow-gold"></div>
+    </div>
+
+    <!-- Cabecera de la Bóveda -->
+    <header class="archive-header">
+      <div class="archive-header-inner">
+        <div>
+          <div class="archive-badge-rune">
+            <i class="fa-solid fa-gem" style="color: #22D3EE;"></i>
+            The Grand Arcanum Multiverse Vault • Bóveda Fuera del Tiempo
+          </div>
+          <h1 class="archive-title">The Infinite Archive</h1>
+          <p style="color: #94A3B8; font-size: 0.95rem; max-width: 680px; margin: 0; font-weight: 300;">
+            El nexo cósmico donde convergen registros acústicos ancestrales, atmósferas neonwave chillwave y la custodia del Archicanciller y su dragón negro.
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+          <button onclick="switchView('public')" class="btn btn-secondary" style="font-size: 0.85rem; border-color: rgba(255,255,255,0.15);">
+            <i class="fa-solid fa-arrow-left"></i> Volver a Los Manejadores
+          </button>
+          <a href="https://youtube.com" target="_blank" class="btn btn-primary" style="background: linear-gradient(135deg, #DC2626, #EF4444); border: none; font-size: 0.85rem; box-shadow: 0 0 15px rgba(239,68,68,0.3);">
+            <i class="fa-brands fa-youtube"></i> Canal YouTube
+          </a>
+        </div>
+      </div>
+
+      <!-- Navegación de Subsecciones -->
+      <div class="archive-subtabs-nav">
+        <button id="btn-archive-tab-lore" class="archive-subtab-btn active" onclick="switchArchiveTab('lore')">
+          <i class="fa-solid fa-dragon" style="color: #A855F7;"></i> 1. El Gran Arcano & Dragón Umbraxion
+        </button>
+        <button id="btn-archive-tab-audio" class="archive-subtab-btn" onclick="switchArchiveTab('audio')">
+          <i class="fa-solid fa-headphones" style="color: #22D3EE;"></i> 2. Bóveda Acústica (Audio Vault)
+        </button>
+        <button id="btn-archive-tab-pipeline" class="archive-subtab-btn" onclick="switchArchiveTab('pipeline')">
+          <i class="fa-solid fa-diagram-project" style="color: #D4AF37;"></i> 3. Pipeline & YouTube Studio Kit
+        </button>
+      </div>
+    </header>
+
+    <!-- Contenido de las Secciones -->
+    <div class="archive-body-container">
+      
+      <!-- ========================================== -->
+      <!-- PESTAÑA 1: LORE & PERSONAJE PRINCIPAL       -->
+      <!-- ========================================== -->
+      <section id="archive-pane-lore" class="archive-pane" style="display: block;">
+        
+        <!-- Visor Dinámico de Escenas -->
+        <div class="archive-scene-viewer">
+          <div class="archive-scene-img-box">
+            <img id="archive-current-scene-img" src="arcano_tower_window.jpg" alt="Aurelius mirando hacia el mundo destruido" class="archive-scene-main-img" />
+            <div style="position: absolute; top: 1rem; left: 1rem; background: rgba(6,8,13,0.75); backdrop-filter: blur(8px); padding: 0.35rem 0.85rem; border-radius: 6px; border: 1px solid rgba(168,85,247,0.4); font-size: 0.75rem; font-family: monospace; color: #E9D5FF;">
+              <span style="color: #22D3EE;">●</span> ESCENA EN VIVO • REGISTRO VISUAL
+            </div>
+            <div style="position: absolute; bottom: 1rem; left: 1rem; right: 1rem; background: linear-gradient(to top, rgba(6,8,13,0.9), transparent); padding-top: 2rem; display: flex; justify-content: space-between; align-items: flex-end;">
+              <span id="archive-scene-badge" style="font-size: 0.75rem; font-family: monospace; color: #D4AF37; text-transform: uppercase;">
+                Capítulo I • La Torre sobre las Cenizas
+              </span>
+            </div>
+          </div>
+
+          <div class="archive-scene-info-box">
+            <div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                <span style="font-size: 0.75rem; font-family: monospace; color: #A855F7; text-transform: uppercase; letter-spacing: 0.1em;">
+                  Archicanciller del Gran Arcano
+                </span>
+              </div>
+              <h2 id="archive-scene-title" style="font-size: 1.6rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.75rem; line-height: 1.25;">
+                Aurelius Chronovoid en la Ventana de la Aguja
+              </h2>
+              <p id="archive-scene-desc" style="color: #CBD5E1; font-size: 0.9rem; line-height: 1.65; margin-bottom: 1.25rem; font-weight: 300;">
+                Desde la aguja más alta de la fortaleza de Kar-Kaelum, Aurelius contempla la ciudadela deshecha por las Guerras de la Ruptura. El cielo se funde con el espacio profundo: estrellas frías, una nebulosa violeta y polvo cósmico lila que titila suspendido en el aire con destellos chillwave y cian neonwave. El astrolabio de bronce y piedra oscura que pende de su pecho registra cada vibración del multiverso.
+              </p>
+              
+              <blockquote id="archive-scene-quote" style="border-left: 2px solid #D4AF37; padding-left: 1rem; color: #F59E0B; font-style: italic; font-size: 0.85rem; background: rgba(212,175,55,0.05); padding-top: 0.5rem; padding-bottom: 0.5rem; border-radius: 0 6px 6px 0;">
+                "Las guerras desgarraron los continentes de carne y piedra, pero el sonido de las estrellas es inmortal. Aquí aguardo con Umbraxion hasta que el tiempo decida recomenzar."
+              </blockquote>
+            </div>
+
+            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center;">
+              <div style="font-size: 0.8rem; color: #94A3B8;">
+                <strong style="color: #FFFFFF;">Atmósfera:</strong> Neonwave Dark Fantasy / 432Hz
+              </div>
+              <span style="font-size: 0.75rem; font-family: monospace; color: #22D3EE; background: rgba(34,211,238,0.1); padding: 0.25rem 0.6rem; border-radius: 4px; border: 1px solid rgba(34,211,238,0.3);">
+                Polvo Lila • 8K Render
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selector de Escenas / Miniaturas Clickables -->
+        <div style="margin-bottom: 3rem;">
+          <h3 style="font-size: 1rem; font-weight: 600; color: #FFFFFF; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+            <i class="fa-solid fa-film" style="color: #22D3EE;"></i> Haz click en una escena para cambiar la vista del Arcano:
+          </h3>
+          <div class="archive-scenes-selector">
+            
+            <div id="thumb-scene-1" class="archive-scene-thumb-card active" onclick="selectArchiveScene(1)">
+              <img src="arcano_tower_window.jpg" alt="Mirando por la ventana" />
+              <div class="archive-scene-thumb-title">
+                1. La Mirada al Vasto Abismo
+              </div>
+            </div>
+
+            <div id="thumb-scene-2" class="archive-scene-thumb-card" onclick="selectArchiveScene(2)">
+              <img src="arcano_reading.jpg" alt="Leyendo libro a la luz de la vela" />
+              <div class="archive-scene-thumb-title">
+                2. El Estudio bajo la Vela
+              </div>
+            </div>
+
+            <div id="thumb-scene-3" class="archive-scene-thumb-card" onclick="selectArchiveScene(3)">
+              <img src="arcano_dragon.jpg" alt="Acariciando la palma del dragón negro" />
+              <div class="archive-scene-thumb-title">
+                3. El Pacto de Umbraxion
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Ficha de Lore Profundo -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+          
+          <div style="background: rgba(14,19,31,0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+              <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(168,85,247,0.15); border: 1px solid rgba(168,85,247,0.4); display: flex; align-items: center; justify-content: center; color: #C084FC; font-size: 1.2rem;">
+                <i class="fa-solid fa-scroll"></i>
+              </div>
+              <div>
+                <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin: 0;">Aurelius Chronovoid</h4>
+                <span style="font-size: 0.75rem; color: #94A3B8; font-family: monospace;">El Último Archicanciller del Gran Arcano</span>
+              </div>
+            </div>
+            <p style="color: #94A3B8; font-size: 0.85rem; line-height: 1.6; margin: 0;">
+              Posee cabello níveo y una barba solemne que roza su pecho. Su túnica celestial bordada en hilos astrales y runas de plata fue tejida antes de la Caída. Lleva colgado al cuello el <strong>Crono-Astrolabio Alquímico</strong>, un artefacto esotérico que decodifica las ondas acústicas emitidas por nebulosas lejanas y antiguos reinos perdidos.
+            </p>
+          </div>
+
+          <div style="background: rgba(14,19,31,0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+              <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(34,211,238,0.15); border: 1px solid rgba(34,211,238,0.4); display: flex; align-items: center; justify-content: center; color: #22D3EE; font-size: 1.2rem;">
+                <i class="fa-solid fa-dragon"></i>
+              </div>
+              <div>
+                <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin: 0;">Umbraxion, el Dragón del Vacío</h4>
+                <span style="font-size: 0.75rem; color: #94A3B8; font-family: monospace;">Guardián del Salón de las Bóvedas</span>
+              </div>
+            </div>
+            <p style="color: #94A3B8; font-size: 0.85rem; line-height: 1.6; margin: 0;">
+              Una bestia colosal de escamas color obsidiana pulida con reflejos dorados y amatista. No emite rugidos destructivos; su respiración profunda actúa como un drone natural subsónico (a 40-50Hz) que pacifica la mente de Aurelius. Descansa en el gran salón de columnas góticas y responde con dócil afecto a la palma del archicanciller.
+            </p>
+          </div>
+
+          <div style="background: rgba(14,19,31,0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+              <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(212,175,55,0.15); border: 1px solid rgba(212,175,55,0.4); display: flex; align-items: center; justify-content: center; color: #D4AF37; font-size: 1.2rem;">
+                <i class="fa-solid fa-compass"></i>
+              </div>
+              <div>
+                <h4 style="font-size: 1.05rem; font-weight: 700; color: #FFFFFF; margin: 0;">La Bóveda Fuera del Tiempo</h4>
+                <span style="font-size: 0.75rem; color: #94A3B8; font-family: monospace;">Fusión Medieval-Neonwave</span>
+              </div>
+            </div>
+            <p style="color: #94A3B8; font-size: 0.85rem; line-height: 1.6; margin: 0;">
+              La atmósfera de la ciudadela destruida permanece sumergida en una noche cósmica eterna. Partículas luminiscentes de polvo lila flotan ingrávidas entre estanterías de roble fosilizado y pantallas holográficas rúnicas, creando un espacio de concentración absoluta para el estudio, la lectura y la codificación.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- PESTAÑA 2: BÓVEDA ACÚSTICA (SHOWCASE)       -->
+      <!-- ========================================== -->
+      <section id="archive-pane-audio" class="archive-pane" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h2 style="font-size: 1.5rem; font-weight: 700; color: #FFFFFF; margin: 0;">Códices Sonoros de Lanzamiento</h2>
+            <p style="color: #94A3B8; font-size: 0.85rem; margin-top: 0.25rem;">3 Tomos oficiales de 1.5 a 2 horas ensamblados para estados de foco prolongado</p>
+          </div>
+          
+          <!-- Filtro de Reinos -->
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button class="archive-filter-btn active" onclick="filterArchiveUniverse('all', this)">Todos</button>
+            <button class="archive-filter-btn" onclick="filterArchiveUniverse('elven', this)">🌿 Élfico</button>
+            <button class="archive-filter-btn" onclick="filterArchiveUniverse('dwarf', this)">⚒️ Enano</button>
+            <button class="archive-filter-btn" onclick="filterArchiveUniverse('winter', this)">❄️ Norteño</button>
+          </div>
+        </div>
+
+        <!-- Grid de Tarjetas de Tomos -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem;">
+          
+          <!-- Tomo 1 -->
+          <div class="archive-tome-card" data-universe="elven" style="background: rgba(14,19,31,0.85); border: 1px solid rgba(34,211,238,0.25); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="position: relative; height: 180px; overflow: hidden;">
+                <img src="arcano_reading.jpg" alt="Tomo I" style="width: 100%; height: 100%; object-fit: cover;" />
+                <span style="position: absolute; top: 0.75rem; left: 0.75rem; background: rgba(6,8,13,0.8); border: 1px solid #22D3EE; color: #22D3EE; font-size: 0.7rem; font-family: monospace; padding: 0.2rem 0.6rem; border-radius: 4px;">
+                  TOME I • LECTURA & CALMA
+                </span>
+                <span style="position: absolute; bottom: 0.75rem; right: 0.75rem; background: rgba(0,0,0,0.8); color: #FFFFFF; font-size: 0.7rem; font-family: monospace; padding: 0.2rem 0.5rem; border-radius: 4px;">
+                  1h 30m • 60 BPM
+                </span>
+              </div>
+
+              <div style="padding: 1.25rem;">
+                <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin: 0 0 0.5rem 0;">Whispers of the Moonlit Sanctuary</h3>
+                <p style="color: #94A3B8; font-size: 0.8rem; line-height: 1.5; margin-bottom: 1rem;">
+                  Arpa céltica suspendida, flauta de bambú bansuri, lluvia tenue nocturna y frecuencias binaurales de 6Hz. Ideal para lectura reflexiva.
+                </p>
+
+                <!-- Pistas -->
+                <div style="background: rgba(6,8,13,0.6); border-radius: 8px; padding: 0.75rem; margin-bottom: 1rem;">
+                  <div style="font-size: 0.75rem; font-family: monospace; color: #22D3EE; margin-bottom: 0.4rem; display: flex; justify-content: space-between;">
+                    <span>TRACK-01A: Sylverian Starlight Harp</span>
+                    <span>60 BPM</span>
+                  </div>
+                  <div style="font-size: 0.75rem; font-family: monospace; color: #94A3B8; margin-bottom: 0.4rem; display: flex; justify-content: space-between;">
+                    <span>TRACK-01B: Breeze in High Scriptorium</span>
+                    <span>58 BPM</span>
+                  </div>
+                  <div style="font-size: 0.75rem; font-family: monospace; color: #94A3B8; display: flex; justify-content: space-between;">
+                    <span>TRACK-01C: Starlight Maiden Incantation</span>
+                    <span>62 BPM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 1rem 1.25rem; background: rgba(10,14,23,0.8); border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center;">
+              <button onclick="previewArchiveTrack('Tome I: Whispers of the Moonlit Sanctuary', 60, 'D Dorian')" class="btn btn-secondary" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;">
+                <i class="fa-solid fa-play" style="color: #22D3EE;"></i> Escuchar Preview
+              </button>
+              <span style="font-size: 0.75rem; color: #22D3EE; font-family: monospace;">-14 LUFS Master</span>
+            </div>
+          </div>
+
+          <!-- Tomo 2 -->
+          <div class="archive-tome-card" data-universe="dwarf" style="background: rgba(14,19,31,0.85); border: 1px solid rgba(212,175,55,0.25); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="position: relative; height: 180px; overflow: hidden;">
+                <img src="arcano_dragon.jpg" alt="Codex II" style="width: 100%; height: 100%; object-fit: cover;" />
+                <span style="position: absolute; top: 0.75rem; left: 0.75rem; background: rgba(6,8,13,0.8); border: 1px solid #D4AF37; color: #D4AF37; font-size: 0.7rem; font-family: monospace; padding: 0.2rem 0.6rem; border-radius: 4px;">
+                  CODEX II • FLOW STATE CODING
+                </span>
+                <span style="position: absolute; bottom: 0.75rem; right: 0.75rem; background: rgba(0,0,0,0.8); color: #FFFFFF; font-size: 0.7rem; font-family: monospace; padding: 0.2rem 0.5rem; border-radius: 4px;">
+                  2h 00m • 65 BPM
+                </span>
+              </div>
+
+              <div style="padding: 1.25rem;">
+                <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin: 0 0 0.5rem 0;">The Deep Forge of the Runesmiths</h3>
+                <p style="color: #94A3B8; font-size: 0.8rem; line-height: 1.5; margin-bottom: 1rem;">
+                  Martillos rítmicos lejanos como metrónomo a 65 BPM, coros guturales profundos y engranajes de bronce. Diseñado para software engineers.
+                </p>
+
+                <!-- Pistas -->
+                <div style="background: rgba(6,8,13,0.6); border-radius: 8px; padding: 0.75rem; margin-bottom: 1rem;">
+                  <div style="font-size: 0.75rem; font-family: monospace; color: #D4AF37; margin-bottom: 0.4rem; display: flex; justify-content: space-between;">
+                    <span>TRACK-02A: Rhythmic Strike of the Anvil</span>
+                    <span>65 BPM</span>
+                  </div>
+                  <div style="font-size: 0.75rem; font-family: monospace; color: #94A3B8; margin-bottom: 0.4rem; display: flex; justify-content: space-between;">
+                    <span>TRACK-02B: Subterranean Guilds Chant</span>
+                    <span>65 BPM</span>
+                  </div>
+                  <div style="font-size: 0.75rem; font-family: monospace; color: #94A3B8; display: flex; justify-content: space-between;">
+                    <span>TRACK-02C: Gears in the Magma Chamber</span>
+                    <span>66 BPM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 1rem 1.25rem; background: rgba(10,14,23,0.8); border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center;">
+              <button onclick="previewArchiveTrack('Codex II: The Deep Forge of the Runesmiths', 65, 'C Minor')" class="btn btn-secondary" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;">
+                <i class="fa-solid fa-play" style="color: #D4AF37;"></i> Escuchar Preview
+              </button>
+              <span style="font-size: 0.75rem; color: #D4AF37; font-family: monospace;">-14 LUFS Master</span>
+            </div>
+          </div>
+
+          <!-- Tomo 3 -->
+          <div class="archive-tome-card" data-universe="winter" style="background: rgba(14,19,31,0.85); border: 1px solid rgba(168,85,247,0.25); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="position: relative; height: 180px; overflow: hidden;">
+                <img src="arcano_tower_window.jpg" alt="Archive III" style="width: 100%; height: 100%; object-fit: cover;" />
+                <span style="position: absolute; top: 0.75rem; left: 0.75rem; background: rgba(6,8,13,0.8); border: 1px solid #A855F7; color: #A855F7; font-size: 0.7rem; font-family: monospace; padding: 0.2rem 0.6rem; border-radius: 4px;">
+                  ARCHIVE III • ESCRITURA & ANÁLISIS
+                </span>
+                <span style="position: absolute; bottom: 0.75rem; right: 0.75rem; background: rgba(0,0,0,0.8); color: #FFFFFF; font-size: 0.7rem; font-family: monospace; padding: 0.2rem 0.5rem; border-radius: 4px;">
+                  2h 00m • 56 BPM
+                </span>
+              </div>
+
+              <div style="padding: 1.25rem;">
+                <h3 style="font-size: 1.15rem; font-weight: 700; color: #FFFFFF; margin: 0 0 0.5rem 0;">The Obsidian Bastion at Winterfall</h3>
+                <p style="color: #94A3B8; font-size: 0.8rem; line-height: 1.5; margin-bottom: 1rem;">
+                  Violonchelo acústico solista, fuego crepitando de roble, laúd renacentista y ventisca polar lejana. Diseñado para redactores y pensadores.
+                </p>
+
+                <!-- Pistas -->
+                <div style="background: rgba(6,8,13,0.6); border-radius: 8px; padding: 0.75rem; margin-bottom: 1rem;">
+                  <div style="font-size: 0.75rem; font-family: monospace; color: #A855F7; margin-bottom: 0.4rem; display: flex; justify-content: space-between;">
+                    <span>TRACK-03A: Solitary Cellist of Bastion</span>
+                    <span>56 BPM</span>
+                  </div>
+                  <div style="font-size: 0.75rem; font-family: monospace; color: #94A3B8; margin-bottom: 0.4rem; display: flex; justify-content: space-between;">
+                    <span>TRACK-03B: Old Parchment and Bitter Cold</span>
+                    <span>58 BPM</span>
+                  </div>
+                  <div style="font-size: 0.75rem; font-family: monospace; color: #94A3B8; display: flex; justify-content: space-between;">
+                    <span>TRACK-03C: Bell of the Frozen Keep</span>
+                    <span>50 BPM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 1rem 1.25rem; background: rgba(10,14,23,0.8); border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center;">
+              <button onclick="previewArchiveTrack('Archive III: The Obsidian Bastion at Winterfall', 56, 'B Minor')" class="btn btn-secondary" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;">
+                <i class="fa-solid fa-play" style="color: #A855F7;"></i> Escuchar Preview
+              </button>
+              <span style="font-size: 0.75rem; color: #A855F7; font-family: monospace;">-14 LUFS Master</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Reproductor de Preview Activo Flotante / Inferior -->
+        <div id="archive-audio-player-banner" style="margin-top: 2rem; background: rgba(10,14,23,0.9); border: 1px solid #22D3EE; border-radius: 12px; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; box-shadow: 0 0 25px rgba(34,211,238,0.2);">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 40px; height: 40px; border-radius: 8px; background: #22D3EE; color: #06080D; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: bold;">
+              <i class="fa-solid fa-volume-high"></i>
+            </div>
+            <div>
+              <div id="archive-player-title" style="font-weight: 700; color: #FFFFFF; font-size: 0.95rem;">Tome I: Whispers of the Moonlit Sanctuary</div>
+              <div id="archive-player-sub" style="font-size: 0.75rem; color: #94A3B8; font-family: monospace;">60 BPM • D Dorian • Simulación Activa (Sin Fatiga Auditiva)</div>
+            </div>
+          </div>
+
+          <div class="archive-waveform-bars" style="height: 28px;">
+            <div class="archive-waveform-bar" style="animation-delay: 0.1s;"></div>
+            <div class="archive-waveform-bar" style="animation-delay: 0.3s;"></div>
+            <div class="archive-waveform-bar" style="animation-delay: 0.15s;"></div>
+            <div class="archive-waveform-bar" style="animation-delay: 0.4s;"></div>
+            <div class="archive-waveform-bar" style="animation-delay: 0.25s;"></div>
+            <div class="archive-waveform-bar" style="animation-delay: 0.5s;"></div>
+            <div class="archive-waveform-bar" style="animation-delay: 0.2s;"></div>
+            <div class="archive-waveform-bar" style="animation-delay: 0.35s;"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- PESTAÑA 3: PIPELINE KANBAN & YOUTUBE SEO   -->
+      <!-- ========================================== -->
+      <section id="archive-pane-pipeline" class="archive-pane" style="display: none;">
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h2 style="font-size: 1.5rem; font-weight: 700; color: #FFFFFF; margin: 0;">Pipeline de Producción & YouTube Studio Kit</h2>
+            <p style="color: #94A3B8; font-size: 0.85rem; margin-top: 0.25rem;">Flujo de trabajo de 5 fases: desde el prompt de lore hasta el copy-paste directo a YouTube Studio.</p>
+          </div>
+
+          <button onclick="copyArchiveYouTubeKit()" class="btn btn-primary" style="background: linear-gradient(135deg, #22D3EE, #0284C7); border: none; font-size: 0.85rem; box-shadow: 0 0 20px rgba(34,211,238,0.3); font-weight: 700;">
+            <i class="fa-solid fa-copy"></i> Copiar Paquete YouTube Studio (1-Click)
+          </button>
+        </div>
+
+        <!-- Tablero Kanban de 5 Columnas -->
+        <div class="archive-kanban-board">
+          
+          <!-- Col 1 -->
+          <div class="archive-kanban-col">
+            <div class="archive-kanban-header">
+              <span style="font-size: 0.8rem; font-weight: 700; color: #F59E0B;">1. Idea / Lore Prompt</span>
+              <span style="background: rgba(245,158,11,0.2); color: #F59E0B; font-size: 0.7rem; font-family: monospace; padding: 0.1rem 0.4rem; border-radius: 4px;">1</span>
+            </div>
+            <div class="archive-kanban-card">
+              <div style="font-size: 0.7rem; color: #F59E0B; font-family: monospace; margin-bottom: 0.25rem;">NUEVO PROYECTO</div>
+              <h5 style="color: #FFFFFF; font-size: 0.85rem; margin: 0 0 0.4rem 0;">Observatorio Celestial de Eldoria</h5>
+              <p style="color: #94A3B8; font-size: 0.75rem; margin: 0;">Cuencos de cuarzo y drones solares para meditación nocturna.</p>
+            </div>
+          </div>
+
+          <!-- Col 2 -->
+          <div class="archive-kanban-col">
+            <div class="archive-kanban-header">
+              <span style="font-size: 0.8rem; font-weight: 700; color: #22D3EE;">2. Audio AI (Udio/Suno)</span>
+              <span style="background: rgba(34,211,238,0.2); color: #22D3EE; font-size: 0.7rem; font-family: monospace; padding: 0.1rem 0.4rem; border-radius: 4px;">3</span>
+            </div>
+            <div class="archive-kanban-card">
+              <div style="font-size: 0.7rem; color: #22D3EE; font-family: monospace; margin-bottom: 0.25rem;">GENERACIÓN DE STEMS</div>
+              <h5 style="color: #FFFFFF; font-size: 0.85rem; margin: 0 0 0.4rem 0;">Pistas 1A, 1B, 1C (Arpa & Lluvia)</h5>
+              <p style="color: #94A3B8; font-size: 0.75rem; margin: 0;">Verificación de BPM (60 BPM exactos) y afinación a 432 Hz.</p>
+            </div>
+          </div>
+
+          <!-- Col 3 -->
+          <div class="archive-kanban-col">
+            <div class="archive-kanban-header">
+              <span style="font-size: 0.8rem; font-weight: 700; color: #A855F7;">3. Loops Visuales AI</span>
+              <span style="background: rgba(168,85,247,0.2); color: #A855F7; font-size: 0.7rem; font-family: monospace; padding: 0.1rem 0.4rem; border-radius: 4px;">3</span>
+            </div>
+            <div class="archive-kanban-card">
+              <div style="font-size: 0.7rem; color: #A855F7; font-family: monospace; margin-bottom: 0.25rem;">RUNWAY GEN-3 / LUMA</div>
+              <h5 style="color: #FFFFFF; font-size: 0.85rem; margin: 0 0 0.4rem 0;">Erudito en Balcón 8K Loop</h5>
+              <p style="color: #94A3B8; font-size: 0.75rem; margin: 0;">Ciclo perfecto de 15 segundos sin cortes visibles de lluvia.</p>
+            </div>
+          </div>
+
+          <!-- Col 4 -->
+          <div class="archive-kanban-col">
+            <div class="archive-kanban-header">
+              <span style="font-size: 0.8rem; font-weight: 700; color: #38BDF8;">4. Montaje & Master</span>
+              <span style="background: rgba(56,189,248,0.2); color: #38BDF8; font-size: 0.7rem; font-family: monospace; padding: 0.1rem 0.4rem; border-radius: 4px;">1</span>
+            </div>
+            <div class="archive-kanban-card">
+              <div style="font-size: 0.7rem; color: #38BDF8; font-family: monospace; margin-bottom: 0.25rem;">DAVINCI / PREMIERE</div>
+              <h5 style="color: #FFFFFF; font-size: 0.85rem; margin: 0 0 0.4rem 0;">Ensamble 1h 30m -14 LUFS</h5>
+              <p style="color: #94A3B8; font-size: 0.75rem; margin: 0;">Normalización de volumen estándar YouTube y transiciones suaves.</p>
+            </div>
+          </div>
+
+          <!-- Col 5 -->
+          <div class="archive-kanban-col">
+            <div class="archive-kanban-header">
+              <span style="font-size: 0.8rem; font-weight: 700; color: #10B981;">5. Listo / YouTube</span>
+              <span style="background: rgba(16,185,129,0.2); color: #10B981; font-size: 0.7rem; font-family: monospace; padding: 0.1rem 0.4rem; border-radius: 4px;">3</span>
+            </div>
+            <div class="archive-kanban-card" style="border-color: rgba(16,185,129,0.4);">
+              <div style="font-size: 0.7rem; color: #10B981; font-family: monospace; margin-bottom: 0.25rem;">PUBLICADO</div>
+              <h5 style="color: #FFFFFF; font-size: 0.85rem; margin: 0 0 0.4rem 0;">Tomo I, Codex II & Archive III</h5>
+              <p style="color: #94A3B8; font-size: 0.75rem; margin: 0;">Metadatos SEO inyectados, 25 tags y sin Content ID.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Cuadro de Vista Previa de los Metadatos Copiables -->
+        <div style="margin-top: 2rem; background: rgba(14,19,31,0.85); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: #FFFFFF; margin: 0 0 0.75rem 0;">
+            <i class="fa-brands fa-youtube" style="color: #EF4444;"></i> Previsualización del Paquete de YouTube Studio (Listo para Subir)
+          </h4>
+          <textarea id="archive-youtube-text-preview" readonly style="width: 100%; height: 200px; background: #06080D; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #CBD5E1; font-family: monospace; font-size: 0.75rem; padding: 1rem; resize: vertical; line-height: 1.5;">
+TÍTULO:
+Ancient Elven Library (Ambient Fantasy Music & Rain) 1.5 HOURS | Deep Reading & Tranquil Study
+
+DESCRIPCIÓN:
+"Has cruzado el umbral del Gran Arcano. Frente a ti se abre Tome I — Whispers of the Moonlit Sanctuary, custodiado en la Bóveda del Vacío."
+
+🌌 LORE DEL REGISTRO:
+El tomo que tienes ante ti recopila las frecuencias registradas en los santuarios de cristal de Sylveria por el Archicanciller Aurelius y el dragón Umbraxion. Diseñado específicamente para acompañar sesiones de estudio prolongado, lectura inmersiva o codificación sin fatiga auditiva.
+
+⏱️ TIMESTAMPS & TRACKLIST:
+00:00 - Track 1A: Sylverian Starlight Harp & Dew (60 BPM | D Dorian)
+30:00 - Track 1B: Breeze Through the High Scriptorium (58 BPM | A Pentatonic)
+1:00:00 - Track 1C: The Starlight Maiden’s Incantation (62 BPM | E Aeolian)
+
+🍅 TÉCNICA DE ESTUDIO RECOMENDADA (POMODORO 50/10):
+00:00 - Bloque de Enfoque Profundo I (50 min)
+50:00 - Pausa de respiración e hidratación (10 min)
+1:00:00 - Bloque de Enfoque Profundo II (50 min)
+1:50:00 - Cierre del Tomo
+
+🎧 ESPECIFICACIONES TÉCNICAS DE AUDIO:
+• Masterizado a -14 LUFS Integrated para YouTube.
+• Afinación armónica a 432 Hz / Frecuencias binaurales sub-graves templadas.
+
+📜 DESCARGO ÉTICO Y LEGAL (LIBRE DE CONTENT ID):
+Toda la música y los visuales de The Infinite Archive son generados mediante IA de última generación y masterizados profesionalmente. Puedes utilizar este video en tus streams de Twitch o YouTube sin strikes de copyright.
+
+TAGS (25 ETIQUETAS ESTRATÉGICAS):
+fantasy study music, medieval ambient focus, elven library ambience, deep work music coding, programmer focus beats, flow state ambient, dark academia study music, reading music fantasy, calm harp ambience, dwarven forge ambience, winter keep fireplace, ambient music 2 hours, lofi fantasy ambient, sleep fantasy sounds, relaxing rpg music, tabletop background music, dnd study playlist, focus music no drums, rain on window fantasy, chillwave fantasy, cinemagraph study background, medieval writing music, ambient soundscape study, study with me fantasy, the infinite archive
+          </textarea>
+        </div>
+      </section>
+
+    </div>
   </main>
 
   <!-- =================================================================== -->
