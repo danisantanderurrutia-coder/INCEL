@@ -6305,7 +6305,6 @@ function renderCursosPage() {
         </div>
       `).join('')}
     </div>
-    </div>
 
     <!-- Need customized training box -->
     <div class="glass-card" style="text-align: center; padding: 2.5rem; border: 1px dashed rgba(245, 158, 11, 0.4); max-width: 750px; margin: 0 auto;">
