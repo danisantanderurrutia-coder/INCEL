@@ -834,8 +834,6 @@ const influencersData = {
     ]
   },
 
-  liravoss: null, // Asignado abajo como alias de kira
-
   alejandra: {
     id: "alejandra",
     name: "Alejandra (Prototipo B2B)",
@@ -1061,9 +1059,6 @@ const influencersData = {
   }
 };
 
-influencersData.almendra = influencersData.alejandra;
-influencersData.liravoss = influencersData.kira;
-influencersData.kiravane = influencersData.kira;
 influencersData['alina-van-dijk'] = influencersData.alina;
 influencersData['alina_van_dijk'] = influencersData.alina;
 influencersData['alinavandijk'] = influencersData.alina;
@@ -2193,9 +2188,7 @@ const defaultInfluencerPlatforms = {
   mateo: ["flux", "nanobanana", "elevenlabs", "claude", "notion", "capcut", "tiktok", "instagram", "youtube"],
   maite: ["flux", "kling", "suno", "elevenlabs", "chatgpt", "capcut", "tiktok", "instagram", "fanvue"],
   kira: ["mj", "kling", "elevenlabs", "claude", "davinci", "twitter", "youtube", "discord"],
-  liravoss: ["flux", "comfy", "realesrgan", "kling", "elevenlabs", "claude", "twitter", "discord"],
   alejandra: ["flux", "kling", "elevenlabs", "claude", "capcut", "instagram", "linkedin"],
-  almendra: ["flux", "kling", "elevenlabs", "claude", "capcut", "instagram", "linkedin"],
   alina: ["flux", "comfy", "elevenlabs", "kling", "capcut", "twitter", "instagram", "telegram", "fanvue"]
 };
 
@@ -2254,15 +2247,6 @@ const defaultInfluencerOpsConfig = {
     status: "Validado / Live (Equipo)",
     sop: "1. Selección de 3 juegos indie en Steam con descuento o temática original.\n2. Render de Kira en setup gamer con iluminación neón en Flux.1.\n3. Síntesis de voz dinámica en ElevenLabs con tono gamer entusiasta.\n4. Edición rápida en CapCut con clips de gameplay de fondo.\n5. Publicación con invitación a unirse al Discord gratuito de recomendaciones."
   },
-  liravoss: {
-    handle: "@kira.voss.gamer",
-    vipUrl: "https://discord.gg/kiravoss",
-    cadence: "4 videos/sem",
-    scheduler: "Metricool",
-    responsible: "Equipo (Los Manejadores)",
-    status: "Validado / Live (Equipo)",
-    sop: "Activo unificado con Kira Voss (Gaming & Cultura Indie)."
-  },
   alejandra: {
     handle: "@alejandra.b2b",
     vipUrl: "https://losmanejadores.io/#empresas",
@@ -2271,15 +2255,6 @@ const defaultInfluencerOpsConfig = {
     responsible: "Comercial B2B (Pancho / Daniel)",
     status: "Disponible para Negocios / En Adopción",
     sop: "1. Prototipo abierto para demostraciones a marcas y empresas clientes.\n2. Personalización de vestuario corporativo y logo de marca en Flux.1.\n3. Parametrización de voz corporativa a medida en ElevenLabs."
-  },
-  almendra: {
-    handle: "@alejandra.b2b",
-    vipUrl: "https://losmanejadores.io/#empresas",
-    cadence: "Demostraciones a demanda",
-    scheduler: "Manual B2B",
-    responsible: "Comercial B2B (Pancho / Daniel)",
-    status: "Disponible para Negocios / En Adopción",
-    sop: "Alias de Alejandra (Prototipo B2B en Adopción)."
   },
   alina: {
     handle: "@alina.mindcontrol",
@@ -3859,20 +3834,71 @@ function renderInfluencersPage(categoryFilter = 'all') {
       `).join('')}
     </div>
 
-    <!-- Commercial Avatar Custom Creation Callout -->
-    <div class="glass-card" style="margin-top: 3.5rem; padding: 2.2rem; border-color: rgba(139, 92, 246, 0.4); background: radial-gradient(circle at center, rgba(139, 92, 246, 0.1) 0%, rgba(10, 12, 22, 0.95) 100%); border-radius: var(--radius-lg); text-align: center;">
-      <span class="detail-badge" style="background: rgba(139, 92, 246, 0.2); color: var(--purple); border-color: var(--purple); margin-bottom: 0.75rem;">
-        CREACIÓN EXCLUSIVA PARA MARCAS
-      </span>
-      <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: #fff; margin-bottom: 0.75rem;">
-        ¿Deseas Crear un Influencer Virtual Propio para tu Empresa?
-      </h3>
-      <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 680px; margin: 0 auto 1.5rem auto; line-height: 1.6;">
-        Diseñamos avatares con consistencia facial 100% exclusiva, entrenados con LoRA privado y adaptados a los valores corporativos de tu marca. Sin regalías a modelos humanas y con entrega de activos en 48 horas.
-      </p>
-      <a href="#clientes" class="btn btn-primary" style="font-size: 0.95rem; padding: 0.75rem 1.75rem;">
-        <i class="fa-solid fa-handshake"></i> Solicitar Creación de Modelo a Medida
-      </a>
+    <!-- Servicios de Creación de Influencers -->
+    <div style="margin-top: 3.5rem;">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <span class="detail-badge" style="background: rgba(139, 92, 246, 0.2); color: var(--purple); border-color: var(--purple); margin-bottom: 0.75rem;">
+          CREACIÓN EXCLUSIVA PARA EMPRESAS
+        </span>
+        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: #fff; margin-top: 1rem;">
+          ¿Necesitas tu Propio Influencer Virtual?
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 680px; margin: 0.5rem auto 0;">Creamos avatares digitales hiperrealistas adaptados a tu marca, CEO o producto.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto;">
+        <!-- Card 1: Clon Digital para CEOs & Fundadores -->
+        <div class="glass-card" style="border-color: rgba(6, 182, 212, 0.35); overflow: hidden; padding: 0; cursor: pointer;" onclick="window.location.hash='#influencer/ceo-clone'">
+          <div style="position: relative; aspect-ratio: 5/4; overflow: hidden;">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&h=640&crop=faces&q=80" alt="Clon Digital para CEOs & Fundadores" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;" loading="lazy">
+            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,12,24,0.95) 0%, rgba(10,12,24,0.3) 50%, transparent 100%);"></div>
+            <div style="position: absolute; bottom: 1rem; left: 1rem; right: 1rem;">
+              <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--cyan); font-weight: 700;"><i class="fa-solid fa-user-tie"></i> Servicio Ejecutivo</span>
+              <h4 style="color: #fff; font-size: 1.15rem; margin: 0.3rem 0 0.25rem 0; font-family: var(--font-heading);">Clon Digital para CEOs & Fundadores</h4>
+            </div>
+          </div>
+          <div style="padding: 1.2rem 1.3rem 1.4rem;">
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.55; margin-bottom: 1rem;">
+              Réplica digital de video y voz del CEO de tu empresa. Produce comunicaciones corporativas, pitch decks y contenido de LinkedIn a escala — sin sesiones de cámara.
+            </p>
+            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem;">
+              <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: rgba(6,182,212,0.12); border-radius: 4px; color: var(--cyan);">Voz Clonada</span>
+              <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: rgba(6,182,212,0.12); border-radius: 4px; color: var(--cyan);">Lipsync 4K</span>
+              <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: rgba(6,182,212,0.12); border-radius: 4px; color: var(--cyan);">LinkedIn</span>
+              <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: rgba(6,182,212,0.12); border-radius: 4px; color: var(--cyan);">Corporativo</span>
+            </div>
+            <a href="#clientes" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 0.88rem;">
+              <i class="fa-solid fa-arrow-right"></i> Solicitar Clon Ejecutivo
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Modelo IA Exclusiva a Medida -->
+        <div class="glass-card" style="border-color: rgba(139, 92, 246, 0.35); overflow: hidden; padding: 0; cursor: pointer;" onclick="window.location.hash='#influencer/custom-model'">
+          <div style="position: relative; aspect-ratio: 5/4; overflow: hidden;">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&h=640&crop=faces&q=80" alt="Modelo IA Exclusiva a Medida" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;" loading="lazy">
+            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,12,24,0.95) 0%, rgba(10,12,24,0.3) 50%, transparent 100%);"></div>
+            <div style="position: absolute; bottom: 1rem; left: 1rem; right: 1rem;">
+              <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--purple); font-weight: 700;"><i class="fa-solid fa-wand-magic-sparkles"></i> Creación a Medida</span>
+              <h4 style="color: #fff; font-size: 1.15rem; margin: 0.3rem 0 0.25rem 0; font-family: var(--font-heading);">Modelo IA Exclusiva para E-Commerce & Marcas</h4>
+            </div>
+          </div>
+          <div style="padding: 1.2rem 1.3rem 1.4rem;">
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.55; margin-bottom: 1rem;">
+              Diseñamos un influencer virtual 100% exclusivo para tu marca: rostro único con LoRA privado, voz propia y personalidad alineada a tu identidad comercial. Sin regalías a modelos humanas.
+            </p>
+            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem;">
+              <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: rgba(139,92,246,0.12); border-radius: 4px; color: var(--purple);">Rostro Exclusivo</span>
+              <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: rgba(139,92,246,0.12); border-radius: 4px; color: var(--purple);">LoRA Privado</span>
+              <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: rgba(139,92,246,0.12); border-radius: 4px; color: var(--purple);">Voz Propia</span>
+              <span style="font-size: 0.72rem; padding: 0.15rem 0.5rem; background: rgba(139,92,246,0.12); border-radius: 4px; color: var(--purple);">E-Commerce</span>
+            </div>
+            <a href="#clientes" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 0.88rem; background: linear-gradient(135deg, var(--purple), #a855f7);">
+              <i class="fa-solid fa-arrow-right"></i> Solicitar Modelo a Medida
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   `;
 }
