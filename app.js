@@ -456,7 +456,7 @@ const influencersData = {
         desc: "Ambiente hacker nocturno con reflexiones en monitores y estética cyberpunk chic."
       },
       {
-        img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80",
+        img: "yt_kira_thumb.jpg",
         tag: "Editorial Neo-Tokyo",
         label: "Kira Voss • Cyber Glamour",
         desc: "Estética neón violeta y cian, primer modelo validado con más de 500 suscriptores en Fanvue."
@@ -3723,6 +3723,18 @@ function renderInfluencersPage(categoryFilter = 'all') {
       tags: ['Skincare', 'Clean Beauty', 'Dermocosmética']
     },
     {
+      id: 'alina',
+      name: 'Alina Van Dijk',
+      avatar: 'alina_avatar.png',
+      nicheIcon: 'fa-fire',
+      niche: 'Sex-Positive Dominatrix & Erotismo Consciente',
+      category: 'vip',
+      badge: 'Activo Certificado • Nicho Adulto VIP',
+      badgeColor: '#ef4444',
+      desc: '28 años. Barcelona/Tulum. Seducción psicológica, erotismo consciente, fetiches sin tabúes y estimulación auditiva binaural. Alto ticket y retención en Fanvue VIP.',
+      tags: ['Adulto VIP', 'Sex-Positive', 'Fanvue']
+    },
+    {
       id: 'maite',
       name: 'Maite Valenzuela',
       avatar: 'maite_avatar.jpg',
@@ -3748,14 +3760,14 @@ function renderInfluencersPage(categoryFilter = 'all') {
     },
     {
       id: 'kira',
-      name: 'Kira Vane',
-      avatar: 'kira_avatar.png',
+      name: 'Kira Voss',
+      avatar: 'kira_avatar.jpg',
       nicheIcon: 'fa-gamepad',
       niche: 'Desarrollo Indie, Godot & Ciber-Activismo',
       category: 'tech',
       badge: 'Activo Certificado • Gaming & Open Source',
       badgeColor: '#10b981',
-      desc: '23 años. Berlín/Valparaíso. Programadora independiente, devlogs técnicos y defensa de la soberanía digital y el software libre.',
+      desc: '26 años. Berlín/Valparaíso. Programadora independiente, devlogs técnicos y defensa de la soberanía digital y el software libre. Más de 500 suscriptores en Fanvue.',
       tags: ['GameDev', 'Godot Engine', 'Open Source']
     },
     {
@@ -3771,16 +3783,16 @@ function renderInfluencersPage(categoryFilter = 'all') {
       tags: ['Fitness', 'Calistenia', 'Biohacking']
     },
     {
-      id: 'liravoss',
-      name: 'Lira Voss',
-      avatar: 'liravoss_avatar.png',
-      nicheIcon: 'fa-laptop-code',
-      niche: 'Vibe Coding, AI Agents & Cyberpunk Aesthetic',
-      category: 'tech',
-      badge: 'Activo Certificado • Creative Tech',
+      id: 'alejandra',
+      name: 'Alejandra (Prototipo B2B)',
+      avatar: 'alejandra_avatar.jpg',
+      nicheIcon: 'fa-handshake',
+      niche: 'Embajadora Virtual de Marca (En Adopción)',
+      category: 'b2b',
+      badge: 'Prototipo B2B • Listo para Licenciamiento',
       badgeColor: '#a855f7',
-      desc: '25 años. Toronto/Berlín. Exploradora de interfaces futuristas, flujos generativos de audio y creación de software autónomo con agentes de IA.',
-      tags: ['AI Agents', 'Vibe Coding', 'Cyberpunk']
+      desc: 'Embajadora virtual llave en mano para empresas. Personalización de vestuario corporativo, clonación de voz y generación continua de campañas publicitarias.',
+      tags: ['Licencia B2B', 'Marca Corporativa', 'Adopción']
     }
   ];
 
@@ -3808,11 +3820,13 @@ function renderInfluencersPage(categoryFilter = 'all') {
       <!-- Category Filter Tabs -->
       <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
         <button class="archive-filter-btn ${categoryFilter === 'all' ? 'active' : ''}" onclick="renderInfluencersPage('all')">Todos (${list.length})</button>
-        <button class="archive-filter-btn ${categoryFilter === 'lifestyle' ? 'active' : ''}" onclick="renderInfluencersPage('lifestyle')">Lifestyle & Moda</button>
+        <button class="archive-filter-btn ${categoryFilter === 'lifestyle' ? 'active' : ''}" onclick="renderInfluencersPage('lifestyle')">Lifestyle & Bienestar</button>
         <button class="archive-filter-btn ${categoryFilter === 'beauty' ? 'active' : ''}" onclick="renderInfluencersPage('beauty')">Belleza & Skincare</button>
+        <button class="archive-filter-btn ${categoryFilter === 'vip' ? 'active' : ''}" onclick="renderInfluencersPage('vip')">Adulto VIP</button>
         <button class="archive-filter-btn ${categoryFilter === 'music' ? 'active' : ''}" onclick="renderInfluencersPage('music')">Música & Regional</button>
         <button class="archive-filter-btn ${categoryFilter === 'finance' ? 'active' : ''}" onclick="renderInfluencersPage('finance')">FinTech & Inversión</button>
         <button class="archive-filter-btn ${categoryFilter === 'tech' ? 'active' : ''}" onclick="renderInfluencersPage('tech')">Gaming & Tech</button>
+        <button class="archive-filter-btn ${categoryFilter === 'b2b' ? 'active' : ''}" onclick="renderInfluencersPage('b2b')">Marcas B2B</button>
       </div>
     </div>
 
