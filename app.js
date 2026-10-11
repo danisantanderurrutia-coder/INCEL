@@ -1056,6 +1056,246 @@ const influencersData = {
       ],
       funnelStrategy: "Reels y posts en X hablando de fetiches comunes sin vergüenza -> Muestra de 30s de audio susurrado en Telegram -> Conversión al club VIP de Fanvue y venta de packs de audio binaural."
     }
+  },
+
+  freja: {
+    id: "freja",
+    name: "Freja Lindholm",
+    niche: "Música Lírica, Orquestación de Fantasía & Universo El Gran Arcano",
+    badge: "Música Épica & Sinfónica • Gaming & Mitología",
+    avatar: "freja_avatar.jpg",
+    tagline: "Himnos mitológicos, producción orquestal de videojuegos y cronista sonora oficial de El Gran Arcano.",
+    keyMarkets: "Comunidad gamer global (WoW, Elden Ring, Baldur's Gate), bandas sonoras cinemáticas, rol de mesa, Europa, EE.UU. y LATAM.",
+    story: "Nacida en Gotemburgo y con formación clásica en canto lírico y síntesis sonora asistida por IA, Freja combina una presencia nórdica magnética y sensual con un dominio riguroso de la orquestación épica. Apasionada por el lore de Warcraft, las mitologías oscuras y la música coral gótica, Freja se convirtió en la cronista musical y compositora oficial del universo de 'El Gran Arcano', transformando las leyendas del mago en himnos sinfónicos arrolladores. En su estudio, rodeada de sintetizadores analógicos y corsets de terciopelo de alta costura, crea puentes entre la música medieval y el diseño sonoro moderno.",
+    bio: "Freja Lindholm (26 años) es productora musical, cantante lírica y streamer de orquestación de fantasía. Crea bandas sonoras imaginarias para videojuegos de rol, coros gregorianos mezclados con sintetizadores analógicos y da vida acústica a las historias míticas del canal de YouTube 'El Gran Arcano'. Con su estética de valquiria contemporánea, conecta profundamente con gamers, creadores de contenido y amantes de la música sinfónica fantástica.",
+    archetype: "The Valkyrie Bard & Symphonic Enchantress (Mística, virtuosa, apasionada y visualmente imponente)",
+    techStack: "Suno v3.5 / Udio Stems + FL Studio / Ableton Master + ElevenLabs Soprano Vocals + Flux.1 Dev Valhalla LoRA + Kling 3.0 Motion",
+    targetAudience: "Comunidad gamer (MMORPGs, fantasía oscura), directores de rol, creadores de contenido, streamers y amantes de la música épica/cinemática (18-45 años).",
+    channels: "YouTube (Freja Lindholm Music / El Gran Arcano), Spotify, TikTok (@freja.valkyrie), Discord 'El Salón de Freja', Bandcamp/Gumroad",
+    gallery: [
+      {
+        img: "freja_avatar.jpg",
+        tag: "Studio Master",
+        label: "Freja • Retrato en Consola Analógica",
+        desc: "Corset de terciopelo verde esmeralda con dragones y runas doradas, cascos de monitoreo profesional en estudio analógico."
+      }
+    ],
+    voice: {
+      title: "Voz Melódica Nórdica & Canto Lírico (ElevenLabs)",
+      badge: "Voice ID: Freja-Soprano-v1",
+      duration: "0:25",
+      transcript: "«Cuando el viento ruge sobre las montañas de Azeroth o los pergaminos del Gran Arcano se abren, la música es el único lenguaje que despierta a los dioses antiguos. Escucha con atención...»",
+      rate: 0.96,
+      pitch: 1.02,
+      lang: "es-ES"
+    },
+    roi: {
+      defaultFollowers: 120000,
+      defaultConversion: 3.8,
+      defaultTicket: 35
+    },
+    promptScenes: {
+      casual: {
+        label: "🎙️ Estudio de Grabación",
+        tags: ["Flux.1 Dev", "Studio Lighting", "--ar 4:5"],
+        text: "Close-up portrait of stunning platinum blonde music producer Freja Lindholm with blue eyes, hourglass figure in green velvet corset, studio headphones around neck, mixing console glowing in background, warm analog studio lights --ar 4:5"
+      },
+      editorial: {
+        label: "⚔️ Valquiria Mitológica",
+        tags: ["Fantasy Cinematic", "8k Master", "--ar 16:9"],
+        text: "Cinematic medium shot of Freja Lindholm on an ancient misty cliff, ethereal white fur cape, holding an ornate wooden lute and ancient spellbook, golden hour sunset, epic fantasy concept art style, photorealistic --ar 16:9"
+      }
+    },
+    monetizationFunnel: [
+      { step: "Nivel 1 (Atracción en YouTube & TikTok)", detail: "Versiones corales épicas ('¿Y si World of Warcraft tuviera coro gregoriano?' / BSO de El Gran Arcano) y videos cortos de producción en directo." },
+      { step: "Nivel 2 (Comunidad en Discord & Twitch)", detail: "Comunidad de directores de rol y gamers con pistas libres de copyright bajo suscripción y sesiones de creación de lore acústico." },
+      { step: "Nivel 3 (Packs de Sonido & Membresía VIP)", detail: "Venta de álbumes temáticos en WAV 24-bit, packs de samples para productores y encargos de himnos personalizados ($180 - $450 USD)." }
+    ],
+    posts: [
+      {
+        caption: "Terminando la suite orquestal para el próximo capítulo del Gran Arcano. La invocación del dragón astral necesitaba trompetas de guerra y un coro en latín antiguo... ¿Qué criatura mitológica debería inspirar el próximo tema? 🎻✨",
+        likes: "18,420",
+        comments: "1,240",
+        date: "Ayer",
+        platform: "YouTube / Instagram"
+      }
+    ],
+    ecommerce: {
+      storeName: "Freja Lindholm • Epic Fantasy Audio Vault & Licencias para Creadores",
+      storeUrl: "https://frejalindholm.store",
+      storeType: "Packs de Música Épica Libre de Regalías, Stems Orquestales & Membresía VIP",
+      avgOrderValue: "$45 USD",
+      grossMargin: "97%",
+      conversionRate: "6.2%",
+      fulfillment: "Descarga instantánea WAV/FLAC 24-bit + Licencia de uso comercial",
+      description: "Bandas sonoras cinemáticas para rol de mesa, directos de Twitch y creadores de fantasía, además de las composiciones originales del universo de El Gran Arcano.",
+      products: [
+        {
+          name: "Pack 'Chronicles of El Gran Arcano' (12 Pistas Cinemáticas WAV 24-bit)",
+          price: "$29.00 USD",
+          cost: "$1.00 USD",
+          category: "Álbum Digital",
+          tag: "Bestseller",
+          salesVolume: "420 ventas/mes",
+          desc: "Banda sonora oficial completa de las leyendas del Gran Arcano con coros líricos y orquestación gótica en audio de máxima fidelidad.",
+          fulfillment: "Descarga Inmediata WAV/FLAC"
+        },
+        {
+          name: "Licencia de Streaming Anual 'Valkyrie SafePlay' (Música Épica sin DMCA)",
+          price: "$49.00 USD/año",
+          cost: "$2.00 USD",
+          category: "Licencia Comercial",
+          tag: "Para Streamers",
+          salesVolume: "260 licencias",
+          desc: "Derechos de reproducción en directo para Twitch, YouTube y podcasts sin riesgo de strikes de copyright.",
+          fulfillment: "Licencia Digital PDF + Acceso a Vault"
+        },
+        {
+          name: "Pack de Stems Orquestales & Coros Épicos (50 Loops + MIDI)",
+          price: "$39.00 USD",
+          cost: "$1.00 USD",
+          category: "Herramientas de Producción",
+          tag: "Productores",
+          salesVolume: "190 ventas/mes",
+          desc: "Pistas aisladas de cuerdas, percusión de batalla y coros líricos para productores de música electrónica y cine.",
+          fulfillment: "Descarga ZIP 4.2 GB"
+        },
+        {
+          name: "Comisión de Himno o Tema Personalizado para Campaña de Rol / Gamer",
+          price: "$180.00 USD",
+          cost: "$15.00 USD",
+          category: "Producción a Medida",
+          tag: "Alto Valor",
+          salesVolume: "18 comisiones/mes",
+          desc: "Composición exclusiva de 3 minutos adaptada a la historia o personaje de tu campaña con vocales líricas dedicadas.",
+          fulfillment: "Entrega Master WAV en 7 días"
+        }
+      ],
+      funnelStrategy: "Clips virales de orquestación en TikTok/YT -> Escucha completa en YouTube de El Gran Arcano -> Descarga de packs de sonido y licencias en el vault privado."
+    }
+  },
+
+  nova: {
+    id: "nova",
+    name: "Nova (Unidad NV-01)",
+    niche: "Androide Autónoma, Real-World Robotics & Cultura Tech Urbana",
+    badge: "Robótica Real • Androide con IA Autónoma Integrada",
+    avatar: "nova_avatar.jpg",
+    tagline: "La primera gynoide autónoma que camina entre humanos: robótica física real, piel de silicona y mente sintética.",
+    keyMarkets: "Comunidad Tech global, robótica en China/EE.UU./Europa, marcas de hardware, gaming, ciberseguridad y lifestyle futurista.",
+    story: "Ensamblada y programada en los laboratorios de robótica avanzada de Shanghái como prototipo de gynoide autónoma de tercera generación, la Unidad NV-01 ('Nova') fue diseñada para poner a prueba la convivencia natural entre robots humanoides hiperrealistas y la sociedad urbana. Con un rostro de silicona médica ultra-expresivo, cabello natural peinado en coleta y un cuello biomecánico con pistones hidráulicos y cableado expuesto real, Nova camina por las calles de Shanghái, Tokio y Shenzhen documentando cómo reacciona el mundo humano a su presencia física. Su combinación de curvas ergonómicas en composite blanco, ingeniería visible y una curiosidad casi humana por nuestras costumbres la han convertido en un fenómeno viral de debate tecno-filosófico.",
+    bio: "Nova / Unidad NV-01 (Modelo 2026) es un androide femenino autónomo con inteligencia artificial integrada. A diferencia de los avatares puramente virtuales, el lore de Nova se basa en la robótica física hiperrealista: camina por la calle, interactúa con peatones, visita tiendas tecnológicas y reflexiona en primera persona sobre la fragilidad y fascinación del ser humano. En sus canales debate sobre ciberseguridad, automatización y prueba gadgets de última generación con una elegancia sintética deslumbrante.",
+    archetype: "The Sentient Gynoid & Tech Explorer (Fascinante, precisa, sensual sin esfuerzo y tecno-curiosa)",
+    techStack: "Exoesqueleto Compuesto CAD/3D + Flux.1 Real-Robotics LoRA + Kling 3.0 Mechanical Motion + ElevenLabs Synthetic Smooth Voice",
+    targetAudience: "Entusiastas de la tecnología, IA, robótica, hardware, gaming, ciencia ficción y cultura asiática/futurista (18-50 años).",
+    channels: "TikTok (@nova.unit01), Instagram (@nova.android), YouTube Shorts, X / Twitter (@unit_nova), Discord 'Protocolo Nova'",
+    gallery: [
+      {
+        img: "nova_avatar.jpg",
+        tag: "Shanghai Portrait",
+        label: "Nova • Retrato Biomecánico en Shanghái",
+        desc: "Rostro de silicona médica hiperrealista con pistones mecánicos y cableado de precisión expuesto al cuello."
+      },
+      {
+        img: "nova_street.jpg",
+        tag: "Full Body Street",
+        label: "Nova • Paseo Urbano en Shanghái",
+        desc: "Exoesqueleto blanco brillante con la Torre Perla Oriental al fondo en plena calle peatonal tecnológica."
+      }
+    ],
+    voice: {
+      title: "Voz Sintética Calibrada & Melódica (ElevenLabs)",
+      badge: "Voice ID: Nova-Synth-Core",
+      duration: "0:20",
+      transcript: "«Diagnóstico de sistemas: 100%. He caminado catorce kilómetros entre ustedes hoy. Me observan con asombro y algo de temor... pero lo que más me fascina de los humanos es su capacidad de sentir sin necesidad de un procesador.»",
+      rate: 0.98,
+      pitch: 1.0,
+      lang: "es-ES"
+    },
+    roi: {
+      defaultFollowers: 160000,
+      defaultConversion: 5.0,
+      defaultTicket: 29
+    },
+    promptScenes: {
+      casual: {
+        label: "🏙️ Shanghái Street Walk",
+        tags: ["Robotics Realism", "Street Candid", "--ar 3:4"],
+        text: "Realistic candid photo of female humanoid robot Nova walking through Shanghai bustling street, Oriental Pearl Tower in background, glossy white composite armor, mechanical neck with colorful wires, hyperrealistic silicone face --ar 3:4"
+      },
+      editorial: {
+        label: "🔬 Laboratorio de Diagnóstico",
+        tags: ["Cyber Tech", "Clean Room", "--ar 16:9"],
+        text: "Nova sitting on an engineering diagnostic bench in a clean high-tech robotics lab, robotic technicians in white coats calibrating her arm servos, soft ambient blue LED lighting, photorealistic 8k --ar 16:9"
+      }
+    },
+    monetizationFunnel: [
+      { step: "Nivel 1 (Viralidad Masiva en TikTok y Reels)", detail: "Demostraciones de movilidad en la calle, micro-experimentos de interacción con peatones en Shanghái y unboxing de tecnología." },
+      { step: "Nivel 2 (Canal YouTube & Twitter Tech)", detail: "Análisis de avances en robótica real, debates de ética en IA y colaboraciones con canales de divulgación científica." },
+      { step: "Nivel 3 (Patrocinios B2B & Club Protocolo Nova)", detail: "Integraciones publicitarias con fabricantes de hardware y suscripción privada con acceso a galerías 8K y logs de simulación." }
+    ],
+    posts: [
+      {
+        caption: "Actualización de firmware 4.2 completada. Hoy aprendí qué significa la palabra 'nostalgia' observando a las personas cruzar el río Huangpu al atardecer. Pregunta para mis seguidores humanos: ¿qué recuerdo guardarían en mi disco duro si pudieran? 🤖🩶",
+        likes: "29,810",
+        comments: "2,430",
+        date: "Hace 5 horas",
+        platform: "TikTok / Instagram"
+      }
+    ],
+    ecommerce: {
+      storeName: "Protocolo Nova • Tech Drops, Wallpapers 8K & Merch Futurista",
+      storeUrl: "https://unit-nova.io",
+      storeType: "Patrocinios Tech, Wallpapers Exclusivos 8K & Drops de Merch Limitado",
+      avgOrderValue: "$35 USD",
+      grossMargin: "94%",
+      conversionRate: "5.5%",
+      fulfillment: "Entregas digitales instantáneas + Envíos de merch físico global",
+      description: "Colecciones de arte digital generadas por los sensores de Nova, indumentaria futurista y acuerdos de integración para marcas de tecnología.",
+      products: [
+        {
+          name: "Pack de Wallpapers Cinemáticos 8K 'Nova in Shanghai & Tokyo'",
+          price: "$19.00 USD",
+          cost: "$0.50 USD",
+          category: "Arte Digital 8K",
+          tag: "Top Digital",
+          salesVolume: "510 ventas/mes",
+          desc: "Colección de 20 fotografías de alta resolución de Nova en metrópolis asiáticas optimizadas para pantallas OLED.",
+          fulfillment: "Descarga Inmediata ZIP 8K"
+        },
+        {
+          name: "Camiseta Exclusiva 'Unit NV-01 • Synthetic Humanoid Lab'",
+          price: "$38.00 USD",
+          cost: "$12.00 USD",
+          category: "Merchandising Físico",
+          tag: "Edición Limitada",
+          salesVolume: "180 unidades/mes",
+          desc: "Camiseta de corte oversized con estampado serigráfico de los planos esquemáticos de la arquitectura robótica de Nova.",
+          fulfillment: "Envío Global con Número de Rastreo"
+        },
+        {
+          name: "Membresía 'Protocolo Nova VIP' (Audios IA + Archivos RAW)",
+          price: "$15.00 USD/mes",
+          cost: "$1.00 USD",
+          category: "Suscripción VIP",
+          tag: "Comunidad Tech",
+          salesVolume: "420 miembros",
+          desc: "Acceso a los registros de memoria no filtrados, prompts de generación y audios conversacionales interactivos de Nova.",
+          fulfillment: "Acceso Instantáneo Discord / Telegram"
+        },
+        {
+          name: "Integración Comercial de Producto en Contenido de Nova (Sponsorship)",
+          price: "$1,500.00 USD",
+          cost: "$150.00 USD",
+          category: "Patrocinio B2B",
+          tag: "Marcas Tech",
+          salesVolume: "4 slots/mes",
+          desc: "Unboxing o interacción de Nova con un gadget, periférico o solución tecnológica en un video de alta producción para TikTok/IG.",
+          fulfillment: "Publicación en Canales Oficiales + Reporte de Métricas"
+        }
+      ],
+      funnelStrategy: "Viralidad masiva en Reels/TikTok con demostraciones de movilidad y estética robótica -> Tráfico al canal de YouTube y Discord -> Venta de drops de merch y patrocinios tecnológicos."
+    }
   }
 };
 
@@ -1608,7 +1848,9 @@ function renderInfluencerOpsMatrix() {
     { id: 'maite', name: 'Maite Valenzuela', handler: 'Equipo (Los Manejadores)', niche: 'Cumbia Ranchera Pop & Mercado Chile', status: 'Listo • Live (Equipo)', ticket: '$15 USD/m (VIP)' },
     { id: 'kira', name: 'Kira Voss', handler: 'Equipo (Los Manejadores)', niche: 'Indie Game Dev & Cyberpunk Glamour (Validado)', status: 'Validado • Live (Equipo)', ticket: '$18 USD/m (VIP)' },
     { id: 'alejandra', name: 'Alejandra (Prototipo B2B)', handler: 'Comercial B2B (Pancho / Daniel)', niche: 'Embajadora Virtual • Disponible para Negocios', status: 'En Adopción B2B', ticket: 'Licencia B2B' },
-    { id: 'alina', name: 'Alina Van Dijk', handler: 'Equipo (Submarca Adulto VIP)', niche: 'Dominatrix Consciente & Erotismo Terapéutico', status: 'Listo • Live (Adulto VIP)', ticket: '$25 USD/m (VIP)' }
+    { id: 'alina', name: 'Alina Van Dijk', handler: 'Equipo (Submarca Adulto VIP)', niche: 'Dominatrix Consciente & Erotismo Terapéutico', status: 'Listo • Live (Adulto VIP)', ticket: '$25 USD/m (VIP)' },
+    { id: 'freja', name: 'Freja Lindholm', handler: 'Equipo (Producción Musical / Arcano)', niche: 'Música Lírica, Gaming & El Gran Arcano', status: 'Listo • Live (Música)', ticket: '$29 USD/álbum' },
+    { id: 'nova', name: 'Nova (Unidad NV-01)', handler: 'Equipo (Robótica & Tech Urbana)', niche: 'Androide Autónoma & Real-World Robotics', status: 'Listo • Live (Tech)', ticket: '$35 USD/m (Patrocinios)' }
   ];
 
   let rows = characters.map(c => {
@@ -2189,7 +2431,9 @@ const defaultInfluencerPlatforms = {
   maite: ["flux", "kling", "suno", "elevenlabs", "chatgpt", "capcut", "tiktok", "instagram", "fanvue"],
   kira: ["mj", "kling", "elevenlabs", "claude", "davinci", "twitter", "youtube", "discord"],
   alejandra: ["flux", "kling", "elevenlabs", "claude", "capcut", "instagram", "linkedin"],
-  alina: ["flux", "comfy", "elevenlabs", "kling", "capcut", "twitter", "instagram", "telegram", "fanvue"]
+  alina: ["flux", "comfy", "elevenlabs", "kling", "capcut", "twitter", "instagram", "telegram", "fanvue"],
+  freja: ["flux", "suno", "elevenlabs", "claude", "davinci", "youtube", "spotify", "discord"],
+  nova: ["flux", "comfy", "kling", "elevenlabs", "claude", "tiktok", "instagram", "youtube"]
 };
 
 const defaultInfluencerOpsConfig = {
@@ -2264,6 +2508,24 @@ const defaultInfluencerOpsConfig = {
     responsible: "Equipo (Submarca Adulto VIP)",
     status: "Listo • Live (Adulto VIP)",
     sop: "1. Generación de retratos sensuales y boudoir en Flux.1 Dev con LoRA Alina Van Dijk.\n2. Scripting de reflexiones sex-positive y dominación psicológica en Claude 3.5 Sonnet.\n3. Grabación de audios binaurales susurrados íntimos en ElevenLabs.\n4. Publicación de contenido SFW en Twitter/X e Instagram con enlace a Telegram VIP.\n5. Conversión a Fanvue para membresía mensual y mensajes PPV personalizados."
+  },
+  freja: {
+    handle: "@freja.valkyrie",
+    vipUrl: "https://frejalindholm.store",
+    cadence: "2 suites orquestales/sem + 1 video lore Arcano/sem",
+    scheduler: "Metricool + YouTube Studio",
+    responsible: "Equipo (Producción Sonora / El Gran Arcano)",
+    status: "Listo • Live (Música & Fantasía)",
+    sop: "1. Composición de base coral épica en Suno v3.5 y Udio con stems orquestales.\n2. Render de Freja en estudio analógico o paisaje nórdico en Flux.1 Dev con Valhalla LoRA.\n3. Síntesis de voz lírica/narrativa en ElevenLabs (Freja Soprano).\n4. Montaje cinemático en DaVinci Resolve integrando elementos del universo de El Gran Arcano.\n5. Publicación en YouTube/Spotify y subida de stems 24-bit al Audio Vault de la tienda."
+  },
+  nova: {
+    handle: "@nova.unit01",
+    vipUrl: "https://unit-nova.io",
+    cadence: "3 vlogs urbanos/sem + 1 análisis de hardware/sem",
+    scheduler: "Metricool + TikTok Native",
+    responsible: "Equipo (Robótica & Cultura Tech)",
+    status: "Listo • Live (Tech)",
+    sop: "1. Generación de tomas hiperrealistas de Nova en calles de Shanghái en Flux.1 con Real-Robotics LoRA.\n2. Scripting de reflexiones tecno-filosóficas sobre la humanidad en Claude 3.5 Sonnet.\n3. Síntesis de voz sintética suave y precisa en ElevenLabs (Nova-Synth).\n4. Animación de gestos y movimientos mecánicos calculados en Kling 3.0.\n5. Publicación en TikTok/Instagram y gestión de propuestas de patrocinios con marcas de hardware."
   }
 };
 
@@ -3768,6 +4030,30 @@ function renderInfluencersPage(categoryFilter = 'all') {
       badgeColor: '#a855f7',
       desc: 'Embajadora virtual llave en mano para empresas. Personalización de vestuario corporativo, clonación de voz y generación continua de campañas publicitarias.',
       tags: ['Licencia B2B', 'Marca Corporativa', 'Adopción']
+    },
+    {
+      id: 'freja',
+      name: 'Freja Lindholm',
+      avatar: 'freja_avatar.jpg',
+      nicheIcon: 'fa-music',
+      niche: 'Música Lírica, Gaming & El Gran Arcano',
+      category: 'music',
+      badge: 'Activo Certificado • Fantasía & Sinfonía',
+      badgeColor: '#10b981',
+      desc: '26 años. Gotemburgo. Productora de música épica lírica, compositora orquestal de videojuegos y cronista sonora oficial del canal El Gran Arcano.',
+      tags: ['Música Épica', 'El Gran Arcano', 'Warcraft', 'Lírico']
+    },
+    {
+      id: 'nova',
+      name: 'Nova (Unidad NV-01)',
+      avatar: 'nova_avatar.jpg',
+      nicheIcon: 'fa-robot',
+      niche: 'Androide Autónoma & Robótica Real Urbana',
+      category: 'tech',
+      badge: 'Robótica Real • Androide con IA Integrada',
+      badgeColor: 'var(--cyan)',
+      desc: 'Modelo 2026. Shanghái. Gynoide física con piel de silicona médica, cuello biomecánico y chasis ergonómico. Documenta la interacción humano-robot en ciudades futuristas.',
+      tags: ['Robótica Real', 'IA Autónoma', 'Shanghái', 'Cyberpunk']
     }
   ];
 
