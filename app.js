@@ -1296,12 +1296,445 @@ const influencersData = {
       ],
       funnelStrategy: "Viralidad masiva en Reels/TikTok con demostraciones de movilidad y estética robótica -> Tráfico al canal de YouTube y Discord -> Venta de drops de merch y patrocinios tecnológicos."
     }
+  },
+
+  minho: {
+    id: "minho",
+    pilotScript: {
+      "title": "Episodio 1: Mi Primera Vez en Medellín («¿Esto pica? Y mi primer tropiezo con la salsa»)",
+      "duration": "48 segundos",
+      "format": "Vertical 9:16 (TikTok, Instagram Reels & YouTube Shorts)",
+      "objective": "Establecer la misión musical (EP K-Latino), humanizar con vulnerabilidad (barrera del idioma + comida picante), lucir el físico imponente (calistenia al sol) y detonar tensión romántica con las seguidoras.",
+      "musicTrack": "Fusión Lo-Fi K-Pop con percusión suave de bachata/salsa a 95 BPM.",
+      "scenes": [
+            {
+                  "num": 1,
+                  "time": "0:00 - 0:08",
+                  "name": "El Hook de Vulnerabilidad & Choque Cultural",
+                  "shotType": "Primer plano medio (Close-up dynamic)",
+                  "visual": "Min-ho en una terraza de El Poblado con camisa de lino entreabierta y auriculares al cuello. Sostiene una empanada colombiana y un tarro de ají casero. Mira a la cámara con una sonrisa curiosa, da un mordisco y sus ojos se abren de golpe al sentir el picante, abanicándose con la mano mientras se ríe con timidez.",
+                  "klingPrompt": "Close-up shot of handsome 25yo athletic Korean idol Min-ho Park on a sunlit Medellín balcony, wearing loose linen shirt showing toned collarbone, holding a street empanada, taking a curious bite, wide-eyed surprised reaction to spicy sauce, laughing shyly, natural outdoor daylight, shallow depth of field, 8k photographic master --ar 9:16",
+                  "voice": "«Día 1 en Colombia... El señor del puesto me juró: 'Tranquilo parce, no pica nada'. Y yo, confié.»",
+                  "voiceNotes": "Tono risueño, dulce, pronunciando 'parce' con curiosidad y acento coreano encantador.",
+                  "audioCue": "Mordisco crujiente -> Silbido cómico de campana de fuego -> Risa tímida natural de Min-ho.",
+                  "overlayText": "Día 1 en Colombia: Me mintieron sobre el ají 😭🌶️"
+            },
+            {
+                  "num": 2,
+                  "time": "0:08 - 0:22",
+                  "name": "La Misión Sonora del Álbum K-Latino",
+                  "shotType": "Plano medio dinámico en exteriores",
+                  "visual": "Min-ho recorriendo una plaza colonial adoquinada. Se detiene fascinado frente a un grupo de percusionistas locales tocando congas y güiro. Saca su grabadora portátil profesional, ajusta los niveles con sus audífonos y asiente al ritmo de la música con ojos brillantes.",
+                  "klingPrompt": "Medium tracking shot of stylish Korean musician Min-ho Park in vibrant Latin colonial plaza, holding portable field recorder near Afro-Colombian percussionists, nodding head rhythmically, warm golden hour tones, dynamic camera movement, cinematic lighting --ar 9:16",
+                  "voice": "«Crucé el océano buscando los sonidos que le faltaban a mi nuevo disco. Pero la verdad... el ritmo de acá no se aprende encerrado en un estudio en Seúl.»",
+                  "voiceNotes": "Voz inspirada, reflexiva y cercana con base rítmica de fondo.",
+                  "audioCue": "Transición sonora: de la risa anterior entra el groove enérgico de tambores en vivo.",
+                  "overlayText": "Buscando sonidos para mi EP «K-Latino» 🎶🌎"
+            },
+            {
+                  "num": 3,
+                  "time": "0:22 - 0:38",
+                  "name": "El Factor Físico & El Enredo Romántico",
+                  "shotType": "Plano entero atlético (Calistenia al atardecer)",
+                  "visual": "Corte rápido a Min-ho entrenando en barras de calistenia en un mirador al atardecer. Espalda y brazos definidos, sudor natural reflejando la luz dorada. Se baja de la barra, bebe agua y sonríe mirando a la cámara mientras recuerda una anécdota.",
+                  "klingPrompt": "Cinematic shot of fit athletic Korean man doing pull-ups on outdoor calisthenics bars at golden hour sunset, muscular back and arms, turning around smiling warmly with light sweat on collarbone, drinking from water bottle, cinematic flare, 85mm lens --ar 9:16",
+                  "voice": "«Fui a pedir indicaciones para volver y una chica me gritó: '¡Upa, qué chimba de entrenamiento!'. Pasé veinte minutos buscando en Google Translate qué significaba 'chimba'...»",
+                  "voiceNotes": "Tono travieso, bajando la voz al confesar su confusión lingüística.",
+                  "audioCue": "Sonido de respiración agitada tras el ejercicio -> Toque de campana de notificación de celular.",
+                  "overlayText": "Google Translate no me preparó para los modismos latinos 😂"
+            },
+            {
+                  "num": 4,
+                  "time": "0:38 - 0:48",
+                  "name": "El Cliffhanger Romántico & Call to Action Masivo",
+                  "shotType": "Primer plano íntimo y cómplice (Close-up selfie)",
+                  "visual": "Sentado en los escalones del mirador con su guitarra acústica apoyada en las piernas. La ciudad iluminada de noche al fondo. Mira fijamente al lente con una mirada cálida, ladea la cabeza y hace un gesto invitando a comentar.",
+                  "klingPrompt": "Intimate close-up of Min-ho Park looking directly into camera with charismatic romantic smile, holding acoustic guitar in lap, dusk city panorama lights in background, warm bokeh, soft cinematic depth --ar 9:16",
+                  "voice": "«Necesito urgente una profesora que me enseñe a bailar salsa y no me deje pasar vergüenzas. ¿Quién de ustedes se ofrece en los comentarios? Las leo todas.»",
+                  "voiceNotes": "Voz íntima, pausa antes de la pregunta final, tono de romance de dorama coreano.",
+                  "audioCue": "Acorde acústico final cálido en guitarra que queda suspendido en fade out.",
+                  "overlayText": "🇨🇴 ¿De qué ciudad eres y a dónde debería ir mañana? 👇✨"
+            }
+      ]
+},
+
+    name: "Min-ho Park (박민호)",
+    niche: "K-Pop Urbano, Calistenia & Bitácora de Viaje por Latinoamérica",
+    badge: "Nuevo Fichaje • K-Pop & Bitácora Latina",
+    avatar: "minho_avatar.jpg",
+    tagline: "El Aprendiz del Ritmo: fusionando el K-Pop con ritmos latinos mientras viaja, aprende español y busca su musa.",
+    keyMarkets: "México, Colombia, Perú, Argentina, Chile, Brasil y comunidad K-pop hispanohablante global.",
+    story: "Nacido en Seúl y tras años de riguroso entrenamiento como vocalista y bailarín en la exigente escena coreana, Min-ho rompió con las estructuras tradicionales para recorrer América Latina en busca de una evolución artística y personal. Con su libreta de notas, auriculares al cuello y una grabadora portátil, viaja por playas, terrazas coloniales y plazas urbanas aprendiendo a bailar salsa, probando comidas que retan su tolerancia al picante y componiendo su EP debut 'K-Latino'. Su encanto explosivo radica en el contraste entre su disciplina física implacable (calistenia al aire libre sin filtro) y su tierna timidez al intentar dominar los modismos del español, buscando genuinamente una musa latina que inspire sus canciones.",
+    bio: "Min-ho Park (25 años) es cantante, productor y atleta de calistenia nacido en Seúl. En sus plataformas documenta su travesía por Latinoamérica, compartiendo rutinas de entrenamiento funcional al atardecer, sesiones acústicas con guitarra y divertidos tropiezos culturales mientras perfecciona su español. Su misión es construir un puente entre la precisión del K-Pop y la calidez pasional de la cultura hispana.",
+    archetype: "The Nomadic K-Idol & Athletic Musician (Disciplinado, magnético, vulnerable y tierno)",
+    techStack: "Flux.1 Dev / LoRA K-Idol Athletic + ElevenLabs Korean-Spanish Flirtatious Accent + Suno v3.5 Vocal Stems + Kling 3.0 Motion",
+    targetAudience: "Mujeres jóvenes y adultas de 18 a 38 años fanáticas del K-pop, los doramas (K-dramas), el fitness masculino y las historias de romance multicultural.",
+    channels: "TikTok (@minho.nomad), Instagram (@minhopark.latam), Spotify / YouTube Music, Canal de Difusión 'Diario de Min-ho'",
+    gallery: [
+      {
+        img: "minho_avatar.jpg",
+        tag: "Retrato Principal",
+        label: "Min-ho Park • Terraza Colonial en Latinoamérica",
+        desc: "Estilo linen relajado, auriculares de monitoreo y luz cálida natural al atardecer en una terraza colonial."
+      }
+    ],
+    voice: {
+      title: "Acento Coreano Tierno & Expresivo (ElevenLabs)",
+      badge: "Voice ID: Minho-KoLat-v1",
+      duration: "0:22",
+      transcript: "«Hola... todavía me cuesta un poco pronunciar la doble r, pero hoy probé arepas y aprendí a bailar tres pasos de salsa. Este viaje está cambiando mi música... y tal vez mi corazón. Gracias por acompañarme en cada ciudad.»",
+      rate: 0.95,
+      pitch: 1.0,
+      lang: "es-ES"
+    },
+    roi: {
+      defaultFollowers: 95000,
+      defaultConversion: 4.2,
+      defaultTicket: 18
+    },
+    promptScenes: {
+      casual: {
+        label: "🏖️ Calistenia en Playa Tropical",
+        tags: ["Flux.1 Dev", "Natural Golden Hour", "--ar 4:5"],
+        text: "Close-up portrait of handsome athletic 25yo Korean man Min-ho Park doing calisthenics on a tropical beach, sun-kissed skin, relaxed charming smile, white linen unbuttoned shirt, golden hour glow, turquoise ocean bokeh background --ar 4:5"
+      },
+      editorial: {
+        label: "🎙️ Sesión Acústica en Rooftop Colonial",
+        tags: ["Acoustic Night", "8k Master", "--ar 16:9"],
+        text: "Cinematic portrait of Korean singer Min-ho Park playing acoustic guitar on a colonial rooftop terrace overlooking city lights at twilight, warm ambient streetlights, moody romantic atmosphere, 85mm f/1.4 lens --ar 16:9"
+      }
+    },
+    monetizationFunnel: [
+      { step: "Nivel 1 (Atracción Masiva en TikTok & Reels)", detail: "Retos de baile con transeúntes locales, entrenamientos de calistenia sin camiseta y bloopers graciosos aprendiendo modismos hispanos." },
+      { step: "Nivel 2 (Comunidad & Fandom Activo)", detail: "Canal de difusión diario en Instagram y Telegram con notas de voz matutinas, encuestas para elegir su próxima ciudad y adelantos de tracks." },
+      { step: "Nivel 3 (Monetización Directa)", detail: "Streaming masivo en Spotify, patrocinios con marcas de K-Beauty y fitness, venta de merchandise conmemorativo de la gira y Meet & Greets acústicos íntimos." }
+    ],
+    ecommerceHub: {
+      grossMargin: "92%",
+      conversionRate: "4.2%",
+      fulfillment: "Streaming digital + Merch global oficial",
+      description: "Merchandise oficial de la gira 'K-Latino Tour', preventa digital del EP acústico y paquetes de entrenamiento funcional.",
+      products: [
+        {
+          name: "EP Digital Exclusivo 'K-Latino: Vol. 1' (Stems + Acústicos)",
+          price: ".00 USD",
+          cost: "zsh.50 USD",
+          category: "Música Digital",
+          tag: "Preventa Fan",
+          salesVolume: "850 descargas/mes",
+          desc: "Las 5 canciones compuestas durante su recorrido por México, Colombia y Perú en calidad Master 24-bit con notas de voz explicativas.",
+          fulfillment: "Descarga Inmediata WAV + Booklet PDF"
+        },
+        {
+          name: "Hoodie Oficial Oversized 'Min-ho Nomad Latin Tour'",
+          price: ".00 USD",
+          cost: ".00 USD",
+          category: "Merchandising Físico",
+          tag: "Edición Tour",
+          salesVolume: "240 unidades/mes",
+          desc: "Sudadera premium estilo streetwear coreano con serigrafía en hangul y las fechas de su ruta latinoamericana.",
+          fulfillment: "Envío Internacional con Rastreo"
+        }
+      ],
+      funnelStrategy: "TikToks virales de entrenamiento y música -> Fandom en Telegram/Instagram con encuestas para su ruta -> Venta del EP y drops de ropa urbana."
+    }
+  },
+
+  damien: {
+    id: "damien",
+    pilotScript: {
+      "title": "Prólogo Clandestino: «El Hombre que no te Merece» (Lectura en Penumbra & Análisis Psicológico)",
+      "duration": "52 segundos",
+      "format": "Vertical 9:16 (TikTok, Reels, Shorts con estética Noir / Dark Romance)",
+      "objective": "Establecer la justificación del anonimato corporativo, la voz de barítono protectora/dominante, la autoridad como escritor de BookTok y la venta impulsiva de su libro en Amazon + membresía VIP.",
+      "musicTrack": "Piano minimalista melancólico en Re menor con violonchelo grave y lluvia suave.",
+      "scenes": [
+            {
+                  "num": 1,
+                  "time": "0:00 - 0:10",
+                  "name": "El Hook de Estatus & Justificación del Anonimato",
+                  "shotType": "Plano detalle cinematográfico (Macro Noir)",
+                  "visual": "Vaso de cristal con whisky en escritorio de caoba maciza. Afuera, la lluvia golpea los ventanales de un ático con vista a rascacielos. Una mano masculina con gemelos dorados, anillo de sello y reloj de alta gama sostiene una pluma fuente que gotea tinta sobre papel envejecido.",
+                  "klingPrompt": "Extreme close-up of masculine manicured hands in bespoke black suit with luxury wristwatch and dark signet ring, dipping fountain pen into ink on heavy parchment, rain-streaked penthouse window in background, noir chiaroscuro lighting, moody cinematic depth of field --ar 9:16",
+                  "voice": "«En mi mundo corporativo me pagan millones por calcular riesgos y no mostrar debilidad. Pero aquí, en esta penumbra... escribo las verdades que ningún hombre se atreve a decirte a la cara.»",
+                  "voiceNotes": "Barítono muy grave, aterciopelado, ritmo lento y pausado estilo ASMR nocturno de alta gama.",
+                  "audioCue": "Lluvia contra el cristal, crujido sutil del papel de algodón y tintineo del hielo en el vaso.",
+                  "overlayText": "Capítulo Cero: Por qué no muestro mi rostro..."
+            },
+            {
+                  "num": 2,
+                  "time": "0:10 - 0:24",
+                  "name": "El Diagnóstico Emocional: Rompiendo la Inseguridad",
+                  "shotType": "Plano medio en contrapicado (Rostro en sombra)",
+                  "visual": "Damien sentado con postura imponente en sillón Chesterfield de cuero. Camisa negra desabrochada revelando clavícula y cuello musculoso. Mandíbula afilada con barba de diseñador, pero la mitad superior de su rostro permanece oculta en la sombra del ático. Pasa la página de su libro.",
+                  "klingPrompt": "Low-angle cinematic shot of mysterious dominant gentleman Damien Vance in unbuttoned black silk shirt, sculpted jawline with designer stubble, upper face cloaked in deep noir shadow, turning page of a leather-bound book, moody ambient amber lamplight --ar 9:16",
+                  "voice": "«Ayer una lectora me escribió diciendo: 'Damien, creo que le pido demasiado a mi pareja'. Leí su mensaje y casi quiebro la copa. No pides demasiado... Se lo estás pidiendo a un niño que no tiene la menor idea de qué hacer con una reina.»",
+                  "voiceNotes": "Tono de reproche sereno pero contundente; protección absoluta que hace sentir escuchada a la audiencia.",
+                  "audioCue": "Entra nota profunda de violonchelo marcando el peso dramático de la frase.",
+                  "overlayText": "«No pides demasiado... se lo pides a la persona equivocada.»"
+            },
+            {
+                  "num": 3,
+                  "time": "0:24 - 0:40",
+                  "name": "La Demostración de Poder Intelectual (Cita de su Libro)",
+                  "shotType": "Plano detalle de la pluma y perfil masculino",
+                  "visual": "La pluma fuente subraya con tinta negra sobre el libro abierto: 'La sumisión no se exige; se entrega cuando ella siente que al fin está en manos de un hombre que sabe protegerla'. La cámara enfoca su perfil lateral, el humo sutil de un habano o vapor en el aire.",
+                  "klingPrompt": "Macro shot of fountain pen underlining a passage in dark romance book, then slow rack focus to masculine sharp jawline tilting slightly up with a calm commanding expression, atmospheric haze, moody noir luxury --ar 9:16",
+                  "voice": "«Un hombre que conoce su valor jamás te pide que apagues tu luz para no sentirse intimidado. Te cuida, sostiene tu mirada y toma el control de todo para que por primera vez en años... puedas soltar la guardia.»",
+                  "voiceNotes": "Pausa tras 'soltar la guardia', voz susurrada pero autoritaria.",
+                  "audioCue": "Efecto de respiración profunda que invita a la oyente a relajarse.",
+                  "overlayText": "Fragmento de «Las Leyes de la Devoción» 📖🖤"
+            },
+            {
+                  "num": 4,
+                  "time": "0:40 - 0:52",
+                  "name": "Cierre Hipnótico & Embudo de Alto Ticket",
+                  "shotType": "Plano medio cerrado (Leaning forward)",
+                  "visual": "Damien cierra el libro con un golpe sordo y elegante. Apoya ambos antebrazos sobre el escritorio de caoba, inclinándose hacia el objetivo. Las sombras de la persiana veneciana cruzan su pecho atlético.",
+                  "klingPrompt": "Cinematic medium close-up of Damien closing the leather book firmly, leaning slightly forward, venetian blind shadows across his broad chest, intense commanding presence, cinematic color grading --ar 9:16",
+                  "voice": "«Si hoy tuviste un día pesado, deja de sobrepensar. Yo me encargo. El primer capítulo de 'Las Leyes de la Devoción' te espera en mi enlace. Esta noche... lee antes de dormir.»",
+                  "voiceNotes": "Frase de despedida protectora, magnética y dominante.",
+                  "audioCue": "Golpe del libro cerrándose -> Acorde final de piano -> Sonido suave de lluvia constante.",
+                  "overlayText": "🔗 Lee el primer capítulo gratis en el enlace de mi perfil."
+            }
+      ]
+},
+
+    name: "Damien Vance («The Author»)",
+    niche: "Dark Romance, Psicología del Deseo & Anonimato Dominante",
+    badge: "Identidad Protegida • Dark Romance & Poder",
+    avatar: "damien_avatar.jpg",
+    tagline: "Oculto tras el velo corporativo; autor de ficción psicológica y voz íntima para mujeres que exigen devoción sin mediocridad.",
+    keyMarkets: "México, España, Argentina, Colombia, Chile y lectoras hispanas en EE.UU.",
+    story: "Blindado por un estricto pacto de confidencialidad y por su cargo como alto socio legal y estratega corporativo de inversiones, Damien Vance preserva su anonimato por necesidad profesional y misticismo estético. De día domina salas de juntas en rascacielos; de noche, en la soledad de su ático con vista a la metrópolis, se convierte en el autor anónimo de las novelas de 'Dark Romance' y ensayos de psicología de la atracción femenina más leídos en BookTok. Jamás muestra su rostro completo: solo la mandíbula esculpida, sus manos con guantes de cuero o gemelos a medida, y su silueta contra los ventanales. Damien actúa como un protector intelectual y dominante que responde cartas de sus lectoras, desmonta las inseguridades inculcadas por relaciones mediocres y ofrece un santuario donde la sumisión consensuada y la devoción masculina absoluta se viven con elegancia y sin culpas.",
+    bio: "Damien Vance (34 años) es autor superventas de romance oscuro, psicólogo aficionado y figura de culto anónima. Con una voz profunda y aterciopelada de barítono, recita pasajes de sus obras, analiza la dinámica del poder en la seducción contemporánea y aconseja a mujeres sobre cómo exigir el trato de reinas que merecen. Su universo combina la estética de Christian Grey con la sofisticación intelectual del cine noir.",
+    archetype: "The Shadow Dominant & Cultured Gentleman (Poderoso, protector, implacablemente inteligente y misterioso)",
+    techStack: "Flux.1 Dev Noir Shadow LoRA + ElevenLabs Deep Baritone Cinematic ASMR + DaVinci Chiaroscuro Grading + Amazon KDP Store",
+    targetAudience: "Mujeres de 22 a 48 años lectoras ávidas de BookTok / Dark Romance, profesionales y ejecutivas que buscan desconectar con fantasías de control, bienestar y romance apasionado.",
+    channels: "Instagram (@the.vance.confidential), TikTok (@author.damienvance), Amazon KDP, Telegram Clandestino VIP",
+    gallery: [
+      {
+        img: "damien_avatar.jpg",
+        tag: "Retrato Penumbra",
+        label: "Damien Vance • En el Ático Privado",
+        desc: "Traje bespoke italiano, libro encuadernado en cuero, guantes y rostro en sombra cinemática noir."
+      }
+    ],
+    voice: {
+      title: "Barítono Cinematográfico & ASMR Nocturno (ElevenLabs)",
+      badge: "Voice ID: Vance-Noir-v2",
+      duration: "0:25",
+      transcript: "«No oculto mi rostro por cobardía, sino porque las verdades que necesitas oír no deben tener distracciones. Sé que hoy el mundo te exigió demasiado. Cierra los ojos y suelta la guardia... esta noche yo tengo el control.»",
+      rate: 0.90,
+      pitch: 0.88,
+      lang: "es-ES"
+    },
+    roi: {
+      defaultFollowers: 85000,
+      defaultConversion: 5.8,
+      defaultTicket: 29
+    },
+    promptScenes: {
+      casual: {
+        label: "🥃 Noche de Escritura en el Ático",
+        tags: ["Flux.1 Dev", "Moody Penthouse", "--ar 4:5"],
+        text: "Cinematic close-up of mysterious fit gentleman Damien Vance in unbuttoned black silk shirt, sharp jawline with light stubble, writing with fountain pen in leather journal, crystal glass of whiskey on mahogany desk, rainy night city lights outside window, chiaroscuro --ar 4:5"
+      },
+      editorial: {
+        label: "🖤 Traje Bespoke Frente al Horizonte",
+        tags: ["Dark Romance", "8k Master", "--ar 16:9"],
+        text: "Medium shot of muscular handsome man Damien Vance in tailored charcoal three-piece suit, hands in black leather gloves adjusting pocket watch, upper face shadowed, moody penthouse library with warm amber lamplight --ar 16:9"
+      }
+    },
+    monetizationFunnel: [
+      { step: "Nivel 1 (Atracción Orgánica en TikTok & Reels)", detail: "Videos cortos con estética noir, primeros planos de manos escribiendo, lectura de fragmentos sensuales y consejos de psicología del valor femenino." },
+      { step: "Nivel 2 (Venta Editorial Directa)", detail: "Libros impresos y eBooks en Amazon Kindle ('Las Leyes de la Devoción', 'Sombras en el Ático') con compras impulsivas recurrentes." },
+      { step: "Nivel 3 (Comunidad VIP & Audios Eróticos)", detail: "Membresía privada en Telegram/Patreon ( USD/mes) con audiolibros completos, audios de compañía nocturna ASMR y consultas anónimas personalizadas." }
+    ],
+    ecommerceHub: {
+      grossMargin: "95%",
+      conversionRate: "5.8%",
+      fulfillment: "Amazon KDP print-on-demand + Telegram VIP instantáneo",
+      description: "Ediciones impresas de lujo encuadernadas en tapa dura, audiolibros completos en ASMR inmersivo y membresía al Santuario Clandestino.",
+      products: [
+        {
+          name: "Novela Tapa Dura 'Las Leyes de la Devoción' (Firma Impresa & Prólogo Exclusivo)",
+          price: ".00 USD",
+          cost: ".00 USD",
+          category: "Libro Físico KDP",
+          tag: "Bestseller",
+          salesVolume: "620 ejemplares/mes",
+          desc: "Edición especial de coleccionista en encuadernación mate con estampados dorados y cartas manuscritas inéditas del autor.",
+          fulfillment: "Impresión y Envío Global Amazon KDP"
+        },
+        {
+          name: "Suscripción 'Santuario Clandestino VIP' (Audios ASMR & Consultorio Privado)",
+          price: ".00 USD/mes",
+          cost: ".50 USD",
+          category: "Membresía VIP",
+          tag: "Alta Retención",
+          salesVolume: "510 miembros",
+          desc: "Acceso al canal privado con 4 audios inmersivos nocturnos semanales, análisis de libros y lectura confidencial de dilemas personales.",
+          fulfillment: "Acceso Instantáneo a Telegram VIP"
+        }
+      ],
+      funnelStrategy: "Lecturas nocturnas virales en TikTok/Reels con estética misteriosa -> Enlace a Amazon para compra del libro -> Conversión a la membresía de audios ASMR de alto ticket."
+    }
+  },
+
+  camila: {
+    id: "camila",
+    pilotScript: {
+      "title": "Pecados de Departamento • Cap. 1: «La Llave Adentro (¿Por qué siempre a mí?)»",
+      "duration": "46 segundos",
+      "format": "Vertical 9:16 (TikTok, Reels, Shorts con formato Telenovela Cómica / Sensual)",
+      "objective": "Viralidad masiva con humor de doble sentido, elusión absoluta del algoritmo (100% insinuación, cero censura), retención récord de hombres y conversión hacia el capítulo sin censura en Fanvue/Telegram.",
+      "musicTrack": "Intro de comedia dramática de telenovela latina con cuerdas picadas (pizzicato) que muta a suspenso sensual.",
+      "scenes": [
+            {
+                  "num": 1,
+                  "time": "0:00 - 0:08",
+                  "name": "El Hook Físico & El Accidente Inesperado",
+                  "shotType": "Plano medio en pasillo de edificio residencial",
+                  "visual": "Camila parada en el pasillo alfombrado frente a la puerta 402 con un camisón de satén verde esmeralda que resalta su silueta. La puerta se cierra de golpe con un portazo violento. Ella se gira, intenta abrir el pomo inútilmente y mira a la cámara con ojos abiertos de par en par y una sonrisa pícara.",
+                  "klingPrompt": "Medium shot of stunning 24yo Latina woman Camila Reyes locked outside apartment door in hallway, wearing emerald green silk slip nightgown, glossy brunette hair, expressive comedic panic and playful smirk, warm hallway lights, photorealistic 8k --ar 9:16",
+                  "voice": "«¡Ay, no me puede estar pasando esto a las once de la noche! Se me azotó la puerta... y yo en estas fachas de domingo.»",
+                  "voiceNotes": "Acento paisa coqueto, musical, con dramatismo cómico exagerado de telenovela.",
+                  "audioCue": "¡PORTAZO METÁLICO! -> Sonido dramático de telenovela: ¡Tan-tan-tán! (efecto orquestal clásico).",
+                  "overlayText": "Capítulo 1: Se me quedó la llave adentro 😭🚪"
+            },
+            {
+                  "num": 2,
+                  "time": "0:08 - 0:22",
+                  "name": "Aparición del Personaje Secundario (Don Ramón)",
+                  "shotType": "Plano conjunto cómico (Two-shot)",
+                  "visual": "El ascensor se abre al fondo del pasillo. Sale Don Ramón, el conserje del edificio, con su caja de herramientas. Al ver a Camila en camisón, se le caen las llaves al piso con estruendo. Camila intenta cubrirse cómicamente con un volante de publicidad de pizza que apenas tapa nada.",
+                  "klingPrompt": "Two-shot comedic scene: sexy woman in silk nightgown trying to hide behind a tiny flyer while a surprised older building super drops his keys in the background corridor, lively sitcom lighting, expressive faces --ar 9:16",
+                  "voice": "«Don Ramón casi se me infarta... Le dije: 'Don Ramón, no me mire así que me da pena... ¿Será que usted tiene la llave maestra o me va a tocar pedirle posada?'»",
+                  "voiceNotes": "Risa pícara entre dientes, tono de coquetería desvergonzada.",
+                  "audioCue": "Sonido de llaves cayendo al piso de baldosas -> Risitas de fondo simuladas de telenovela.",
+                  "overlayText": "Don Ramón casi no la cuenta hoy 😂🔑"
+            },
+            {
+                  "num": 3,
+                  "time": "0:22 - 0:36",
+                  "name": "La Subida de Tensión & El Doble Sentido Maestro",
+                  "shotType": "Plano cenital cerrado y sugerente",
+                  "visual": "Don Ramón sudando frío, arrodillado frente a la cerradura con una ganzúa temblorosa. Camila se apoya en el marco de la puerta a centímetros de él, inclinándose hacia adelante con el escote de seda favorecido por la luz cenital cálida del pasillo.",
+                  "klingPrompt": "Over-the-shoulder dynamic camera movement, gorgeous curvy Latina woman leaning close to the door lock with alluring teasing expression, high aesthetic lighting, telenovela rich color palette --ar 9:16",
+                  "voice": "«El pobre hombre me decía: 'Señorita Camila, esta cerradura está muy apretada'... Y yo le contesté: 'Tranquilo vecino, tómese su tiempo... que la noche apenas empieza.'»",
+                  "voiceNotes": "Voz susurrada en confidencia directa al oído del espectador, tono ardiente.",
+                  "audioCue": "Música cambia a saxofón suave con bajo envolvente de tensión romántica.",
+                  "overlayText": "«Tranquilo Don Ramón... tómese su tiempo 😏»"
+            },
+            {
+                  "num": 4,
+                  "time": "0:36 - 0:46",
+                  "name": "El Gran Apagón & Cliffhanger para Fanvue",
+                  "shotType": "Silueta dramática y corte a oscuras",
+                  "visual": "En el instante en que se escucha el '¡CLICK!' de la cerradura abriéndose, las luces del pasillo parpadean y se corta la luz por completo, dejando la escena a oscuras. Se enciende la pantalla del teléfono de Camila iluminando su sonrisa traviesa y un guiño a la lente.",
+                  "klingPrompt": "Corridor lights flicker off into dramatic low-light silhouette, gorgeous woman illuminating her seductive face with phone flashlight with an enticing mischievous wink to camera --ar 9:16",
+                  "voice": "«¡Ay bendito! Se fue la luz en todo el piso... ¿Ustedes qué dicen: Don Ramón logró abrir... o se quedó adentro conmigo? El desenlace sin censura ya saben dónde encontrarlo.»",
+                  "voiceNotes": "Risa traviesa, susurro sugerente, cierre de capítulo con intriga.",
+                  "audioCue": "Chispazo de luz -> Oscuridad total -> Sonido de respiración cercana y susurro cómplice.",
+                  "overlayText": "🎬 El desenlace sin censura en el enlace de mi perfil 🔞🤫"
+            }
+      ]
+},
+
+    name: "Camila Reyes",
+    niche: "Telenovela Erótica Cómica, Enredos Cotidianos & Adulto VIP",
+    badge: "Monetización Rápida • Telenovela Pícara & Adulto VIP",
+    avatar: "camila_avatar.jpg",
+    tagline: "«Pecados de Departamento»: La vecina irresistible que transforma cualquier situación cotidiana en un enredo ardiente.",
+    keyMarkets: "México, Colombia, Chile, Perú, Argentina, España y público hispano en EE.UU.",
+    story: "Nacida en Medellín y dotada de un carisma pícaro y una silueta deslumbrante, Camila revolucionó la creación de contenido para adultos al sustituir los posados vacíos por la comedia de situación erótica. Creadora y protagonista de la exitosa webnovela 'Pecados de Departamento', Camila interpreta a la inolvidable inquilina del 402 a la que siempre le ocurren accidentes inverosímiles: desde perder la llave en camisón de seda hasta pedirle ayuda al conserje con la linterna cuando se corta la luz. Apoyada por un elenco cómico recurrente (el conserje metiche, el repartidor tímido, la amiga descarada), Camila mantiene a cientos de miles de hombres al borde del asiento con cliffhangers teatrales en redes abiertas, canalizando esa fascinación masiva hacia su plataforma privada donde se transmiten los capítulos prohibidos sin censura.",
+    bio: "Camila Reyes (24 años) es actriz, comediante sensual y empresaria digital paisa. Su serie web episódica combina la estética de las telenovelas clásicas con el morbo de la vecina atractiva y desinhibida. Diseñada para una monetización acelerada de alto volumen, es experta en burlar algoritmos con dobles sentidos magistrales mientras monetiza suscripciones y paquetes PPV con márgenes del 95%.",
+    archetype: "The Playful Temptress & Telenovela Siren (Sensual, pícara, cómica y magnética)",
+    techStack: "Flux.1 Dev Latina Glamour LoRA + ElevenLabs Colombian Flirtatious Tone + Kling 3.0 Facial Expression Sync + Fanvue PPV Gateway",
+    targetAudience: "Audiencia masculina masiva (21 a 55 años) consumidora de humor picante, belleza latina de alto impacto y fantasías eróticas cotidianas.",
+    channels: "TikTok (@camila.pecados), Instagram (@camilareyes.telenovela), Telegram Sin Censura, Fanvue VIP ( USD/mes + PPV)",
+    gallery: [
+      {
+        img: "camila_avatar.jpg",
+        tag: "Retrato Principal",
+        label: "Camila Reyes • Sala del Departamento 402",
+        desc: "Vestido de seda verde esmeralda, ondas morenas brillantes y expresión pícara telenovelesca."
+      }
+    ],
+    voice: {
+      title: "Insinuación Paisa & Tono Telenovela (ElevenLabs)",
+      badge: "Voice ID: Camila-Paisa-v1",
+      duration: "0:20",
+      transcript: "«¡Ay, vecino! Menos mal abrió... se me quedó la llave adentro y mire la facha con la que me tocó salir al pasillo. ¿Será que me deja pasar a esperar mientras llega el cerrajero?»",
+      rate: 1.0,
+      pitch: 1.06,
+      lang: "es-ES"
+    },
+    roi: {
+      defaultFollowers: 140000,
+      defaultConversion: 5.5,
+      defaultTicket: 20
+    },
+    promptScenes: {
+      casual: {
+        label: "🚪 Enredo en el Pasillo del Edificio",
+        tags: ["Flux.1 Dev", "Apartment Hallway", "--ar 4:5"],
+        text: "Close-up portrait of stunning 24yo Latina woman Camila Reyes with hourglass figure wearing emerald green satin slip dress, expressive playful smirk, apartment hallway background with soft warm corridor lighting --ar 4:5"
+      },
+      editorial: {
+        label: "🍷 Escena de Telenovela Nocturna",
+        tags: ["Telenovela Drama", "8k Master", "--ar 16:9"],
+        text: "Cinematic medium shot of gorgeous Latina woman Camila Reyes laughing sensually while holding a wine glass on a modern apartment sofa, dramatic warm lighting, vibrant colors, telenovela high production aesthetic --ar 16:9"
+      }
+    },
+    monetizationFunnel: [
+      { step: "Nivel 1 (Atracción & Viralidad en TikTok/Reels)", detail: "Mini-episodios cómicos de 40s ('Se me cayó la toalla en la terraza', 'El cerrajero novato') con remates en suspenso y música de telenovela." },
+      { step: "Nivel 2 (El Puente de Tráfico Telegram)", detail: "Canal gratuito con tomas descartadas, bloopers sin edición y recordatorios de estrenos de capítulos." },
+      { step: "Nivel 3 (Monetización Acelerada en Fanvue/OnlyFans)", detail: "Suscripción mensual a  USD/mes para ver la versión sin censura ('Los Capítulos Prohibidos') y venta directa de sets fotográficos temáticos PPV." }
+    ],
+    ecommerceHub: {
+      grossMargin: "96%",
+      conversionRate: "6.0%",
+      fulfillment: "Acceso digital inmediato Fanvue & Telegram VIP",
+      description: "Episodios completos sin cortes de 'Pecados de Departamento', sets fotográficos 4K de lencería y mensajes de chat personalizados.",
+      products: [
+        {
+          name: "Pase VIP 'Los Capítulos Prohibidos' (Suscripción Mensual)",
+          price: ".00 USD/mes",
+          cost: ".00 USD",
+          category: "Suscripción Adulto VIP",
+          tag: "Tráfico Caliente",
+          salesVolume: "980 suscriptores",
+          desc: "Acceso a todos los episodios sin censura de la serie, tomas exclusivas entre bastidores y chat directo prioritario con Camila.",
+          fulfillment: "Activación Inmediata en Fanvue / OnlyFans"
+        },
+        {
+          name: "Pack Exclusivo 4K 'La Vecina del 402: Sin Censura' (PPV)",
+          price: ".00 USD",
+          cost: "zsh.50 USD",
+          category: "Set Fotográfico & Video PPV",
+          tag: "Top Ventas PPV",
+          salesVolume: "450 ventas/mes",
+          desc: "Galería de 40 fotos en resolución 8K y video de 8 minutos con el desenlace explícito de los capítulos 10 al 15.",
+          fulfillment: "Enlace Seguro Descarga Inmediata"
+        }
+      ],
+      funnelStrategy: "Humor picante y situaciones absurdas en TikTok/IG -> Bloopers y anticipos en Telegram -> Suscripción mensual masiva en Fanvue para ver el desenlace erótico."
+    }
   }
 };
 
 influencersData['alina-van-dijk'] = influencersData.alina;
 influencersData['alina_van_dijk'] = influencersData.alina;
 influencersData['alinavandijk'] = influencersData.alina;
+influencersData['minhopark'] = influencersData.minho;
+influencersData['minho-park'] = influencersData.minho;
+influencersData['damienvance'] = influencersData.damien;
+influencersData['damien-vance'] = influencersData.damien;
+influencersData['camilareyes'] = influencersData.camila;
+influencersData['camila-reyes'] = influencersData.camila;
+
 
 const channelsData = {
   arcano: {
@@ -2433,7 +2866,10 @@ const defaultInfluencerPlatforms = {
   alejandra: ["flux", "kling", "elevenlabs", "claude", "capcut", "instagram", "linkedin"],
   alina: ["flux", "comfy", "elevenlabs", "kling", "capcut", "twitter", "instagram", "telegram", "fanvue"],
   freja: ["flux", "suno", "elevenlabs", "claude", "davinci", "youtube", "spotify", "discord"],
-  nova: ["flux", "comfy", "kling", "elevenlabs", "claude", "tiktok", "instagram", "youtube"]
+  nova: ["flux", "comfy", "kling", "elevenlabs", "claude", "tiktok", "instagram", "youtube"],
+  minho: ["flux", "kling", "suno", "elevenlabs", "capcut", "tiktok", "instagram", "spotify"],
+  damien: ["flux", "elevenlabs", "claude", "davinci", "instagram", "tiktok", "telegram"],
+  camila: ["flux", "kling", "elevenlabs", "capcut", "tiktok", "instagram", "telegram", "fanvue"]
 };
 
 const defaultInfluencerOpsConfig = {
@@ -3071,6 +3507,62 @@ function renderInfluencerPublicProduct(id) {
             </div>
           </div>
 
+          <!-- Pilot Episode Showcase: Guión del Video Piloto Oficial -->
+          ${data.pilotScript ? `
+            <div class="glass-card" style="margin-top: 2rem; border-color: rgba(236, 72, 153, 0.45); background: radial-gradient(circle at top right, rgba(236, 72, 153, 0.12) 0%, rgba(10, 12, 22, 0.95) 100%); padding: 1.75rem; border-radius: var(--radius-lg); box-shadow: 0 10px 30px rgba(0,0,0,0.4);">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+                <div>
+                  <span class="product-tag" style="background: rgba(236, 72, 153, 0.15); color: #ec4899; border-color: rgba(236, 72, 153, 0.4);">
+                    <i class="fa-solid fa-clapperboard"></i> Pre-Producción Oficial • Video Piloto / Primer Episodio
+                  </span>
+                  <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: #fff; margin: 0.35rem 0;">
+                    ${data.pilotScript.title}
+                  </h3>
+                  <div style="font-size: 0.85rem; color: #cbd5e1; max-width: 650px;">
+                    ${data.pilotScript.objective}
+                  </div>
+                </div>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                  <button class="btn btn-primary btn-sm" onclick="copyFullPilotScript('${data.id}')" style="background: linear-gradient(135deg, #ec4899, #8b5cf6);">
+                    <i class="fa-solid fa-copy"></i> Copiar Guión Completo
+                  </button>
+                  <button class="btn btn-secondary btn-sm" onclick="copyPilotKlingPrompts('${data.id}')">
+                    <i class="fa-solid fa-video"></i> Copiar Prompts Kling 3.0
+                  </button>
+                </div>
+              </div>
+
+              <!-- Metadata Pills -->
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.25rem; font-size: 0.82rem; padding: 0.75rem 1rem; background: rgba(0,0,0,0.3); border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+                <div><strong style="color: var(--cyan);"><i class="fa-solid fa-clock"></i> Duración:</strong> ${data.pilotScript.duration}</div>
+                <div><strong style="color: #ec4899;"><i class="fa-solid fa-mobile-screen"></i> Formato:</strong> ${data.pilotScript.format}</div>
+                <div><strong style="color: #f59e0b;"><i class="fa-solid fa-music"></i> Audio Track:</strong> ${data.pilotScript.musicTrack}</div>
+              </div>
+
+              <!-- Scenes Grid -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+                ${data.pilotScript.scenes.map(s => `
+                  <div style="background: rgba(18, 20, 36, 0.75); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius-md); padding: 1.15rem; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <span style="background: linear-gradient(135deg, #ec4899, #8b5cf6); color: #fff; font-weight: 800; font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 4px;">ESCENA ${s.num}</span>
+                        <span style="color: var(--cyan); font-family: monospace; font-size: 0.78rem;"><i class="fa-regular fa-clock"></i> ${s.time}</span>
+                      </div>
+                      <h4 style="color: #fff; font-size: 0.92rem; margin-bottom: 0.4rem;">${s.name}</h4>
+                      <p style="font-size: 0.78rem; color: #94a3b8; line-height: 1.4; margin-bottom: 0.6rem;">${s.visual}</p>
+                    </div>
+
+                    <div style="border-top: 1px solid var(--border-glass); padding-top: 0.6rem; margin-top: 0.4rem;">
+                      <div style="color: #ec4899; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.2rem;"><i class="fa-solid fa-microphone-lines"></i> Locución:</div>
+                      <div style="color: #f1f5f9; font-size: 0.78rem; font-style: italic; line-height: 1.35; margin-bottom: 0.4rem;">${s.voice}</div>
+                      <div style="color: var(--cyan); font-size: 0.72rem;"><strong>Texto:</strong> «${s.overlayText}»</div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
+
           <!-- E-Commerce Showcase: Productos y Estrategias de Venta Directa -->
           ${data.ecommerce ? `
             <div class="ecommerce-showcase-card">
@@ -3387,6 +3879,10 @@ function renderInfluencerCockpit(id) {
       <main class="cockpit-main-stage">
         <div class="cockpit-tab-bar">
           <button id="tab-btn-platforms" class="tab-btn cockpit-tab-btn active" onclick="switchTab(this, 'tab-platforms')">
+          <button id="tab-btn-pilot" class="tab-btn cockpit-tab-btn" onclick="switchTab(this, 'tab-pilot')" style="position: relative;">
+            <i class="fa-solid fa-clapperboard" style="color: #ec4899; margin-right: 0.35rem;"></i> Guión Piloto 🎬
+            <span style="background: #ec4899; color: #fff; font-size: 0.65rem; font-weight: 700; padding: 0.15rem 0.4rem; border-radius: 999px; margin-left: 0.35rem;">NUEVO</span>
+          </button>
             <i class="fa-solid fa-layer-group"></i> Plataformas & SOP
           </button>
           <button id="tab-btn-ecommerce" class="tab-btn cockpit-tab-btn" onclick="switchTab(this, 'tab-ecommerce')">
@@ -3748,6 +4244,99 @@ function renderInfluencerCockpit(id) {
         </div>
       </div>
 
+      <!-- Tab Especial: Guión Piloto de Producción (Escena por Escena) -->
+      <div id="tab-pilot" class="tab-pane">
+        <div class="platform-manager-card" style="border-color: rgba(236, 72, 153, 0.4); background: radial-gradient(circle at top right, rgba(236, 72, 153, 0.08) 0%, rgba(10, 12, 22, 0.95) 100%);">
+          <div class="platform-manager-header" style="flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <span style="display: inline-block; background: rgba(236, 72, 153, 0.15); border: 1px solid #ec4899; color: #ec4899; font-size: 0.72rem; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 6px; text-transform: uppercase; margin-bottom: 0.4rem;">
+                <i class="fa-solid fa-film"></i> Pre-Producción Oficial • Video Piloto
+              </span>
+              <h3 class="platform-manager-title" style="color: #fff; font-size: 1.25rem;">
+                ${data.pilotScript ? data.pilotScript.title : 'Guión del Video Piloto Oficial'}
+              </h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.3rem;">
+                ${data.pilotScript ? data.pilotScript.objective : 'Estructura técnica escena por escena optimizada para retención algorítmica y conversión.'}
+              </p>
+            </div>
+            <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
+              <button class="btn btn-primary btn-sm" onclick="copyFullPilotScript('${data.id}')" style="background: linear-gradient(135deg, #ec4899, #8b5cf6);">
+                <i class="fa-solid fa-copy"></i> Copiar Guión Técnico
+              </button>
+              <button class="btn btn-secondary btn-sm" onclick="copyPilotKlingPrompts('${data.id}')">
+                <i class="fa-solid fa-video"></i> Copiar Prompts Kling 3.0
+              </button>
+            </div>
+          </div>
+
+          <!-- Metadata Badges -->
+          ${data.pilotScript ? `
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; padding: 0.85rem 1rem; background: rgba(0,0,0,0.3); border-radius: var(--radius-md); border: 1px solid var(--border-glass); font-size: 0.82rem;">
+              <div><strong style="color: var(--cyan);"><i class="fa-solid fa-stopwatch"></i> Duración:</strong> ${data.pilotScript.duration}</div>
+              <div><strong style="color: #ec4899;"><i class="fa-solid fa-mobile-screen"></i> Formato:</strong> ${data.pilotScript.format}</div>
+              <div><strong style="color: #f59e0b;"><i class="fa-solid fa-music"></i> Track Sonoro:</strong> ${data.pilotScript.musicTrack}</div>
+            </div>
+
+            <!-- Scene by scene list -->
+            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+              ${data.pilotScript.scenes.map(s => `
+                <div style="background: rgba(18, 20, 36, 0.7); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius-md); padding: 1.25rem; transition: all 0.2s ease;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+                    <div style="display: flex; align-items: center; gap: 0.65rem;">
+                      <span style="background: linear-gradient(135deg, #ec4899, #8b5cf6); color: #fff; font-weight: 800; font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 6px;">
+                        ESCENA ${s.num}
+                      </span>
+                      <strong style="color: #fff; font-size: 0.95rem;">${s.name}</strong>
+                    </div>
+                    <span style="color: var(--cyan); font-family: monospace; font-size: 0.85rem; font-weight: 600;">
+                      <i class="fa-regular fa-clock"></i> ${s.time} • ${s.shotType}
+                    </span>
+                  </div>
+
+                  <!-- Visual & Kling Prompt -->
+                  <div style="margin-bottom: 0.85rem;">
+                    <div style="font-size: 0.82rem; color: #cbd5e1; margin-bottom: 0.35rem;">
+                      <strong style="color: #94a3b8;"><i class="fa-solid fa-eye"></i> Pauta Visual:</strong> ${s.visual}
+                    </div>
+                    <div style="background: rgba(0,0,0,0.45); border-left: 3px solid var(--purple); padding: 0.6rem 0.85rem; border-radius: 4px; font-family: monospace; font-size: 0.78rem; color: #a78bfa; margin-top: 0.4rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem;">
+                      <span><strong style="color: var(--cyan);">Kling 3.0 / Flux:</strong> ${s.klingPrompt}</span>
+                      <button onclick="navigator.clipboard.writeText('${s.klingPrompt.replace(/'/g, "\'")}'); alert('Prompt copiado al portapapeles');" class="btn-icon-subtle" title="Copiar prompt" style="color: #94a3b8; cursor: pointer; background: none; border: none;">
+                        <i class="fa-regular fa-copy"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Voice & Audio Cues -->
+                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.85rem; background: rgba(0,0,0,0.25); padding: 0.75rem 0.85rem; border-radius: 6px; font-size: 0.82rem;">
+                    <div>
+                      <div style="color: #ec4899; font-weight: 700; margin-bottom: 0.2rem;">
+                        <i class="fa-solid fa-microphone-lines"></i> Locución (ElevenLabs):
+                      </div>
+                      <div style="color: #fff; font-style: italic; line-height: 1.4;">${s.voice}</div>
+                      <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 0.25rem;"><em>Nota: ${s.voiceNotes}</em></div>
+                    </div>
+                    <div>
+                      <div style="color: #f59e0b; font-weight: 700; margin-bottom: 0.2rem;">
+                        <i class="fa-solid fa-volume-high"></i> SFX / Ambiente:
+                      </div>
+                      <div style="color: #cbd5e1;">${s.audioCue}</div>
+                      <div style="margin-top: 0.35rem; font-size: 0.76rem; color: var(--cyan);">
+                        <strong><i class="fa-solid fa-closed-captioning"></i> Texto en Pantalla:</strong> «${s.overlayText}»
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          ` : `
+            <div style="text-align: center; padding: 2rem; color: var(--text-muted);">
+              <i class="fa-solid fa-film" style="font-size: 2.5rem; margin-bottom: 0.75rem; opacity: 0.6;"></i>
+              <p>Guión piloto en fase de calibración técnica. Configura el prompt inicial en la pestaña Prompts.</p>
+            </div>
+          `}
+        </div>
+      </div>
+
       <!-- Tab 5: Gestión de Contenidos & Plataformas (Active by default in cockpit) -->
       <div id="tab-platforms" class="tab-pane active">
         <div class="platform-manager-card">
@@ -4054,6 +4643,42 @@ function renderInfluencersPage(categoryFilter = 'all') {
       badgeColor: 'var(--cyan)',
       desc: 'Modelo 2026. Shanghái. Gynoide física con piel de silicona médica, cuello biomecánico y chasis ergonómico. Documenta la interacción humano-robot en ciudades futuristas.',
       tags: ['Robótica Real', 'IA Autónoma', 'Shanghái', 'Cyberpunk']
+    },
+    {
+      id: 'minho',
+      name: 'Min-ho Park (박민호)',
+      avatar: 'minho_avatar.jpg',
+      nicheIcon: 'fa-headphones',
+      niche: 'K-Pop Urbano, Calistenia & Bitácora Latina',
+      category: 'music',
+      badge: 'Nuevo Fichaje • K-Pop & Bitácora Latina',
+      badgeColor: '#ec4899',
+      desc: '25 años. Seúl/LATAM. El aprendiz del ritmo: fusiona K-Pop con ritmos latinos, calistenia al aire libre y búsqueda de su musa en cada país.',
+      tags: ['K-Pop', 'Calistenia', 'Música Urbana', 'LATAM Tour']
+    },
+    {
+      id: 'damien',
+      name: 'Damien Vance («The Author»)',
+      avatar: 'damien_avatar.jpg',
+      nicheIcon: 'fa-book-open',
+      niche: 'Dark Romance, Psicología del Deseo & Anonimato',
+      category: 'lifestyle',
+      badge: 'Identidad Protegida • Dark Romance & Poder',
+      badgeColor: '#6366f1',
+      desc: '34 años. Manhattan/LATAM. Autor anónimo de BookTok, estratega corporativo y voz de barítono nocturna que aconseja a mujeres sobre el valor propio.',
+      tags: ['Dark Romance', 'BookTok', 'Misterio', 'Alto Estatus']
+    },
+    {
+      id: 'camila',
+      name: 'Camila Reyes',
+      avatar: 'camila_avatar.jpg',
+      nicheIcon: 'fa-film',
+      niche: 'Telenovela Erótica Cómica & Adulto VIP',
+      category: 'vip',
+      badge: 'Monetización Rápida • Telenovela Pícara & Adulto VIP',
+      badgeColor: '#ef4444',
+      desc: '24 años. Medellín. Creadora de la webnovela "Pecados de Departamento". Enredos cotidianos cómicos, tensión sexual irresistible y alta conversión.',
+      tags: ['Telenovela', 'Comedia Erótica', 'Adulto VIP', 'Fanvue']
     }
   ];
 
@@ -7411,3 +8036,44 @@ document.addEventListener('DOMContentLoaded', () => {
   updateWorldClocks();
   updateAuthUI();
 });
+
+function copyFullPilotScript(influencerId) {
+  const data = influencersData[influencerId];
+  if (!data || !data.pilotScript) {
+    alert('No hay guión piloto registrado para este influencer.');
+    return;
+  }
+  const ps = data.pilotScript;
+  let md = `# GUIÓN TÉCNICO PILOTO: ${ps.title}\n`;
+  md += `**Influencer:** ${data.name} (@${influencerId})\n`;
+  md += `**Duración:** ${ps.duration} | **Formato:** ${ps.format}\n`;
+  md += `**Objetivo:** ${ps.objective}\n`;
+  md += `**Banda Sonora / Ambiente:** ${ps.musicTrack}\n\n`;
+  md += `--- ESCALETA TÉCNICA ESCENA POR ESCENA ---\n\n`;
+  
+  ps.scenes.forEach(s => {
+    md += `### ESCENA ${s.num}: ${s.name} (${s.time})\n`;
+    md += `- **Encuadre:** ${s.shotType}\n`;
+    md += `- **Descripción Visual:** ${s.visual}\n`;
+    md += `- **Prompt de Video (Kling 3.0 / Flux):** \`${s.klingPrompt}\`\n`;
+    md += `- **Locución / Diálogo (ElevenLabs):** ${s.voice}\n`;
+    md += `- **Indicación de Voz:** ${s.voiceNotes}\n`;
+    md += `- **Diseño Sonoro & SFX:** ${s.audioCue}\n`;
+    md += `- **Texto en Pantalla:** ${s.overlayText}\n\n`;
+  });
+  
+  navigator.clipboard.writeText(md).then(() => {
+    alert('✅ Guión técnico completo copiado al portapapeles en formato Markdown.');
+  }).catch(err => {
+    console.error('Error al copiar:', err);
+  });
+}
+
+function copyPilotKlingPrompts(influencerId) {
+  const data = influencersData[influencerId];
+  if (!data || !data.pilotScript) return;
+  const prompts = data.pilotScript.scenes.map(s => `// ESCENA ${s.num} (${s.time}):\n${s.klingPrompt}`).join('\n\n');
+  navigator.clipboard.writeText(prompts).then(() => {
+    alert('🎬 Prompts de Kling 3.0 copiados al portapapeles.');
+  });
+}
